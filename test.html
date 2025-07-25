@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>BIỆT ĐỘI TINH NHUỆ - AI AUTOMATION AGENCY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BIỆT ĐỘI TINH NHUỆ - Đội ngũ chuyên gia AI Automation, giúp doanh nghiệp Việt tối ưu vận hành, tăng trưởng vượt trội.">
+  <!-- ROBOTO FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --yellow: #ffb300;
+      --orange: #ff9800;
+      --white: #fff;
+      --header-shadow: 0 2px 18px #0001;
+      --radius: 18px;
+      --primary: #2463eb;
+      --secondary: #0f172a;
+      --accent: #fb7185;
+      --bg: #f1f5f9;
+      --bg-banner: linear-gradient(135deg, #ffb300 70%, #fff 100%);
+      --soft-yellow: #fff8e1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0;}
+    body {
+      background: var(--bg);
+      font-family: 'Roboto', Arial, sans-serif;
+      color: var(--secondary);
+      min-height: 100vh;
+    }
+    /* HEADER */
+    header {
+      background: #fff;
+      box-shadow: var(--header-shadow);
+      z-index: 10;
+      position: relative;
+    }
+    .header-flex {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 3vw;
+      min-height: 75px;
+      position: relative;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .logo img {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      display: block;
+    }
+    .main-menu {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+      flex: 1;
+      justify-content: center;
+    }
+    .main-menu li a {
+      text-decoration: none;
+      font-family: 'Roboto', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #1a202c;
+      letter-spacing: 0.3px;
+      padding: 10px 18px;
+      border-radius: 7px;
+      transition: background 0.16s, color 0.16s;
+      position: relative;
+      text-transform: uppercase;
+      display: block;
+    }
+    .main-menu li a:hover,
+    .main-menu li.active a {
+      color: #fff;
+      background: var(--orange);
+    }
+    .btn-consult {
+      background: linear-gradient(93deg,#ff9800 65%,#ffd54f 100%);
+      color: #fff;
+      border: none;
+      font-family: 'Roboto', Arial, sans-serif;
+      font-weight: 900;
+      font-size: 1.1rem;
+      border-radius: 999px;
+      padding: 15px 38px;
+      cursor: pointer;
+      box-shadow: 0 2px 14px #ff980055;
+      transition: background 0.14s, transform 0.12s;
+      outline: none;
+      z-index: 9;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      display: inline-block;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .btn-consult:hover {
+      background: linear-gradient(90deg,#f57c00 80%,#ffb300 100%);
+      transform: scale(1.04);
+      color: #fff;
+    }
+    @media (max-width: 950px) {
+      .header-flex { flex-direction: column; gap: 10px; align-items: stretch; min-height: unset;}
+      .main-menu { flex-wrap: wrap; gap: 16px;}
+      .btn-consult { width: 100%; }
+    }
+
+    /* HERO */
+    .hero {
+      background: var(--bg-banner);
+      color: var(--white);
+      padding: 82px 0 62px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero h1 {
+      font-family: 'Roboto', Arial, sans-serif;
+      font-size: 2.8rem;
+      font-weight: 900;
+      margin-bottom: 14px;
+      letter-spacing: 0.5px;
+      line-height: 1.19;
+      text-shadow: 0 6px 24px #ff980048;
+      text-transform: uppercase;
+    }
+    .hero .slogan {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 38px;
+      color: #fffde7;
+      text-shadow: 0 2px 8px #ffb30018;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero .cta-btn {
+      background: var(--orange);
+      color: var(--white);
+      padding: 18px 46px;
+      border-radius: var(--radius);
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 18px #ff980024;
+      transition: background 0.18s, transform 0.14s;
+      display: inline-block;
+      text-transform: uppercase;
+      margin-bottom: 35px;
+      text-align: center;
+    }
+    .hero .cta-btn:hover {
+      background: #f57c00;
+      transform: translateY(-2px) scale(1.03);
+    }
+    .hero-img {
+      margin: 0 auto;
+      max-width: 580px;
+      width: 100%;
+      filter: drop-shadow(0 6px 24px #0e1a30aa);
+      border-radius: 25px;
+      display: block;
+    }
+    /* KHÓA HỌC */
+    .courses-section {
+      background: var(--soft-yellow);
+      padding: 68px 0 62px 0;
+      min-height: 470px;
+    }
+    .courses-section .container {
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+    .courses-section h2 {
+      font-family: 'Roboto', Arial, sans-serif;
+      text-align: center;
+      color: #ff9800;
+      font-weight: 900;
+      font-size: 2.15rem;
+      margin-bottom: 36px;
+      text-transform: uppercase;
+    }
+    .courses-row {
+      display: flex;
+      gap: 46px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch;
+    }
+    .course-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 24px #ff980014;
+      padding: 40px 32px 38px 32px;
+      max-width: 370px;
+      min-width: 300px;
+      min-height: 300px;
+      flex: 1 1 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 10px;
+      justify-content: center;
+      text-align: center;
+    }
+    .course-card h3 {
+      font-family: 'Roboto', Arial, sans-serif;
+      color: #f57c00;
+      font-weight: 900;
+      font-size: 1.2rem;
+      margin-bottom: 13px;
+      text-transform: uppercase;
+    }
+    .course-card p {
+      color: #222;
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+      font-weight: 400;
+    }
+    .course-card .btn-course {
+      margin-top: auto;
+      background: linear-gradient(93deg,#ff9800 65%,#ffd54f 100%);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      padding: 13px 33px;
+      font-family: 'Roboto', Arial, sans-serif;
+      font-weight: 900;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 2px 14px #ff980055;
+      transition: background 0.15s, transform 0.11s;
+      display: inline-block;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .course-card .btn-course:hover {
+      background: linear-gradient(90deg,#f57c00 80%,#ffb300 100%);
+      transform: scale(1.04);
+      color: #fff;
+    }
+
+    /* TEAM SECTION */
+    .team-section {
+      background: var(--soft-yellow);
+      padding: 56px 0 50px 0;
+    }
+    .team-section .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .team-section h2 {
+      font-family: 'Roboto', Arial, sans-serif;
+      text-align: center;
+      color: #ff9800;
+      font-weight: 900;
+      font-size: 2.08rem;
+      margin-bottom: 34px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .team-row {
+      display: flex;
+      gap: 38px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch;
+    }
+    .team-card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 3px 18px #ff980012;
+      max-width: 260px;
+      min-width: 220px;
+      min-height: 320px;
+      flex: 1 1 230px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 28px 16px 20px 16px;
+      margin-bottom: 10px;
+      text-align: center;
+      justify-content: flex-start;
+      transition: box-shadow 0.17s;
+    }
+    .team-card:hover {
+      box-shadow: 0 7px 32px #ff980037;
+      transform: translateY(-4px) scale(1.03);
+    }
+    .team-avatar {
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 14px;
+      border: 3.5px solid #ffe082;
+      background: #fffbe6;
+      box-shadow: 0 2px 8px #ff980027;
+    }
+    .team-name {
+      font-family: 'Roboto', Arial, sans-serif;
+      font-weight: 900;
+      font-size: 1.09rem;
+      margin-bottom: 4px;
+      color: #ff9800;
+      text-transform: uppercase;
+    }
+    .team-role {
+      color: #555;
+      font-weight: 500;
+      font-size: 1rem;
+      margin-bottom: 7px;
+      text-transform: uppercase;
+      letter-spacing: 0.2px;
+    }
+    .team-desc {
+      color: #222;
+      font-size: 0.99rem;
+      margin-bottom: 0;
+      font-weight: 400;
+      margin-top: 6px;
+    }
+
+    /* TƯ VẤN */
+    .consult-section {
+      background: #fff;
+      padding: 66px 0 64px 0;
+      min-height: 440px;
+    }
+    .consult-section h2 {
+      font-family: 'Roboto', Arial, sans-serif;
+      text-align: center;
+      color: #ff9800;
+      font-weight: 900;
+      font-size: 2.15rem;
+      margin-bottom: 35px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .consult-row {
+      display: flex;
+      gap: 48px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch;
+      margin-top: 16px;
+    }
+    .consult-card {
+      background: var(--soft-yellow);
+      border-radius: 20px;
+      box-shadow: 0 3px 24px #ff980014;
+      max-width: 410px;
+      min-width: 320px;
+      min-height: 350px;
+      flex: 1 1 360px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 38px 30px 32px 30px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .consult-card h3 {
+      font-family: 'Roboto', Arial, sans-serif;
+      color: #fb7185;
+      font-weight: 900;
+      font-size: 1.13rem;
+      margin-bottom: 7px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .consult-card .price {
+      color: #ff9800;
+      font-size: 1.05rem;
+      font-weight: 900;
+      margin-bottom: 3px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .consult-card .sub {
+      color: #555;
+      font-size: 0.99rem;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 700;
+    }
+    .consult-card ul {
+      text-align: left;
+      margin: 0 auto 16px auto;
+      max-width: 90%;
+      padding-left: 18px;
+      font-size: 1.01rem;
+    }
+    .consult-card li {
+      margin-bottom: 8px;
+      font-weight: 400;
+      color: #222;
+    }
+    .consult-card .btn-course {
+      background: linear-gradient(93deg,#ff9800 65%,#ffd54f 100%);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      padding: 13px 33px;
+      font-family: 'Roboto', Arial, sans-serif;
+      font-weight: 900;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 2px 14px #ff980055;
+      transition: background 0.15s, transform 0.11s;
+      display: inline-block;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 12px;
+    }
+    .consult-card .btn-course:hover {
+      background: linear-gradient(90deg,#f57c00 80%,#ffb300 100%);
+      transform: scale(1.04);
+      color: #fff;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #10141b;
+      color: #a1a5b2;
+      text-align: center;
+      font-size: 1.09rem;
+      padding: 36px 0 22px 0;
+      margin-top: 48px;
+      letter-spacing: 0.5px;
+    }
+    .footer-logo {
+      display: inline-block;
+      margin-bottom: 7px;
+    }
+    .footer-logo img {
+      width: 48px; height: 48px;
+      border-radius: 11px;
+      margin-bottom: 6px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .footer-contact {
+      margin-top: 18px;
+      color: #fffde7;
+      font-size: 1.04rem;
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+    .footer-contact a {
+      color: #ffe082;
+      text-decoration: none;
+    }
+    @media (max-width: 1200px) {
+      .header-flex, .courses-row, .consult-row, .team-row {
+        flex-direction: column;
+        align-items: center;
+      }
+      .team-card, .course-card, .consult-card { max-width: 97vw; }
+    }
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 1.7rem;}
+      .hero .slogan { font-size: 1.05rem;}
+      .container { width: 99%;}
+      .course-card, .consult-card, .team-card { min-width: 90vw; max-width: 97vw;}
+      .team-row { gap: 18px;}
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-flex">
+      <a href="#" class="logo">
+        <img src="https://raw.githubusercontent.com/drakenguyen/bietdoitinhnhue/main/logo-bietdoi.png" alt="Biệt Đội Tinh Nhuệ">
+      </a>
+      <ul class="main-menu">
+        <li class="active"><a href="#">Trang Chủ</a></li>
+        <li><a href="#services">Dịch Vụ</a></li>
+        <li><a href="#courses">Khóa Học</a></li>
+        <li><a href="#team">Đội Ngũ</a></li>
+      </ul>
+      <a class="btn-consult" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">Liên hệ</a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container">
+      <h1>BIỆT ĐỘI TINH NHUỆ<br>GIẢI PHÁP AI & AUTOMATION HÀNG ĐẦU</h1>
+      <div class="slogan">
+        Tối ưu vận hành, tăng trưởng đột phá, vượt qua mọi thử thách với công nghệ AI tự động hóa. <br>
+        Đội ngũ chuyên gia đồng hành cùng doanh nghiệp Việt chinh phục kỷ nguyên số.
+      </div>
+      <a href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener" class="cta-btn">NHẬN TƯ VẤN MIỄN PHÍ</a>
+      <img class="hero-img" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=cover&w=800&q=80" alt="Biệt Đội Tinh Nhuệ - AI Automation" loading="lazy">
+    </div>
+  </section>
+
+  <!-- KHOÁ HỌC SECTION -->
+  <section class="courses-section" id="courses">
+    <div class="container">
+      <h2>KHÓA HỌC NỔI BẬT</h2>
+      <div class="courses-row">
+        <div class="course-card">
+          <h3>KHÓA AI AUTOMATION MASTER</h3>
+          <p>nắm vững quy trình xây dựng hệ thống ai tự động hóa cho doanh nghiệp, thực hành trực tiếp trên các nền tảng thực tế.</p>
+          <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">TƯ VẤN KHÓA HỌC</a>
+        </div>
+        <div class="course-card">
+          <h3>CHATBOT & WORKFLOW PRO</h3>
+          <p>tự động hóa chăm sóc khách hàng với chatbot, tạo phễu bán hàng tự động, tiết kiệm chi phí vận hành và tăng trưởng bền vững.</p>
+          <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">TƯ VẤN KHÓA HỌC</a>
+        </div>
+        <div class="course-card">
+          <h3>MARKETING FUNNEL AI</h3>
+          <p>xây dựng phễu marketing tích hợp ai, tăng chuyển đổi, phân tích dữ liệu khách hàng nâng cao hiệu quả bán hàng đa kênh.</p>
+          <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">TƯ VẤN KHÓA HỌC</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ĐỘI NGŨ TINH NHUỆ SECTION -->
+  <section class="team-section" id="team">
+    <div class="container">
+      <h2>ĐỘI NGŨ TINH NHUỆ</h2>
+      <div class="team-row">
+        <div class="team-card">
+          <img class="team-avatar" src="https://randomuser.me/api/portraits/men/45.jpg" alt="Nguyễn Văn Minh">
+          <div class="team-name">Nguyễn Văn Minh</div>
+          <div class="team-role">Founder & AI Architect</div>
+          <div class="team-desc">10+ năm xây dựng hệ thống tự động hóa và kiến trúc AI cho các doanh nghiệp lớn nhỏ tại Việt Nam.</div>
+        </div>
+        <div class="team-card">
+          <img class="team-avatar" src="https://randomuser.me/api/portraits/women/64.jpg" alt="Trần Thị Hạnh">
+          <div class="team-name">Trần Thị Hạnh</div>
+          <div class="team-role">Automation Lead</div>
+          <div class="team-desc">Chuyên gia thiết kế workflow & triển khai giải pháp tối ưu vận hành bằng AI cho SME và tập đoàn.</div>
+        </div>
+        <div class="team-card">
+          <img class="team-avatar" src="https://randomuser.me/api/portraits/men/18.jpg" alt="Lê Quang Huy">
+          <div class="team-name">Lê Quang Huy</div>
+          <div class="team-role">Tech Solutionist</div>
+          <div class="team-desc">Master tích hợp công nghệ mới, giúp doanh nghiệp ứng dụng AI vào thực tế, tăng hiệu suất và giảm chi phí.</div>
+        </div>
+        <div class="team-card">
+          <img class="team-avatar" src="https://randomuser.me/api/portraits/women/75.jpg" alt="Phạm Thu Uyên">
+          <div class="team-name">Phạm Thu Uyên</div>
+          <div class="team-role">Data & Growth Strategist</div>
+          <div class="team-desc">Định hướng chiến lược dữ liệu và tăng trưởng cho doanh nghiệp dựa trên các giải pháp AI hiện đại.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DỊCH VỤ TƯ VẤN SECTION -->
+  <section class="consult-section" id="consult">
+    <div class="container">
+      <h2>DỊCH VỤ TƯ VẤN CHUYÊN SÂU</h2>
+      <div class="consult-row">
+        <div class="consult-card">
+          <h3>tư vấn cá nhân</h3>
+          <div class="price">1,500,000đ/giờ</div>
+          <div class="sub">Book tối thiểu 3h chỉ còn 3 triệu</div>
+          <ul>
+            <li>Đánh giá & gợi ý tối ưu tự động hóa cho cá nhân/nhóm nhỏ</li>
+            <li>Tư vấn chọn nền tảng ai, thiết kế quy trình tối ưu</li>
+            <li>Hỗ trợ xây dựng phễu bán hàng ai, tối ưu workflow</li>
+          </ul>
+          <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">liên hệ tư vấn</a>
+        </div>
+        <div class="consult-card">
+          <h3>tư vấn doanh nghiệp</h3>
+          <div class="price">2,000,000đ/giờ</div>
+          <div class="sub">Book tối thiểu 3h chỉ còn 5 triệu</div>
+          <ul>
+            <li>Phân tích, thiết kế hệ thống ai tự động hóa quy mô dn</li>
+            <li>Tối ưu vận hành, quy trình, tự động crm & marketing</li>
+            <li>Cố vấn & đào tạo đội ngũ triển khai hệ thống ai</li>
+          </ul>
+          <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">liên hệ tư vấn</a>
+        </div>
+        <div class="consult-card">
+          <h3>tư vấn lẻ theo giờ</h3>
+          <div class="price">3,000,000đ/giờ</div>
+          <div class="sub">Miễn trả giá</div>
+          <ul>
+            <li>Giải đáp thắc mắc, cố vấn ngắn hạn cho team/leader</li>
+            <li>Phù hợp dự án nhỏ, kiểm thử ý tưởng hoặc khởi động</li>
+          </ul>
+          <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">liên hệ tư vấn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="footer-logo">
+      <img src="https://raw.githubusercontent.com/drakenguyen/bietdoitinhnhue/main/logo-bietdoi.png" alt="Biệt Đội Tinh Nhuệ">
+    </div>
+    ĐỒNG HÀNH CÙNG DOANH NGHIỆP VIỆT TRÊN HÀNH TRÌNH CHUYỂN ĐỔI SỐ.
+    <div class="footer-contact">
+      <div>Email: <a href="mailto:Bietdoitinhnhue@gmail.com">Bietdoitinhnhue@gmail.com</a></div>
+      <div>SĐT: <a href="tel:+84968333342">+84 968333342</a></div>
+      <div>Facebook: <a href="https://facebook.com/bietdoitinhnhue" target="_blank" rel="noopener">facebook.com/bietdoitinhnhue</a></div>
+    </div>
+    <div style="margin-top:14px;">
+      <a href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener" class="btn-consult" style="background: linear-gradient(93deg,#ff9800 65%,#ffd54f 100%);padding:10px 28px;font-size:1rem;">LIÊN HỆ TƯ VẤN</a>
+    </div>
+    <div style="margin-top:14px;">&copy; 2025 BIỆT ĐỘI TINH NHUỆ. All rights reserved.</div>
+  </footer>
+</body>
+</html>
