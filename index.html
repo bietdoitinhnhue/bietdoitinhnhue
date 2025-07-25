@@ -1088,7 +1088,6 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 <!-- Chative.io -->
 <script src="https://messenger.svc.chative.io/static/v1.0/channels/s6f494c3f-4fe7-4c70-b578-e3dc861e8e46/messenger.js?mode=livechat" defer="defer"></script>
-<!-- Google Analytics Tracking -->
 	<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6WJM4VLSG6"></script>
 <script>
@@ -1098,5 +1097,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
   gtag('config', 'G-6WJM4VLSG6');
 </script>
+	<!-- Chặn click chuột phải -->
+	<script>
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    // Optionally show a custom message:
+    // alert('Bạn tính làm điều gì mờ ám chăng?');
+  });
+</script>
+
 </body>
 </html>
