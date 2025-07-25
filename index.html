@@ -763,6 +763,45 @@
   height: auto !important;
   overflow: visible !important;
 }
+	  .consult-row {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: center;
+  align-items: stretch;
+  gap: 38px;
+  flex-wrap: nowrap !important;
+}
+
+.consult-card {
+  min-width: 340px;
+  max-width: 370px;
+  flex: 1 1 0;
+  margin-bottom: 0;
+  /* Đảm bảo card không bị bóp */
+}
+
+@media (max-width: 1150px) {
+  .consult-row {
+    gap: 22px;
+  }
+  .consult-card {
+    min-width: 260px;
+    max-width: 100%;
+    flex: 1 1 260px;
+  }
+}
+@media (max-width: 850px) {
+  .consult-row {
+    flex-direction: column !important;
+    gap: 18px;
+    align-items: center;
+  }
+  .consult-card {
+    min-width: 90vw;
+    max-width: 98vw;
+  }
+}
+
   </style>
   <!-- FontAwesome for social icons (CDN) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
