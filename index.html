@@ -325,6 +325,7 @@
       margin-bottom: 5px;
     }
     /* TƯ VẤN */
+        /* TƯ VẤN */
     .consult-section {
       background: #fff;
       padding: 66px 0 64px 0;
@@ -340,91 +341,124 @@
       text-transform: uppercase;
       letter-spacing: 1px;
     }
-    .consult-row {
-      display: flex;
-      gap: 48px;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: stretch;
-      margin-top: 16px;
-    }
-    .consult-card {
-      background: var(--soft-yellow);
-      border-radius: 20px;
-      box-shadow: 0 3px 24px #ff980014;
-      max-width: 410px;
-      min-width: 320px;
-      min-height: 350px;
-      flex: 1 1 360px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 38px 30px 32px 30px;
-      margin-bottom: 10px;
-      text-align: center;
-    }
-    .consult-card h3 {
-      color: #fb7185;
-      font-weight: 900;
-      font-size: 1.13rem;
-      margin-bottom: 7px;
-      text-transform: uppercase;
-      text-align: center;
-      font-family: 'Roboto', Arial, sans-serif;
-    }
-    .consult-card .price {
-      color: #ff9800;
-      font-size: 1.05rem;
-      font-weight: 900;
-      margin-bottom: 3px;
-      text-transform: uppercase;
-      text-align: center;
-    }
-    .consult-card .sub {
-      color: #555;
-      font-size: 0.99rem;
-      margin-bottom: 12px;
-      text-transform: uppercase;
-      text-align: center;
-      font-weight: 700;
-    }
-    .consult-card ul {
-      text-align: left;
-      margin: 0 auto 16px auto;
-      max-width: 90%;
-      padding-left: 18px;
-      font-size: 1.01rem;
-    }
-    .consult-card li {
-      margin-bottom: 8px;
-      font-weight: 400;
-      color: #222;
-    }
-    .consult-card .btn-course {
-      background: linear-gradient(93deg,#ff9800 65%,#ffd54f 100%);
-      color: #fff;
-      border: none;
-      border-radius: 999px;
-      padding: 13px 33px;
-      font-family: 'Roboto', Arial, sans-serif;
-      font-weight: 900;
-      font-size: 1rem;
-      letter-spacing: 0.5px;
-      cursor: pointer;
-      text-decoration: none;
-      box-shadow: 0 2px 14px #ff980055;
-      transition: background 0.15s, transform 0.11s;
-      display: inline-block;
-      text-transform: uppercase;
-      text-align: center;
-      margin-top: 12px;
-    }
-    .consult-card .btn-course:hover {
-      background: linear-gradient(90deg,#f57c00 80%,#ffb300 100%);
-      transform: scale(1.04);
-      color: #fff;
-    }
+.consult-row {
+  display: flex;
+  gap: 46px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.consult-card {
+  background: var(--soft-yellow, #fff8e1);
+  border-radius: 20px;
+  box-shadow: 0 3px 24px #ff980014;
+  max-width: 410px;
+  min-width: 320px;
+  min-height: 470px;
+  flex: 1 1 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  padding: 38px 30px 32px 30px;
+  margin-bottom: 10px;
+  /* Đảm bảo các card cùng chiều cao */
+  justify-content: flex-start;
+}
+
+.consult-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 14px;
+  min-height: 88px; /* hoặc tuỳ thực tế chiều cao title, sub, giá */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.consult-card h3 {
+  color: #fb7185;
+  font-weight: 900;
+  font-size: 1.28rem;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Roboto', Arial, sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.consult-card .price {
+  color: #ff9800;
+  font-size: 1.12rem;
+  font-weight: 900;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.consult-card .sub {
+  color: #555;
+  font-size: 0.99rem;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+}
+
+.consult-card ul {
+  padding-left: 22px;
+  margin-bottom: 12px;
+  align-self: stretch;
+}
+.consult-card ul li {
+  text-align: left;
+  margin-bottom: 8px;
+  line-height: 1.6;
+  text-indent: 0;
+  padding-left: 0;
+  list-style-position: outside;
+  font-size: 1.05rem;
+}
+
+.consult-benefit {
+  font-size:1.03rem;
+  color:#fb7185;
+  margin-bottom:16px;
+  margin-top:-5px;
+  text-align:left;
+}
+
+.consult-footer {
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+}
+.consult-card .btn-course {
+  padding: 13px 33px;
+  border-radius: 999px;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 2px 14px #ff980055;
+  transition: background 0.15s, transform 0.11s;
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
+  background: linear-gradient(93deg,#ff9800 65%,#ffd54f 100%);
+  color: #fff;
+  border: none;
+  margin-top: 10px;
+}
+.consult-card .btn-course:hover {
+  background: linear-gradient(90deg,#f57c00 80%,#ffb300 100%);
+  transform: scale(1.04);
+  color: #fff;
+}
     /* FOOTER STYLE */
     .footer {
       background: var(--dark);
@@ -723,8 +757,6 @@
   padding-left: 0;          /* Không lồng padding */
   font-size: 1.07em;        /* Tùy chọn, tăng nhẹ chữ nếu thích */
 }
-
-
   </style>
   <!-- FontAwesome for social icons (CDN) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
@@ -793,7 +825,7 @@
           <li>Kết nối đa kênh (Facebook, Zalo OA, Telegram, Website...).</li>
           <li>Tối ưu quy trình chăm sóc khách hàng tự động.</li>
         </ul>
-        <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">LIÊN HỆ BIỆT ĐỘI</a>
+        <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">HỌC NGAY ĐI</a>
       </div>
 
       <!-- KHÓA 2 -->
@@ -806,7 +838,7 @@
           <li>Tiết kiệm chi phí vận hành và tăng trưởng bền vững.</li>
           <li>Áp dụng AI vào phân tích hành vi khách hàng.</li>
         </ul>
-        <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">LIÊN HỆ BIỆT ĐỘI</a>
+        <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">HỌC NGAY ĐI</a>
       </div>
 
       <!-- KHÓA 3 -->
@@ -819,7 +851,7 @@
           <li>Tối ưu hóa quảng cáo, email marketing và chăm sóc tự động.</li>
           <li>Nâng cao trải nghiệm khách hàng trên toàn hành trình.</li>
         </ul>
-        <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">LIÊN HỆ BIỆT ĐỘI</a>
+        <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">HỌC NGAY ĐI</a>
       </div>
 
     </div>
@@ -828,46 +860,75 @@
 
 
   <!-- DỊCH VỤ TƯ VẤN SECTION -->
-  <section class="consult-section" id="consult">
-    <div class="container">
-      <h2>DỊCH VỤ TƯ VẤN CHUYÊN SÂU</h2>
-      <div class="consult-row">
-        <div class="consult-card">
+<section class="consult-section" id="consult">
+  <div class="container">
+    <h2>DỊCH VỤ TƯ VẤN CHUYÊN SÂU</h2>
+    <div class="consult-row">
+
+      <!-- TƯ VẤN CÁ NHÂN -->
+      <div class="consult-card">
+        <div class="consult-header">
           <h3>TƯ VẤN CÁ NHÂN</h3>
-          <div class="price">1,500,000đ/giờ</div>
-          <div class="sub">Book tối thiểu 3h chỉ còn 3 triệu</div>
-          <ul>
-            <li>Đánh giá & gợi ý tối ưu tự động hóa cho cá nhân/nhóm nhỏ</li>
-            <li>Tư vấn chọn nền tảng AI, thiết kế quy trình tối ưu</li>
-            <li>Hỗ trợ xây dựng phễu bán hàng AI, tối ưu workflow</li>
-          </ul>
-          <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">LIÊN HỆ TƯ VẤN</a>
+          <div class="price">1.500.000đ/giờ</div>
+          <div class="sub">Đặt tối thiểu 3 giờ chỉ còn 3 triệu</div>
         </div>
-        <div class="consult-card">
-          <h3>TƯ VẤN DOANH NGHIỆP</h3>
-          <div class="price">2,000,000đ/giờ</div>
-          <div class="sub">Book tối thiểu 3h chỉ còn 5 triệu</div>
-          <ul>
-            <li>Phân tích, thiết kế hệ thống AI tự động hóa quy mô DN</li>
-            <li>Tối ưu vận hành, quy trình, tự động CRM & Marketing</li>
-            <li>Cố vấn & đào tạo đội ngũ triển khai hệ thống AI</li>
-          </ul>
-          <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">LIÊN HỆ TƯ VẤN</a>
-        </div>
-        <div class="consult-card">
-          <h3>TƯ VẤN LẺ THEO GIỜ</h3>
-          <div class="price">3,000,000đ/giờ</div>
-          <div class="sub">Miễn trả giá</div>
-          <ul>
-            <li>Giải đáp thắc mắc, cố vấn ngắn hạn cho team/leader</li>
-            <li>Phù hợp dự án nhỏ, kiểm thử ý tưởng hoặc khởi động</li>
-          </ul>
+        <ul>
+          <li>Đánh giá, đề xuất lộ trình tối ưu tự động hóa phù hợp cho từng cá nhân hoặc nhóm nhỏ.</li>
+          <li>Gợi ý lựa chọn nền tảng AI, xây dựng quy trình thực tiễn, phù hợp mục tiêu phát triển cá nhân.</li>
+          <li>Hỗ trợ xây dựng phễu bán hàng, tự động hóa chăm sóc khách hàng qua chatbot/workflow.</li>
+          <li>Giải đáp mọi thắc mắc, đồng hành trực tiếp trên hành trình chuyển đổi số cá nhân.</li>
+        </ul>
+        <div class="consult-footer">
           <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">LIÊN HỆ TƯ VẤN</a>
         </div>
       </div>
-    </div>
-  </section>
 
+      <!-- TƯ VẤN DOANH NGHIỆP -->
+      <div class="consult-card">
+        <div class="consult-header">
+          <h3>TƯ VẤN DOANH NGHIỆP</h3>
+          <div class="price">2.000.000đ/giờ</div>
+          <div class="sub">Đặt tối thiểu 3 giờ chỉ còn 5 triệu</div>
+        </div>
+        <ul>
+          <li>Phân tích & thiết kế hệ thống AI Automation phù hợp quy mô doanh nghiệp.</li>
+          <li>Tư vấn xây dựng quy trình vận hành, tự động hóa CRM, Marketing, bán hàng, tối ưu chi phí.</li>
+          <li>Cố vấn, đào tạo đội nhóm triển khai hệ thống AI, xây dựng lộ trình chuyển đổi số doanh nghiệp.</li>
+          <li>Đồng hành, hỗ trợ doanh nghiệp cập nhật công nghệ mới nhất.</li>
+        </ul>
+        <div class="consult-footer">
+          <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">LIÊN HỆ TƯ VẤN</a>
+        </div>
+      </div>
+
+      <!-- TƯ VẤN LINH HOẠT THEO THÁNG -->
+      <div class="consult-card">
+        <div class="consult-header">
+          <h3>TƯ VẤN LINH HOẠT THEO THÁNG</h3>
+          <div class="price">Chỉ từ 10.000.000đ/tháng</div>
+          <div class="sub">Đăng ký linh hoạt – Không phát sinh phụ phí</div>
+        </div>
+        <ul>
+          <li>Được giải đáp trực tiếp mọi thắc mắc về AI & Automation trong suốt tháng.</li>
+          <li>Mentoring 1-1 cho leader, founder, đội ngũ vận hành/chuyển đổi số.</li>
+          <li>Đánh giá & tư vấn tối ưu quy trình hiện tại, đề xuất giải pháp AI phù hợp.</li>
+          <li>Hỗ trợ kiểm thử, thử nghiệm các ý tưởng tự động hóa, triển khai workflow mẫu.</li>
+          <li>Cố vấn xây dựng lộ trình chuyển đổi số từng bước, phù hợp nguồn lực thực tế.</li>
+          <li>Nhận tài liệu, hướng dẫn thực chiến, case study và mẫu quy trình độc quyền.</li>
+          <li>Ưu tiên hỗ trợ khẩn cấp trong các dự án thử nghiệm, xử lý sự cố thực tế.</li>
+          <li>Tham gia group mentoring riêng, trao đổi kinh nghiệm cùng các chuyên gia và DN khác.</li>
+        </ul>
+        <div class="consult-benefit">
+          <b>Lợi ích:</b> Linh hoạt – Tiết kiệm – Được kèm cặp thực chiến – Không lo “chết dự án giữa chừng”.
+        </div>
+        <div class="consult-footer">
+          <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">ĐĂNG KÝ GÓI LINH HOẠT</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
   <!-- ĐỘI NGŨ TINH NHUỆ -->
   <section class="team-section" id="team">
     <div class="container">
