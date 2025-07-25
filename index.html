@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Biệt Đội Tinh Nhuệ - Giải Pháp AI Automation Hàng Đầu Việt Nam</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Biệt Đội Tinh Nhuệ - Đội ngũ chuyên gia AI Automation, giúp doanh nghiệp Việt tối ưu vận hành, tăng trưởng vượt trội với các giải pháp tự động hóa thông minh.">
+  <meta name="keywords" content="AI Automation, Automation Agency, tự động hóa doanh nghiệp, chuyển đổi số, AI Việt Nam, chatbot, workflow, tư vấn AI, biệt đội tinh nhuệ">
+  <meta property="og:title" content="Biệt Đội Tinh Nhuệ - Giải Pháp AI Automation Hàng Đầu Việt Nam">
+  <meta property="og:description" content="Giải pháp AI Automation, tối ưu vận hành, tăng trưởng vượt trội. Đồng hành cùng doanh nghiệp Việt chinh phục chuyển đổi số.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/refs/heads/main/Biet-doi-tinh-nhue.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bietdoitinhnhue.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Biệt Đội Tinh Nhuệ - Giải Pháp AI Automation Hàng Đầu Việt Nam">
+  <meta name="twitter:description" content="Đồng hành chuyển đổi số cùng doanh nghiệp Việt, tối ưu vận hành, tăng trưởng vượt trội với AI Automation.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/refs/heads/main/Biet-doi-tinh-nhue.png">
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/refs/heads/main/ba-dev-con-nghe.png">
+  <!-- Roboto font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --yellow: #ffb300;
+      --orange: #ff9800;
+      --white: #fff;
+      --header-shadow: 0 2px 18px #0001;
+      --radius: 18px;
+      --primary: #2463eb;
+      --secondary: #0f172a;
+      --accent: #fb7185;
+      --bg: #f1f5f9;
+      --bg-banner: linear-gradient(135deg, #ffb300 70%, #fff 100%);
+      --soft-yellow: #fff8e1;
+      --dark: #181e29;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0;}
+    body {
+      background: var(--bg);
+      font-family: 'Roboto', Arial, sans-serif;
+      color: var(--secondary);
+      min-height: 100vh;
+    }
+    /* HEADER */
+    header {
+      background: #fff;
+      box-shadow: var(--header-shadow);
+      z-index: 10;
+      position: relative;
+    }
+    .header-flex {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 3vw;
+      min-height: 75px;
+      position: relative;
+    }
+    .logo img {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      display: block;
+    }
+    .main-menu {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+      flex: 1;
+      justify-content: center;
+    }
+    .main-menu li a {
+      text-decoration: none;
+      font-family: 'Roboto', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #1a202c;
+      letter-spacing: 0.3px;
+      padding: 10px 18px;
+      border-radius: 7px;
+      transition: background 0.16s, color 0.16s;
+      position: relative;
+      text-transform: uppercase;
+      display: block;
+    }
+    .main-menu li a:hover,
+    .main-menu li.active a {
+      color: #fff;
+      background: var(--orange);
+    }
+    .btn-consult {
+      background: linear-gradient(93deg,#ff9800 65%,#ffd54f 100%);
+      color: #fff;
+      border: none;
+      font-family: 'Roboto', Arial, sans-serif;
+      font-weight: 900;
+      font-size: 1.1rem;
+      border-radius: 999px;
+      padding: 15px 38px;
+      cursor: pointer;
+      box-shadow: 0 2px 14px #ff980055;
+      transition: background 0.14s, transform 0.12s;
+      outline: none;
+      z-index: 9;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      display: inline-block;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .btn-consult:hover {
+      background: linear-gradient(90deg,#f57c00 80%,#ffb300 100%);
+      transform: scale(1.04);
+      color: #fff;
+    }
+    /* HERO */
+    .hero {
+      background: var(--bg-banner);
+      color: var(--white);
+      padding: 82px 0 62px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero h1 {
+      font-family: 'Roboto', Arial, sans-serif;
+      font-size: 2.8rem;
+      font-weight: 900;
+      margin-bottom: 14px;
+      letter-spacing: 0.5px;
+      line-height: 1.19;
+      text-shadow: 0 6px 24px #ff980048;
+      text-transform: uppercase;
+    }
+    .hero .slogan {
+      font-size: 1.22rem;
+      font-weight: 400;
+      margin-bottom: 38px;
+      color: #fffde7;
+      text-shadow: 0 2px 8px #ffb30018;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+    .hero .cta-btn {
+      background: var(--orange);
+      color: var(--white);
+      padding: 18px 46px;
+      border-radius: var(--radius);
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 18px #ff980024;
+      transition: background 0.18s, transform 0.14s;
+      display: inline-block;
+      text-transform: uppercase;
+      margin-bottom: 35px;
+      text-align: center;
+    }
+    .hero .cta-btn:hover {
+      background: #f57c00;
+      transform: translateY(-2px) scale(1.03);
+    }
+    .hero-img {
+      margin: 0 auto;
+      max-width: 520px;
+      width: 100%;
+      filter: drop-shadow(0 6px 24px #0e1a30aa);
+      border-radius: 25px;
+      display: block;
+    }
+    /* KHÓA HỌC */
+    .courses-section {
+      background: var(--soft-yellow);
+      padding: 68px 0 62px 0;
+      min-height: 470px;
+    }
+    .courses-section .container {
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+    .courses-section h2 {
+      font-family: 'Roboto', Arial, sans-serif;
+      text-align: center;
+      color: #ff9800;
+      font-weight: 900;
+      font-size: 2.15rem;
+      margin-bottom: 36px;
+      text-transform: uppercase;
+    }
+    .courses-row {
+      display: flex;
+      gap: 46px;
+      justify-content: center;
+      align-items: stretch;
+      width: 100%;
+      max-width: 1160px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+    .course-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 24px #ff980014;
+      padding: 38px 28px 30px 28px;
+      max-width: 370px;
+      min-width: 260px;
+      min-height: 270px;
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 10px;
+      justify-content: center;
+      text-align: center;
+    }
+    .course-card h3 {
+      color: #f57c00;
+      font-weight: 900;
+      font-size: 1.14rem;
+      margin-bottom: 13px;
+      text-transform: uppercase;
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+    .course-card p {
+      color: #222;
+      font-size: 1.04rem;
+      margin-bottom: 18px;
+      font-weight: 400;
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+    .course-card .btn-course {
+      margin-top: auto;
+      background: linear-gradient(93deg,#ff9800 65%,#ffd54f 100%);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      padding: 13px 33px;
+      font-family: 'Roboto', Arial, sans-serif;
+      font-weight: 900;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 2px 14px #ff980055;
+      transition: background 0.15s, transform 0.11s;
+      display: inline-block;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .course-card .btn-course:hover {
+      background: linear-gradient(90deg,#f57c00 80%,#ffb300 100%);
+      transform: scale(1.04);
+      color: #fff;
+    }
+    /* ĐỘI NGŨ TINH NHUỆ */
+    .team-section {
+      background: #fff;
+      padding: 64px 0 64px 0;
+    }
+    .team-section .container {
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+    .team-section h2 {
+      font-family: 'Roboto', Arial, sans-serif;
+      text-align: center;
+      color: #ff9800;
+      font-weight: 900;
+      font-size: 2.15rem;
+      margin-bottom: 34px;
+      text-transform: uppercase;
+    }
+    .team-row {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch;
+    }
+    .team-card {
+      background: var(--soft-yellow);
+      border-radius: 18px;
+      box-shadow: 0 2px 18px #ffd54f22;
+      max-width: 260px;
+      min-width: 220px;
+      flex: 1 1 190px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 36px 18px 26px 18px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .team-avatar {
+      width: 78px; height: 78px;
+      border-radius: 50%;
+      margin-bottom: 17px;
+      border: 3px solid #ffb30055;
+      object-fit: cover;
+      box-shadow: 0 3px 12px #ffd54f33;
+    }
+    .team-name {
+      font-size: 1.18rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #222;
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+    .team-role {
+      color: #fb7185;
+      font-size: 1.02rem;
+      font-weight: 500;
+      margin-bottom: 7px;
+    }
+    .team-desc {
+      color: #444;
+      font-size: 0.98rem;
+      font-weight: 400;
+      margin-bottom: 5px;
+    }
+    /* TƯ VẤN */
+    .consult-section {
+      background: #fff;
+      padding: 66px 0 64px 0;
+      min-height: 440px;
+    }
+    .consult-section h2 {
+      font-family: 'Roboto', Arial, sans-serif;
+      text-align: center;
+      color: #ff9800;
+      font-weight: 900;
+      font-size: 2.15rem;
+      margin-bottom: 35px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .consult-row {
+      display: flex;
+      gap: 48px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch;
+      margin-top: 16px;
+    }
+    .consult-card {
+      background: var(--soft-yellow);
+      border-radius: 20px;
+      box-shadow: 0 3px 24px #ff980014;
+      max-width: 410px;
+      min-width: 320px;
+      min-height: 350px;
+      flex: 1 1 360px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 38px 30px 32px 30px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .consult-card h3 {
+      color: #fb7185;
+      font-weight: 900;
+      font-size: 1.13rem;
+      margin-bottom: 7px;
+      text-transform: uppercase;
+      text-align: center;
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+    .consult-card .price {
+      color: #ff9800;
+      font-size: 1.05rem;
+      font-weight: 900;
+      margin-bottom: 3px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .consult-card .sub {
+      color: #555;
+      font-size: 0.99rem;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 700;
+    }
+    .consult-card ul {
+      text-align: left;
+      margin: 0 auto 16px auto;
+      max-width: 90%;
+      padding-left: 18px;
+      font-size: 1.01rem;
+    }
+    .consult-card li {
+      margin-bottom: 8px;
+      font-weight: 400;
+      color: #222;
+    }
+    .consult-card .btn-course {
+      background: linear-gradient(93deg,#ff9800 65%,#ffd54f 100%);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      padding: 13px 33px;
+      font-family: 'Roboto', Arial, sans-serif;
+      font-weight: 900;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 2px 14px #ff980055;
+      transition: background 0.15s, transform 0.11s;
+      display: inline-block;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 12px;
+    }
+    .consult-card .btn-course:hover {
+      background: linear-gradient(90deg,#f57c00 80%,#ffb300 100%);
+      transform: scale(1.04);
+      color: #fff;
+    }
+    /* FOOTER STYLE */
+    .footer {
+      background: var(--dark);
+      color: #fff;
+      padding: 60px 0 24px 0;
+      margin-top: 48px;
+      font-family: 'Roboto', Arial, sans-serif;
+      letter-spacing: 0.03em;
+    }
+    .footer-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 50px 18px;
+      padding: 0 28px;
+    }
+    .footer-col {
+      flex: 1 1 240px;
+      min-width: 220px;
+      max-width: 330px;
+      margin-bottom: 20px;
+    }
+    .footer-logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+    .footer-logo-img {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+    .footer-brand {
+      font-size: 1.24rem;
+      font-weight: 900;
+      color: var(--orange);
+      line-height: 1.1;
+      letter-spacing: 0.03em;
+    }
+    .footer-desc {
+      color: #e0e2eb;
+      font-size: 1.08rem;
+      margin-bottom: 18px;
+      line-height: 1.55;
+    }
+    .footer-social {
+      display: flex;
+      gap: 22px;
+      margin-top: 12px;
+      margin-bottom: 8px;
+    }
+    .footer-social a {
+      color: #fff;
+      font-size: 1.32rem;
+      transition: color 0.13s;
+      display: inline-block;
+    }
+    .footer-social a:hover { color: var(--yellow);}
+    .footer-title {
+      font-weight: 900;
+      font-size: 1.13rem;
+      margin-bottom: 13px;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      text-transform: uppercase;
+      border-bottom: 2px solid #444452;
+      padding-bottom: 3px;
+    }
+    .footer-link, .footer-link:visited {
+      display: block;
+      color: #fffde7;
+      font-size: 1.06rem;
+      margin-bottom: 9px;
+      text-decoration: none;
+      transition: color 0.13s;
+    }
+    .footer-link:hover { color: var(--orange);}
+    .footer-contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 8px 0;
+      color: #fffde7;
+      font-size: 1.09rem;
+      line-height: 1.6;
+    }
+    .footer-contact-list li {
+      margin-bottom: 3px;
+      word-break: break-word;
+    }
+    .footer-form {
+      display: flex;
+      gap: 0;
+      margin-top: 14px;
+    }
+    .footer-form input[type="email"] {
+      flex: 1;
+      padding: 12px 16px;
+      border: none;
+      border-radius: 8px 0 0 8px;
+      outline: none;
+      font-size: 1rem;
+      font-family: 'Roboto', Arial, sans-serif;
+      background: #232836;
+      color: #fff;
+      transition: box-shadow 0.12s;
+      box-shadow: 0 2px 9px #23283644;
+    }
+    .footer-form button {
+      background: linear-gradient(93deg,#ff9800 65%,#ffd54f 100%);
+      color: #fff;
+      font-weight: 700;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 0 8px 8px 0;
+      font-size: 1rem;
+      cursor: pointer;
+      font-family: 'Roboto', Arial, sans-serif;
+      transition: background 0.13s;
+    }
+    .footer-form button:hover { background: linear-gradient(90deg,#f57c00 80%,#ffb300 100%);}
+    .footer-copyright {
+      text-align: center;
+      color: #c7cbe6;
+      margin-top: 34px;
+      font-size: 1.04rem;
+      padding-top: 18px;
+      border-top: 1px solid #283042;
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+    @media (max-width: 1050px) {
+      .footer-container { flex-direction: column; align-items: flex-start; gap: 18px;}
+      .footer-col {max-width: 100%; min-width: unset;}
+    }
+    @media (max-width: 700px) {
+      .header-flex { flex-direction: column; gap: 10px; align-items: stretch; min-height: unset;}
+      .main-menu { flex-wrap: wrap; gap: 16px;}
+      .btn-consult { width: 100%; }
+      .container { width: 99%;}
+      .course-card, .consult-card { min-width: 90vw; max-width: 97vw;}
+      .team-row { flex-direction: column;}
+      .footer-container {padding: 0 7vw;}
+    }
+  </style>
+  <!-- FontAwesome for social icons (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-flex">
+      <a href="#" class="logo">
+        <img src="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/refs/heads/main/Biet%20doi%20tinh%20nhue.png" alt="Biệt Đội Tinh Nhuệ">
+      </a>
+      <ul class="main-menu">
+        <li class="active"><a href="#">Trang Chủ</a></li>
+        <li><a href="#services">Dịch Vụ</a></li>
+        <li><a href="#courses">Khóa Học</a></li>
+        <li><a href="#team">Đội Ngũ</a></li>
+      </ul>
+      <a class="btn-consult" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">Liên hệ</a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container">
+      <h1>BIỆT ĐỘI TINH NHUỆ<br>GIẢI PHÁP AI & AUTOMATION HÀNG ĐẦU</h1>
+      <div class="slogan">
+        Tối ưu vận hành, tăng trưởng đột phá, vượt qua mọi thử thách với công nghệ AI tự động hóa.<br>
+        Đội ngũ chuyên gia đồng hành cùng doanh nghiệp Việt chinh phục kỷ nguyên số.
+      </div>
+      <a href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener" class="cta-btn">NHẬN TƯ VẤN MIỄN PHÍ</a>
+      <img class="hero-img" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=cover&w=800&q=80" alt="Biệt Đội Tinh Nhuệ - AI Automation" loading="lazy">
+    </div>
+  </section>
+
+  <!-- KHOÁ HỌC SECTION -->
+  <section class="courses-section" id="courses">
+    <div class="container">
+      <h2>KHÓA HỌC NỔI BẬT</h2>
+      <div class="courses-row">
+        <div class="course-card">
+          <h3>KHÓA AI AUTOMATION MASTER</h3>
+          <p>nắm vững quy trình xây dựng hệ thống ai tự động hóa cho doanh nghiệp, thực hành trực tiếp trên các nền tảng thực tế.</p>
+          <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">TƯ VẤN KHÓA HỌC</a>
+        </div>
+        <div class="course-card">
+          <h3>CHATBOT & WORKFLOW PRO</h3>
+          <p>tự động hóa chăm sóc khách hàng với chatbot, tạo phễu bán hàng tự động, tiết kiệm chi phí vận hành và tăng trưởng bền vững.</p>
+          <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">TƯ VẤN KHÓA HỌC</a>
+        </div>
+        <div class="course-card">
+          <h3>MARKETING FUNNEL AI</h3>
+          <p>xây dựng phễu marketing tích hợp ai, tăng chuyển đổi, phân tích dữ liệu khách hàng nâng cao hiệu quả bán hàng đa kênh.</p>
+          <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">TƯ VẤN KHÓA HỌC</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DỊCH VỤ TƯ VẤN SECTION -->
+  <section class="consult-section" id="consult">
+    <div class="container">
+      <h2>DỊCH VỤ TƯ VẤN CHUYÊN SÂU</h2>
+      <div class="consult-row">
+        <div class="consult-card">
+          <h3>TƯ VẤN CÁ NHÂN</h3>
+          <div class="price">1,500,000đ/giờ</div>
+          <div class="sub">Book tối thiểu 3h chỉ còn 3 triệu</div>
+          <ul>
+            <li>Đánh giá & gợi ý tối ưu tự động hóa cho cá nhân/nhóm nhỏ</li>
+            <li>Tư vấn chọn nền tảng AI, thiết kế quy trình tối ưu</li>
+            <li>Hỗ trợ xây dựng phễu bán hàng AI, tối ưu workflow</li>
+          </ul>
+          <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">LIÊN HỆ TƯ VẤN</a>
+        </div>
+        <div class="consult-card">
+          <h3>TƯ VẤN DOANH NGHIỆP</h3>
+          <div class="price">2,000,000đ/giờ</div>
+          <div class="sub">Book tối thiểu 3h chỉ còn 5 triệu</div>
+          <ul>
+            <li>Phân tích, thiết kế hệ thống AI tự động hóa quy mô DN</li>
+            <li>Tối ưu vận hành, quy trình, tự động CRM & Marketing</li>
+            <li>Cố vấn & đào tạo đội ngũ triển khai hệ thống AI</li>
+          </ul>
+          <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">LIÊN HỆ TƯ VẤN</a>
+        </div>
+        <div class="consult-card">
+          <h3>TƯ VẤN LẺ THEO GIỜ</h3>
+          <div class="price">3,000,000đ/giờ</div>
+          <div class="sub">Miễn trả giá</div>
+          <ul>
+            <li>Giải đáp thắc mắc, cố vấn ngắn hạn cho team/leader</li>
+            <li>Phù hợp dự án nhỏ, kiểm thử ý tưởng hoặc khởi động</li>
+          </ul>
+          <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">LIÊN HỆ TƯ VẤN</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ĐỘI NGŨ TINH NHUỆ -->
+  <section class="team-section" id="team">
+    <div class="container">
+      <h2>ĐỘI NGŨ TINH NHUỆ</h2>
+      <div class="team-row">
+        <div class="team-card">
+          <img class="team-avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Drake Nguyễn">
+          <div class="team-name">Drake Nguyễn</div>
+          <div class="team-role">Founder • AI Solution Architect</div>
+          <div class="team-desc">10+ năm chuyên gia chuyển đổi số, thiết kế hệ thống AI Automation cho doanh nghiệp.</div>
+        </div>
+        <div class="team-card">
+          <img class="team-avatar" src="https://randomuser.me/api/portraits/women/54.jpg" alt="Linh Trần">
+          <div class="team-name">Linh Trần</div>
+          <div class="team-role">Data Scientist</div>
+          <div class="team-desc">Chuyên sâu về khai phá dữ liệu, AI ứng dụng và xây dựng workflow tự động.</div>
+        </div>
+        <div class="team-card">
+          <img class="team-avatar" src="https://randomuser.me/api/portraits/men/67.jpg" alt="Hoàng Lê">
+          <div class="team-name">Hoàng Lê</div>
+          <div class="team-role">Automation Developer</div>
+          <div class="team-desc">Tối ưu hệ thống, xây dựng giải pháp RPA và tích hợp AI cho doanh nghiệp.</div>
+        </div>
+        <div class="team-card">
+          <img class="team-avatar" src="https://randomuser.me/api/portraits/women/33.jpg" alt="Mai Đỗ">
+          <div class="team-name">Mai Đỗ</div>
+          <div class="team-role">AI Marketing Lead</div>
+          <div class="team-desc">Chuyên gia Marketing tự động hóa, tối ưu phễu chuyển đổi bằng AI/ML.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="footer-container">
+      <!-- Info -->
+      <div class="footer-col">
+        <div class="footer-logo-wrap">
+          <img class="footer-logo-img" src="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/refs/heads/main/Biet%20doi%20tinh%20nhue%20am.png" alt="Biệt Đội Tinh Nhuệ">
+          <span class="footer-brand">Biệt Đội Tinh Nhuệ</span>
+        </div>
+        <div class="footer-desc">
+          Giải pháp AI Automation toàn diện giúp doanh nghiệp Việt xây dựng, vận hành & tối ưu hệ thống kinh doanh tự động hóa hoàn toàn. Đồng hành cùng bạn trên hành trình chuyển đổi số!
+        </div>
+        <div class="footer-social">
+          <a href="https://facebook.com/bietdoitinhnhue" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener" aria-label="Messenger"><i class="fab fa-facebook-messenger"></i></a>
+          <a href="mailto:Bietdoitinhnhue@gmail.com" aria-label="Email"><i class="fa fa-envelope"></i></a>
+        </div>
+      </div>
+      <!-- Dịch vụ -->
+      <div class="footer-col">
+        <div class="footer-title">DỊCH VỤ</div>
+        <a class="footer-link" href="#courses">Khoá học AI Automation</a>
+        <a class="footer-link" href="#consult">Tư vấn triển khai</a>
+        <a class="footer-link" href="#team">Đội ngũ chuyên gia</a>
+        <a class="footer-link" href="#">Báo giá dịch vụ</a>
+      </div>
+      <!-- Support -->
+      <div class="footer-col">
+        <div class="footer-title">SUPPORT</div>
+        <a class="footer-link" href="#">Liên hệ & Hỗ trợ</a>
+        <a class="footer-link" href="#">Điều khoản sử dụng</a>
+        <a class="footer-link" href="#">Tài liệu AI Free</a>
+      </div>
+      <!-- Liên hệ + Form -->
+      <div class="footer-col">
+        <div class="footer-title">LIÊN HỆ</div>
+        <ul class="footer-contact-list">
+          <li><i class="fa fa-envelope"></i> <a href="mailto:Bietdoitinhnhue@gmail.com" style="color:#ffe082">Bietdoitinhnhue@gmail.com</a></li>
+          <li><i class="fa fa-phone"></i> <a href="tel:+84968333342" style="color:#ffe082">+84 968 333 342</a></li>
+          <li><i class="fa fa-map-marker-alt"></i> Phường Sài Gòn, TP.HCM</li>
+        </ul>
+        <form class="footer-form" onsubmit="alert('Cảm ơn bạn đã để lại email! Chúng tôi sẽ liên hệ sớm.');return false;">
+          <input type="email" placeholder="Email của bạn..." required>
+          <button type="submit">Gửi</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      &copy; 2025 Biệt Đội Tinh Nhuệ. All rights reserved.
+      <br>Built & Managed by <a href="https://drakenguyen.com" target="_blank" style="color:#ffd54f;text-decoration:none;">Drake Nguyễn</a>
+    </div>
+  </footer>
+</body>
+</html>
