@@ -572,6 +572,144 @@
       .team-row { flex-direction: column;}
       .footer-container {padding: 0 7vw;}
     }
+	.hero-slider {
+  width: 100vw;
+  aspect-ratio: 16/9;
+  max-height: 100vh;
+  overflow: hidden;
+  margin: 0 calc(50% - 50vw);
+  position: relative;
+  border-bottom-left-radius: 22px;
+  border-bottom-right-radius: 22px;
+  box-shadow: 0 4px 32px #0001;
+  background: #0d182b;
+}
+.hero-slide {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  left: 0; top: 0;
+  transition: opacity 0.7s;
+}
+.hero-slide.active {
+  display: block;
+  position: relative;
+  opacity: 1;
+  z-index: 2;
+  animation: fadeIn 1s;
+}
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-bottom-left-radius: 22px;
+  border-bottom-right-radius: 22px;
+  background: #0d182b;
+}
+@keyframes fadeIn {
+  0% { opacity: 0.5;}
+  100% { opacity: 1;}
+}
+/* Dots dưới slide */
+.hero-slider-dots {
+  position: absolute;
+  left: 50%; bottom: 16px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 5;
+}
+.hero-slider-dot {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: #fff9;
+  border: 2px solid #ff9800;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: background 0.18s, opacity 0.18s;
+}
+.hero-slider-dot.active {
+  background: #ff9800;
+  opacity: 1;
+}
+@media (max-width: 900px) {
+  .hero-slider { aspect-ratio: 16/9; max-height: 180px; min-height: 100px;}
+}
+@media (max-width: 600px) {
+  .hero-slider { aspect-ratio: 16/9; max-height: 120px; min-height: 60px;}
+}
+.hero-slider {
+  width: 100vw;
+  max-width: 100%;
+  height: 530px; /* hoặc 38vw, hoặc cao 1920x1080 nếu responsive */
+  min-height: 220px;
+  position: relative;
+  margin: 0 calc(50% - 50vw);
+  overflow: hidden;
+  /* Nếu cần bo góc, shadow thì thêm ở đây */
+}
+
+@media (max-width: 900px) {
+  .hero-slider { height: 32vw; min-height: 120px; }
+}
+@media (max-width: 600px) {
+  .hero-slider { height: 28vw; min-height: 70px; }
+}
+
+.hero-text-section {
+  text-align: center;
+  padding: 52px 16px 42px 16px;
+  background: #f1f5f9;
+  max-width: 1120px;
+  margin: 0 auto 38px auto;
+  border-radius: 22px;
+  box-shadow: 0 6px 36px #fbbf2480;
+  position: relative;
+  top: 0; /* không để âm hoặc dương nếu không muốn dính vào slide */
+  z-index: 2;
+}
+
+.hero-text-section h1 {
+  color: #ff9800;
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.13;
+}
+
+.hero-desc {
+  color: #444;
+  font-size: 1.18rem;
+  margin-bottom: 28px;
+  font-weight: 400;
+}
+
+.hero-text-section .btn-consult {
+  padding: 16px 40px;
+  border-radius: 13px;
+  font-size: 1.11rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+  background: linear-gradient(93deg,#ff9800 65%,#ffd54f 100%);
+  color: #fff;
+  box-shadow: 0 3px 18px #ff980032;
+  border: none;
+  outline: none;
+  transition: background 0.15s, transform 0.11s;
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.hero-text-section .btn-consult:hover {
+  background: linear-gradient(90deg,#f57c00 80%,#ffb300 100%);
+  transform: scale(1.04);
+}
+
   </style>
   <!-- FontAwesome for social icons (CDN) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
@@ -581,6 +719,7 @@
   <header>
     <div class="header-flex">
       <a href="#" class="logo">
+        <!-- LOGO HEADER - THAY LINK Ở ĐÂY -->
         <img src="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/refs/heads/main/Biet%20doi%20tinh%20nhue.png" alt="Biệt Đội Tinh Nhuệ">
       </a>
       <ul class="main-menu">
@@ -593,18 +732,35 @@
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="container">
-      <h1>BIỆT ĐỘI TINH NHUỆ<br>GIẢI PHÁP AI & AUTOMATION HÀNG ĐẦU</h1>
-      <div class="slogan">
-        Tối ưu vận hành, tăng trưởng đột phá, vượt qua mọi thử thách với công nghệ AI tự động hóa.<br>
-        Đội ngũ chuyên gia đồng hành cùng doanh nghiệp Việt chinh phục kỷ nguyên số.
-      </div>
-      <a href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener" class="cta-btn">NHẬN TƯ VẤN MIỄN PHÍ</a>
-      <img class="hero-img" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=cover&w=800&q=80" alt="Biệt Đội Tinh Nhuệ - AI Automation" loading="lazy">
-    </div>
-  </section>
+ <!-- HERO SLIDER BANNER -->
+<div class="hero-slider">
+  <div class="hero-slide active">
+    <img src="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/refs/heads/main/Biet-doi-tinh-nhue.png" alt="Banner 1">
+  </div>
+  <div class="hero-slide">
+    <img src="https://cdn.shopify.com/s/files/1/0090/9236/6436/files/RECOMMENDED_SHOPIFY_BANNER_SIZE_FOR_DESKTOP_1024x1024.png" alt="Banner 2">
+  </div>
+  <div class="hero-slide">
+    <img src="https://www.maytinhninhbinh.com/wp-content/uploads/2023/11/banner-1280x500-1.jpg" alt="Banner 3">
+  </div>
+  <div class="hero-slide">
+    <img src="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/refs/heads/main/Biet-doi-tinh-nhue-4.png" alt="Banner 4">
+  </div>
+  <div class="hero-slide">
+    <img src="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/refs/heads/main/Biet-doi-tinh-nhue-5.png" alt="Banner 5">
+  </div>
+  <div class="hero-slider-dots"></div>
+</div>
+
+  <!-- HERO TEXT + CTA -->
+ <section class="hero-text-section">
+  <h1>BIỆT ĐỘI TINH NHUỆ<br>GIẢI PHÁP AI & AUTOMATION HÀNG ĐẦU</h1>
+  <div class="hero-desc">
+    Tối ưu vận hành, tăng trưởng đột phá, vượt qua mọi thử thách với công nghệ AI tự động hóa.<br>
+    Đội ngũ chuyên gia đồng hành cùng doanh nghiệp Việt chinh phục kỷ nguyên số.
+  </div>
+  <a href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener" class="btn-consult">NHẬN TƯ VẤN MIỄN PHÍ</a>
+</section>
 
   <!-- KHOÁ HỌC SECTION -->
   <section class="courses-section" id="courses">
@@ -670,6 +826,7 @@
       </div>
     </div>
   </section>
+
   <!-- ĐỘI NGŨ TINH NHUỆ -->
   <section class="team-section" id="team">
     <div class="container">
@@ -709,6 +866,7 @@
       <!-- Info -->
       <div class="footer-col">
         <div class="footer-logo-wrap">
+          <!-- FOOTER LOGO - THAY LINK Ở ĐÂY -->
           <img class="footer-logo-img" src="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/refs/heads/main/Biet%20doi%20tinh%20nhue%20am.png" alt="Biệt Đội Tinh Nhuệ">
           <span class="footer-brand">Biệt Đội Tinh Nhuệ</span>
         </div>
@@ -752,8 +910,39 @@
     </div>
     <div class="footer-copyright">
       &copy; 2025 Biệt Đội Tinh Nhuệ. All rights reserved.
-      <br>Built & Managed by <a href="https://drakenguyen.com" target="_blank" style="color:#ffd54f;text-decoration:none;">Drake Nguyễn</a>
+      <br>Built & Managed by <a href="https://drakenguyen.me" target="_blank" style="color:#ffd54f;text-decoration:none;">Drake Nguyễn</a>
     </div>
   </footer>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const slides = document.querySelectorAll('.hero-slide');
+  const dotsWrap = document.querySelector('.hero-slider-dots');
+  let current = 0, timer;
+  // Tạo dots
+  slides.forEach((_, i) => {
+    let dot = document.createElement('span');
+    dot.className = 'hero-slider-dot' + (i === 0 ? ' active' : '');
+    dot.onclick = () => showSlide(i, true);
+    dotsWrap.appendChild(dot);
+  });
+  const dots = document.querySelectorAll('.hero-slider-dot');
+  // Hiện slide
+  function showSlide(i, manual) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = i;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+    if (manual) { clearInterval(timer); autoSlide(); }
+  }
+  // Auto slide 5s
+  function autoSlide() {
+    timer = setInterval(() => {
+      showSlide((current + 1) % slides.length);
+    }, 5000);
+  }
+  autoSlide();
+});
+</script>
 </body>
 </html>
