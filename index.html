@@ -325,58 +325,57 @@
       margin-bottom: 5px;
     }
     /* TƯ VẤN */
-     .consult-section {
-  background: #fff;
-  padding: 66px 0 64px 0;
-  min-height: 440px;
-}
-.consult-section .container {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-}
-.consult-section h2 {
-  font-family: 'Roboto', Arial, sans-serif;
-  text-align: center;
-  color: #ff9800;
-  font-weight: 900;
-  font-size: 2.15rem;
-  margin-bottom: 35px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
+   .consult-section {
+      background: #fff;
+      padding: 66px 0 64px 0;
+      min-height: 440px;
+    }
+    .consult-section h2 {
+      font-family: 'Roboto', Arial, sans-serif;
+      text-align: center;
+      color: #ff9800;
+      font-weight: 900;
+      font-size: 2.15rem;
+      margin-bottom: 35px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 .consult-row {
   display: flex;
-  gap: 38px;
+  gap: 46px;
   justify-content: center;
   align-items: stretch;
-  flex-wrap: nowrap; /* KHÔNG cho xuống hàng trên desktop */
+  flex-wrap: wrap;
 }
+
 .consult-card {
-  background: #fff8e1;
+  background: var(--soft-yellow, #fff8e1);
   border-radius: 20px;
   box-shadow: 0 3px 24px #ff980014;
-  max-width: 370px;
-  min-width: 0;  /* Cho phép co lại khi cần */
+  max-width: 410px;
+  min-width: 320px;
   min-height: 470px;
-  flex: 1 1 0;
+  flex: 1 1 360px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: left;
   padding: 38px 30px 32px 30px;
   margin-bottom: 10px;
+  /* Đảm bảo các card cùng chiều cao */
   justify-content: flex-start;
 }
+
 .consult-header {
   width: 100%;
   text-align: center;
   margin-bottom: 14px;
-  min-height: 88px;
+  min-height: 88px; /* hoặc tuỳ thực tế chiều cao title, sub, giá */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
+
 .consult-card h3 {
   color: #fb7185;
   font-weight: 900;
@@ -387,6 +386,7 @@
   font-family: 'Roboto', Arial, sans-serif;
   letter-spacing: 0.5px;
 }
+
 .consult-card .price {
   color: #ff9800;
   font-size: 1.12rem;
@@ -395,6 +395,7 @@
   text-transform: uppercase;
   text-align: center;
 }
+
 .consult-card .sub {
   color: #555;
   font-size: 0.99rem;
@@ -403,6 +404,7 @@
   text-align: center;
   font-weight: 700;
 }
+
 .consult-card ul {
   padding-left: 22px;
   margin-bottom: 12px;
@@ -417,6 +419,7 @@
   list-style-position: outside;
   font-size: 1.05rem;
 }
+
 .consult-benefit {
   font-size:1.03rem;
   color:#fb7185;
@@ -424,6 +427,7 @@
   margin-top:-5px;
   text-align:left;
 }
+
 .consult-footer {
   width: 100%;
   margin-top: auto;
@@ -453,29 +457,6 @@
   background: linear-gradient(90deg,#f57c00 80%,#ffb300 100%);
   transform: scale(1.04);
   color: #fff;
-}
-/* RESPONSIVE: 2 cột khi nhỏ hơn 1100px, 1 cột khi mobile */
-@media (max-width: 1100px) {
-  .consult-row {
-    flex-wrap: wrap;
-    gap: 28px;
-  }
-  .consult-card {
-    min-width: 320px;
-    max-width: 100%;
-    flex: 1 1 420px;
-  }
-}
-@media (max-width: 850px) {
-  .consult-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 22px;
-  }
-  .consult-card {
-    max-width: 97vw;
-    min-width: unset;
-  }
 }
     /* FOOTER STYLE */
     .footer {
