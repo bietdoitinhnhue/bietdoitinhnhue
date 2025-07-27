@@ -26,7 +26,7 @@
   <!-- Roboto font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
   <style>
-    :root {
+   :root {
   --yellow: #ffb300;
   --orange: #ff9800;
   --white: #fff;
@@ -46,9 +46,8 @@ body {
   font-family: 'Roboto', Arial, sans-serif;
   color: var(--secondary);
   min-height: 100vh;
-  font-size: 16px;
+  font-size: 17px;
 }
-
 /* HEADER */
 header {
   background: #fff;
@@ -68,7 +67,8 @@ header {
   flex-wrap: wrap;
 }
 .logo img {
-  width: 56px; height: 56px;
+  width: 56px;
+  height: 56px;
   border-radius: 12px;
   display: block;
 }
@@ -82,6 +82,9 @@ header {
   flex: 1;
   justify-content: center;
   flex-wrap: wrap;
+}
+.main-menu li {
+  margin: 0 4px;
 }
 .main-menu li a {
   text-decoration: none;
@@ -121,20 +124,16 @@ header {
   display: inline-block;
   text-transform: uppercase;
   text-align: center;
-}
-.btn-consult:hover {
-  background: linear-gradient(90deg,#f57c00 80%,#ffb300 100%);
-  transform: scale(1.04);
-  color: #fff;
+  margin-top: 10px;
 }
 
 /* HERO SLIDER */
 .hero-slider {
   width: 100vw;
   max-width: 100%;
-  height: 530px;
-  min-height: 220px;
-  aspect-ratio: 16/9;
+  height: 36vw;
+  min-height: 160px;
+  max-height: 350px;
   position: relative;
   margin: 0 calc(50% - 50vw);
   overflow: hidden;
@@ -167,7 +166,10 @@ header {
   border-bottom-right-radius: 22px;
   background: #0d182b;
 }
-@keyframes fadeIn { 0% { opacity: 0.5;} 100% { opacity: 1; } }
+@keyframes fadeIn {
+  0% { opacity: 0.5;}
+  100% { opacity: 1;}
+}
 .hero-slider-dots {
   position: absolute;
   left: 50%; bottom: 16px;
@@ -190,279 +192,198 @@ header {
   opacity: 1;
 }
 
-/* HERO TEXT + CTA */
+/* HERO TEXT */
 .hero-text-section {
   text-align: center;
-  padding: 52px 16px 42px 16px;
+  padding: 44px 10px 36px 10px;
   background: #f1f5f9;
   max-width: 1120px;
-  margin: 0 auto 38px auto;
+  margin: 0 auto 34px auto;
   border-radius: 22px;
   box-shadow: 0 6px 36px #fbbf2480;
   position: relative;
-  top: 0;
   z-index: 2;
 }
 .hero-text-section h1 {
   color: #ff9800;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 900;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   text-transform: uppercase;
   letter-spacing: 1px;
   line-height: 1.13;
 }
 .hero-desc {
   color: #444;
-  font-size: 1.18rem;
-  margin-bottom: 28px;
+  font-size: 1.08rem;
+  margin-bottom: 22px;
   font-weight: 400;
 }
 .hero-text-section .btn-consult {
-  padding: 16px 40px;
+  padding: 13px 33px;
   border-radius: 13px;
-  font-size: 1.11rem;
+  font-size: 1.06rem;
   font-weight: 900;
   margin-bottom: 8px;
-  background: linear-gradient(93deg,#ff9800 65%,#ffd54f 100%);
-  color: #fff;
-  box-shadow: 0 3px 18px #ff980032;
-  border: none;
-  outline: none;
-  transition: background 0.15s, transform 0.11s;
-  display: inline-block;
-  text-transform: uppercase;
-  text-align: center;
-}
-.hero-text-section .btn-consult:hover {
-  background: linear-gradient(90deg,#f57c00 80%,#ffb300 100%);
-  transform: scale(1.04);
 }
 
-/* COURSES SECTION */
-.courses-section { background: var(--soft-yellow); padding: 68px 0 62px 0; min-height: 470px;}
-.courses-section .container { max-width: 1160px; margin: 0 auto; }
-.courses-section h2 {
-  font-family: 'Roboto', Arial, sans-serif;
-  text-align: center;
-  color: #ff9800;
-  font-weight: 900;
-  font-size: 2.15rem;
-  margin-bottom: 36px;
-  text-transform: uppercase;
+/* SECTION SPACING */
+section {
+  margin-bottom: 38px;
 }
-.courses-row {
-  display: flex;
-  gap: 46px;
-  justify-content: center;
-  align-items: stretch;
-  width: 100%;
-  max-width: 1160px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-}
-.course-card {
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 4px 24px #ff980014;
-  padding: 38px 28px 30px 28px;
-  max-width: 370px;
-  min-width: 260px;
-  min-height: 270px;
-  flex: 1 1 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 10px;
-  justify-content: center;
-  text-align: center;
-}
-.course-card h3 { color: #f57c00; font-weight: 900; font-size: 1.14rem; margin-bottom: 13px; text-transform: uppercase;}
-.course-card h4 {font-size:1.05em;margin:8px 0 0 0;color:#222;}
-.course-card ul {
-  padding-left: 22px;
-  margin-bottom: 12px;
-  align-self: stretch;
-  text-align:left;
-}
-.course-card ul li { margin-bottom:8px; line-height:1.6;}
-.course-card .btn-course {
-  margin-top: auto;
-  background: linear-gradient(93deg,#ff9800 65%,#ffd54f 100%);
-  color: #fff;
-  border: none;
-  border-radius: 999px;
-  padding: 13px 33px;
-  font-family: 'Roboto', Arial, sans-serif;
-  font-weight: 900;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  text-decoration: none;
-  box-shadow: 0 2px 14px #ff980055;
-  transition: background 0.15s, transform 0.11s;
-  display: inline-block;
-  text-transform: uppercase;
-  text-align: center;
-}
-.course-card .btn-course:hover {
-  background: linear-gradient(90deg,#f57c00 80%,#ffb300 100%);
-  transform: scale(1.04);
-  color: #fff;
+.courses-section,
+.consult-section,
+.team-section {
+  padding: 36px 0 32px 0;
 }
 
-/* ĐỘI NGŨ TINH NHUỆ */
-.team-section { background: #fff; padding: 64px 0 64px 0; }
-.team-section .container { max-width: 1160px; margin: 0 auto; }
-.team-section h2 {
-  font-family: 'Roboto', Arial, sans-serif;
-  text-align: center;
-  color: #ff9800;
-  font-weight: 900;
-  font-size: 2.15rem;
-  margin-bottom: 34px;
-  text-transform: uppercase;
-}
-.team-row {
+/* COURSES, CONSULT, TEAM SECTION */
+.courses-row, .consult-row, .team-row {
   display: flex;
   gap: 28px;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
+  flex-wrap: wrap;
 }
-.team-card {
-  background: var(--soft-yellow);
-  border-radius: 18px;
-  box-shadow: 0 2px 18px #ffd54f22;
-  max-width: 260px;
+.course-card, .consult-card, .team-card {
+  border-radius: 20px;
+  box-shadow: 0 3px 24px #ff980014;
+  background: #fff;
+  padding: 24px 14px 22px 14px;
+  max-width: 370px;
   min-width: 220px;
-  flex: 1 1 190px;
+  flex: 1 1 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 36px 18px 26px 18px;
-  margin-bottom: 10px;
   text-align: center;
+  margin-bottom: 0;
 }
+.consult-card { background: var(--soft-yellow, #fff8e1);}
+.team-card { background: var(--soft-yellow);}
 .team-avatar {
-  width: 78px; height: 78px;
+  width: 70px; height: 70px;
   border-radius: 50%;
-  margin-bottom: 17px;
+  margin-bottom: 12px;
   border: 3px solid #ffb30055;
   object-fit: cover;
   box-shadow: 0 3px 12px #ffd54f33;
 }
-.team-name { font-size: 1.18rem; font-weight: 700; margin-bottom: 6px; color: #222;}
-.team-role { color: #fb7185; font-size: 1.02rem; font-weight: 500; margin-bottom: 7px;}
-.team-desc { color: #444; font-size: 0.98rem; font-weight: 400; margin-bottom: 5px;}
-
-/* CONSULT */
-.consult-section { background: #fff; padding: 66px 0 64px 0; min-height: 440px;}
+.team-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #222;
+}
+.team-role {
+  color: #fb7185;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+.team-desc {
+  color: #444;
+  font-size: 0.97rem;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.team-section h2,
+.courses-section h2,
 .consult-section h2 {
-  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 1.45rem;
+  font-weight: 900;
   text-align: center;
   color: #ff9800;
-  font-weight: 900;
-  font-size: 2.15rem;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  padding-top: 12px;
 }
-.consult-row {
-  display: flex;
-  flex-direction: row !important;
-  justify-content: center;
-  align-items: stretch;
-  gap: 38px;
-  flex-wrap: nowrap !important;
+.consult-header h3, .consult-card h3 {
+  font-size: 1.15rem;
+  color: #fb7185;
+  font-weight: 900;
+  margin-bottom: 3px;
 }
-.consult-card {
-  background: var(--soft-yellow, #fff8e1);
-  border-radius: 20px;
-  box-shadow: 0 3px 24px #ff980014;
-  max-width: 370px;
-  min-width: 320px;
-  min-height: 470px;
-  flex: 1 1 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.consult-card .price {
+  color: #ff9800;
+  font-size: 1.08rem;
+  font-weight: 900;
+}
+.consult-card .sub {
+  color: #555;
+  font-size: 0.97rem;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+/* UL LISTS */
+ul {
+  padding-left: 22px;
+  margin-bottom: 10px;
+}
+li {
   text-align: left;
-  padding: 38px 30px 32px 30px;
-  margin-bottom: 0;
-  justify-content: flex-start;
-}
-.consult-header { width: 100%; text-align: center; margin-bottom: 14px; min-height: 88px; display: flex; flex-direction: column; justify-content: flex-end;}
-.consult-card h3 { color: #fb7185; font-weight: 900; font-size: 1.28rem; margin-bottom: 3px; text-transform: uppercase; text-align: center; letter-spacing: 0.5px;}
-.consult-card .price { color: #ff9800; font-size: 1.12rem; font-weight: 900; margin-bottom: 3px; text-transform: uppercase; text-align: center;}
-.consult-card .sub { color: #555; font-size: 0.99rem; margin-bottom: 5px; text-transform: uppercase; text-align: center; font-weight: 700;}
-.consult-card ul { padding-left: 22px; margin-bottom: 12px; align-self: stretch;}
-.consult-card ul li { text-align: left; margin-bottom: 8px; line-height: 1.6; text-indent: 0; padding-left: 0; list-style-position: outside; font-size: 1.05rem;}
-.consult-benefit { font-size:1.03rem; color:#fb7185; margin-bottom:16px; margin-top:-5px; text-align:left;}
-.consult-footer { width: 100%; margin-top: auto; display: flex; justify-content: center;}
-.consult-card .btn-course { padding: 13px 33px; border-radius: 999px; font-family: 'Roboto', Arial, sans-serif; font-weight: 900; font-size: 1rem; letter-spacing: 0.5px; cursor: pointer; text-decoration: none; box-shadow: 0 2px 14px #ff980055; transition: background 0.15s, transform 0.11s; display: inline-block; text-transform: uppercase; text-align: center; background: linear-gradient(93deg,#ff9800 65%,#ffd54f 100%); color: #fff; border: none; margin-top: 10px;}
-.consult-card .btn-course:hover { background: linear-gradient(90deg,#f57c00 80%,#ffb300 100%); transform: scale(1.04); color: #fff;}
-
-/* FOOTER STYLE */
-.footer { background: var(--dark); color: #fff; padding: 60px 0 24px 0; margin-top: 48px; font-family: 'Roboto', Arial, sans-serif; letter-spacing: 0.03em;}
-.footer-container { max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 50px 18px; padding: 0 28px;}
-.footer-col { flex: 1 1 240px; min-width: 220px; max-width: 330px; margin-bottom: 20px;}
-.footer-logo-wrap { display: flex; align-items: center; gap: 12px; margin-bottom: 15px;}
-.footer-logo-img { width: 48px; height: 48px; border-radius: 10px; display: inline-block;}
-.footer-brand { font-size: 1.24rem; font-weight: 900; color: var(--orange); line-height: 1.1; letter-spacing: 0.03em;}
-.footer-desc { color: #e0e2eb; font-size: 1.08rem; margin-bottom: 18px; line-height: 1.55;}
-.footer-social { display: flex; gap: 22px; margin-top: 12px; margin-bottom: 8px;}
-.footer-social a { color: #fff; font-size: 1.32rem; transition: color 0.13s; display: inline-block;}
-.footer-social a:hover { color: var(--yellow);}
-.footer-title { font-weight: 900; font-size: 1.13rem; margin-bottom: 13px; letter-spacing: 0.04em; color: var(--white); text-transform: uppercase; border-bottom: 2px solid #444452; padding-bottom: 3px;}
-.footer-link, .footer-link:visited { display: block; color: #fffde7; font-size: 1.06rem; margin-bottom: 9px; text-decoration: none; transition: color 0.13s;}
-.footer-link:hover { color: var(--orange);}
-.footer-contact-list { list-style: none; padding: 0; margin: 0 0 8px 0; color: #fffde7; font-size: 1.09rem; line-height: 1.6;}
-.footer-contact-list li { margin-bottom: 3px; word-break: break-word;}
-.footer-form { display: flex; gap: 0; margin-top: 14px;}
-.footer-form input[type="email"] { flex: 1; padding: 12px 16px; border: none; border-radius: 8px 0 0 8px; outline: none; font-size: 1rem; font-family: 'Roboto', Arial, sans-serif; background: #232836; color: #fff; transition: box-shadow 0.12s; box-shadow: 0 2px 9px #23283644;}
-.footer-form button { background: linear-gradient(93deg,#ff9800 65%,#ffd54f 100%); color: #fff; font-weight: 700; border: none; padding: 12px 30px; border-radius: 0 8px 8px 0; font-size: 1rem; cursor: pointer; font-family: 'Roboto', Arial, sans-serif; transition: background 0.13s;}
-.footer-form button:hover { background: linear-gradient(90deg,#f57c00 80%,#ffb300 100%);}
-.footer-copyright { text-align: center; color: #c7cbe6; margin-top: 34px; font-size: 1.04rem; padding-top: 18px; border-top: 1px solid #283042; font-family: 'Roboto', Arial, sans-serif;}
-
-@media (max-width: 1200px) {
-  .header-flex, .courses-section .container, .team-section .container, .footer-container {
-    max-width: 97vw;
-    padding: 0 10px;
-  }
-  .hero-text-section { max-width: 98vw; }
+  margin-bottom: 7px;
+  line-height: 1.55;
+  font-size: 1rem;
+  word-break: break-word;
 }
 
-@media (max-width: 1000px) {
-  .hero-slider { height: 320px; min-height: 140px; }
-  .courses-row, .team-row, .consult-row { flex-wrap: wrap !important; gap: 16px;}
-  .course-card, .team-card, .consult-card { min-width: 300px; max-width: 96vw;}
-  .consult-row { flex-direction: column !important; align-items: center;}
-  .consult-card { min-width: 92vw; }
+/* FOOTER */
+.footer {
+  background: var(--dark);
+  color: #fff;
+  padding: 40px 0 20px 0;
+  margin-top: 32px;
 }
+.footer-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px 12px;
+  padding: 0 14px;
+}
+.footer-col {
+  flex: 1 1 180px;
+  min-width: 130px;
+  max-width: 260px;
+  margin-bottom: 10px;
+}
+.footer-logo-img { width: 40px; height: 40px;}
+.footer-brand { font-size: 1.08rem;}
+.footer-desc { font-size: 0.98rem;}
+.footer-title { font-size: 1.04rem; margin-bottom: 10px;}
+.footer-link, .footer-link:visited { font-size: 1.01rem;}
+.footer-contact-list { font-size: 0.98rem;}
+.footer-copyright { font-size: 0.96rem;}
 
-@media (max-width: 700px) {
-  body { font-size: 15px;}
+/* --- RESPONSIVE --- */
+@media (max-width: 1050px) {
   .header-flex { flex-direction: column; gap: 10px; align-items: stretch; min-height: unset;}
-  .main-menu { flex-wrap: wrap; gap: 12px;}
-  .btn-consult { width: 100%; padding: 13px 0;}
-  .hero-text-section { padding: 28px 4vw 20px 4vw; font-size:1rem;}
-  .hero-text-section h1 { font-size: 1.45rem; }
-  .hero-desc { font-size:1rem;}
-  .courses-section { padding: 28px 0 18px 0;}
-  .courses-row { gap: 12px; }
-  .course-card, .team-card, .consult-card { min-width: 92vw; max-width: 99vw; padding: 18px 8px;}
-  .team-row { flex-direction: column;}
-  .footer-container { flex-direction: column; align-items: flex-start; gap: 18px; padding: 0 4vw;}
+  .main-menu { flex-wrap: wrap; gap: 16px;}
+  .btn-consult { width: 100%; }
+  .container { width: 99%;}
+  .footer-container { flex-direction: column; gap: 18px;}
   .footer-col {max-width: 100%; min-width: unset;}
-  .footer-logo-img { width: 36px; height: 36px;}
+}
+@media (max-width: 850px) {
+  .courses-row, .consult-row, .team-row { flex-direction: column; gap: 14px;}
+  .course-card, .consult-card, .team-card { min-width: 90vw; max-width: 98vw; margin: 0 auto;}
+}
+@media (max-width: 600px) {
+  .hero-slider { height: 28vw; min-height: 90px; }
+  .hero-text-section { padding: 24px 4px 18px 4px;}
+  .hero-text-section h1 { font-size: 1.22rem; }
+  .team-section h2, .courses-section h2, .consult-section h2 { font-size: 1.15rem; padding-top: 5px;}
+  .footer-container {padding: 0 4vw;}
+  .footer { padding: 26px 0 10px 0;}
+  section { margin-bottom: 20px;}
 }
 
-@media (max-width: 500px) {
-  .hero-slider { height: 160px; min-height: 60px;}
-  .hero-text-section { border-radius: 12px; box-shadow: none; }
-  .footer-container, .team-section .container, .courses-section .container { padding: 0 2vw;}
-}
   </style>
   <!-- FontAwesome for social icons (CDN) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
