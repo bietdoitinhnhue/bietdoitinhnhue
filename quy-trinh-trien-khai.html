@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Quy Trình Triển Khai</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 280px;
+            max-height: 300px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 300px;
+                max-height: 350px;
+            }
+        }
+        .flow-step {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .flow-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <h1 class="text-2xl md:text-3xl font-bold text-center uppercase" style="color: #003f5c;">QUY TRÌNH TRIỂN KHAI</h1>
+            <p class="text-center text-gray-600 mt-2">Từ ý tưởng đến vận hành hiệu quả - một hành trình rõ ràng và minh bạch.</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <section id="process-flow" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-4 uppercase" style="color: #374c80;">Sơ Đồ Quy Trình</h2>
+            <p class="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-12">Chúng tôi tin vào một quy trình có cấu trúc để đảm bảo chất lượng và thành công. Mỗi bước đều được thiết kế để tối đa hóa giá trị và giảm thiểu rủi ro cho dự án của bạn.</p>
+
+            <div class="flex flex-col items-center w-full">
+
+                <!-- Step 1 -->
+                <div class="flow-step w-full max-w-4xl bg-white p-6 rounded-xl shadow-lg border-l-8" style="border-color: #003f5c;">
+                    <div class="flex flex-col md:flex-row md:items-center md:space-x-8">
+                        <div class="flex-shrink-0 mb-4 md:mb-0 text-center md:w-1/4">
+                            <span class="text-5xl md:text-6xl font-bold" style="color: #003f5c;">1</span>
+                            <h3 class="text-2xl font-bold mt-2 uppercase" style="color: #003f5c;">Khảo Sát & Kế Hoạch</h3>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="text-lg font-semibold mb-3">🔍 Nền tảng của thành công</p>
+                            <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700">
+                                <li>Tìm hiểu sản phẩm, khách hàng & mục tiêu kinh doanh.</li>
+                                <li>Phân tích các kênh & công cụ đang sử dụng.</li>
+                                <li>Xây dựng kế hoạch hành động chi tiết, rõ ràng.</li>
+                            </ul>
+                            <p class="mt-4 font-bold text-right" style="color: #003f5c;">Kết quả: Bản kế hoạch hành động rõ ràng.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-4xl text-gray-400 my-4">⬇️</div>
+
+                <!-- Step 2 -->
+                <div class="flow-step w-full max-w-4xl bg-white p-6 rounded-xl shadow-lg border-l-8" style="border-color: #7a5195;">
+                    <div class="flex flex-col md:flex-row md:items-center md:space-x-8">
+                        <div class="flex-shrink-0 mb-4 md:mb-0 text-center md:w-1/4">
+                            <span class="text-5xl md:text-6xl font-bold" style="color: #7a5195;">2</span>
+                            <h3 class="text-2xl font-bold mt-2 uppercase" style="color: #7a5195;">Cài Đặt & Xây Dựng</h3>
+                        </div>
+                        <div class="flex-grow md:flex md:items-center md:space-x-6">
+                            <div class="md:w-1/2">
+                                <p class="text-lg font-semibold mb-3">⚙️ Biến kế hoạch thành hiện thực</p>
+                                <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700">
+                                    <li>Thiết kế tài nguyên: Landing Page, QR Code...</li>
+                                    <li>Soạn thảo nội dung: Kịch bản, ZNS, chatbot...</li>
+                                    <li>Cấu hình công cụ & luồng tự động hóa.</li>
+                                </ul>
+                            </div>
+                            <div class="md:w-1/2 mt-4 md:mt-0">
+                                <div class="chart-container">
+                                    <canvas id="buildChart" class="chart-canvas"></canvas>
+                                </div>
+                                <p class="text-center text-sm text-gray-500 mt-2">Phân bổ nguồn lực xây dựng.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-4xl text-gray-400 my-4">⬇️</div>
+
+                <!-- Step 3 -->
+                <div class="flow-step w-full max-w-4xl bg-white p-6 rounded-xl shadow-lg border-l-8" style="border-color: #bc5090;">
+                    <div class="flex flex-col md:flex-row md:items-center md:space-x-8">
+                        <div class="flex-shrink-0 mb-4 md:mb-0 text-center md:w-1/4">
+                            <span class="text-5xl md:text-6xl font-bold" style="color: #bc5090;">3</span>
+                            <h3 class="text-2xl font-bold mt-2 uppercase" style="color: #bc5090;">Kiểm Thử & Tinh Chỉnh</h3>
+                        </div>
+                        <div class="flex-grow md:flex md:items-center md:space-x-6">
+                            <div class="md:w-1/2">
+                                <p class="text-lg font-semibold mb-3">✔️ Đảm bảo chất lượng tuyệt đối</p>
+                                <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700">
+                                    <li>Kiểm tra toàn bộ tính năng, sửa lỗi kỹ thuật.</li>
+                                    <li>Mời khách hàng trải nghiệm thử (UAT).</li>
+                                    <li>Đảm bảo hệ thống ổn định, đúng mong đợi.</li>
+                                </ul>
+                            </div>
+                            <div class="md:w-1/2 mt-4 md:mt-0">
+                                <div class="chart-container">
+                                    <canvas id="testChart" class="chart-canvas"></canvas>
+                                </div>
+                                <p class="text-center text-sm text-gray-500 mt-2">Mức độ ổn định hệ thống.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-4xl text-gray-400 my-4">⬇️</div>
+
+                <!-- Step 4 -->
+                <div class="flow-step w-full max-w-4xl bg-white p-6 rounded-xl shadow-lg border-l-8" style="border-color: #ef5675;">
+                    <div class="flex flex-col md:flex-row md:items-center md:space-x-8">
+                        <div class="flex-shrink-0 mb-4 md:mb-0 text-center md:w-1/4">
+                            <span class="text-5xl md:text-6xl font-bold" style="color: #ef5675;">4</span>
+                            <h3 class="text-2xl font-bold mt-2 uppercase" style="color: #ef5675;">Bàn Giao & Đào Tạo</h3>
+                        </div>
+                        <div class="flex-grow md:flex md:items-center md:space-x-6">
+                            <div class="md:w-1/2">
+                                <p class="text-lg font-semibold mb-3">🎓 Trao quyền cho đội ngũ của bạn</p>
+                                <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700">
+                                    <li>Chính thức kích hoạt (go-live) hệ thống.</li>
+                                    <li>Đào tạo chi tiết cho đội ngũ vận hành.</li>
+                                    <li>Bàn giao tài liệu & tài nguyên liên quan.</li>
+                                </ul>
+                            </div>
+                            <div class="md:w-1/2 mt-4 md:mt-0">
+                                <div class="chart-container">
+                                    <canvas id="trainingChart" class="chart-canvas"></canvas>
+                                </div>
+                                <p class="text-center text-sm text-gray-500 mt-2">Mức độ tự tin của đội ngũ.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-4xl text-gray-400 my-4">⬇️</div>
+
+                <!-- Step 5 -->
+                <div class="flow-step w-full max-w-4xl bg-white p-6 rounded-xl shadow-lg border-l-8" style="border-color: #ff764a;">
+                    <div class="flex flex-col md:flex-row md:items-center md:space-x-8">
+                        <div class="flex-shrink-0 mb-4 md:mb-0 text-center md:w-1/4">
+                            <span class="text-5xl md:text-6xl font-bold" style="color: #ff764a;">5</span>
+                            <h3 class="text-2xl font-bold mt-2 uppercase" style="color: #ff764a;">Đồng Hành & Hỗ Trợ</h3>
+                        </div>
+                        <div class="flex-grow md:flex md:items-center md:space-x-6">
+                            <div class="md:w-1/2">
+                                <p class="text-lg font-semibold mb-3">🤝 Đối tác bền vững</p>
+                                <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700">
+                                    <li>Hỗ trợ kỹ thuật miễn phí trong 30 ngày.</li>
+                                    <li>Khắc phục sự cố liên quan đến tính năng.</li>
+                                    <li>Tư vấn & giải đáp thắc mắc.</li>
+                                </ul>
+                            </div>
+                            <div class="md:w-1/2 text-center mt-4 md:mt-0">
+                                <p class="text-6xl md:text-7xl font-bold" style="color: #ffa600;">30</p>
+                                <p class="text-xl font-semibold text-gray-700">NGÀY HỖ TRỢ KỸ THUẬT MIỄN PHÍ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white mt-20">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-600">
+            <p class="font-bold">Trình bày bởi BIỆT ĐỘI TINH NHUỆ</p>
+            <p class="text-sm mt-2"><a href="https://m.me/Bietdoitinhnhue" target="_blank" class="font-bold" style="color: #003f5c;">LIÊN HỆ VỚI CHÚNG TÔI >>></a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const brilliantBlues = ['#003f5c', '#7a5195', '#ef5675', '#ffa600', '#374c80', '#bc5090', '#ff764a'];
+            
+            function wrapLabel(str, maxWidth) {
+                if (str.length <= maxWidth) return str;
+                const words = str.split(' ');
+                let lines = [];
+                let currentLine = '';
+                for (const word of words) {
+                    if ((currentLine + ' ' + word).trim().length > maxWidth && currentLine.length > 0) {
+                        lines.push(currentLine);
+                        currentLine = word;
+                    } else {
+                        currentLine = (currentLine + ' ' + word).trim();
+                    }
+                }
+                if (currentLine.length > 0) lines.push(currentLine);
+                return lines;
+            }
+
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                return Array.isArray(label) ? label.join(' ') : label;
+            };
+            
+            const commonChartOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                animation: {
+                    duration: 1500,
+                    easing: 'easeInOutQuart'
+                },
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: { family: "'Be Vietnam Pro', sans-serif", size: 12 },
+                            boxWidth: 15,
+                            padding: 20
+                        }
+                    },
+                    tooltip: {
+                        callbacks: { title: tooltipTitleCallback },
+                        bodyFont: { family: "'Be Vietnam Pro', sans-serif" },
+                        titleFont: { family: "'Be Vietnam Pro', sans-serif" }
+                    }
+                }
+            };
+
+            const chartConfigs = {
+                buildChart: {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Thiết kế tài nguyên', 'Soạn thảo nội dung', 'Cấu hình tự động hóa'].map(l => wrapLabel(l, 16)),
+                        datasets: [{
+                            label: 'Phân bổ nguồn lực',
+                            data: [40, 35, 25],
+                            backgroundColor: [brilliantBlues[0], brilliantBlues[1], brilliantBlues[5]],
+                            borderColor: '#fff',
+                            borderWidth: 3
+                        }]
+                    },
+                    options: { ...commonChartOptions }
+                },
+                testChart: {
+                    type: 'line',
+                    data: {
+                        labels: ['Lỗi ban đầu', 'Sau test nội bộ', 'Sau UAT', 'Ổn định'].map(l => wrapLabel(l, 16)),
+                        datasets: [{
+                            label: 'Mức độ ổn định (%)',
+                            data: [75, 92, 98, 99.9],
+                            backgroundColor: 'rgba(188, 80, 144, 0.2)',
+                            borderColor: brilliantBlues[5],
+                            fill: true,
+                            tension: 0.4
+                        }]
+                    },
+                    options: {
+                        ...commonChartOptions,
+                        scales: { y: { beginAtZero: false, max: 100 } },
+                        plugins: { ...commonChartOptions.plugins, legend: { display: false } }
+                    }
+                },
+                trainingChart: {
+                    type: 'radar',
+                    data: {
+                        labels: ['Vận hành', 'Quản lý nội dung', 'Hiểu tự động hóa', 'Xử lý sự cố', 'Phân tích'].map(label => wrapLabel(label, 16)),
+                        datasets: [{
+                            label: 'Trước Đào Tạo',
+                            data: [3, 4, 2, 2, 3],
+                            backgroundColor: 'rgba(239, 86, 117, 0.2)',
+                            borderColor: brilliantBlues[2],
+                            pointBackgroundColor: brilliantBlues[2],
+                        }, {
+                            label: 'Sau Đào Tạo',
+                            data: [9, 8, 9, 7, 8],
+                            backgroundColor: 'rgba(0, 63, 92, 0.2)',
+                            borderColor: brilliantBlues[0],
+                            pointBackgroundColor: brilliantBlues[0],
+                        }]
+                    },
+                    options: {
+                        ...commonChartOptions,
+                        scales: {
+                            r: {
+                                angleLines: { display: false },
+                                suggestedMin: 0,
+                                suggestedMax: 10,
+                                ticks: { stepSize: 2 }
+                            }
+                        }
+                    }
+                }
+            };
+
+            const chartObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const canvas = entry.target;
+                        const chartId = canvas.id;
+                        if (chartConfigs[chartId] && !canvas.dataset.animated) {
+                            new Chart(canvas.getContext('2d'), chartConfigs[chartId]);
+                            canvas.dataset.animated = "true";
+                            observer.unobserve(canvas);
+                        }
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5
+            });
+
+            document.querySelectorAll('.chart-canvas').forEach(canvas => {
+                chartObserver.observe(canvas);
+            });
+        });
+    </script>
+</body>
+</html>
