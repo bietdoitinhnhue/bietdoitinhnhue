@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- SEO Meta Tags -->
+  <title>OmniFlow Solutions – Tự Động Hóa Marketing, Thoát Phụ Thuộc Sàn</title>
+  <meta name="description" content="OmniFlow Solutions giúp doanh nghiệp thoát phụ thuộc sàn TMĐT, sở hữu tệp khách hàng, và tối đa hóa LTV qua các kịch bản tự động hóa marketing trên Zalo & Facebook.">
+  <meta name="keywords" content="tự động hóa marketing, marketing automation, omniflow, biệt đội tinh nhuệ, thoát sàn, kinh doanh online, zalo marketing, facebook marketing, chatbot, crm, lifetime value, ltv, aov, remarketing, upsale, cross-sell, giữ chân khách hàng, chăm sóc khách hàng tự động, kinh doanh TMĐT, shopee, tiktok shop, lazada">
+  <!-- <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE" /> -->
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://omniflow.solutions/">
+  <meta property="og:title" content="OmniFlow Solutions – Tự Động Hóa Marketing, Thoát Phụ Thuộc Sàn">
+  <meta property="og:description" content="Sở hữu tệp khách hàng, chăm sóc tự động, tăng AOV & LTV bền vững. Không còn phụ thuộc 80–100% vào Shopee/TikTok Shop/Lazada.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/bietdoitinhnhue/tramtaichinh/main/omniflow-thumbnail.png">
+  <meta property="og:site_name" content="OmniFlow Solutions">
+  <!-- <meta property="fb:app_id" content="YOUR_FACEBOOK_APP_ID" /> -->
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://omniflow.solutions/">
+  <meta property="twitter:title" content="OmniFlow Solutions – Tự Động Hóa Marketing, Thoát Phụ Thuộc Sàn">
+  <meta property="twitter:description" content="Sở hữu tệp khách hàng, chăm sóc tự động, tăng AOV & LTV bền vững. Không còn phụ thuộc 80–100% vào Shopee/TikTok Shop/Lazada.">
+  <meta property="twitter:image" content="https://raw.githubusercontent.com/bietdoitinhnhue/tramtaichinh/main/omniflow-thumbnail.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/bietdoitinhnhue/tramtaichinh/main/omniflow-favicon.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+    .container { max-width: 1200px; }
+  </style>
+
+  <!-- FAQ Schema for Google AI Overview -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Chi phí trên đã bao gồm ngân sách quảng cáo chưa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Chưa. Phí setup/vận hành là cho cấu hình hệ thống, nội dung, và báo cáo. Ngân sách ads (Meta, Zalo, Google), phí ZNS, SMS… do nền tảng/nhà mạng thu và sẽ được tách riêng."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Nếu đã có Pancake/CRM rồi thì có giảm phí không?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Có. Chúng tôi tái sử dụng hạ tầng sẵn có, chỉ tính phần tích hợp và tối ưu bổ sung."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Dữ liệu khách hàng được lưu ở đâu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dữ liệu được lưu ở CRM đã chọn (ví dụ: Pancake CRM) và các nền tảng chính chủ (OA/FB). Bạn luôn là chủ sở hữu dữ liệu."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Thời gian triển khai có thể nhanh hơn không?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Có thể đẩy nhanh nếu hạ tầng đã sẵn sàng (OA xác minh, domain, form, tài nguyên nội dung…). Thường rút ngắn 20–30%."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-white text-neutral-900">
+  <!-- Header -->
+  <header class="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-neutral-200">
+    <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="font-extrabold tracking-tight text-lg">OmniFlow <span class="font-medium">Solutions</span></div>
+      <div class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#hook" class="hover:underline underline-offset-4">Vấn đề</a>
+        <a href="#flow" class="hover:underline underline-offset-4">Quy trình</a>
+        <a href="#packages" class="hover:underline underline-offset-4">Gói dịch vụ</a>
+        <a href="#contact" class="hover:underline underline-offset-4">Liên hệ</a>
+      </div>
+      <a href="#contact" class="inline-flex items-center px-4 py-2 rounded-lg border border-neutral-300 text-sm font-semibold">Nhận tư vấn</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="container mx-auto px-4 py-14 text-center">
+    <div class="inline-flex items-center px-3 py-1 rounded-full border text-xs font-medium">OmniFlow: Care → Convert → LTV · Thoát phụ thuộc sàn</div>
+    <h1 class="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight">XÂY KÊNH RIÊNG, SỞ HỮU TỆP KHÁCH – VỚI OMNIFLOW</h1>
+    <div class="mt-4 max-w-2xl mx-auto">
+        <ul class="list-disc text-left text-lg text-neutral-600 space-y-2">
+            <li>Không còn phụ thuộc 80–100% vào sàn TMĐT, chia dần tỉ trọng các kênh OWNED.</li>
+            <li>Kéo khách về OA/FB, chăm sóc tự động.</li>
+            <li>Tăng AOV (giá trị đơn hàng trung bình) & LTV (giá trị trọn đời khách hàng) một cách bền vững.</li>
+            <li>Tối ưu chi phí bán hàng (Optimize Cost per revenue).</li>
+        </ul>
+    </div>
+    <div class="mt-6 flex items-center justify-center gap-3">
+      <a href="#contact" class="px-5 py-3 rounded-xl bg-black text-white text-sm font-semibold">Nhận tư vấn miễn phí</a>
+      <a href="#packages" class="px-5 py-3 rounded-xl border text-sm font-semibold">Xem bảng gói dịch vụ</a>
+    </div>
+    <div class="mt-6 flex items-center justify-center gap-3 text-sm text-neutral-500">
+      <span>Sở hữu dữ liệu khách hàng</span> · <span>Triển khai nhanh</span> · <span>Đồng hành tối ưu dài hạn</span>
+    </div>
+  </section>
+
+  <!-- Hook: Pain points -->
+  <section id="hook" class="container mx-auto px-4 pb-8">
+    <div class="rounded-2xl border border-neutral-200 p-6">
+      <h2 class="text-xl font-bold mb-4">Bạn đang phụ thuộc vào sàn TMĐT?</h2>
+      <div class="grid md:grid-cols-2 gap-6 text-sm">
+        <div>
+          <div class="font-semibold mb-2">Thực trạng phổ biến</div>
+          <ul class="list-disc pl-5 space-y-1 text-neutral-700">
+            <li>80–100% đơn hàng đến từ Shopee/TikTok Shop/Lazada.</li>
+            <li>Không sở hữu dữ liệu khách (số điện thoại/email) vì sàn hạn chế hiển thị.</li>
+            <li>Không có kênh bán hàng riêng → phụ thuộc thuật toán &amp; phí sàn.</li>
+            <li>Không có quy trình giữ chân khách → khách mua xong trên sàn là mất liên lạc.</li>
+            <li>Chưa có tư duy khai thác vòng đời khách hàng (LTV).</li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-semibold mb-2">Nỗi đau</div>
+          <ul class="list-disc pl-5 space-y-1 text-neutral-700">
+            <li>Sợ bị khóa shop hoặc tụt traffic đột ngột.</li>
+            <li>Không biết cách kéo khách về kênh riêng để giữ &amp; chăm sóc.</li>
+            <li>Mỗi lần muốn khuyến mãi phải chạy Ads hoặc chờ traffic từ sàn.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- The FLOW -->
+  <section id="flow" class="container mx-auto px-4 py-12">
+     <h2 class="text-3xl font-bold text-center mb-10">Quy Trình Triển Khai (The FLOW)</h2>
+     <div class="grid md:grid-cols-4 gap-8 text-center">
+         <!-- Step 1 -->
+         <div class="flex flex-col items-center">
+             <div class="flex items-center justify-center w-20 h-20 bg-blue-100 rounded-full mb-4 border-4 border-blue-200">
+                 <span class="text-3xl font-bold text-blue-600">1</span>
+             </div>
+             <h4 class="text-xl font-semibold text-neutral-800 mb-2">Phân Tích</h4>
+             <p class="text-neutral-600 text-sm">Lắng nghe mục tiêu, phân tích hệ thống và xây dựng chân dung khách hàng.</p>
+         </div>
+         <!-- Step 2 -->
+         <div class="flex flex-col items-center">
+             <div class="flex items-center justify-center w-20 h-20 bg-blue-100 rounded-full mb-4 border-4 border-blue-200">
+                <span class="text-3xl font-bold text-blue-600">2</span>
+             </div>
+             <h4 class="text-xl font-semibold text-neutral-800 mb-2">Thiết Kế & Xây Dựng</h4>
+             <p class="text-neutral-600 text-sm">Thiết kế kiến trúc hệ thống, luồng chatbot và các kịch bản tương tác.</p>
+         </div>
+         <!-- Step 3 -->
+         <div class="flex flex-col items-center">
+             <div class="flex items-center justify-center w-20 h-20 bg-blue-100 rounded-full mb-4 border-4 border-blue-200">
+                <span class="text-3xl font-bold text-blue-600">3</span>
+             </div>
+             <h4 class="text-xl font-semibold text-neutral-800 mb-2">Triển Khai & Kiểm Thử</h4>
+             <p class="text-neutral-600 text-sm">Cài đặt, kích hoạt hệ thống và kiểm thử toàn diện để đảm bảo hoạt động trơn tru.</p>
+         </div>
+         <!-- Step 4 -->
+         <div class="flex flex-col items-center">
+             <div class="flex items-center justify-center w-20 h-20 bg-blue-100 rounded-full mb-4 border-4 border-blue-200">
+                <span class="text-3xl font-bold text-blue-600">4</span>
+             </div>
+             <h4 class="text-xl font-semibold text-neutral-800 mb-2">Vận Hành & Tối Ưu</h4>
+             <p class="text-neutral-600 text-sm">Theo dõi, báo cáo định kỳ và đề xuất các phương án tối ưu để cải thiện hiệu quả.</p>
+         </div>
+     </div>
+  </section>
+
+  <!-- Packages -->
+  <section id="packages" class="container mx-auto px-4 py-8">
+    <h2 class="text-3xl font-bold mb-6 text-center">Gói dịch vụ</h2>
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Basic -->
+      <article class="rounded-2xl border border-neutral-200 p-5 flex flex-col">
+        <div class="flex-grow">
+          <div class="text-xs inline-flex self-start mb-2 px-2 py-1 rounded-full border font-medium">Best for khởi động</div>
+          <h3 class="text-2xl font-bold">Cơ bản</h3>
+          <p class="text-neutral-500 font-semibold">Care Flow from E‑commerce</p>
+          <p class="text-sm text-neutral-600 mt-2">Giúp doanh nghiệp bắt đầu sở hữu data khách hàng và xây kết nối trực tiếp ngoài sàn.</p>
+          <div class="mt-4 text-sm space-y-2">
+            <details class="rounded-lg border p-3">
+              <summary class="cursor-pointer font-semibold">Mô tả chi tiết</summary>
+              <ul class="list-disc pl-5 space-y-1 mt-2 text-neutral-700">
+                <li>Kéo khách từ sàn về Facebook/Zalo OA bằng QR &amp; ưu đãi.</li>
+                <li>Thu thập số điện thoại + thông tin mua hàng.</li>
+                <li>Flow chăm sóc sau bán D0, D3, D7, D14.</li>
+                <li>Tập cho khách thói quen nhận ưu đãi qua kênh riêng.</li>
+              </ul>
+            </details>
+            <details class="rounded-lg border p-3">
+                <summary class="cursor-pointer font-semibold">Hạ tầng cần chuẩn bị</summary>
+                <ul class="list-disc pl-5 space-y-1 mt-2 text-neutral-700">
+                    <li>Facebook Page &amp; Zalo OA đã xác minh</li>
+                    <li>QR code trỏ về kênh riêng (FB/Zalo OA)</li>
+                    <li>Tờ rơi / insert card</li>
+                    <li>Landing page form đăng ký nhận ưu đãi</li>
+                </ul>
+            </details>
+            <details class="rounded-lg border p-3">
+                <summary class="cursor-pointer font-semibold">Nội dung &amp; tài nguyên</summary>
+                <ul class="list-disc pl-5 space-y-1 mt-2 text-neutral-700">
+                    <li>Tin nhắn cảm ơn / chào mừng</li>
+                    <li>Hướng dẫn sử dụng sản phẩm (ảnh / video / PDF)</li>
+                    <li>Nhắc bảo hành</li>
+                    <li>Voucher 5–10%</li>
+                </ul>
+            </details>
+            <details class="rounded-lg border p-3">
+                <summary class="cursor-pointer font-semibold">Công cụ &amp; quy trình</summary>
+                <ul class="list-disc pl-5 space-y-1 mt-2 text-neutral-700">
+                    <li>Hệ thống gửi tin hàng loạt</li>
+                    <li>Quy trình nhập khách từ sàn về kênh riêng</li>
+                </ul>
+            </details>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 gap-2 text-sm mt-4">
+          <div class="rounded-xl border p-3 text-center">
+            <div class="text-neutral-500">Thời gian</div>
+            <div class="font-semibold">3–5 ngày</div>
+          </div>
+          <div class="rounded-xl border p-3 text-center">
+            <div class="text-neutral-500">Phí setup</div>
+            <div class="font-semibold">Từ 5tr</div>
+          </div>
+          <div class="rounded-xl border p-3 text-center">
+            <div class="text-neutral-500">Vận hành</div>
+            <div class="font-semibold">500k/tháng</div>
+          </div>
+        </div>
+        <a href="#contact" class="mt-4 w-full inline-flex items-center justify-center px-4 py-3 rounded-xl bg-neutral-900 text-white text-sm font-semibold">Bắt đầu nuôi tệp</a>
+      </article>
+
+      <!-- Advanced -->
+      <article class="rounded-2xl border-2 border-black p-5 flex flex-col relative">
+        <div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2">
+            <span class="bg-black text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">Phổ biến</span>
+        </div>
+        <div class="flex-grow">
+            <div class="text-xs inline-flex self-start mb-2 px-2 py-1 rounded-full border font-medium">Phù hợp tăng trưởng</div>
+            <h3 class="text-2xl font-bold">Nâng cao</h3>
+            <p class="text-neutral-500 font-semibold">Re‑Marketing &amp; Auto Convert</p>
+            <p class="text-sm text-neutral-600 mt-2">Kích hoạt lại khách cũ và chuyển đổi đơn từ kênh riêng.</p>
+            <div class="mt-4 text-sm space-y-2">
+                <details class="rounded-lg border p-3">
+                    <summary class="cursor-pointer font-semibold">Mô tả chi tiết</summary>
+                    <ul class="list-disc pl-5 space-y-1 mt-2 text-neutral-700">
+                        <li>Broadcast/Chatbot tới khách chưa mua lại.</li>
+                        <li>Ưu đãi cá nhân hóa theo nhóm khách.</li>
+                        <li>Follow‑up tự động để khách từ sàn quay lại.</li>
+                        <li>Đo lường CR &amp; AOV kênh riêng so với sàn.</li>
+                    </ul>
+                </details>
+                <details class="rounded-lg border p-3">
+                    <summary class="cursor-pointer font-semibold">Hạ tầng cần chuẩn bị</summary>
+                    <ul class="list-disc pl-5 space-y-1 mt-2 text-neutral-700">
+                        <li>Toàn bộ hạ tầng gói Cơ bản</li>
+                        <li>Chatbot FB/Zalo (Chative, Botcake) + API AI</li>
+                        <li>CRM quản lý data (CRM Pancake)</li>
+                    </ul>
+                </details>
+                <details class="rounded-lg border p-3">
+                    <summary class="cursor-pointer font-semibold">Nội dung &amp; tài nguyên</summary>
+                    <ul class="list-disc pl-5 space-y-1 mt-2 text-neutral-700">
+                        <li>Toàn bộ nội dung gói Cơ bản</li>
+                        <li>Kịch bản cho khách lâu không quay lại</li>
+                        <li>Ưu đãi cá nhân hóa</li>
+                        <li>Bộ FAQ chatbot</li>
+                    </ul>
+                </details>
+                <details class="rounded-lg border p-3">
+                    <summary class="cursor-pointer font-semibold">Công cụ &amp; quy trình</summary>
+                    <ul class="list-disc pl-5 space-y-1 mt-2 text-neutral-700">
+                        <li>Toàn bộ công cụ &amp; quy trình gói Cơ bản</li>
+                        <li>Kịch bản Upsale sau khi về kênh riêng</li>
+                        <li>Cross‑sell sản phẩm liên quan</li>
+                        <li>Ưu đãi sinh nhật / lễ tết</li>
+                    </ul>
+                </details>
+            </div>
+        </div>
+        <div class="grid grid-cols-3 gap-2 text-sm mt-4">
+            <div class="rounded-xl border p-3 text-center">
+                <div class="text-neutral-500">Thời gian</div>
+                <div class="font-semibold">7–10 ngày</div>
+            </div>
+            <div class="rounded-xl border p-3 text-center">
+                <div class="text-neutral-500">Phí setup</div>
+                <div class="font-semibold">Từ 10tr</div>
+            </div>
+            <div class="rounded-xl border p-3 text-center">
+                <div class="text-neutral-500">Vận hành</div>
+                <div class="font-semibold">1tr/tháng</div>
+            </div>
+        </div>
+        <a href="#contact" class="mt-4 w-full inline-flex items-center justify-center px-4 py-3 rounded-xl bg-neutral-900 text-white text-sm font-semibold">Tăng chuyển đổi</a>
+      </article>
+
+      <!-- VIP -->
+      <article class="rounded-2xl border border-neutral-200 p-5 flex flex-col">
+        <div class="flex-grow">
+            <div class="text-xs inline-flex self-start mb-2 px-2 py-1 rounded-full border font-medium">Tối ưu lợi nhuận</div>
+            <h3 class="text-2xl font-bold">Siêu cấp VIP PRO</h3>
+            <p class="text-neutral-500 font-semibold">Upsale &amp; Lifetime Value Max</p>
+            <p class="text-sm text-neutral-600 mt-2">Tối đa AOV và giá trị vòng đời (LTV) từ kênh riêng.</p>
+            <div class="mt-4 text-sm space-y-2">
+                <details class="rounded-lg border p-3">
+                    <summary class="cursor-pointer font-semibold">Mô tả chi tiết</summary>
+                    <ul class="list-disc pl-5 space-y-1 mt-2 text-neutral-700">
+                        <li>Chương trình tích điểm &amp; khách hàng thân thiết.</li>
+                        <li>Chiến dịch upsale &amp; cross‑sell.</li>
+                        <li>Phân tích dữ liệu tìm top khách sinh lời.</li>
+                        <li>Duy trì AOV cao hơn ≥ 20% so với đơn sàn.</li>
+                    </ul>
+                </details>
+                <details class="rounded-lg border p-3">
+                    <summary class="cursor-pointer font-semibold">Hạ tầng cần chuẩn bị</summary>
+                    <ul class="list-disc pl-5 space-y-1 mt-2 text-neutral-700">
+                        <li>Toàn bộ hạ tầng gói Nâng cao</li>
+                        <li>Hệ thống tích điểm</li>
+                        <li>Module báo cáo tự động</li>
+                        <li>Tài khoản ZCA (ZNS)</li>
+                    </ul>
+                </details>
+                <details class="rounded-lg border p-3">
+                    <summary class="cursor-pointer font-semibold">Nội dung &amp; tài nguyên</summary>
+                    <ul class="list-disc pl-5 space-y-1 mt-2 text-neutral-700">
+                        <li>Toàn bộ nội dung gói Nâng cao</li>
+                        <li>Chatbot follow‑up tự động</li>
+                        <li>Lọc &amp; phân nhóm khách</li>
+                        <li>Lịch gửi re‑marketing</li>
+                        <li>Đo lường tỷ lệ quay lại mua</li>
+                        <li>Kịch bản chăm sóc bằng ZNS</li>
+                    </ul>
+                </details>
+                <details class="rounded-lg border p-3">
+                    <summary class="cursor-pointer font-semibold">Công cụ &amp; quy trình</summary>
+                    <ul class="list-disc pl-5 space-y-1 mt-2 text-neutral-700">
+                        <li>Toàn bộ công cụ &amp; quy trình gói Nâng cao</li>
+                        <li>Phân tích dữ liệu hành vi &amp; AOV</li>
+                        <li>Flash sale VIP</li>
+                        <li>Báo cáo đề xuất giải pháp hàng tháng</li>
+                    </ul>
+                </details>
+            </div>
+        </div>
+        <div class="grid grid-cols-3 gap-2 text-sm mt-4">
+            <div class="rounded-xl border p-3 text-center">
+                <div class="text-neutral-500">Thời gian</div>
+                <div class="font-semibold">10–14 ngày</div>
+            </div>
+            <div class="rounded-xl border p-3 text-center">
+                <div class="text-neutral-500">Phí setup</div>
+                <div class="font-semibold">Từ 15tr</div>
+            </div>
+            <div class="rounded-xl border p-3 text-center">
+                <div class="text-neutral-500">Vận hành</div>
+                <div class="font-semibold">Từ 1.5tr/tháng</div>
+            </div>
+        </div>
+        <a href="#contact" class="mt-4 w-full inline-flex items-center justify-center px-4 py-3 rounded-xl bg-neutral-900 text-white text-sm font-semibold">Tối đa LTV</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Value props -->
+  <section class="container mx-auto px-4 py-10">
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="rounded-2xl border p-5">
+        <h3 class="text-xl font-semibold">Sở hữu tệp khách</h3>
+        <p class="text-sm text-neutral-600 mt-1">Không còn phụ thuộc hoàn toàn vào sàn. Bạn kiểm soát việc nuôi dưỡng, nhắn tin và remarketing.</p>
+      </div>
+      <div class="rounded-2xl border p-5">
+        <h3 class="text-xl font-semibold">Đo lường theo AOV/LTV</h3>
+        <p class="text-sm text-neutral-600 mt-1">So sánh tỉ lệ chuyển đổi &amp; AOV giữa kênh riêng và sàn để quyết định ngân sách thông minh.</p>
+      </div>
+      <div class="rounded-2xl border p-5">
+        <h3 class="text-xl font-semibold">Tự động hoá nuôi dưỡng</h3>
+        <p class="text-sm text-neutral-600 mt-1">Kịch bản D0/D3/D7/D14, upsale, cross‑sell, sinh nhật, flash sale… chạy tự động và có kiểm soát.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-neutral-50">
+    <div class="container mx-auto px-4 py-12 grid md:grid-cols-2 gap-8 items-start">
+      <div>
+        <h3 class="text-3xl font-bold">Nhận tư vấn &amp; báo giá chi tiết</h3>
+        <p class="mt-2 text-neutral-600">
+          Điền thông tin vào form bên cạnh hoặc liên hệ trực tiếp với chúng tôi qua các kênh dưới đây.
+        </p>
+        <div class="mt-6 flex items-center gap-4">
+            <a href="https://zalo.me/2906623907642047221" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full border bg-white hover:bg-neutral-100 transition" title="Nhắn Zalo">
+                <svg width="28" height="28" viewBox="0 0 24 24"><defs><linearGradient id="zalo-gradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3683DC;stop-opacity:1" /><stop offset="100%" style="stop-color:#003988;stop-opacity:1" /></linearGradient></defs><path fill="url(#zalo-gradient)" d="M16.5,6.5A2,2,0,0,1,18.5,8.5V15.5A2,2,0,0,1,16.5,17.5H13.5V15.5H16.5V8.5H13.5V6.5H16.5M10.5,6.5A2,2,0,0,1,12.5,8.5V17.5H10.5V13.5H7.5V17.5H5.5V8.5A2,2,0,0,1,7.5,6.5H10.5M10.5,8.5H7.5V11.5H10.5V8.5Z" /></svg>
+            </a>
+            <a href="https://m.me/bietdoitinhnhue" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full border bg-white hover:bg-neutral-100 transition" title="Nhắn Facebook">
+                <svg width="28" height="28" viewBox="0 0 24 24"><defs><linearGradient id="messenger-gradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#00B2FF;stop-opacity:1" /><stop offset="100%" style="stop-color:#006AFF;stop-opacity:1" /></linearGradient></defs><path fill="url(#messenger-gradient)" d="M12,2A10,10,0,0,0,2,12a9.89,9.89,0,0,0,6.24,9.24a1.49,1.49,0,0,0,2-.59L12,15.1l1.76,5.55a1.49,1.49,0,0,0,2,.59A9.89,9.89,0,0,0,22,12,10,10,0,0,0,12,2Z" /></svg>
+            </a>
+            <a href="https://t.me/drakenguyen" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full border bg-white hover:bg-neutral-100 transition" title="Nhắn Telegram">
+                 <svg width="24" height="24" viewBox="0 0 24 24"><path fill="#2AABEE" d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm5.47,7.3-1.4,6.53a.69.69,0,0,1-1.33.39L12,13.79l-1.91,1.86a.69.69,0,0,1-.95,0l.35-1.9,4.48-4.06a.35.35,0,0,0-.56-.5L8.5,12.09,6.7,11.52a.69.69,0,0,1,0-1.28l9.44-3.64A.69.69,0,0,1,17.47,9.3Z"/></svg>
+            </a>
+            <a href="tel:0585574757" class="w-12 h-12 flex items-center justify-center rounded-full border bg-white hover:bg-neutral-100 transition" title="Gọi 0585 574 757">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </a>
+        </div>
+        <div class="mt-6 space-y-3 rounded-xl border bg-white p-4 text-sm">
+          <div class="flex items-center gap-3 text-neutral-700">
+             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+             <span>Dữ liệu của bạn được bảo mật</span>
+          </div>
+          <div class="flex items-center gap-3 text-neutral-700">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span>Thời gian phản hồi: trong 4 giờ làm việc</span>
+          </div>
+        </div>
+      </div>
+      <form id="contact-form" class="rounded-2xl border bg-white p-5 space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <label class="text-sm font-medium">Họ và tên<input class="mt-1 w-full rounded-md border-neutral-300 px-3 py-2 shadow-sm focus:border-black focus:ring-black" name="name" placeholder="Nguyễn Văn A" required></label>
+          <label class="text-sm font-medium">Số điện thoại<input class="mt-1 w-full rounded-md border-neutral-300 px-3 py-2 shadow-sm focus:border-black focus:ring-black" name="phone" placeholder="09xx xxx xxx" required></label>
+        </div>
+        <label class="text-sm font-medium block">Email<input type="email" class="mt-1 w-full rounded-md border-neutral-300 px-3 py-2 shadow-sm focus:border-black focus:ring-black" name="email" placeholder="you@example.com"></label>
+        <label class="text-sm font-medium block">Gói quan tâm
+          <select name="package" class="mt-1 w-full rounded-md border-neutral-300 px-3 py-2 shadow-sm focus:border-black focus:ring-black">
+            <option>Cơ bản – Care Flow from E‑commerce</option>
+            <option>Nâng cao – Re‑Marketing &amp; Auto Convert</option>
+            <option>Siêu cấp VIP PRO – Upsale &amp; Lifetime Value Max</option>
+          </select>
+        </label>
+        <label class="text-sm font-medium block">Mô tả nhu cầu
+          <textarea name="message" rows="4" class="mt-1 w-full rounded-md border-neutral-300 px-3 py-2 shadow-sm focus:border-black focus:ring-black" placeholder="Ngân sách, sản phẩm, kênh đang dùng, mục tiêu…"></textarea>
+        </label>
+        <button type="submit" class="w-full px-4 py-3 rounded-xl bg-black text-white text-sm font-semibold">Gửi yêu cầu tư vấn</button>
+        <div id="form-status" class="text-sm text-center mt-2"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="container mx-auto px-4 py-12">
+    <h3 class="text-3xl font-bold mb-6 text-center">Câu hỏi thường gặp</h3>
+    <div class="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+      <div class="rounded-2xl border p-5">
+        <div class="text-base font-semibold">Chi phí trên đã bao gồm ngân sách quảng cáo chưa?</div>
+        <p class="text-sm text-neutral-600 mt-1">Chưa. Phí setup/vận hành là cho cấu hình hệ thống, nội dung, và báo cáo. Ngân sách ads (Meta, Zalo, Google), phí ZNS, SMS… do nền tảng/nhà mạng thu và sẽ được tách riêng.</p>
+      </div>
+      <div class="rounded-2xl border p-5">
+        <div class="text-base font-semibold">Nếu đã có Pancake/CRM rồi thì có giảm phí không?</div>
+        <p class="text-sm text-neutral-600 mt-1">Có. Chúng tôi tái sử dụng hạ tầng sẵn có, chỉ tính phần tích hợp và tối ưu bổ sung.</p>
+      </div>
+      <div class="rounded-2xl border p-5">
+        <div class="text-base font-semibold">Dữ liệu khách hàng được lưu ở đâu?</div>
+        <p class="text-sm text-neutral-600 mt-1">Dữ liệu được lưu ở CRM đã chọn (ví dụ: Pancake CRM) và các nền tảng chính chủ (OA/FB). Bạn luôn là chủ sở hữu dữ liệu.</p>
+      </div>
+      <div class="rounded-2xl border p-5">
+        <div class="text-base font-semibold">Thời gian triển khai có thể nhanh hơn không?</div>
+        <p class="text-sm text-neutral-600 mt-1">Có thể đẩy nhanh nếu hạ tầng đã sẵn sàng (OA xác minh, domain, form, tài nguyên nội dung…). Thường rút ngắn 20–30%.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-neutral-200">
+    <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-3 text-sm">
+      <div class="text-neutral-600">© <span id="year"></span> OmniFlow Solutions by Biệt đội tinh nhuệ. All rights reserved.</div>
+      <div class="flex items-center gap-4">
+        <a class="hover:underline underline-offset-4" href="#packages">Các gói dịch vụ</a>
+        <a class="hover:underline underline-offset-4" href="#contact">Liên hệ</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky CTA -->
+  <div class="fixed bottom-4 left-1/2 -translate-x-1/2 z-50">
+    <div class="flex gap-2 rounded-full shadow-lg border bg-white/80 backdrop-blur px-2 py-2">
+      <a href="https://zalo.me/2906623907642047221" target="_blank" class="px-4 py-2 rounded-full border text-sm font-semibold hover:bg-neutral-100 transition">Nhắn Zalo</a>
+      <a href="https://t.me/drakenguyen" target="_blank" class="px-4 py-2 rounded-full border text-sm font-semibold hover:bg-neutral-100 transition">Nhắn Telegram</a>
+      <a href="#contact" class="px-4 py-2 rounded-full bg-black text-white text-sm font-semibold">Nhận báo giá</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+
+    contactForm.addEventListener('submit', async function(event) {
+        event.preventDefault();
+
+        const submitButton = this.querySelector('button[type="submit"]');
+        submitButton.disabled = true;
+        submitButton.textContent = 'Đang gửi...';
+
+        const formData = new FormData(this);
+        const name = formData.get('name');
+        const phone = formData.get('phone');
+        const email = formData.get('email');
+        const pkg = formData.get('package');
+        const msg = formData.get('message');
+
+        const botToken = '7390679103:AAGRp29FwObAfDXqcwEsz1GgdZiFPJjtWbo';
+        const chatId = '1002388548041';
+
+        let message = `<b>🔔 Yêu cầu tư vấn mới từ OmniFlow Website</b>\n\n`;
+        message += `<b>Họ và tên:</b> ${name}\n`;
+        message += `<b>Số điện thoại:</b> <code>${phone}</code>\n`;
+        message += `<b>Email:</b> ${email || 'Không cung cấp'}\n`;
+        message += `<b>Gói quan tâm:</b> ${pkg}\n\n`;
+        message += `<b>Nội dung:</b>\n${msg || 'Không có'}`;
+
+        const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message,
+                    parse_mode: 'HTML'
+                }),
+            });
+
+            const result = await response.json();
+
+            if (result.ok) {
+                formStatus.textContent = '✅ Gửi yêu cầu thành công! Chúng tôi sẽ liên hệ lại sớm.';
+                formStatus.className = 'text-sm text-center mt-2 text-green-600';
+                contactForm.reset();
+            } else {
+                throw new Error(result.description);
+            }
+        } catch (error) {
+            console.error('Telegram API Error:', error);
+            formStatus.textContent = '❌ Có lỗi xảy ra. Vui lòng thử lại hoặc liên hệ trực tiếp qua Zalo/SĐT.';
+            formStatus.className = 'text-sm text-center mt-2 text-red-600';
+        } finally {
+            submitButton.disabled = false;
+            submitButton.textContent = 'Gửi yêu cầu tư vấn';
+        }
+    });
+  </script>
+</body>
+</html>
