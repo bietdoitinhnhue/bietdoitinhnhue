@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Biệt Đội Tinh Nhuệ – Công Cụ Tạo Chat Plugin Miễn Phí</title>
+    <meta name="description" content="Tạo và tùy chỉnh Chat Plugin cho Zalo, Messenger, Telegram, WhatsApp, và Instagram một cách dễ dàng và hoàn toàn miễn phí với công cụ từ Biệt Đội Tinh Nhuệ.">
+    <meta name="keywords" content="chat plugin, bietdoitinhnhue, công cụ tạo chat, zalo, messenger, telegram, whatsapp, instagram, chat widget, hỗ trợ khách hàng, miễn phí">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bietdoitinhnhue.com/tools/chat-plugin-generator">
+    <meta property="og:title" content="Biệt Đội Tinh Nhuệ – Công Cụ Tạo Chat Plugin Miễn Phí">
+    <meta property="og:description" content="Tùy chỉnh kích thước, màu sắc, vị trí và nhận ngay đoạn mã nhúng cho website của bạn. Hỗ trợ 5 nền tảng phổ biến nhất.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/bietdoitinhnhue/tramtaichinh/main/omniflow-thumbnail.png">
+    <meta property="og:site_name" content="Biệt Đội Tinh Nhuệ">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://bietdoitinhnhue.com/tools/chat-plugin-generator">
+    <meta property="twitter:title" content="Biệt Đội Tinh Nhuệ – Công Cụ Tạo Chat Plugin Miễn Phí">
+    <meta property="twitter:description" content="Tùy chỉnh kích thước, màu sắc, vị trí và nhận ngay đoạn mã nhúng cho website của bạn. Hỗ trợ 5 nền tảng phổ biến nhất.">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/bietdoitinhnhue/tramtaichinh/main/omniflow-thumbnail.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/bietdoitinhnhue/tramtaichinh/main/omniflow-favicon.png">
+
+    <style>
+        :root {
+            /* Dark Theme Colors */
+            --primary-color: #00aaff; 
+            --background-color: #0a0f1a;
+            --widget-background: #121a2a;
+            --border-color: #1c2a4a;
+            --text-color: #e9ecef;
+            --text-light: #adb5bd;
+            --code-bg: #1a202c;
+            --code-text: #e9ecef;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            max-width: 1200px;
+            width: 100%;
+            padding: 0 2rem;
+            box-sizing: border-box;
+        }
+
+        .widget {
+            background-color: var(--widget-background);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .widget h3, .widget h4 {
+            margin-top: 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        
+        .widget h4 {
+             font-size: 1.1rem;
+             margin-bottom: 1rem;
+        }
+
+        /* --- Left Panel: Configuration --- */
+        .config-section {
+            margin-bottom: 24px;
+        }
+
+        .config-section label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .platform-selector {
+            display: flex;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow: hidden;
+            background-color: #0a0f1a;
+        }
+
+        .platform-selector button {
+            flex-grow: 1;
+            padding: 10px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            transition: all 0.2s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+        
+        .platform-selector button img.icon {
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+
+        .platform-selector button.active {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .platform-selector button.active img.icon {
+            opacity: 1;
+        }
+        
+        .input-group {
+            position: relative;
+        }
+        
+        .input-group input[type="text"] {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 1rem;
+            background-color: #1a202c;
+            color: var(--text-color);
+        }
+
+        .slider-group {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .slider-group span {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            margin: 7px 0;
+            background: transparent;
+        }
+
+        input[type="range"]:focus {
+            outline: none;
+        }
+
+        input[type="range"]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 6px;
+            cursor: pointer;
+            background: #2d3748;
+            border-radius: 3px;
+        }
+        
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            cursor: pointer;
+            margin-top: -7px;
+            transition: background-color 0.2s;
+        }
+        
+        select, .color-picker-container {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 1rem;
+            background-color: #1a202c;
+            color: var(--text-color);
+        }
+        
+        select {
+            -webkit-appearance: none;
+            appearance: none;
+        }
+        
+        .color-picker-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .color-picker-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="color"] {
+            border: none;
+            padding: 0;
+            width: 32px;
+            height: 32px;
+            background: none;
+            cursor: pointer;
+        }
+        
+        .color-value {
+            margin-left: 10px;
+            font-family: monospace;
+        }
+
+        .transparent-toggle {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        
+        .position-toggle {
+            display: flex;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+        }
+        
+        .position-toggle button {
+            flex-grow: 1;
+            padding: 10px;
+            border: none;
+            background-color: #0a0f1a;
+            color: var(--text-light);
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background-color 0.2s;
+        }
+        
+        .position-toggle button.active {
+            background-color: var(--widget-background);
+            color: var(--text-color);
+            font-weight: 600;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        /* --- Right Panel: Preview & Code --- */
+        .preview-pane {
+            height: 300px;
+            background-color: #0a0f1a;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #chat-plugin-preview {
+            position: absolute;
+            transition: all 0.2s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        
+        #chat-plugin-preview img {
+            transition: all 0.2s ease-in-out;
+        }
+
+        .code-pane {
+            position: relative;
+            margin-top: 1.5rem;
+        }
+        
+        #code-output {
+            display: block;
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.85rem;
+            white-space: pre-wrap;
+            word-break: break-all;
+            overflow-wrap: break-word;
+            line-height: 1.5;
+            min-height: 200px;
+            user-select: none;
+            cursor: default;
+        }
+
+        #copy-code-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background-color: #2d3748;
+            color: white;
+            border: 1px solid var(--border-color);
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: background-color 0.2s;
+            z-index: 10;
+        }
+        
+        #copy-code-btn:hover {
+            background-color: #4a5568;
+        }
+
+        /* --- Additional Content Styles --- */
+        .content-section {
+            max-width: 1200px;
+            width: 100%;
+            padding: 3rem 2rem;
+            box-sizing: border-box;
+            margin-top: 2rem;
+        }
+        
+        .content-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: var(--text-color);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .feature-card {
+            background-color: var(--widget-background);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            text-align: left;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.2rem;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+        
+        .how-to-use {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .how-to-use-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .step-card .step-number {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: #0a0f1a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 0 auto 1rem auto;
+        }
+        
+        .step-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-section h2 {
+            text-align: center;
+        }
+
+        .faq-section details {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        .faq-section summary {
+            font-weight: 600;
+            cursor: pointer;
+            outline: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-color);
+        }
+        
+        .faq-section summary::after {
+            content: '▾';
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+        
+        .faq-section details[open] summary::after {
+            content: '▴';
+        }
+        
+        .faq-section p {
+            margin-top: 0.5rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        /* --- Services Section --- */
+        .services-section {
+            max-width: 1200px;
+            width: 100%;
+            padding: 2rem; /* Reduced padding */
+            box-sizing: border-box;
+            background-color: var(--widget-background);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        
+        .services-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem; /* Reduced margin */
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .service-column h4 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .service-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .service-column li {
+            margin-bottom: 0.75rem;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .service-column li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            top: 4px;
+            color: var(--primary-color);
+            font-size: 10px;
+        }
+
+        .service-column li a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .service-column li a:hover {
+            color: var(--primary-color);
+        }
+        
+        footer {
+            width: 100%;
+            background-color: #0a0f1a;
+            color: #adb5bd;
+            padding: 2rem; /* Reduced padding */
+            margin-top: 1rem; /* Reduced margin */
+            box-sizing: border-box;
+        }
+
+        .footer-contact-block {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .footer-contact-block h4 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .footer-social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-social-icons a {
+            display: inline-block;
+        }
+        
+        .footer-social-icons img {
+            width: 32px;
+            height: 32px;
+            transition: transform 0.2s;
+        }
+        
+        .footer-social-icons a:hover img {
+            transform: scale(1.1);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #495057;
+            font-size: 0.9rem;
+        }
+        
+        /* --- Responsive Styles --- */
+        @media (max-width: 992px) {
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+            body {
+                padding: 1rem 0;
+            }
+            .main-container, .content-section, footer, .services-section {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .features-grid, .how-to-use-steps, .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .platform-selector {
+                flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+            }
+            .platform-selector button {
+                flex-basis: 48%; /* Aim for 2 buttons per row */
+            }
+            .widget {
+                padding: 16px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <!-- Left Panel: Configuration -->
+        <div class="widget">
+            <h3>Configure Your Chat Plugin</h3>
+            
+            <div class="config-section">
+                <label>Select Platform</label>
+                <div class="platform-selector" id="platform-selector">
+                    <!-- Buttons will be injected by JS -->
+                </div>
+            </div>
+
+            <div class="config-section">
+                <label for="contact-detail">Contact Detail</label>
+                <div class="input-group">
+                    <input type="text" id="contact-detail" value="">
+                </div>
+            </div>
+
+            <div class="config-section">
+                <div class="slider-group">
+                    <label for="button-size">Button Size</label>
+                    <span id="button-size-value">60px</span>
+                </div>
+                <input type="range" id="button-size" min="40" max="250" value="60">
+            </div>
+
+            <div class="config-section">
+                <div class="slider-group">
+                    <label for="bottom-spacing">Bottom Spacing</label>
+                    <span id="bottom-spacing-value">10px</span>
+                </div>
+                <input type="range" id="bottom-spacing" min="10" max="100" value="10">
+            </div>
+
+            <div class="config-section">
+                <label for="button-style">Button Style</label>
+                <select id="button-style">
+                    <option value="circle">Circle</option>
+                    <option value="rounded">Rounded</option>
+                    <option value="square">Square</option>
+                </select>
+            </div>
+
+            <div class="config-section">
+                <label for="button-color">Button Color</label>
+                <div class="color-picker-container">
+                    <div class="color-picker-wrapper">
+                        <input type="color" id="button-color" value="#000000">
+                        <span id="button-color-value" class="color-value">TRANSPARENT</span>
+                    </div>
+                    <label class="transparent-toggle">
+                        <input type="checkbox" id="transparent-checkbox" checked>
+                        Transparent
+                    </label>
+                </div>
+            </div>
+
+            <div class="config-section">
+                <label>Position</label>
+                <div class="position-toggle" id="position-toggle">
+                    <button data-position="right" class="active">Right</button>
+                    <button data-position="left">Left</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel: Preview & Code -->
+        <div class="widget">
+            <h3>Preview & Code</h3>
+            <div class="preview-pane">
+                <div id="chat-plugin-preview">
+                    <!-- Icon will be injected by JS -->
+                </div>
+            </div>
+            <div class="code-pane">
+                <h4>Chat Plugin Code</h4>
+                <button id="copy-code-btn">Copy Code</button>
+                <code id="code-output"></code>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Content Section -->
+    <div class="content-section">
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>💬 Supports Multiple Messaging Platforms</h3>
+                <p>Easily integrate WhatsApp, Instagram, Messenger, Telegram, and more into your website.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🎨 Fully Customizable Design</h3>
+                <p>Customize button styles, colors, and placement to match your website’s branding and user experience.</p>
+            </div>
+            <div class="feature-card">
+                <h3>⚡ Fast & Easy Setup</h3>
+                <p>Simply copy and paste the generated code no coding skills required!</p>
+            </div>
+        </div>
+
+        <div class="how-to-use">
+            <h2>How to Use</h2>
+            <div class="how-to-use-steps">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Choose Your Chat Platform</h3>
+                    <p>Select from WhatsApp, Messenger, Telegram, Instagram, and more to create your contact launcher.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Customize Your Chat Button</h3>
+                    <p>Modify design elements such as colors, styles, and placement to align with your website’s aesthetics.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Copy & Embed the Code</h3>
+                    <p>Paste the generated script into your website’s HTML, and your live chat launcher is ready to go!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+             <h2>Frequently Asked Questions</h2>
+            <details>
+                <summary>How do I install the chat plugin on my website?</summary>
+                <p>Simply copy the generated script and paste it into your website’s HTML before the closing &lt;/body&gt; tag. The chat launcher will appear automatically on all pages where the code is added.</p>
+            </details>
+            <details>
+                <summary>How do I create a Zalo direct chat link?</summary>
+                <p>Our tool automatically generates the correct link, but you can also manually create one using: "https://zalo.me/[your-phone-number]" (e.g., https://zalo.me/0901234567).</p>
+            </details>
+            <details>
+                <summary>Can I set a predefined message for Zalo?</summary>
+                <p>Yes! You can add a custom message using: "https://zalo.me/[your-phone-number]?text=[your-message]" (e.g., https://zalo.me/0901234567?text=Hello%20there!).</p>
+            </details>
+            <details>
+                <summary>What is the correct format for a WhatsApp phone number?</summary>
+                <p>Enter your full phone number, including the country code, without spaces or special characters. Example: +12125551234 for a U.S. number.</p>
+            </details>
+            <details>
+                <summary>Can I add multiple chat buttons for different platforms?</summary>
+                <p>Yes! You can create and place multiple buttons on your website, giving visitors different contact options.</p>
+            </details>
+             <details>
+                <summary>Is the chat plugin mobile-friendly?</summary>
+                <p>Absolutely! The chat launcher is fully responsive and works seamlessly across mobile, tablet, and desktop devices.</p>
+            </details>
+            <details>
+                <summary>How do I create a WhatsApp direct chat link?</summary>
+                <p>Our tool automatically generates the correct link, but you can also manually create one using: "https://wa.me/[your-number]" (e.g., https://wa.me/12125551234).</p>
+            </details>
+            <details>
+                <summary>Can I set a predefined message for WhatsApp?</summary>
+                <p>Yes! You can add a custom message using: "https://wa.me/[your-number]?text=[your-message]" (e.g., https://wa.me/12125551234?text=Hello%20there!).</p>
+            </details>
+            <details>
+                <summary>How do I add a direct message link for Instagram?</summary>
+                <p>Use "https://www.instagram.com/direct/t/[your-username]/" to create a direct chat link. Our generator automatically formats this for you.</p>
+            </details>
+            <details>
+                <summary>Can I use this chat plugin for business inquiries?</summary>
+                <p>Yes! The chat plugin is perfect for businesses looking to provide quick and efficient customer support through multiple messaging platforms.</p>
+            </details>
+        </div>
+    </div>
+    
+    <div class="services-section">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-column">
+                <h4>Commercial Growth</h4>
+                <ul>
+                    <li><a href="https://m.me/bietdoitinhnhue" target="_blank">Digital Marketing & Ads</a></li>
+                    <li><a href="https://m.me/bietdoitinhnhue" target="_blank">E-commerce Scaling</a></li>
+                </ul>
+            </div>
+            <div class="service-column">
+                <h4>Intelligent Operations</h4>
+                <ul>
+                    <li><a href="https://m.me/bietdoitinhnhue" target="_blank">AI & Automation</a></li>
+                    <li><a href="https://m.me/bietdoitinhnhue" target="_blank">Cross-Functional Restructuring</a></li>
+                </ul>
+            </div>
+            <div class="service-column">
+                <h4>Business Transformation</h4>
+                <ul>
+                    <li><a href="https://m.me/bietdoitinhnhue" target="_blank">Commercial Transformation</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-contact-block">
+            <h4>LIÊN HỆ BIỆT ĐỘI TINH NHUỆ</h4>
+            <div class="footer-social-icons">
+                <a href="#"><img src="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/5f1715a9894f8288f99ab845bca84f3d181a7c3b/Messenger.svg" alt="Facebook"></a>
+                <a href="#"><img src="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/5f1715a9894f8288f99ab845bca84f3d181a7c3b/Telegram.svg" alt="Telegram"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo OA"></a>
+                <a href="#"><img src="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/5f1715a9894f8288f99ab845bca84f3d181a7c3b/Whatsapp.svg" alt="Hotline"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            Biệt Đội Tinh Nhuệ - Empower Business Messaging Since 2017 © 2025.
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Chat Plugin Configurator Logic ---
+            const controls = {
+                platform: document.getElementById('platform-selector'),
+                contactDetail: document.getElementById('contact-detail'),
+                buttonSize: document.getElementById('button-size'),
+                bottomSpacing: document.getElementById('bottom-spacing'),
+                buttonStyle: document.getElementById('button-style'),
+                buttonColor: document.getElementById('button-color'),
+                transparentCheckbox: document.getElementById('transparent-checkbox'),
+                position: document.getElementById('position-toggle'),
+            };
+
+            const displays = {
+                buttonSizeValue: document.getElementById('button-size-value'),
+                bottomSpacingValue: document.getElementById('bottom-spacing-value'),
+                buttonColorValue: document.getElementById('button-color-value'),
+            };
+
+            const preview = {
+                plugin: document.getElementById('chat-plugin-preview'),
+            };
+            
+            const codeOutput = document.getElementById('code-output');
+            const copyCodeBtn = document.getElementById('copy-code-btn');
+            
+            const SIDE_SPACING_DEFAULT = 10; // Fixed horizontal spacing
+
+            const platformData = {
+                zalo: {
+                    name: 'Zalo',
+                    brandColor: '#0068FF',
+                    baseUrl: 'https://zalo.me/',
+                    contactPlaceholder: 'Enter phone number (e.g. 0901234567)',
+                    contactValue: '0901234567',
+                    iconUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg'
+                },
+                messenger: {
+                    name: 'Messenger',
+                    brandColor: '#0068ff',
+                    baseUrl: 'https://m.me/',
+                    contactPlaceholder: 'Enter username or page ID',
+                    contactValue: 'chative.io',
+                    iconUrl: 'https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/5f1715a9894f8288f99ab845bca84f3d181a7c3b/Messenger.svg'
+                },
+                telegram: {
+                    name: 'Telegram',
+                    brandColor: '#00aeef',
+                    baseUrl: 'https://t.me/',
+                    contactPlaceholder: 'Enter username',
+                    contactValue: 'username',
+                    iconUrl: 'https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/5f1715a9894f8288f99ab845bca84f3d181a7c3b/Telegram.svg'
+                },
+                whatsapp: {
+                    name: 'WhatsApp',
+                    brandColor: '#25D366',
+                    baseUrl: 'https://wa.me/',
+                    contactPlaceholder: 'Enter phone number (e.g. +1234567890)',
+                    contactValue: '+1234567890',
+                    iconUrl: 'https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/5f1715a9894f8288f99ab845bca84f3d181a7c3b/Whatsapp.svg'
+                },
+                instagram: {
+                    name: 'Instagram',
+                    brandColor: '#BC2A8D',
+                    baseUrl: 'https://instagram.com/',
+                    contactPlaceholder: 'Enter username',
+                    contactValue: 'chative.io',
+                    iconUrl: 'https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/5f1715a9894f8288f99ab845bca84f3d181a7c3b/Instagram.svg'
+                }
+            };
+            
+            let settings = {
+                platform: 'zalo',
+                contact: '0901234567',
+                size: 60,
+                spacing: 10,
+                style: 'circle',
+                color: 'transparent',
+                isTransparent: true,
+                position: 'right'
+            };
+
+            function initializePlatforms() {
+                const platformSelector = controls.platform;
+                platformSelector.innerHTML = '';
+                Object.keys(platformData).forEach(key => {
+                    const platform = platformData[key];
+                    const button = document.createElement('button');
+                    button.dataset.platform = key;
+                    
+                    const img = document.createElement('img');
+                    img.src = platform.iconUrl;
+                    img.alt = platform.name;
+                    img.width = 20;
+                    img.height = 20;
+                    img.className = 'icon';
+
+                    button.appendChild(img);
+                    button.append(` ${platform.name}`);
+                    
+                    if (key === settings.platform) {
+                        button.classList.add('active');
+                    }
+                    platformSelector.appendChild(button);
+                });
+            }
+
+            function updatePreview() {
+                const platform = platformData[settings.platform];
+                document.documentElement.style.setProperty('--primary-color', platform.brandColor);
+
+                displays.buttonSizeValue.textContent = `${settings.size}px`;
+                displays.bottomSpacingValue.textContent = `${settings.spacing}px`;
+                
+                if(settings.isTransparent){
+                    displays.buttonColorValue.textContent = 'TRANSPARENT';
+                    controls.buttonColor.disabled = true;
+                } else {
+                    displays.buttonColorValue.textContent = settings.color.toUpperCase();
+                    controls.buttonColor.disabled = false;
+                }
+                controls.buttonColor.value = settings.isTransparent ? '#ffffff' : settings.color;
+                
+                const previewButton = preview.plugin;
+                previewButton.style.width = `${settings.size}px`;
+                previewButton.style.height = `${settings.size}px`;
+                previewButton.style.backgroundColor = settings.isTransparent ? 'transparent' : settings.color;
+                
+                if (settings.isTransparent) {
+                    previewButton.style.boxShadow = 'none';
+                    previewButton.style.border = 'none';
+                } else {
+                    previewButton.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
+                    previewButton.style.border = settings.color === '#FFFFFF' ? '1px solid #e9ecef' : 'none';
+                }
+                
+                previewButton.style.bottom = `${settings.spacing}px`;
+
+                if (settings.position === 'right') {
+                    previewButton.style.right = `${SIDE_SPACING_DEFAULT}px`;
+                    previewButton.style.left = 'auto';
+                } else {
+                    previewButton.style.left = `${SIDE_SPACING_DEFAULT}px`;
+                    previewButton.style.right = 'auto';
+                }
+                
+                let borderRadius = '0%';
+                if (settings.style === 'circle') borderRadius = '50%';
+                if (settings.style === 'rounded') borderRadius = '15px';
+                previewButton.style.borderRadius = borderRadius;
+                
+                const iconSize = Math.floor(settings.size * 0.4);
+                preview.plugin.innerHTML = `<img src="${platform.iconUrl}" alt="${platform.name} icon" width="${iconSize}" height="${iconSize}" />`;
+
+                generateCode();
+            }
+            
+            function generateCode() {
+                const borderRadiusMap = {
+                    circle: '50%',
+                    rounded: '15px',
+                    square: '0px'
+                };
+                
+                const positionStyle = settings.position === 'right' 
+                    ? `right: ${SIDE_SPACING_DEFAULT}px;` 
+                    : `left: ${SIDE_SPACING_DEFAULT}px;`;
+
+                const platform = platformData[settings.platform];
+                const href = `${platform.baseUrl}${settings.contact}`;
+                const iconSize = Math.floor(settings.size * 0.4);
+                
+                const finalColor = settings.isTransparent ? 'transparent' : settings.color;
+                
+                let extraStyles = '';
+                if (settings.isTransparent) {
+                    extraStyles += ' box-shadow: none;';
+                } else {
+                    extraStyles += ' box-shadow: 0 4px 8px rgba(0,0,0,0.2);';
+                    if (settings.color === '#FFFFFF') {
+                        extraStyles += ' border: 1px solid #e9ecef;';
+                    }
+                }
+                
+                const imageTag = `<img src="${platform.iconUrl}" alt="${platform.name} icon" width="${iconSize}" height="${iconSize}" />`;
+
+                const code = `<!-- Chat Plugin Code -->
+<div id="chat-plugin" style="position: fixed; bottom: ${settings.spacing}px; ${positionStyle} z-index: 9999;">
+  <a href="${href}" target="_blank" style="display: flex; align-items: center; justify-content: center; width: ${settings.size}px; height: ${settings.size}px; border-radius: ${borderRadiusMap[settings.style]}; background-color: ${finalColor}; text-decoration: none;${extraStyles}">
+    ${imageTag.trim()}
+  </a>
+</div>`;
+                
+                codeOutput.textContent = code.trim();
+            }
+            
+            controls.platform.addEventListener('click', (e) => {
+                const button = e.target.closest('button');
+                if (button) {
+                    controls.platform.querySelector('.active').classList.remove('active');
+                    button.classList.add('active');
+                    const newPlatformKey = button.dataset.platform;
+                    const platformInfo = platformData[newPlatformKey];
+
+                    settings.platform = newPlatformKey;
+                    settings.isTransparent = true; // Default to transparent when switching
+                    settings.color = platformInfo.brandColor; // Store brand color for later
+                    settings.contact = platformInfo.contactValue;
+
+                    controls.transparentCheckbox.checked = true;
+                    controls.contactDetail.placeholder = platformInfo.contactPlaceholder;
+                    controls.contactDetail.value = platformInfo.contactValue;
+
+                    updatePreview();
+                }
+            });
+
+            controls.contactDetail.addEventListener('input', (e) => {
+                settings.contact = e.target.value;
+                updatePreview();
+            });
+            
+            controls.buttonSize.addEventListener('input', (e) => {
+                settings.size = e.target.value;
+                updatePreview();
+            });
+
+            controls.bottomSpacing.addEventListener('input', (e) => {
+                settings.spacing = e.target.value;
+                updatePreview();
+            });
+
+            controls.buttonStyle.addEventListener('change', (e) => {
+                settings.style = e.target.value;
+                updatePreview();
+            });
+
+            controls.buttonColor.addEventListener('input', (e) => {
+                settings.color = e.target.value;
+                settings.isTransparent = false;
+                controls.transparentCheckbox.checked = false;
+                updatePreview();
+            });
+            
+            controls.transparentCheckbox.addEventListener('change', (e) => {
+                settings.isTransparent = e.target.checked;
+                if (!e.target.checked) {
+                    // If unchecking, revert to the last saved color or brand color
+                    settings.color = controls.buttonColor.value;
+                }
+                updatePreview();
+            });
+            
+            controls.position.addEventListener('click', (e) => {
+                const button = e.target.closest('button');
+                if (button) {
+                    controls.position.querySelector('.active').classList.remove('active');
+                    button.classList.add('active');
+                    settings.position = button.dataset.position;
+                    updatePreview();
+                }
+            });
+            
+            copyCodeBtn.addEventListener('click', () => {
+                const codeElement = document.getElementById('code-output');
+                const range = document.createRange();
+                range.selectNodeContents(codeElement);
+                
+                const selection = window.getSelection();
+                selection.removeAllRanges();
+                selection.addRange(range);
+                
+                navigator.clipboard.writeText(codeOutput.textContent).then(() => {
+                    copyCodeBtn.textContent = 'Copied!';
+                    setTimeout(() => {
+                        copyCodeBtn.textContent = 'Copy Code';
+                        selection.removeAllRanges();
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy code: ', err);
+                    copyCodeBtn.textContent = 'Error!';
+                     setTimeout(() => {
+                        copyCodeBtn.textContent = 'Copy Code';
+                    }, 2000);
+                });
+            });
+
+            // Initial setup
+            initializePlatforms();
+            const initialPlatformInfo = platformData[settings.platform];
+            controls.contactDetail.placeholder = initialPlatformInfo.contactPlaceholder;
+            controls.contactDetail.value = initialPlatformInfo.contactValue;
+            settings.color = initialPlatformInfo.brandColor; // Set initial color for unchecking
+            updatePreview();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: ĐÁY XÃ HỘI - RAT RACE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.5s, color 0.5s;
+        }
+        .bg-light {
+            background-color: #f8fafc;
+            background-image: radial-gradient(1000px 400px at 70% -100px, rgba(59, 130, 246, 0.12), transparent), radial-gradient(800px 400px at -20% -100px, rgba(16, 185, 129, 0.14), transparent);
+        }
+        .bg-dark {
+            background-color: #0f172a;
+            background-image: radial-gradient(1000px 400px at 70% -100px, rgba(59, 130, 246, 0.15), transparent), radial-gradient(800px 400px at -20% -100px, rgba(168, 85, 247, 0.18), transparent);
+        }
+        .animated-card {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .animated-card.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        #ai-suggestion-content ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        #ai-suggestion-content li {
+            margin-bottom: 0.5rem;
+        }
+        #ai-suggestion-content strong {
+            color: #a5b4fc; /* Indigo-300 for dark mode */
+        }
+        html.light #ai-suggestion-content strong {
+            color: #4f46e5; /* Indigo-600 for light mode */
+        }
+        .flowchart-step {
+            position: relative;
+            padding-left: 60px;
+            padding-bottom: 2rem;
+        }
+        .flowchart-step:not(:last-child)::before {
+            content: '';
+            position: absolute;
+            left: 24px;
+            top: 50px;
+            width: 2px;
+            height: calc(100% - 30px);
+            background-color: #38bdf8; /* sky-400 */
+            opacity: 0.3;
+        }
+        .flowchart-icon {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        /* Animation Keyframes */
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin 10s linear infinite;
+            transform-origin: center;
+        }
+        @keyframes climb {
+            from { transform: translateY(0); }
+            to { transform: translateY(-40px); }
+        }
+        .animate-climb {
+            animation: climb 2s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-dark text-white">
+
+    <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/10 dark:supports-[backdrop-filter]:bg-slate-900/20 border-b border-white/10">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+            <div class="flex items-center gap-3">
+                <div class="h-8 w-8 rounded-xl bg-gradient-to-br from-indigo-500 to-fuchsia-500"></div>
+                <span class="text-sm font-semibold opacity-90">LÀM THẾ NÀO THOÁT ĐÁY XÃ HỘI</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <div class="hidden sm:flex items-center gap-2 rounded-full border border-black/10 dark:border-white/20 bg-white/70 dark:bg-slate-800/50 px-3 py-1 text-xs font-medium text-black/70 dark:text-white/70 backdrop-blur shadow-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-3.572A2 2 0 0 0 1.5 12.22v-2.44A2 2 0 0 0 2.865 8.21l6.135-3.572A2 2 0 0 0 10.5 6.47V17.5a2 2 0 0 0-1.437-1.937Z"/><path d="M12.25 21a2 2 0 0 0 1.937-1.437L17.5 14.063A2 2 0 0 0 15.5 11.5h-1.875a2 2 0 0 0-1.938 1.437L8.5 19.5A2 2 0 0 0 10.5 22h1.75Z"/><path d="M19.135 15.572A2 2 0 0 0 20.5 17.3v2.44a2 2 0 0 0 1.365 1.937l-6.135 3.571A2 2 0 0 0 14.25 24h-1.75a2 2 0 0 0-1.938-1.437l3.25-6.5A2 2 0 0 0 15.5 14.5h1.875a2 2 0 0 0 1.76-2.928Z"/></svg>
+                    <span>Minh hoạ từ bài chiep.co</span>
+                </div>
+                <button id="theme-toggle" class="rounded-xl border border-black/10 dark:border-white/20 bg-white/10 px-3 py-2 text-xs hover:bg-white/20">
+                    Light
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 py-14 md:grid-cols-2">
+            <div>
+                <h1 class="bg-gradient-to-r from-fuchsia-400 to-sky-400 bg-clip-text text-transparent font-black leading-tight md:text-5xl">
+                    <span class="bg-gradient-to-r from-fuchsia-400 to-sky-400 bg-clip-text text-transparent"> LÀM THẾ NÀO THOÁT KHỎI ĐÁY XÃ HỘI</span>
+                </h1>
+                <p class="mt-4 max-w-xl text-sm/6 opacity-80">
+                    Trang minh hoạ trực quan, tóm lược các luận điểm then chốt và biến chúng thành hành động. Kéo xuống để bắt đầu.
+                </p>
+                <div class="mt-6 flex flex-wrap gap-3">
+                    <div class="inline-flex items-center gap-2 rounded-full border border-black/10 dark:border-white/20 bg-white/70 dark:bg-slate-800/50 px-3 py-1 text-xs font-medium text-black/70 dark:text-white/70 backdrop-blur shadow-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        <span>Dành cho người muốn thoát 'vòng lặp' 9–5</span>
+                    </div>
+                    <div class="inline-flex items-center gap-2 rounded-full border border-black/10 dark:border-white/20 bg-white/70 dark:bg-slate-800/50 px-3 py-1 text-xs font-medium text-black/70 dark:text-white/70 backdrop-blur shadow-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="m9 9.5 2 2 4-4"/></svg>
+                        <span>Munger’s mental models</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-indigo-500/20 to-fuchsia-500/10 blur-2xl"></div>
+                <div class="relative overflow-hidden rounded-2xl bg-white/80 dark:bg-slate-800/80 p-5 shadow-sm ring-1 ring-black/10 dark:ring-white/10 backdrop-blur transition hover:shadow-md text-slate-900 dark:text-white">
+                    <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-indigo-500/15 to-fuchsia-500/10"></div>
+                    <div class="relative z-10 grid grid-cols-2 gap-6">
+                        <div class="flex flex-col items-center">
+                            <svg viewBox="0 0 200 200" class="h-44 w-44 text-slate-800 dark:text-slate-300">
+                                <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="currentColor" stopOpacity="0.15" /><stop offset="100%" stopColor="currentColor" stopOpacity="0.35" /></linearGradient></defs>
+                                <g class="animate-spin-slow">
+                                    <circle cx="100" cy="100" r="90" fill="none" stroke="currentColor" stroke-width="6" opacity="0.25" />
+                                    <line x1="100" y1="100" x2="185" y2="100" stroke="currentColor" stroke-width="2" opacity="0.25"/><line x1="100" y1="100" x2="177.9" y2="132.8" stroke="currentColor" stroke-width="2" opacity="0.25"/><line x1="100" y1="100" x2="160.1" y2="160.1" stroke="currentColor" stroke-width="2" opacity="0.25"/><line x1="100" y1="100" x2="132.8" y2="177.9" stroke="currentColor" stroke-width="2" opacity="0.25"/><line x1="100" y1="100" x2="100" y2="185" stroke="currentColor" stroke-width="2" opacity="0.25"/><line x1="100" y1="100" x2="67.2" y2="177.9" stroke="currentColor" stroke-width="2" opacity="0.25"/><line x1="100" y1="100" x2="39.9" y2="160.1" stroke="currentColor" stroke-width="2" opacity="0.25"/><line x1="100" y1="100" x2="22.1" y2="132.8" stroke="currentColor" stroke-width="2" opacity="0.25"/><line x1="100" y1="100" x2="15" y2="100" stroke="currentColor" stroke-width="2" opacity="0.25"/><line x1="100" y1="100" x2="22.1" y2="67.2" stroke="currentColor" stroke-width="2" opacity="0.25"/><line x1="100" y1="100" x2="39.9" y2="39.9" stroke="currentColor" stroke-width="2" opacity="0.25"/><line x1="100" y1="100" x2="67.2" y2="22.1" stroke="currentColor" stroke-width="2" opacity="0.25"/><line x1="100" y1="100" x2="100" y2="15" stroke="currentColor" stroke-width="2" opacity="0.25"/><line x1="100" y1="100" x2="132.8" y2="22.1" stroke="currentColor" stroke-width="2" opacity="0.25"/><line x1="100" y1="100" x2="160.1" y2="39.9" stroke="currentColor" stroke-width="2" opacity="0.25"/><line x1="100" y1="100" x2="177.9" y2="67.2" stroke="currentColor" stroke-width="2" opacity="0.25"/>
+                                </g>
+                                <g transform="translate(100,100)" class="animate-spin-slow">
+                                    <g transform="translate(0, -55)">
+                                        <circle r="18" fill="url(#g1)" />
+                                        <circle r="4" cx="-6" cy="-4" fill="currentColor" />
+                                        <circle r="4" cx="8" cy="4" fill="currentColor" />
+                                    </g>
+                                </g>
+                                <rect x="50" y="180" width="100" height="10" rx="5" fill="currentColor" opacity="0.15" />
+                            </svg>
+                            <span class="mt-2 text-xs opacity-70">Vòng lặp vô tận</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <svg viewBox="0 0 200 200" class="h-44 w-44 text-slate-800 dark:text-slate-300">
+                                <defs>
+                                    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stopColor="currentColor" stopOpacity="0.15" /><stop offset="100%" stopColor="currentColor" stopOpacity="0.35" /></linearGradient>
+                                    <mask id="ladder-mask">
+                                        <rect x="70" y="20" width="60" height="160" fill="white" />
+                                    </mask>
+                                </defs>
+                                <rect x="70" y="20" width="12" height="160" rx="6" fill="currentColor" opacity="0.35" />
+                                <rect x="118" y="20" width="12" height="160" rx="6" fill="currentColor" opacity="0.35" />
+                                <g mask="url(#ladder-mask)">
+                                    <g class="animate-climb">
+                                        <rect x="70" y="40" width="60" height="8" rx="4" fill="url(#g2)"/><rect x="70" y="80" width="60" height="8" rx="4" fill="url(#g2)"/><rect x="70" y="120" width="60" height="8" rx="4" fill="url(#g2)"/><rect x="70" y="160" width="60" height="8" rx="4" fill="url(#g2)"/><rect x="70" y="200" width="60" height="8" rx="4" fill="url(#g2)"/>
+                                        <rect x="70" y="60" width="60" height="8" rx="4" fill="url(#g2)"/><rect x="70" y="100" width="60" height="8" rx="4" fill="url(#g2)"/><rect x="70" y="140" width="60" height="8" rx="4" fill="url(#g2)"/><rect x="70" y="180" width="60" height="8" rx="4" fill="url(#g2)"/>
+                                    </g>
+                                </g>
+                            </svg>
+                            <span class="mt-2 text-xs opacity-70">Bậc thang đi lên</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mx-auto max-w-6xl px-4 pb-12">
+            <div class="mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <h2 class="text-xl font-bold md:text-2xl">8 Tín lý – từ bài viết</h2>
+            </div>
+
+            <div id="doctrines-grid" class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+            </div>
+        </section>
+
+        <section class="mx-auto max-w-6xl px-4 pb-14">
+             <div class="animated-card relative overflow-hidden rounded-2xl bg-white/80 dark:bg-slate-800/80 p-6 shadow-sm ring-1 ring-black/10 dark:ring-white/10 backdrop-blur text-slate-900 dark:text-white">
+                <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-sky-500/10 to-sky-500/0"></div>
+                <div class="relative z-10">
+                    <div class="mb-6 flex items-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 11a10 10 0 0 1 20 0Z"/><path d="M2 13a10 10 0 0 0 20 0Z"/><path d="M12 2v20"/><path d="M22 12H2"/></svg>
+                        <h3 class="text-xl font-bold">Mô hình giải quyết vấn đề của Charlie Munger</h3>
+                    </div>
+                    <div id="munger-model-flowchart" class="max-w-3xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mx-auto max-w-6xl px-4 pb-20">
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                <div class="animated-card relative overflow-hidden rounded-2xl bg-white/80 dark:bg-slate-800/80 p-5 shadow-sm ring-1 ring-black/10 dark:ring-white/10 backdrop-blur text-slate-900 dark:text-white">
+                    <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-amber-500/10 to-amber-500/0"></div>
+                    <div class="relative z-10 flex flex-col h-full">
+                        <h4 class="mb-1 text-base font-semibold">Bản đồ HÀNH ĐỘNG 30–60–90 ngày</h4>
+                        <p class="mb-4 text-sm opacity-80">
+                            Tìm cách giải quyết một vấn đề, đáp ứng một ham muốn mà người khác sẵn sàng chi tiền. Sau đó, bạn phải có khả năng giải quyết nó trên diện rộng, lặp lại càng nhiều lần càng tốt. Đó là cách duy nhất để đi từ không thành có.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                            <div class="rounded-xl border border-black/10 dark:border-white/20 bg-white/80 dark:bg-slate-700/50 p-3 text-black dark:text-white">
+                                <div class="mb-2 text-[11px] font-medium uppercase tracking-wider text-black/60 dark:text-white/60">Lợi thế của tôi</div>
+                                <textarea id="action-advantage" placeholder="VD: Kỹ năng viết lách, marketing..." class="h-24 w-full resize-none rounded-md border border-black/10 dark:border-white/20 bg-white/60 dark:bg-slate-600/50 p-2 text-xs outline-none focus:ring-2 focus:ring-amber-400"></textarea>
+                            </div>
+                            <div class="rounded-xl border border-black/10 dark:border-white/20 bg-white/80 dark:bg-slate-700/50 p-3 text-black dark:text-white">
+                                <div class="mb-2 text-[11px] font-medium uppercase tracking-wider text-black/60 dark:text-white/60">Vấn đề muốn giải quyết</div>
+                                <textarea id="action-problem" placeholder="VD: Giúp các startup nhỏ quảng bá sản phẩm..." class="h-24 w-full resize-none rounded-md border border-black/10 dark:border-white/20 bg-white/60 dark:bg-slate-600/50 p-2 text-xs outline-none focus:ring-2 focus:ring-amber-400"></textarea>
+                            </div>
+                            <div class="rounded-xl border border-black/10 dark:border-white/20 bg-white/80 dark:bg-slate-700/50 p-3 text-black dark:text-white">
+                                <div class="mb-2 text-[11px] font-medium uppercase tracking-wider text-black/60 dark:text-white/60">Cách lặp ở quy mô</div>
+                                <textarea id="action-scale" placeholder="VD: Tạo khóa học online, viết ebook..." class="h-24 w-full resize-none rounded-md border border-black/10 dark:border-white/20 bg-white/60 dark:bg-slate-600/50 p-2 text-xs outline-none focus:ring-2 focus:ring-amber-400"></textarea>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <button id="get-ai-suggestion" class="w-full flex items-center justify-center gap-2 rounded-lg bg-amber-500 px-4 py-2.5 text-sm font-semibold text-black transition hover:bg-amber-400 disabled:opacity-50">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-3.572A2 2 0 0 0 1.5 12.22v-2.44A2 2 0 0 0 2.865 8.21l6.135-3.572A2 2 0 0 0 10.5 6.47V17.5a2 2 0 0 0-1.437-1.937Z"/><path d="M12.25 21a2 2 0 0 0 1.937-1.437L17.5 14.063A2 2 0 0 0 15.5 11.5h-1.875a2 2 0 0 0-1.938 1.437L8.5 19.5A2 2 0 0 0 10.5 22h1.75Z"/><path d="M19.135 15.572A2 2 0 0 0 20.5 17.3v2.44a2 2 0 0 0 1.365 1.937l-6.135 3.571A2 2 0 0 0 14.25 24h-1.75a2 2 0 0 0-1.938-1.437l3.25-6.5A2 2 0 0 0 15.5 14.5h1.875a2 2 0 0 0 1.76-2.928Z"/></svg>
+                                <span>Nhận Gợi Ý AI</span>
+                            </button>
+                        </div>
+                        <div id="ai-suggestion-container" class="mt-4 hidden flex-grow rounded-xl border border-black/10 dark:border-white/20 bg-white/80 dark:bg-slate-700/50 p-4 text-xs text-black dark:text-white">
+                            <div id="ai-suggestion-loader" class="flex items-center gap-2 opacity-70">
+                                <svg class="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                                <span>Cố vấn AI đang phân tích...</span>
+                            </div>
+                            <div id="ai-suggestion-content" class="prose prose-sm max-w-none"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animated-card relative overflow-hidden rounded-2xl bg-white/80 dark:bg-slate-800/80 p-5 shadow-sm ring-1 ring-black/10 dark:ring-white/10 backdrop-blur text-slate-900 dark:text-white">
+                    <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-sky-500/10 to-sky-500/0"></div>
+                    <div class="relative z-10">
+                        <h4 class="mb-1 text-base font-semibold">Bộ lọc 'Edge' nhanh</h4>
+                        <p class="mb-3 text-sm opacity-80">Ba câu hỏi để kiểm tra một cơ hội theo Tín lý #4.</p>
+                        <div class="space-y-3" id="edge-filter-toggles">
+                        </div>
+                        <p class="mt-3 text-xs opacity-70">Nếu cả 3 = Đúng → tiếp tục. Nếu bất kỳ = Sai → bỏ qua/đổi hướng.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mx-auto max-w-6xl px-4 pb-10 opacity-80">
+        <p class="text-xs">
+            Nguồn cảm hứng & trích ý: bài viết "ĐÁY XÃ HỘI – RAT RACE: LÀM THẾ NÀO ĐỂ THOÁT RA?".
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Data ---
+            const doctrines = [
+                { id: 1, title: "Biết 'người non tay' trong cuộc chơi", subtitle: "Nếu bạn không biết ai là người thua trong 'sòng bạc bịp', rất có thể là bạn.", icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>`, color: "from-rose-500/20 to-rose-500/5", tag: "Tín lý #1", explanation: "Trong mọi lĩnh vực, từ đầu tư đến sự nghiệp, luôn có những người chơi có kinh nghiệm và những người mới. Nếu bạn không nhận diện được luật chơi và ai là 'cá mập', bạn sẽ trở thành 'con mồi'." },
+                { id: 2, title: "Trước khi làm gì, hãy học từ người khác", subtitle: "Sao chép những gì đã hiệu quả trước khi 'sáng tạo'.", icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="m9 9.5 2 2 4-4"/></svg>`, color: "from-amber-500/20 to-amber-500/5", tag: "Tín lý #2", explanation: "Sáng tạo đột phá thường đến sau khi đã nắm vững nền tảng. Hãy học hỏi, sao chép chiến lược của người thành công để tiết kiệm thời gian, sau đó cải tiến và tạo ra dấu ấn riêng." },
+                { id: 3, title: "Đừng nghe người giàu nói – Hãy nhìn họ làm", subtitle: "Quan sát hành vi và mô hình lợi ích thực tế, không phải câu chuyện.", icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>`, color: "from-emerald-500/20 to-emerald-500/5", tag: "Tín lý #3", explanation: "Hành động luôn tiết lộ sự thật. Thay vì nghe những lời khuyên chung chung, hãy phân tích cách họ phân bổ thời gian, tiền bạc và nguồn lực. Đó mới là chiến lược thật sự của họ." },
+                { id: 4, title: "Chọn cuộc chơi DỄ với bạn, KHÓ với số đông", subtitle: "Edge = thứ bạn làm nhẹ tựa hơi thở, người khác phải toát mồ hôi.", icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 16.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 1 1 5 0Z"/><path d="M21 16.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 1 1 5 0Z"/><path d="M8 16.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 1 1 5 0Z"/><path d="M16 7.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 1 1 5 0Z"/><path d="M3 7.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 1 1 5 0Z"/><path d="M21 7.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 1 1 5 0Z"/></svg>`, color: "from-sky-500/20 to-sky-500/5", tag: "Tín lý #4", explanation: "Lợi thế cạnh tranh (Edge) là nơi tài năng độc nhất của bạn gặp một thị trường ngách. Hãy tìm lĩnh vực mà bạn có thể trở thành người giỏi nhất một cách tự nhiên, thay vì cạnh tranh trực diện ở những nơi đông đúc." },
+                { id: 5, title: "Tìm LỢI THẾ – không phải 'đam mê'", subtitle: "Đam mê không đồng nghĩa tiền. Lợi thế thì có.", icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>`, color: "from-indigo-500/20 to-indigo-500/5", tag: "Tín lý #5", explanation: "Đam mê là sở thích, còn lợi thế là kỹ năng bạn vượt trội và thị trường cần. Hãy tập trung phát triển lợi thế thành một thứ có thể tạo ra giá trị mà người khác sẵn sàng trả tiền." },
+                { id: 6, title: "Giải quyết vấn đề ở QUY MÔ", subtitle: "Tiền bền vững = giải quyết một nhu cầu mà nhiều người sẵn sàng trả, lặp lại được.", icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4H6v16h12V4Z"/><path d="M12 18V6"/><path d="M6 12h12"/></svg>`, color: "from-fuchsia-500/20 to-fuchsia-500/5", tag: "Tín lý #6", explanation: "Một ý tưởng kinh doanh chỉ thực sự tiềm năng khi nó có thể được nhân rộng. Hãy xây dựng hệ thống (bằng code, media, quy trình...) để phục vụ hàng ngàn người mà không cần bạn phải bỏ ra ngần ấy thời gian." },
+                { id: 7, title: "Đừng bán thời gian đổi tiền", subtitle: "Hoặc để TÀI SẢN làm việc cho bạn, hoặc để NGƯỜI KHÁC làm việc cho bạn.", icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2h4"/><path d="M12 14v-4"/><path d="M4 14a8 8 0 0 1 16 0Z"/><path d="M21.75 16.25a10 10 0 1 1-2.269-5.424"/></svg>`, color: "from-teal-500/20 to-teal-500/5", tag: "Tín lý #7", explanation: "Thu nhập từ việc làm công có giới hạn bởi 24 giờ một ngày. Để tự do, hãy tạo ra các nguồn thu nhập từ tài sản (cổ phiếu, bất động sản, sản phẩm số) hoặc từ hệ thống kinh doanh tự vận hành." },
+                { id: 8, title: "Take a simple idea, and take it seriously", subtitle: "Charlie Munger", icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.33-.04-3.1-.75-.77-2.26-.76-3.1-.04Z"/><path d="m20.5 3.5-2.21 2.21c-.84.84-.7 2.33.04 3.1.75.77 2.26.76 3.1.04l2.21-2.21s-1.26-1.5-5-2Z"/><path d="M15.5 8.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.33-.04-3.1-.75-.77-2.26-.76-3.1-.04Z"/><path d="m8.5 15.5-2.21 2.21c-.84.84-.7 2.33.04 3.1.75.77 2.26.76 3.1.04l2.21-2.21s-1.26-1.5-5-2Z"/><path d="m12 12 5.5 5.5"/><path d="m3.5 20.5 5.5-5.5"/></svg>`, color: "from-violet-500/20 to-violet-500/5", tag: "Tín lý #8", explanation: "Thành công không đến từ những ý tưởng phức tạp, mà từ việc thực thi một ý tưởng đơn giản một cách xuất sắc và bền bỉ. Sự tập trung và kỷ luật chính là chìa khóa." },
+            ];
+            const mungerModel = [
+                { icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>`, title: "Đơn giản hóa vấn đề (No-brainer first)", text: "Bắt đầu bằng cách giải quyết những câu hỏi dễ và rõ ràng nhất để tạo đà và làm sáng tỏ bức tranh toàn cảnh." },
+                { icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4H6v16h12V4Z"/><path d="M12 18V6"/><path d="M6 12h12"/></svg>`, title: "Dùng toán học", text: "Lượng hóa vấn đề và dùng logic, xác suất cơ bản để phân tích. Con số không biết nói dối và giúp loại bỏ cảm tính." },
+                { icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 7H3"/><path d="m6 11-4 4 4 4"/><path d="M21 17H3"/></svg>`, title: "Nghĩ ngược (Inversion)", text: "Thay vì hỏi 'Làm sao để thành công?', hãy hỏi 'Điều gì chắc chắn sẽ dẫn đến thất bại?'. Tránh né những cạm bẫy thường dễ hơn là tìm kiếm sự xuất chúng." },
+                { icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Z"/><path d="M5 14h14"/><path d="M9 18h6"/><path d="M9 10h6"/></svg>`, title: "Ưu tiên kiến thức đơn giản", text: "Những nguyên lý nền tảng, cốt lõi và có thể áp dụng rộng rãi thường mang lại hiệu quả cao nhất. Đừng phức tạp hóa những gì vốn đơn giản." },
+                { icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 11a10 10 0 0 1 20 0Z"/><path d="M2 13a10 10 0 0 0 20 0Z"/><path d="M12 2v20"/><path d="M22 12H2"/></svg>`, title: "Hiệu ứng Lollapalooza", text: "Kết quả đột phá thường không đến từ một yếu tố duy nhất, mà là sự cộng hưởng của nhiều yếu tố mạnh mẽ cùng xảy ra một lúc." },
+            ];
+            const edgeFilters = [
+                "Điều này DỄ với mình? (so với 90% người khác)",
+                "Khó sao chép nhanh? (copycat không bắt kịp trong vài tuần)",
+                "Có đường mở rộng quy mô rõ ràng? (media, code, vốn, hệ thống)"
+            ];
+
+            // --- Elements ---
+            const themeToggle = document.getElementById('theme-toggle');
+            const doctrinesGrid = document.getElementById('doctrines-grid');
+            const mungerModelFlowchart = document.getElementById('munger-model-flowchart');
+            const edgeFilterTogglesContainer = document.getElementById('edge-filter-toggles');
+            const getAISuggestionBtn = document.getElementById('get-ai-suggestion');
+            const aiSuggestionContainer = document.getElementById('ai-suggestion-container');
+            const aiSuggestionLoader = document.getElementById('ai-suggestion-loader');
+            const aiSuggestionContent = document.getElementById('ai-suggestion-content');
+            const advantageInput = document.getElementById('action-advantage');
+            const problemInput = document.getElementById('action-problem');
+            const scaleInput = document.getElementById('action-scale');
+
+            // --- Render Functions ---
+            const renderDoctrines = () => {
+                doctrinesGrid.innerHTML = doctrines.map((d, i) => `
+                    <div class="animated-card h-full" style="transition-delay: ${i * 40}ms">
+                        <div class="relative overflow-hidden rounded-2xl bg-white/80 dark:bg-slate-800/80 p-5 shadow-sm ring-1 ring-black/10 dark:ring-white/10 backdrop-blur transition hover:shadow-md text-slate-900 dark:text-white h-full flex flex-col">
+                            <div class="pointer-events-none absolute inset-0 bg-gradient-to-br ${d.color}"></div>
+                            <div class="relative z-10 flex flex-col flex-grow">
+                                <div class="mb-3 flex items-center justify-between">
+                                    <span class="text-[11px] uppercase tracking-wide opacity-60">${d.tag}</span>
+                                    <span class="text-[11px] opacity-60">${String(d.id).padStart(2, "0")}</span>
+                                </div>
+                                <div class="mb-3 flex items-center gap-2">
+                                    <span class="shrink-0 rounded-xl bg-black/10 dark:bg-white/10 p-2">${d.icon}</span>
+                                    <h3 class="text-sm font-semibold">${d.title}</h3>
+                                </div>
+                                <p class="text-xs opacity-80 italic">
+                                    "${d.subtitle}"
+                                </p>
+                                <hr class="my-3 border-black/10 dark:border-white/10">
+                                <p class="text-xs opacity-90 flex-grow">
+                                    ${d.explanation}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            };
+
+            const renderMungerModel = () => {
+                mungerModelFlowchart.innerHTML = mungerModel.map(m => `
+                    <div class="flowchart-step">
+                        <div class="flowchart-icon text-sky-400">${m.icon}</div>
+                        <h4 class="text-base font-bold mb-1 text-slate-800 dark:text-slate-100">${m.title}</h4>
+                        <p class="text-sm opacity-80">${m.text}</p>
+                    </div>
+                `).join('');
+            };
+
+            const renderEdgeFilters = () => {
+                edgeFilterTogglesContainer.innerHTML = edgeFilters.map((label) => `
+                    <button class="edge-toggle flex w-full items-center justify-between rounded-xl border border-black/10 dark:border-white/20 bg-white/70 dark:bg-slate-800/50 px-4 py-3 text-sm font-medium transition" data-on="false">
+                        <span>${label}</span>
+                        <span class="toggle-switch h-5 w-10 rounded-full p-0.5 transition bg-black/20 dark:bg-white/20">
+                            <span class="toggle-indicator block h-4 w-4 rounded-full bg-white transition"></span>
+                        </span>
+                    </button>
+                `).join('');
+                
+                document.querySelectorAll('.edge-toggle').forEach(toggle => {
+                    toggle.addEventListener('click', () => {
+                        const isOn = toggle.getAttribute('data-on') === 'true';
+                        toggle.setAttribute('data-on', String(!isOn));
+                        toggle.classList.toggle('border-emerald-400', !isOn);
+                        toggle.classList.toggle('bg-emerald-50', !isOn);
+                        toggle.classList.toggle('dark:bg-emerald-900/50', !isOn);
+                        toggle.querySelector('.toggle-switch').classList.toggle('bg-emerald-500', !isOn);
+                        toggle.querySelector('.toggle-indicator').classList.toggle('translate-x-5', !isOn);
+                    });
+                });
+            };
+
+            // --- Event Listeners ---
+            themeToggle.addEventListener('click', () => {
+                const html = document.documentElement;
+                html.classList.toggle('dark');
+                const isDark = html.classList.contains('dark');
+                document.body.classList.toggle('bg-dark', isDark);
+                document.body.classList.toggle('bg-light', !isDark);
+                themeToggle.textContent = isDark ? 'Light' : 'Dark';
+            });
+
+            getAISuggestionBtn.addEventListener('click', async () => {
+                const advantage = advantageInput.value.trim();
+                const problem = problemInput.value.trim();
+                const scale = scaleInput.value.trim();
+
+                if (!advantage || !problem || !scale) {
+                    alert("Vui lòng điền đầy đủ cả 3 ô để nhận được gợi ý tốt nhất.");
+                    return;
+                }
+
+                getAISuggestionBtn.disabled = true;
+                aiSuggestionContainer.classList.remove('hidden');
+                aiSuggestionLoader.style.display = 'flex';
+                aiSuggestionContent.innerHTML = '';
+
+                const prompt = `Bạn là một chuyên gia tư vấn chiến lược kinh doanh. Dựa trên thông tin sau:
+- **Lợi thế cốt lõi:** ${advantage}
+- **Vấn đề cần giải quyết:** ${problem}
+- **Phương án quy mô hóa:** ${scale}
+
+Hãy đưa ra một phân tích ngắn gọn và đề xuất các bước hành động cụ thể, khả thi trong 30-60-90 ngày tới. Tập trung vào việc kết hợp lợi thế để giải quyết vấn đề và tận dụng phương án quy mô hóa. Trình bày dưới dạng các gạch đầu dòng rõ ràng, sử dụng markdown.`;
+                
+                try {
+                    let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
+                    const payload = { contents: chatHistory };
+                    const apiKey = "";
+                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+                    
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`API error: ${response.statusText}`);
+                    }
+
+                    const result = await response.json();
+                    
+                    if (result.candidates && result.candidates.length > 0) {
+                        let text = result.candidates[0].content.parts[0].text;
+                        text = text
+                            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                            .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                            .replace(/^- (.*$)/gm, '<ul><li>$1</li></ul>')
+                            .replace(/<\/ul>\n<ul>/g, '');
+                        aiSuggestionContent.innerHTML = text;
+                    } else {
+                        aiSuggestionContent.textContent = "Không thể nhận được gợi ý lúc này. Vui lòng thử lại sau.";
+                    }
+                } catch (error) {
+                    console.error("Error fetching AI suggestion:", error);
+                    aiSuggestionContent.textContent = "Đã xảy ra lỗi khi kết nối với Cố vấn AI. Vui lòng kiểm tra lại kết nối và thử lại.";
+                } finally {
+                    aiSuggestionLoader.style.display = 'none';
+                    getAISuggestionBtn.disabled = false;
+                }
+            });
+
+            // --- Animation Observer ---
+            const observeAnimatedCards = () => {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                document.querySelectorAll('.animated-card').forEach(card => {
+                    observer.observe(card);
+                });
+            };
+
+            // --- Initial Render ---
+            renderDoctrines();
+            renderMungerModel();
+            renderEdgeFilters();
+            observeAnimatedCards();
+        });
+    </script>
+</body>
+</html>
