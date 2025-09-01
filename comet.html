@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tải Comet (Perplexity) | Biệt đội tinh nhuệ</title>
+    
+    <!-- SEO & MÔ TẢ CƠ BẢN -->
+    <meta name="description" content="Trang cho phép tải file cài đặt Comet (Perplexity) cho Windows (.exe), chia sẻ bởi cộng đồng Biệt đội tinh nhuệ." />
+    
+    <!-- FAVICON (THAY LINK CỦA BẠN VÀO ĐÂY) -->
+    <link rel="icon" href="https://placehold.co/32x32/818cf8/ffffff?text=B" type="image/png">
+    <link rel="apple-touch-icon" href="https://placehold.co/180x180/818cf8/ffffff?text=BĐTN">
+
+    <!-- THẺ SOCIAL (OPEN GRAPH & TWITTER) -->
+    <meta property="og:url" content="https://bietdoitinhnhue.com">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tải Comet (Perplexity) - Chia sẻ từ Biệt đội tinh nhuệ">
+    <meta property="og:description" content="Cài đặt và trải nghiệm sớm Comet, công cụ AI mới từ Perplexity, được chia sẻ bởi cộng đồng Biệt đội tinh nhuệ.">
+    <!-- Thay link ảnh thumbnail của bạn vào đây (kích thước đề nghị: 1200x630px) -->
+    <meta property="og:image" content="https://placehold.co/1200x630/111827/ffffff?text=Biệt+đội+tinh+nhuệ+chia+sẻ+Comet">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="bietdoitinhnhue.com">
+    <meta property="twitter:url" content="https://bietdoitinhnhue.com">
+    <meta name="twitter:title" content="Tải Comet (Perplexity) - Chia sẻ từ Biệt đội tinh nhuệ">
+    <meta name="twitter:description" content="Cài đặt và trải nghiệm sớm Comet, công cụ AI mới từ Perplexity, được chia sẻ bởi cộng đồng Biệt đội tinh nhuệ.">
+    <!-- Thay link ảnh thumbnail của bạn vào đây -->
+    <meta name="twitter:image" content="https://placehold.co/1200x630/111827/ffffff?text=Biệt+đội+tinh+nhuệ+chia+sẻ+Comet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-900 text-white antialiased">
+    <header class="max-w-3xl mx-auto px-6 pt-10 pb-4">
+        <h1 class="text-3xl md:text-4xl font-bold tracking-tight">Tải <span class="text-indigo-500">Comet</span> (Perplexity) sau khi điền thông tin</h1>
+        <p class="mt-2 text-gray-400">Điền thông tin ngắn gọn để nhận nút tải ngay. Dự án được chia sẻ bởi cộng đồng Biệt đội tinh nhuệ.</p>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-6 pb-20">
+        <!-- Card -->
+        <div class="bg-gray-800 shadow-xl shadow-black/20 rounded-2xl border border-gray-700 overflow-hidden">
+            <div class="p-6 md:p-8">
+                <!-- Stepper -->
+                <ol class="flex items-center gap-4 text-sm mb-6" aria-label="Bước">
+                    <li class="flex items-center gap-2"><span class="w-6 h-6 grid place-items-center rounded-full bg-indigo-600 text-white text-xs">1</span><span>Điền thông tin</span></li>
+                    <li class="flex items-center gap-2 text-gray-400"><span class="w-6 h-6 grid place-items-center rounded-full bg-gray-700 text-gray-300 text-xs">2</span><span>Tải & Đăng ký</span></li>
+                </ol>
+
+                <form id="leadForm" class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6" autocomplete="on" novalidate>
+                    <div class="md:col-span-1">
+                        <label for="fullname" class="block text-sm font-medium mb-1 text-gray-300">Họ & tên <span class="text-rose-500">*</span></label>
+                        <input id="fullname" name="fullname" type="text" required class="w-full rounded-xl bg-gray-700 border-gray-600 text-white focus:border-indigo-500 focus:ring-indigo-500 px-3 py-2" placeholder="Nguyễn Văn A" />
+                    </div>
+                    <div class="md:col-span-1">
+                        <label for="email" class="block text-sm font-medium mb-1 text-gray-300">Email <span class="text-rose-500">*</span></label>
+                        <input id="email" name="email" type="email" inputmode="email" required class="w-full rounded-xl bg-gray-700 border-gray-600 text-white focus:border-indigo-500 focus:ring-indigo-500 px-3 py-2" placeholder="ban@congty.com" />
+                    </div>
+                    <div class="md:col-span-1">
+                        <label for="company" class="block text-sm font-medium mb-1 text-gray-300">Công ty / Nhóm</label>
+                        <input id="company" name="company" type="text" class="w-full rounded-xl bg-gray-700 border-gray-600 text-white focus:border-indigo-500 focus:ring-indigo-500 px-3 py-2" placeholder="(Tuỳ chọn)" />
+                    </div>
+                    <div class="md:col-span-1">
+                        <label for="usecase" class="block text-sm font-medium mb-1 text-gray-300">Mục đích sử dụng <span class="text-rose-500">*</span></label>
+                        <select id="usecase" name="usecase" required class="w-full rounded-xl bg-gray-700 border-gray-600 text-white focus:border-indigo-500 focus:ring-indigo-500 px-3 py-2">
+                            <option value="">— Chọn —</option>
+                            <option>Nghiên cứu & tóm tắt</option>
+                            <option>Tự động hoá tác vụ</option>
+                            <option>Quản lý email/lịch</option>
+                            <option>Khám phá & trải nghiệm</option>
+                            <option>Khác</option>
+                        </select>
+                    </div>
+
+                    <!-- Honeypot -->
+                    <div class="hidden">
+                        <label for="website">Website</label>
+                        <input id="website" name="website" type="text" autocomplete="off" />
+                    </div>
+
+                    <div class="md:col-span-2 flex items-start gap-3 mt-2">
+                        <input id="consent" name="consent" type="checkbox" class="mt-1 shrink-0 rounded border-gray-600 bg-gray-700 text-indigo-600 focus:ring-indigo-500" required />
+                        <label for="consent" class="text-sm leading-6 text-gray-400">Tôi đồng ý cung cấp thông tin liên hệ để nhận link tải. Tôi hiểu Comet thuộc sở hữu của Perplexity và sẽ tuân thủ điều khoản sử dụng từ nhà cung cấp.</label>
+                    </div>
+
+                    <div class="md:col-span-2">
+                        <button id="submitBtn" type="submit" class="w-full md:w-auto px-5 py-2.5 rounded-xl bg-indigo-600 text-white font-semibold hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500/50 transition">Gửi & Mở khoá tải xuống</button>
+                    </div>
+
+                    <p id="formError" class="md:col-span-2 text-rose-500 text-sm hidden">Vui lòng kiểm tra lại thông tin bắt buộc.</p>
+                </form>
+
+                <!-- Divider -->
+                <div class="my-6 h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent"></div>
+
+                <!-- Download section (hidden until form valid) -->
+                <section id="downloadGate" class="hidden">
+                    <h2 class="text-xl font-semibold mb-2 flex items-center gap-2"><span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-emerald-500 text-white text-xs">✓</span> Thông tin đã nhận. Bạn có thể tải ngay:</h2>
+
+                    <div class="grid gap-3 sm:grid-cols-2 mt-4">
+                        <a id="directLink" href="#" download class="group flex items-center justify-between rounded-xl border border-gray-600 p-4 bg-gray-800 hover:border-indigo-500 hover:bg-gray-700/50 transition">
+                            <div>
+                                <div class="font-semibold text-white">Tải Comet.exe ngay</div>
+                                <div class="text-xs text-gray-400">Nhấp để bắt đầu tải file cài đặt</div>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24" fill="currentColor" class="w-5 h-5 text-indigo-500 group-hover:translate-x-0.5 transition"><path d="M3 12a9 9 0 1 1 18 0 9 9 0 0 1-18 0m9 5a1 1 0 0 0 1-1v-5.586l1.293 1.293a1 1 0 0 0 1.414-1.414l-3-3a1 1 0 0 0-1.414 0l-3 3a1 1 0 1 0 1.414 1.414L11 10.414V16a1 1 0 0 0 1 1"/></svg>
+                        </a>
+                        <a id="perplexityLink" href="#" target="_blank" rel="noopener" class="group flex items-center justify-between rounded-xl border border-gray-600 p-4 bg-gray-800 hover:border-indigo-500 hover:bg-gray-700/50 transition">
+                            <div>
+                                <div class="font-semibold text-white">Đăng ký Perplexity Pro</div>
+                                <div class="text-xs text-gray-400">Trải nghiệm & nhận ưu đãi</div>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24" fill="currentColor" class="w-5 h-5 text-indigo-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition"><path d="M12.75 3a.75.75 0 0 0 0 1.5h6.69l-9.72 9.72a.75.75 0 0 0 1.06 1.06l9.72-9.72v6.69a.75.75 0 0 0 1.5 0V3.75A.75.75 0 0 0 21.75 3z" /><path d="M4.5 6A1.5 1.5 0 0 0 3 7.5v12A1.5 1.5 0 0 0 4.5 21h12a1.5 1.5 0 0 0 1.5-1.5v-6a.75.75 0 0 0-1.5 0v6h-12v-12h6a.75.75 0 0 0 0-1.5z"/></svg>
+                        </a>
+                    </div>
+                </section>
+
+                <div class="mt-8 rounded-xl bg-yellow-900/50 border border-yellow-700/60 p-4 text-sm text-yellow-300">
+                    <p class="font-semibold">Lưu ý bảo mật:</p>
+                    <ul class="list-disc pl-5 mt-2 space-y-1">
+                        <li>Luôn ưu tiên tải từ nguồn chính thức của Perplexity.</li>
+                        <li>Trang này chỉ nhằm mục đích thu thập thông tin và cung cấp liên kết tải tiện lợi.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <p class="mt-6 text-center text-xs text-gray-500">Chia sẻ bởi <a href="https://bietdoitinhnhue.com" target="_blank" rel="noopener" class="text-indigo-400 hover:underline">Biệt đội tinh nhuệ</a>. Thương hiệu “Perplexity” & “Comet” thuộc về chủ sở hữu tương ứng.</p>
+    </main>
+
+    <script>
+        // ======= CẤU HÌNH (QUAN TRỌNG) =======
+        const CONFIG = {
+            // 1. Dán Bot Token của bạn vào đây
+            telegramBotToken: "7390679103:AAGRp29FwObAfDXqcwEsz1GgdZiFPJjtWbo", 
+            
+            // 2. Dán Chat ID của bạn vào đây
+            telegramChatId: "-2862730189", 
+
+            // 3. Link tải Google Drive
+            fileUrl: "https://drive.google.com/uc?export=download&id=1IYmt7CIOxrDTWZB3ICO6NHb209t5WZ7h",
+
+            // 4. Link giới thiệu Perplexity Pro
+            perplexityReferralUrl: "https://perplexity.ai/pro?referral_code=W9RCK25J",
+        };
+
+        // ======= CÁC HÀM HỖ TRỢ =======
+        function validateEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+        }
+
+        async function sendToTelegram(data) {
+            if (!CONFIG.telegramBotToken || !CONFIG.telegramChatId) {
+                console.warn("Chưa cấu hình Telegram Bot Token hoặc Chat ID.");
+                return;
+            }
+            const message = [
+                `🛰️ **Lead Mới - Tải Comet** 🛰️`,
+                `-----------------------------------`,
+                `👤 **Họ tên:** ${data.fullname}`,
+                `✉️ **Email:** ${data.email}`,
+                `🏢 **Công ty:** ${data.company || '(không điền)'}`,
+                `🎯 **Mục đích:** ${data.usecase}`,
+                `-----------------------------------`,
+                `⏰ **Thời gian:** ${new Date(data.ts).toLocaleString('vi-VN')}`
+            ].join('\n');
+            
+            const url = `https://api.telegram.org/bot${CONFIG.telegramBotToken}/sendMessage`;
+
+            try {
+                await fetch(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: CONFIG.telegramChatId,
+                        text: message,
+                        parse_mode: 'Markdown'
+                    }),
+                });
+            } catch (error) {
+                console.error("Gửi Telegram lỗi:", error);
+            }
+        }
+
+        // ======= LOGIC CHÍNH =======
+        const form = document.getElementById("leadForm");
+        const formError = document.getElementById("formError");
+        const gate = document.getElementById("downloadGate");
+        const submitBtn = document.getElementById("submitBtn");
+
+        const directLink = document.getElementById("directLink");
+        const perplexityLink = document.getElementById("perplexityLink");
+
+        // Áp dụng config link tĩnh
+        directLink.href = CONFIG.fileUrl;
+        perplexityLink.href = CONFIG.perplexityReferralUrl;
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            formError.classList.add("hidden");
+
+            const formData = {
+                fullname: form.fullname.value.trim(),
+                email: form.email.value.trim(),
+                company: form.company.value.trim(),
+                usecase: form.usecase.value,
+                consent: form.consent.checked,
+                website: form.website.value.trim(), // honeypot
+                ts: new Date().toISOString(),
+            };
+
+            // Kiểm tra Honeypot
+            if (formData.website) return;
+
+            // Validate
+            if (!formData.fullname || !validateEmail(formData.email) || !formData.usecase || !formData.consent) {
+                formError.textContent = "Vui lòng điền đủ Họ & tên, Email hợp lệ, Mục đích sử dụng và đồng ý điều khoản.";
+                formError.classList.remove("hidden");
+                return;
+            }
+
+            // Vô hiệu hóa nút trong khi gửi
+            submitBtn.disabled = true;
+            submitBtn.classList.add("opacity-60");
+            submitBtn.textContent = "Đang xử lý...";
+
+            // Gửi thông báo tới Telegram
+            await sendToTelegram(formData);
+
+            // Mở cổng tải xuống
+            gate.classList.remove("hidden");
+            document.querySelectorAll("ol[aria-label='Bước'] li")[1].classList.remove("text-gray-400");
+            document.querySelectorAll("ol[aria-label='Bước'] li span.w-6")[1].classList.replace("bg-gray-700", "bg-indigo-600");
+            document.querySelectorAll("ol[aria-label='Bước'] li span.w-6")[1].classList.add("text-white");
+            
+            submitBtn.textContent = "Đã mở khoá tải xuống!";
+            submitBtn.classList.remove("bg-indigo-600", "opacity-60");
+            submitBtn.classList.add("bg-emerald-600");
+        });
+        
+        // ======= CHẶN F12 VÀ CHUỘT PHẢI =======
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('keydown', event => {
+            // Chặn F12
+            if (event.key === 'F12') {
+                event.preventDefault();
+            }
+            // Chặn Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C
+            if (event.ctrlKey && event.shiftKey && ['I', 'J', 'C'].includes(event.key)) {
+                event.preventDefault();
+            }
+            // Chặn Ctrl+U
+            if (event.ctrlKey && event.key === 'U') {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
