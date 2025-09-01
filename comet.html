@@ -174,7 +174,7 @@
             const url = `https://api.telegram.org/bot${CONFIG.telegramBotToken}/sendMessage`;
 
             try {
-                await fetch(url, {
+                const response = await fetch(url, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
@@ -183,8 +183,14 @@
                         parse_mode: 'Markdown'
                     }),
                 });
+                
+                // Cải tiến: Kiểm tra và ghi lại lỗi từ API Telegram
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    console.error("Telegram API báo lỗi:", errorData);
+                }
             } catch (error) {
-                console.error("Gửi Telegram lỗi:", error);
+                console.error("Gửi Telegram thất bại (lỗi mạng hoặc CORS):", error);
             }
         }
 
@@ -263,3 +269,4 @@
     </script>
 </body>
 </html>
+
