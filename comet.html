@@ -141,7 +141,10 @@
             telegramBotToken: "7390679103:AAGRp29FwObAfDXqcwEsz1GgdZiFPJjtWbo", 
             
             // 2. Dán Chat ID của bạn vào đây
-            telegramChatId: "-2862730189", 
+            // LƯU Ý LỖI "CHAT NOT FOUND": Nếu bạn gặp lỗi này, hãy đảm bảo:
+            // a) Chat ID là chính xác.
+            // b) Bot của bạn ĐÃ ĐƯỢC THÊM vào làm thành viên của nhóm chat này.
+            telegramChatId: "-1002862730189", 
 
             // 3. Link tải Google Drive
             fileUrl: "https://drive.google.com/uc?export=download&id=1IYmt7CIOxrDTWZB3ICO6NHb209t5WZ7h",
@@ -158,7 +161,7 @@
         async function sendToTelegram(data) {
             if (!CONFIG.telegramBotToken || !CONFIG.telegramChatId) {
                 console.warn("Chưa cấu hình Telegram Bot Token hoặc Chat ID.");
-                return;
+                return { ok: false, message: "Chưa cấu hình Telegram Bot Token hoặc Chat ID." };
             }
             const message = [
                 `🛰️ **Lead Mới - Tải Comet** 🛰️`,
@@ -184,13 +187,18 @@
                     }),
                 });
                 
-                // Cải tiến: Kiểm tra và ghi lại lỗi từ API Telegram
                 if (!response.ok) {
                     const errorData = await response.json();
                     console.error("Telegram API báo lỗi:", errorData);
+                    if (errorData.description && errorData.description.toLowerCase().includes("chat not found")) {
+                        return { ok: false, message: "Lỗi Telegram: Không tìm thấy nhóm chat. Vui lòng kiểm tra lại Chat ID và đảm bảo bot đã được thêm vào nhóm." };
+                    }
+                    return { ok: false, message: `Lỗi Telegram: ${errorData.description}` };
                 }
+                return { ok: true };
             } catch (error) {
                 console.error("Gửi Telegram thất bại (lỗi mạng hoặc CORS):", error);
+                return { ok: false, message: "Lỗi mạng khi gửi tin nhắn Telegram." };
             }
         }
 
@@ -237,7 +245,17 @@
             submitBtn.textContent = "Đang xử lý...";
 
             // Gửi thông báo tới Telegram
-            await sendToTelegram(formData);
+            const telegramResult = await sendToTelegram(formData);
+
+            // Xử lý nếu gửi Telegram bị lỗi
+            if (!telegramResult.ok) {
+                formError.textContent = telegramResult.message;
+                formError.classList.remove("hidden");
+                submitBtn.disabled = false;
+                submitBtn.classList.remove("opacity-60");
+                submitBtn.textContent = "Gửi & Mở khoá tải xuống";
+                return;
+            }
 
             // Mở cổng tải xuống
             gate.classList.remove("hidden");
