@@ -1,774 +1,433 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-<meta name="google-site-verification" content="N3Uio38eubzG1wzmJhuOeZQm2gCwSn5iYkywklIu3Ac" />
-  <title>Biệt Đội Tinh Nhuệ – Dẫn đầu giải pháp AI Automation.</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Biệt Đội Tinh Nhuệ – Đội ngũ chuyên gia AI Automation, giúp doanh nghiệp tối ưu vận hành, tăng trưởng vượt trội với các giải pháp tự động hóa thông minh.">
-<meta name="keywords" content="AI Automation, Automation Agency, tự động hóa doanh nghiệp, chuyển đổi số, AI Việt Nam, chatbot, workflow, tư vấn AI, biệt đội tinh nhuệ">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dịch vụ tư vấn xác định TỪ KHÓA VÀNG - Thương Hiệu Dễ Nhớ, Giữ Khách Hàng, Chốt Sale</title>
+  <meta name="description" content="Ultra Focus Session giúp bạn tìm ra TỪ KHÓA VÀNG để xây Brand Story(câu chuyện thương hiệu) & Conversion Story(câu chuyện chuyển đổi). Bố cục block 'đất nền dòng tiền' - Before/After, bảng giá tư vấn 1-1." />
+  <link rel="canonical" href="https://bietdoitinhnhue.com/" />
 
-<!-- Open Graph for Facebook -->
-<meta property="og:title" content="Biệt Đội Tinh Nhuệ – Dẫn đầu giải pháp AI Automation." />
-<meta property="og:description" content="Tối ưu vận hành, tăng trưởng vượt trội. Đồng hành cùng doanh nghiệp Việt chinh phục chuyển đổi số." />
-<meta property="og:image" content="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/refs/heads/main/Thunail.png" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://bietdoitinhnhue.com/" />
-<meta property="og:site_name" content="Biệt Đội Tinh Nhuệ" />
-<meta property="fb:app_id" content="3884767275114632" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Biệt Đội Tinh Nhuệ – Dẫn đầu giải pháp AI Automation.">
-<meta name="twitter:description" content="Đồng hành chuyển đổi số cùng doanh nghiệp Việt, Tối ưu vận hành, tăng trưởng vượt trội với AI Automation.">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/refs/heads/main/Thunail.png">
-<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/refs/heads/main/ba-dev-con-nghe.png">
-  <!-- Roboto font -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <style>
-    :root {
-  --yellow: #ffb300;
-  --orange: #ff9800;
-  --white: #fff;
-  --header-shadow: 0 2px 18px #0001;
-  --radius: 18px;
-  --primary: #2463eb;
-  --secondary: #0f172a;
-  --accent: #fb7185;
-  --bg: #f1f5f9;
-  --bg-banner: linear-gradient(135deg, #ffb300 70%, #fff 100%);
-  --soft-yellow: #fff8e1;
-  --dark: #181e29;
-}
-* { box-sizing: border-box; margin: 0; padding: 0;}
-body {
-  background: var(--bg);
-  font-family: 'Roboto', Arial, sans-serif;
-  color: var(--secondary);
-  min-height: 100vh;
-  font-size: 16px;
-}
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Dịch vụ tư vấn xác định TỪ KHÓA VÀNG - Thương Hiệu Dễ Nhớ, Giữ Khách Hàng, Chốt Sale" />
+  <meta property="og:description" content="Chỉ cần 1 Từ Khóa Vàng để khách hàng nhớ - gắn bó - hành động. Pre-Sale đang mở!" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/refs/heads/main/thumnails-tu-khoa-vang.png" />
+  <meta property="og:url" content="https://bietdoitinhnhue.com/" />
 
-/* HEADER */
-header {
-  background: #fff;
-  box-shadow: var(--header-shadow);
-  z-index: 10;
-  position: relative;
-}
-.header-flex {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 3vw;
-  min-height: 75px;
-  position: relative;
-  flex-wrap: wrap;
-}
-.logo img {
-  width: 56px; height: 56px;
-  border-radius: 12px;
-  display: block;
-}
-.main-menu {
-  display: flex;
-  align-items: center;
-  gap: 36px;
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
-  flex: 1;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.main-menu li a {
-  text-decoration: none;
-  font-family: 'Roboto', Arial, sans-serif;
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: #1a202c;
-  letter-spacing: 0.3px;
-  padding: 10px 18px;
-  border-radius: 7px;
-  transition: background 0.16s, color 0.16s;
-  position: relative;
-  text-transform: uppercase;
-  display: block;
-}
-.main-menu li a:hover,
-.main-menu li.active a {
-  color: #fff;
-  background: var(--orange);
-}
-.btn-consult {
-  background: linear-gradient(93deg,#ff9800 65%,#ffd54f 100%);
-  color: #fff;
-  border: none;
-  font-family: 'Roboto', Arial, sans-serif;
-  font-weight: 900;
-  font-size: 1.1rem;
-  border-radius: 999px;
-  padding: 15px 38px;
-  cursor: pointer;
-  box-shadow: 0 2px 14px #ff980055;
-  transition: background 0.14s, transform 0.12s;
-  outline: none;
-  z-index: 9;
-  letter-spacing: 0.5px;
-  text-decoration: none;
-  display: inline-block;
-  text-transform: uppercase;
-  text-align: center;
-}
-.btn-consult:hover {
-  background: linear-gradient(90deg,#f57c00 80%,#ffb300 100%);
-  transform: scale(1.04);
-  color: #fff;
-}
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dịch vụ tư vấn xác định TỪ KHÓA VÀNG" />
+  <meta name="twitter:description" content="Thương hiệu dễ nhớ - Giữ khách hàng - Chốt sale mạnh mẽ." />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/refs/heads/main/thumnails-tu-khoa-vang.png" />
 
-/* HERO SLIDER */
-.hero-slider {
-  width: 100vw;
-  max-width: 100%;
-  height: 530px;
-  min-height: 220px;
-  aspect-ratio: 16/9;
-  position: relative;
-  margin: 0 calc(50% - 50vw);
-  overflow: hidden;
-  border-bottom-left-radius: 22px;
-  border-bottom-right-radius: 22px;
-  box-shadow: 0 4px 32px #0001;
-  background: #0d182b;
-}
-.hero-slide {
-  width: 100%;
-  height: 100%;
-  display: none;
-  position: absolute;
-  left: 0; top: 0;
-  transition: opacity 0.7s;
-}
-.hero-slide.active {
-  display: block;
-  position: relative;
-  opacity: 1;
-  z-index: 2;
-  animation: fadeIn 1s;
-}
-.hero-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-bottom-left-radius: 22px;
-  border-bottom-right-radius: 22px;
-  background: #0d182b;
-}
-@keyframes fadeIn { 0% { opacity: 0.5;} 100% { opacity: 1; } }
-.hero-slider-dots {
-  position: absolute;
-  left: 50%; bottom: 16px;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  z-index: 5;
-}
-.hero-slider-dot {
-  width: 12px; height: 12px;
-  border-radius: 50%;
-  background: #fff9;
-  border: 2px solid #ff9800;
-  cursor: pointer;
-  opacity: 0.7;
-  transition: background 0.18s, opacity 0.18s;
-}
-.hero-slider-dot.active {
-  background: #ff9800;
-  opacity: 1;
-}
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-/* HERO TEXT + CTA */
-.hero-text-section {
-  text-align: center;
-  padding: 52px 16px 42px 16px;
-  background: #f1f5f9;
-  max-width: 1120px;
-  margin: 0 auto 38px auto;
-  border-radius: 22px;
-  box-shadow: 0 6px 36px #fbbf2480;
-  position: relative;
-  top: 0;
-  z-index: 2;
-}
-.hero-text-section h1 {
-  color: #ff9800;
-  font-size: 2.5rem;
-  font-weight: 900;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  line-height: 1.13;
-}
-.hero-desc {
-  color: #444;
-  font-size: 1.18rem;
-  margin-bottom: 28px;
-  font-weight: 400;
-}
-.hero-text-section .btn-consult {
-  padding: 16px 40px;
-  border-radius: 13px;
-  font-size: 1.11rem;
-  font-weight: 900;
-  margin-bottom: 8px;
-  background: linear-gradient(93deg,#ff9800 65%,#ffd54f 100%);
-  color: #fff;
-  box-shadow: 0 3px 18px #ff980032;
-  border: none;
-  outline: none;
-  transition: background 0.15s, transform 0.11s;
-  display: inline-block;
-  text-transform: uppercase;
-  text-align: center;
-}
-.hero-text-section .btn-consult:hover {
-  background: linear-gradient(90deg,#f57c00 80%,#ffb300 100%);
-  transform: scale(1.04);
-}
-
-/* COURSES SECTION */
-.courses-section { background: var(--soft-yellow); padding: 68px 0 62px 0; min-height: 470px;}
-.courses-section .container { max-width: 1160px; margin: 0 auto; }
-.courses-section h2 {
-  font-family: 'Roboto', Arial, sans-serif;
-  text-align: center;
-  color: #ff9800;
-  font-weight: 900;
-  font-size: 2.15rem;
-  margin-bottom: 36px;
-  text-transform: uppercase;
-}
-.courses-row {
-  display: flex;
-  gap: 46px;
-  justify-content: center;
-  align-items: stretch;
-  width: 100%;
-  max-width: 1160px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-}
-.course-card {
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 4px 24px #ff980014;
-  padding: 38px 28px 30px 28px;
-  max-width: 370px;
-  min-width: 260px;
-  min-height: 270px;
-  flex: 1 1 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 10px;
-  justify-content: center;
-  text-align: center;
-}
-.course-card h3 { color: #f57c00; font-weight: 900; font-size: 1.14rem; margin-bottom: 13px; text-transform: uppercase;}
-.course-card h4 {font-size:1.05em;margin:8px 0 0 0;color:#222;}
-.course-card ul {
-  padding-left: 22px;
-  margin-bottom: 12px;
-  align-self: stretch;
-  text-align:left;
-}
-.course-card ul li { margin-bottom:8px; line-height:1.6;}
-.course-card .btn-course {
-  margin-top: auto;
-  background: linear-gradient(93deg,#ff9800 65%,#ffd54f 100%);
-  color: #fff;
-  border: none;
-  border-radius: 999px;
-  padding: 13px 33px;
-  font-family: 'Roboto', Arial, sans-serif;
-  font-weight: 900;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  text-decoration: none;
-  box-shadow: 0 2px 14px #ff980055;
-  transition: background 0.15s, transform 0.11s;
-  display: inline-block;
-  text-transform: uppercase;
-  text-align: center;
-}
-.course-card .btn-course:hover {
-  background: linear-gradient(90deg,#f57c00 80%,#ffb300 100%);
-  transform: scale(1.04);
-  color: #fff;
-}
-
-/* ĐỘI NGŨ TINH NHUỆ */
-.team-section { background: #fff; padding: 64px 0 64px 0; }
-.team-section .container { max-width: 1160px; margin: 0 auto; }
-.team-section h2 {
-  font-family: 'Roboto', Arial, sans-serif;
-  text-align: center;
-  color: #ff9800;
-  font-weight: 900;
-  font-size: 2.15rem;
-  margin-bottom: 34px;
-  text-transform: uppercase;
-}
-.team-row {
-  display: flex;
-  gap: 28px;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-}
-.team-card {
-  background: var(--soft-yellow);
-  border-radius: 18px;
-  box-shadow: 0 2px 18px #ffd54f22;
-  max-width: 260px;
-  min-width: 220px;
-  flex: 1 1 190px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 36px 18px 26px 18px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-.team-avatar {
-  width: 78px; height: 78px;
-  border-radius: 50%;
-  margin-bottom: 17px;
-  border: 3px solid #ffb30055;
-  object-fit: cover;
-  box-shadow: 0 3px 12px #ffd54f33;
-}
-.team-name { font-size: 1.18rem; font-weight: 700; margin-bottom: 6px; color: #222;}
-.team-role { color: #fb7185; font-size: 1.02rem; font-weight: 500; margin-bottom: 7px;}
-.team-desc { color: #444; font-size: 0.98rem; font-weight: 400; margin-bottom: 5px;}
-
-/* CONSULT */
-.consult-section { background: #fff; padding: 66px 0 64px 0; min-height: 440px;}
-.consult-section h2 {
-  font-family: 'Roboto', Arial, sans-serif;
-  text-align: center;
-  color: #ff9800;
-  font-weight: 900;
-  font-size: 2.15rem;
-  margin-bottom: 35px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-.consult-row {
-  display: flex;
-  flex-direction: row !important;
-  justify-content: center;
-  align-items: stretch;
-  gap: 38px;
-  flex-wrap: nowrap !important;
-}
-.consult-card {
-  background: var(--soft-yellow, #fff8e1);
-  border-radius: 20px;
-  box-shadow: 0 3px 24px #ff980014;
-  max-width: 370px;
-  min-width: 320px;
-  min-height: 470px;
-  flex: 1 1 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: left;
-  padding: 38px 30px 32px 30px;
-  margin-bottom: 0;
-  justify-content: flex-start;
-}
-.consult-header { width: 100%; text-align: center; margin-bottom: 14px; min-height: 88px; display: flex; flex-direction: column; justify-content: flex-end;}
-.consult-card h3 { color: #fb7185; font-weight: 900; font-size: 1.28rem; margin-bottom: 3px; text-transform: uppercase; text-align: center; letter-spacing: 0.5px;}
-.consult-card .price { color: #ff9800; font-size: 1.12rem; font-weight: 900; margin-bottom: 3px; text-transform: uppercase; text-align: center;}
-.consult-card .sub { color: #555; font-size: 0.99rem; margin-bottom: 5px; text-transform: uppercase; text-align: center; font-weight: 700;}
-.consult-card ul { padding-left: 22px; margin-bottom: 12px; align-self: stretch;}
-.consult-card ul li { text-align: left; margin-bottom: 8px; line-height: 1.6; text-indent: 0; padding-left: 0; list-style-position: outside; font-size: 1.05rem;}
-.consult-benefit { font-size:1.03rem; color:#fb7185; margin-bottom:16px; margin-top:-5px; text-align:left;}
-.consult-footer { width: 100%; margin-top: auto; display: flex; justify-content: center;}
-.consult-card .btn-course { padding: 13px 33px; border-radius: 999px; font-family: 'Roboto', Arial, sans-serif; font-weight: 900; font-size: 1rem; letter-spacing: 0.5px; cursor: pointer; text-decoration: none; box-shadow: 0 2px 14px #ff980055; transition: background 0.15s, transform 0.11s; display: inline-block; text-transform: uppercase; text-align: center; background: linear-gradient(93deg,#ff9800 65%,#ffd54f 100%); color: #fff; border: none; margin-top: 10px;}
-.consult-card .btn-course:hover { background: linear-gradient(90deg,#f57c00 80%,#ffb300 100%); transform: scale(1.04); color: #fff;}
-
-/* FOOTER STYLE */
-.footer { background: var(--dark); color: #fff; padding: 60px 0 24px 0; margin-top: 48px; font-family: 'Roboto', Arial, sans-serif; letter-spacing: 0.03em;}
-.footer-container { max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 50px 18px; padding: 0 28px;}
-.footer-col { flex: 1 1 240px; min-width: 220px; max-width: 330px; margin-bottom: 20px;}
-.footer-logo-wrap { display: flex; align-items: center; gap: 12px; margin-bottom: 15px;}
-.footer-logo-img { width: 48px; height: 48px; border-radius: 10px; display: inline-block;}
-.footer-brand { font-size: 1.24rem; font-weight: 900; color: var(--orange); line-height: 1.1; letter-spacing: 0.03em;}
-.footer-desc { color: #e0e2eb; font-size: 1.08rem; margin-bottom: 18px; line-height: 1.55;}
-.footer-social { display: flex; gap: 22px; margin-top: 12px; margin-bottom: 8px;}
-.footer-social a { color: #fff; font-size: 1.32rem; transition: color 0.13s; display: inline-block;}
-.footer-social a:hover { color: var(--yellow);}
-.footer-title { font-weight: 900; font-size: 1.13rem; margin-bottom: 13px; letter-spacing: 0.04em; color: var(--white); text-transform: uppercase; border-bottom: 2px solid #444452; padding-bottom: 3px;}
-.footer-link, .footer-link:visited { display: block; color: #fffde7; font-size: 1.06rem; margin-bottom: 9px; text-decoration: none; transition: color 0.13s;}
-.footer-link:hover { color: var(--orange);}
-.footer-contact-list { list-style: none; padding: 0; margin: 0 0 8px 0; color: #fffde7; font-size: 1.09rem; line-height: 1.6;}
-.footer-contact-list li { margin-bottom: 3px; word-break: break-word;}
-.footer-form { display: flex; gap: 0; margin-top: 14px;}
-.footer-form input[type="email"] { flex: 1; padding: 12px 16px; border: none; border-radius: 8px 0 0 8px; outline: none; font-size: 1rem; font-family: 'Roboto', Arial, sans-serif; background: #232836; color: #fff; transition: box-shadow 0.12s; box-shadow: 0 2px 9px #23283644;}
-.footer-form button { background: linear-gradient(93deg,#ff9800 65%,#ffd54f 100%); color: #fff; font-weight: 700; border: none; padding: 12px 30px; border-radius: 0 8px 8px 0; font-size: 1rem; cursor: pointer; font-family: 'Roboto', Arial, sans-serif; transition: background 0.13s;}
-.footer-form button:hover { background: linear-gradient(90deg,#f57c00 80%,#ffb300 100%);}
-.footer-copyright { text-align: center; color: #c7cbe6; margin-top: 34px; font-size: 1.04rem; padding-top: 18px; border-top: 1px solid #283042; font-family: 'Roboto', Arial, sans-serif;}
-
-@media (max-width: 1200px) {
-  .header-flex, .courses-section .container, .team-section .container, .footer-container {
-    max-width: 97vw;
-    padding: 0 10px;
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Dịch vụ tư vấn xác định TỪ KHÓA VÀNG là gì?","acceptedAnswer":{"@type":"Answer","text":"Dịch vụ giúp doanh nghiệp tìm 1-3 từ khóa lõi để xây Brand Story & Conversion Story, Marketing và Sales lặp lại liên tục."}},
+      {"@type":"Question","name":"Giá & thời lượng dịch vụ 1-1?","acceptedAnswer":{"@type":"Answer","text":"Starter 3 giờ 999.000đ (không giảm). Pro 6 giờ 4.999.000đ - Pre-Sale giảm 20% còn khoảng 3.999.000đ. Premium Team 12 giờ 14.999.000đ - Pre-Sale giảm 40% còn khoảng 8.999.000đ."}},
+      {"@type":"Question","name":"Làm việc online hay offline?","acceptedAnswer":{"@type":"Answer","text":"Có thể làm online (Zoom/Meet) hoặc offline theo lịch hẹn."}}
+    ]
   }
-  .hero-text-section { max-width: 98vw; }
-}
+  </script>
 
-@media (max-width: 1000px) {
-  .hero-slider { height: 320px; min-height: 140px; }
-  .courses-row, .team-row, .consult-row { flex-wrap: wrap !important; gap: 16px;}
-  .course-card, .team-card, .consult-card { min-width: 300px; max-width: 96vw;}
-  .consult-row { flex-direction: column !important; align-items: center;}
-  .consult-card { min-width: 92vw; }
-}
+  <!-- Service Offers (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org","@type":"Service","name":"Dịch vụ tư vấn xác định TỪ KHÓA VÀNG","areaServed":"VN",
+    "offers":[
+      {"@type":"Offer","name":"Starter 3h (không giảm)","priceCurrency":"VND","price":"999000","url":"https://bietdoitinhnhue.com/#pricing"},
+      {"@type":"Offer","name":"Pro 6h Pre-Sale (-20%)","priceCurrency":"VND","price":"3999000","url":"https://bietdoitinhnhue.com/#pricing","priceValidUntil":"2025-09-30"},
+      {"@type":"Offer","name":"Premium Team 12h Pre-Sale (-40%)","priceCurrency":"VND","price":"8999000","url":"https://bietdoitinhnhue.com/#pricing","priceValidUntil":"2025-09-30"}
+    ]
+  }
+  </script>
 
-@media (max-width: 700px) {
-  body { font-size: 15px;}
-  .header-flex { flex-direction: column; gap: 10px; align-items: stretch; min-height: unset;}
-  .main-menu { flex-wrap: wrap; gap: 12px;}
-  .btn-consult { width: 100%; padding: 13px 0;}
-  .hero-text-section { padding: 28px 4vw 20px 4vw; font-size:1rem;}
-  .hero-text-section h1 { font-size: 1.45rem; }
-  .hero-desc { font-size:1rem;}
-  .courses-section { padding: 28px 0 18px 0;}
-  .courses-row { gap: 12px; }
-  .course-card, .team-card, .consult-card { min-width: 92vw; max-width: 99vw; padding: 18px 8px;}
-  .team-row { flex-direction: column;}
-  .footer-container { flex-direction: column; align-items: flex-start; gap: 18px; padding: 0 4vw;}
-  .footer-col {max-width: 100%; min-width: unset;}
-  .footer-logo-img { width: 36px; height: 36px;}
-}
+  <!-- Global Effects -->
+  <style>
+    /* Fade in toàn trang khi load */
+    body { animation: fadeIn .8s ease-out; }
+    @keyframes fadeIn { from {opacity:0} to {opacity:1} }
 
-@media (max-width: 500px) {
-  .hero-slider { height: 160px; min-height: 60px;}
-  .hero-text-section { border-radius: 12px; box-shadow: none; }
-  .footer-container, .team-section .container, .courses-section .container { padding: 0 2vw;}
-}
+    /* Glow nhẹ cho header block (tiêu đề trong form) */
+    .animate-glow { animation: glow 2.6s ease-in-out infinite; }
+    @keyframes glow {
+      0%,100% { box-shadow: 0 0 0 0 rgba(250,204,21,.18), 0 0 26px rgba(250,204,21,.15); }
+      50%     { box-shadow: 0 0 0 4px rgba(250,204,21,.15), 0 0 48px rgba(250,204,21,.25); }
+    }
+
+    /* Fade hover cho tất cả button/link có .btn */
+    .btn { transition: opacity .35s ease, transform .2s ease; }
+    .btn:hover, .btn:focus { opacity: .86; }
+    .btn:active { transform: translateY(1px) scale(.995); }
   </style>
-  <!-- FontAwesome for social icons (CDN) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+
+  <!-- Countdown + Telegram submit -->
+  <script>
+    // ===== CONFIG =====
+    const TG_BOT_TOKEN = "8307731808:AAEZFUPSvpfnvNm9f-H0ie0AXvlx5Zxmw4k"; // demo: nên đưa lên serverless để ẩn khi public
+    const TG_CHAT_ID   = "-1002862730189";
+    const deadline = new Date("2025-09-30T23:59:59+07:00").getTime(); // hạn Pre-Sale
+
+    // ===== Countdown (đồng bộ 2 nơi) =====
+    function updateCountdown(){
+      const d = deadline - Date.now();
+      const dd = Math.max(0, Math.floor(d/(1000*60*60*24)));
+      const hh = Math.max(0, Math.floor((d%(1000*60*60*24))/(1000*60*60)));
+      const mm = Math.max(0, Math.floor((d%(1000*60*60))/(1000*60)));
+      const ss = Math.max(0, Math.floor((d%(1000*60))/1000));
+      const out = d>0 ? `${dd}d ${hh}h ${mm}m ${ss}s` : "ĐÃ HẾT ƯU ĐÃI";
+      const el1 = document.getElementById("countdown");
+      const el2 = document.getElementById("countdown-pricing");
+      if (el1) el1.textContent = out;
+      if (el2) el2.textContent = out;
+    }
+    document.addEventListener("DOMContentLoaded", ()=>{ updateCountdown(); setInterval(updateCountdown,1000); });
+
+    // ===== Utils & Telegram =====
+    const esc = (s="") => s.replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;");
+    async function sendToTelegram(payload){
+      const url = `https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage`;
+      const text =
+        `<b>Đăng ký tư vấn - Từ Khóa Vàng</b>\n` +
+        `• Họ tên: ${esc(payload.name)}\n` +
+        `• Điện thoại: ${esc(payload.phone)}\n` +
+        `• Email: ${esc(payload.email || "-")}\n` +
+        `• Gói: ${esc(payload.package)}\n` +
+        `• Ghi chú: ${esc(payload.note || "-")}\n` +
+        `• Thời gian: ${new Date().toLocaleString("vi-VN")}`;
+      const body = { chat_id: TG_CHAT_ID, text, parse_mode: "HTML" };
+      const res = await fetch(url, {method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(body)});
+      if(!res.ok) throw new Error("Telegram API error");
+      return res.json();
+    }
+  </script>
 </head>
-<body>
-  <!-- HEADER -->
-  <header>
-    <div class="header-flex">
-      <a href="#" class="logo">
-        <!-- LOGO HEADER - THAY LINK Ở ĐÂY -->
-        <img src="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/refs/heads/main/Biet%20doi%20tinh%20nhue.png" alt="Biệt Đội Tinh Nhuệ">
+
+<body class="bg-slate-950 text-slate-200 antialiased selection:bg-yellow-300/40 selection:text-slate-900">
+  <!-- Header -->
+  <header class="border-b border-white/5 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <span class="h-8 w-8 rounded-lg bg-yellow-500 inline-block"></span>
+        <span class="font-bold">TỪ KHÓA VÀNG</span>
       </a>
-      <ul class="main-menu">
-        <li class="active"><a href="#">Trang Chủ</a></li>
-        <li><a href="#consult">Dịch Vụ</a></li>
-        <li><a href="#courses">Khóa Học</a></li>
-        <li><a href="#team">Đội Ngũ</a></li>
-      </ul>
-      <a class="btn-consult" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">Liên hệ</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#before-after" class="hover:text-yellow-400 btn">Vì sao nên chọn chúng tôi</a>
+        <a href="#cases" class="hover:text-yellow-400 btn">Case study</a>
+        <a href="#pricing" class="hover:text-yellow-400 btn">Bảng giá</a>
+        <a href="#consult" class="px-4 py-2 rounded-full bg-yellow-500 text-slate-900 font-bold hover:bg-yellow-400 btn">Đăng ký tư vấn</a>
+      </nav>
     </div>
   </header>
 
- <!-- HERO SLIDER BANNER -->
-<div class="hero-slider">
-  <div class="hero-slide active">
-  <img src="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/refs/heads/main/banner03.png" alt="Banner 1">
-  </div>
-  <div class="hero-slide">
-    <img src="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/refs/heads/main/banner01.png" alt="Banner 2">
-  </div>
-  <div class="hero-slide">
-    <img src="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/refs/heads/main/nguyenthituyettrang_httpss.mj.runpFO9L6q6YPo_The_mechanical_m_875de31e-de2c-4466-8b3b-bfd1bde33468_1.png" alt="Banner 3">
-  </div>
-  <div class="hero-slide">
-    <img src="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/refs/heads/main/banner_bdtn01.png" alt="Banner 4">
-  </div>
-  <div class="hero-slide">
-    <img src="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/refs/heads/main/banner04.png" alt="Banner 5">
-  </div>
-  <div class="hero-slider-dots"></div>
-</div>
+  <!-- HERO (đối xứng) -->
+  <section class="relative">
+    <div class="max-w-7xl mx-auto px-6 py-14 md:py-20 grid md:grid-cols-2 gap-10 items-stretch">
+      <!-- Left: text -->
+      <div class="flex flex-col h-full">
+        <p class="tracking-wide text-xs font-semibold text-slate-400">CHỌN đúng "TỪ KHÓA" sẽ giúp bạn tiết kiệm hàng tỷ đồng quảng cáo vô ích.</p>
+        <h1 class="text-4xl md:text-6xl font-extrabold mt-3 leading-[1.16] md:leading-[1.12] tracking-tight text-left [text-wrap:balance] md:max-w-[24ch]">
+          <span class="block">Hãy để chúng tôi</span>
+          <span class="block">giúp bạn xác định</span>
+          <span class="block text-yellow-400 my-[0.2em] md:my-[0.3em]">TỪ KHÓA VÀNG</span>
+          <span class="block">từ câu chuyện</span>
+          <span class="block">trở thành</span>
+          <span class="block text-yellow-400">chuyển đổi.</span>
+        </h1>
 
-  <!-- HERO TEXT + CTA -->
- <section class="hero-text-section">
-  <h1>BIỆT ĐỘI TINH NHUỆ<br>DẪN ĐẦU GIẢI PHÁP AI & AUTOMATION.</h1>
-  <div class="hero-desc">
-   Nâng tầm vận hành, bứt phá tăng trưởng vượt trội với giải pháp tự động hóa thông minh từ Biệt Đội Tinh Nhuệ.<br>
-   Chúng tôi là người bạn đồng hành tin cậy của mọi doanh nghiệp - bất kể quy mô, lĩnh vực hay vị trí địa lý - trên hành trình chuyển đổi số và khai phóng tiềm năng không giới hạn.
-  </div>
-  <a href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener" class="btn-consult">BIỆT ĐỘI TƯ VẤN</a>
-</section>
+        <p class="mt-4 text-slate-300 text-lg">Chỉ cần <b>1 Từ Khóa Vàng</b> - chúng tôi giúp bạn tìm ra và dệt thành Brand Story &amp; Conversion Story để khách hàng <b>nhớ - gắn bó - hành động</b>.</p>
 
-  <!-- KHOÁ HỌC SECTION -->
-<section class="courses-section" id="courses">
-  <div class="container">
-    <h2>KHÓA HỌC NỔI BẬT</h2>
-    <div class="courses-row">
+        <div class="mt-6">
+          <span class="text-slate-400">Thời gian Pre-Sale còn:</span>
+          <div id="countdown" class="text-2xl md:text-3xl font-extrabold text-yellow-400 mt-1">...</div>
+        </div>
 
-      <!-- KHÓA 1 -->
-      <div class="course-card">
-        <h3>CHATBOT & WORKFLOW AUTOMATION</h3>
-        <h4>Mục tiêu khóa học:</h4>
-        <ul>
-          <li>Nắm vững quy trình xây dựng hệ thống AI tự động hóa cho doanh nghiệp.</li>
-          <li>Thực hành triển khai chatbot và workflow trên các nền tảng thực tế.</li>
-          <li>Kết nối đa kênh (Facebook, Zalo OA, Telegram, Website...).</li>
-          <li>Tối ưu quy trình chăm sóc khách hàng tự động.</li>
-        </ul>
-        <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">HỌC NGAY ĐI</a>
+        <div class="hidden md:block flex-1"></div>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="#consult" class="inline-flex justify-center items-center px-6 py-3 rounded-full bg-yellow-500 text-slate-900 font-bold hover:bg-yellow-400 btn">Đặt lịch tư vấn</a>
+          <a href="https://m.me/drakenguyen.me" target="_blank" rel="noopener" class="inline-flex justify-center items-center px-6 py-3 rounded-full border border-yellow-500 text-yellow-400 hover:bg-yellow-500/10 btn">Nhắn Messenger</a>
+        </div>
+
+        <div class="hidden md:block flex-1"></div>
       </div>
 
-      <!-- KHÓA 2 -->
-      <div class="course-card">
-        <h3>AI AUTOMATION MASTER</h3>
-        <h4>Mục tiêu khóa học:</h4>
-        <ul>
-          <li>Tự động hóa chăm sóc khách hàng với chatbot.</li>
-          <li>Xây dựng phễu bán hàng AI & tối ưu hóa quy trình bán hàng tự động.</li>
-          <li>Tiết kiệm chi phí vận hành và tăng trưởng bền vững.</li>
-          <li>Áp dụng AI vào phân tích hành vi khách hàng.</li>
-        </ul>
-        <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">HỌC NGAY ĐI</a>
-      </div>
-
-      <!-- KHÓA 3 -->
-      <div class="course-card">
-        <h3>MARKETING FUNNEL AI</h3>
-        <h4>Mục tiêu khóa học:</h4>
-        <ul>
-          <li>Xây dựng phễu marketing tích hợp AI tự động hóa chuyển đổi khách hàng.</li>
-          <li>Phân tích dữ liệu khách hàng nâng cao hiệu quả bán hàng đa kênh.</li>
-          <li>Tối ưu hóa quảng cáo, email marketing và chăm sóc tự động.</li>
-          <li>Nâng cao trải nghiệm khách hàng trên toàn hành trình.</li>
-        </ul>
-        <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">HỌC NGAY ĐI</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-<!-- DỊCH VỤ TƯ VẤN SECTION -->
-<section class="consult-section" id="consult">
-  <div class="container">
-    <h2>DỊCH VỤ TƯ VẤN CHUYÊN SÂU</h2>
-    <div class="consult-row">
-
-      <!-- TƯ VẤN CÁ NHÂN -->
-      <div class="consult-card">
-        <div class="consult-header">
-          <h3>TƯ VẤN CÁ NHÂN</h3>
-          <div class="price">2.000.000đ/giờ</div>
-          <div class="sub">Đặt tối thiểu 3 giờ chỉ còn 5 triệu</div>
-        </div>
-        <ul>
-          <li>Đánh giá, đề xuất lộ trình tối ưu tự động hóa phù hợp cho từng cá nhân hoặc nhóm nhỏ.</li>
-          <li>Gợi ý lựa chọn nền tảng AI, xây dựng quy trình thực tiễn, phù hợp mục tiêu phát triển cá nhân.</li>
-          <li>Hỗ trợ xây dựng phễu bán hàng, tự động hóa chăm sóc khách hàng qua chatbot/workflow.</li>
-          <li>Giải đáp mọi thắc mắc, đồng hành trực tiếp trên hành trình chuyển đổi số cá nhân.</li>
-        </ul>
-        <div class="consult-footer">
-          <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">CHỌN NGAY</a>
-        </div>
-      </div>
-
-      <!-- TƯ VẤN DOANH NGHIỆP -->
-      <div class="consult-card">
-        <div class="consult-header">
-          <h3>TƯ VẤN DOANH NGHIỆP</h3>
-          <div class="price">5.000.000đ/giờ</div>
-          <div class="sub">Đặt tối thiểu 3 giờ chỉ còn 10 triệu</div>
-        </div>
-        <ul>
-          <li>Phân tích & thiết kế hệ thống AI Automation phù hợp quy mô doanh nghiệp.</li>
-          <li>Tư vấn xây dựng quy trình vận hành, tự động hóa CRM, Marketing, bán hàng, tối ưu chi phí.</li>
-          <li>Cố vấn, đào tạo đội nhóm triển khai hệ thống AI, xây dựng lộ trình chuyển đổi số doanh nghiệp.</li>
-          <li>Đồng hành, hỗ trợ doanh nghiệp cập nhật công nghệ mới nhất.</li>
-        </ul>
-        <div class="consult-footer">
-          <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">CHỌN NGAY</a>
-        </div>
-      </div>
-
-      <!-- TƯ VẤN LINH HOẠT THEO THÁNG -->
-      <div class="consult-card">
-        <div class="consult-header">
-          <h3>TƯ VẤN LINH HOẠT THEO THÁNG</h3>
-          <div class="price">Chỉ từ 50.000.000đ/tháng</div>
-          <div class="sub">Đăng ký thời gian linh hoạt</div>
-        </div>
-        <ul>
-          <li>Được giải đáp trực tiếp mọi thắc mắc về AI & Automation trong suốt tháng.</li>
-          <li>Mentoring 1-1 cho leader, founder, đội ngũ vận hành/chuyển đổi số.</li>
-          <li>Đánh giá & tư vấn tối ưu quy trình hiện tại, đề xuất giải pháp AI phù hợp.</li>
-          <li>Hỗ trợ kiểm thử, thử nghiệm các ý tưởng tự động hóa, triển khai workflow mẫu.</li>
-          <li>Cố vấn xây dựng lộ trình chuyển đổi số từng bước, phù hợp nguồn lực thực tế.</li>
-          <li>Nhận tài liệu, hướng dẫn thực chiến, case study và mẫu quy trình độc quyền.</li>
-          <li>Ưu tiên hỗ trợ khẩn cấp trong các dự án thử nghiệm, xử lý sự cố thực tế.</li>
-          <li>Tham gia group mentoring riêng, trao đổi kinh nghiệm cùng các chuyên gia và DN khác.</li>
-        </ul>
-        <div class="consult-benefit">
-          <b>Lợi ích:</b> Linh hoạt – Tiết kiệm – Được kèm cặp thực chiến – Không lo “chưa đi chợ đã hết tiền”.
-        </div>
-        <div class="consult-footer">
-          <a class="btn-course" href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener">TÔI MUỐN ĐƯỢC TƯ VẤN</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-  <!-- ĐỘI NGŨ TINH NHUỆ -->
-  <section class="team-section" id="team">
-    <div class="container">
-      <h2>ĐỘI NGŨ TINH NHUỆ</h2>
-      <div class="team-row">
-        <div class="team-card">
-          <img class="team-avatar" src="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/refs/heads/main/IMG_7011.JPG" alt="Drake Nguyễn">
-          <div class="team-name">Drake Nguyễn</div>
-          <div class="team-role">Founder • AI Solution Architect</div>
-          <div class="team-desc">10+ năm kinh nghiệm về Digital Marketing, AI, chuyển đổi số & Kiến trúc hệ thống.</div>
-        </div>
-        <div class="team-card">
-          <img class="team-avatar" src="https://randomuser.me/api/portraits/women/54.jpg" alt="Linh Trần">
-          <div class="team-name">Linh Trần</div>
-          <div class="team-role">Data Scientist</div>
-          <div class="team-desc">Chuyên sâu về khai phá dữ liệu, AI ứng dụng và xây dựng workflow tự động.</div>
-        </div>
-        <div class="team-card">
-          <img class="team-avatar" src="https://randomuser.me/api/portraits/men/67.jpg" alt="Hoàng Lê">
-          <div class="team-name">Hoàng Lê</div>
-          <div class="team-role">Automation Developer</div>
-          <div class="team-desc">Tối ưu hệ thống, xây dựng giải pháp RPA và tích hợp AI cho doanh nghiệp.</div>
-        </div>
-        <div class="team-card">
-          <img class="team-avatar" src="https://scontent.fsgn16-1.fna.fbcdn.net/v/t39.30808-6/500527837_714210484628676_4118727778209686651_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=fdBmlStHcDYQ7kNvwFSX_3h&_nc_oc=AdlQ30NK20mptDt6m85-BBkstP-0cFt0D6M0JOKUwSXkpa3RMoBu-t8-PJkSUB6NqL6bd9HHjNzTiLJYo36W0ffj&_nc_zt=23&_nc_ht=scontent.fsgn16-1.fna&_nc_gid=HQy0yCABVaVTdQXMS-p2mw&oh=00_AfS6e_WAceTZ8ETm2q17ZQDV1xS3rTwjUZxETBGfFDG_9A&oe=688AAD0F" alt="Mai Đỗ">
-          <div class="team-name">Mai Đỗ</div>
-          <div class="team-role">AI Marketing Lead</div>
-          <div class="team-desc">Chuyên gia Marketing tự động hóa, tối ưu phễu chuyển đổi bằng AI/ML.</div>
+      <!-- Right: khung ảnh đối xứng (fix không crop, giữ tỉ lệ 625x750 ~ 5:6) -->
+      <div>
+        <div class="rounded-3xl bg-slate-900/60 border border-white/5 p-5">
+          <div class="relative w-full aspect-[5/6] rounded-2xl ring-1 ring-white/10 overflow-hidden bg-slate-900/40">
+            <img
+              src="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/refs/heads/main/tu%20khoa%20vang%20banner.png"
+              alt="Chọn từ khóa đúng - tiết kiệm hàng tỷ tiền quảng cáo"
+              class="absolute inset-0 w-full h-full object-contain"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer" id="contact">
-    <div class="footer-container">
-      <!-- Info -->
-      <div class="footer-col">
-        <div class="footer-logo-wrap">
-          <!-- FOOTER LOGO - THAY LINK Ở ĐÂY -->
-          <img class="footer-logo-img" src="https://raw.githubusercontent.com/bietdoitinhnhue/bietdoitinhnhue/refs/heads/main/Biet%20doi%20tinh%20nhue%20am.png" alt="Biệt Đội Tinh Nhuệ">
-          <span class="footer-brand">Biệt Đội Tinh Nhuệ</span>
+  <!-- BEFORE / AFTER -->
+  <section id="before-after" class="py-14 md:py-20 bg-slate-900/40 border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Vì sao bạn nên chọn dịch vụ tư vấn <span class="text-yellow-400">TỪ KHÓA VÀNG</span></h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="rounded-2xl p-6 bg-slate-900 border border-white/5">
+          <h3 class="text-xl font-bold text-red-300">Trước khi có Từ Khóa Vàng</h3>
+          <ul class="mt-3 space-y-2 text-slate-300">
+            <li>• Khách không hiểu bạn khác gì đối thủ</li>
+            <li>• Thuyết trình lan man, không biết mở đầu</li>
+            <li>• Content rời rạc, Sales nói không đồng nhất</li>
+            <li>• Awareness thấp, Retention kém, Conversion chập chờn</li>
+          </ul>
         </div>
-        <div class="footer-desc">
-          AI Automation – Tối ưu quy trình, tự động hoá kinh doanh, đồng hành cùng bạn trong hành trình chuyển đổi số.
-        </div>
-        <div class="footer-social">
-          <a href="https://facebook.com/bietdoitinhnhue" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://m.me/bietdoitinhnhue" target="_blank" rel="noopener" aria-label="Messenger"><i class="fab fa-facebook-messenger"></i></a>
-          <a href="mailto:Lienhe@bietdoitinhnhue.com" aria-label="Email"><i class="fa fa-envelope"></i></a>
+        <div class="rounded-2xl p-6 bg-slate-900 border border-yellow-500/30">
+          <h3 class="text-xl font-bold text-yellow-300">Sau khi có Từ Khóa Vàng</h3>
+          <ul class="mt-3 space-y-2 text-slate-300">
+            <li>• 1-3 từ khóa lõi → ghi nhớ tức thì</li>
+            <li>• Brand Story mạch lạc, Conversion Story thúc đẩy hành động</li>
+            <li>• Marketing & Sales có playbook chung → lặp lại liên tục</li>
+            <li>• Awareness ↑ Retention ↑ Conversion ↑ (ổn định & đo được)</li>
+          </ul>
         </div>
       </div>
-      <!-- Dịch vụ -->
-      <div class="footer-col">
-        <div class="footer-title">DỊCH VỤ</div>
-        <a class="footer-link" href="#courses">Khoá học AI Automation</a>
-        <a class="footer-link" href="#consult">Tư vấn chuyên sâu</a>
-        <a class="footer-link" href="#team">Đội ngũ chuyên gia</a>
-        <a class="footer-link" href="#">Báo giá dịch vụ</a>
+
+      <!-- Giá trị cốt lõi -->
+      <div class="mt-8 rounded-2xl p-6 bg-slate-900 border border-white/5">
+        <h4 class="text-xl font-bold">Giá trị cốt lõi của <span class="text-yellow-300">Từ Khóa Vàng</span></h4>
+        <div class="grid md:grid-cols-2 gap-4 mt-4 text-slate-300">
+          <ul class="space-y-2">
+            <li>• Định vị khác biệt: neo lợi ích cốt lõi trong 1-3 từ.</li>
+            <li>• Lọc đúng khách: ai đúng tệp phản hồi ngay.</li>
+            <li>• Tạo hook kể chuyện: mở câu là nhớ, chốt câu là hành động.</li>
+          </ul>
+          <ul class="space-y-2">
+            <li>• Chuẩn hóa playbook: Marketing & Sales nói một ngôn ngữ.</li>
+            <li>• Dễ đo lường: recall/CTR/CR xoay quanh từ khóa.</li>
+            <li>• Mở rộng linh hoạt: headline/CTA/hashtag cùng một lõi.</li>
+          </ul>
+        </div>
       </div>
-      <!-- Support -->
-      <div class="footer-col">
-        <div class="footer-title">SUPPORT</div>
-        <a class="footer-link" href="#">Liên hệ & Hỗ trợ</a>
-        <a class="footer-link" href="#">Điều khoản sử dụng</a>
-        <a class="footer-link" href="#">Tài liệu AI Free</a>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES -->
+  <section id="cases" class="py-14 md:py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6">Case study nổi bật</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="rounded-2xl bg-slate-900 border border-white/5 overflow-hidden">
+          <div class="h-40 bg-[url('https://ladyshouse.vn/wp-content/uploads/2022/10/z3783918156427_365184f21cbd4efbc7a1556eb6dabd38.jpg')] bg-cover bg-center"></div>
+          <div class="p-5">
+            <h3 class="font-semibold">Chuỗi Spa Lady’s House</h3>
+            <p class="mt-1 text-sm text-slate-400">Từ khóa: <span class="text-yellow-300">“Spa trị mụn uy tín Bình Dương”</span></p>
+            <p class="mt-2 text-sm text-slate-400">Định vị địa phương + CTA đặt lịch nhanh.</p>
+          </div>
+        </article>
+        <article class="rounded-2xl bg-slate-900 border border-white/5 overflow-hidden">
+          <div class="h-40 bg-[url('https://scontent.fsgn21-1.fna.fbcdn.net/v/t39.30808-6/539289455_122126091644931327_1838099880056851361_n.jpg?stp=dst-jpg_p180x540_tt6&_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeHcemynGHA3OO0uN8st29L63MRDE67Rhe7cxEMTrtGF7ux2eQOMUq9M8pJ8UZYdtKZgL_ggAw-2ay2uUzmOqmVA&_nc_ohc=-kJwDXNZkJsQ7kNvwHrxVFu&_nc_oc=Adn49LHVcxJRXlCZ5BqQJe3jmo8N27hKICBFAbRIKcFkQ9k1L66MLYaa_06TmFYgGfLBhB0bOpz9DdQ40ADz_nkn&_nc_zt=23&_nc_ht=scontent.fsgn21-1.fna&_nc_gid=HgxBkUZalgqvEnRrSfCiSg&oh=00_AfZ_85AAntSf4U1kAmQYzOQfyD-v07evPJ1CQdv1mhJsSg&oe=68CDA5FC')] bg-cover bg-center"></div>
+          <div class="p-5">
+            <h3 class="font-semibold">Dung dịch xịt Novaskin</h3>
+            <p class="mt-1 text-sm text-slate-400">Từ khóa: <span class="text-yellow-300">“Dung dịch chăm sóc da không chứa corticoid”</span></p>
+            <p class="mt-2 text-sm text-slate-400">Xóa hiểu nhầm thành phần, nhấn mạnh an toàn dùng hằng ngày.</p>
+          </div>
+        </article>
+        <article class="rounded-2xl bg-slate-900 border border-white/5 overflow-hidden">
+          <div class="h-40 bg-[url('https://vn-test-11.slatic.net/p/bc7751aee6120449cacfc4a5ab72d7c3.jpg')] bg-cover bg-center"></div>
+          <div class="p-5">
+            <h3 class="font-semibold">LIFE HUB</h3>
+            <p class="mt-1 text-sm text-slate-400">Từ khóa: <span class="text-yellow-300">“Chứa 19 loại lợi khuẩn”</span></p>
+            <p class="mt-2 text-sm text-slate-400">Giáo dục lợi khuẩn, so sánh khác biệt, CTA dùng thử.</p>
+          </div>
+        </article>
       </div>
-      <!-- Liên hệ + Form -->
-      <div class="footer-col">
-        <div class="footer-title">LIÊN HỆ</div>
-        <ul class="footer-contact-list">
-          <li><i class="fa fa-envelope"></i> <a href="mailto:Lienhe@bietdoitinhnhue.com" style="color:#ffe082">Bietdoitinhnhue@gmail.com</a></li>
-          <li><i class="fa fa-phone"></i> <a href="tel:+84968333342" style="color:#ffe082">+84 968 333 342</a></li>
-          <li><i class="fa fa-map-marker-alt"></i> Phường Sài Gòn, TP.HCM</li>
-        </ul>
-        <form class="footer-form" onsubmit="alert('Cảm ơn bạn đã để lại email! Chúng tôi sẽ liên hệ sớm.');return false;">
-          <input type="email" placeholder="Email của bạn..." required>
-          <button type="submit">Gửi</button>
+    </div>
+  </section>
+
+  <!-- PRICING (1-1) -->
+  <section id="pricing" class="py-16 bg-slate-900/40 border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">KIẾN TẠO LỢI THẾ CẠNH TRANH ĐẶC BIỆT QUA TỪ KHÓA VÀNG</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Starter -->
+        <div class="rounded-2xl p-6 bg-slate-900 border border-white/5 flex flex-col">
+          <h3 class="text-xl font-bold text-center">KHAI PHÁ</h3>
+          <p class="text-center text-slate-400 mb-2">Khai phá 3 giờ</p>
+          <p class="text-center text-2xl font-extrabold text-yellow-400 mb-1">999.000 VNĐ</p>
+          <p class="text-center text-xs text-slate-400 mb-4">*Không áp dụng Pre-Sale</p>
+          <ul class="space-y-2 text-sm">
+            <li>• USP Discovery & Keyword Extraction - tìm USP và trích xuất các Từ Khóa Vàng để làm Story marketing.</li>
+            <li>• USP & Keyword Report (1-3 từ khóa) - dùng cho tiêu đề, nội dung quảng cáo, và cả thông điệp quảng cáo, SEO.</li>
+          </ul>
+          <p class="mt-3 text-xs text-slate-400">💡 Hiểu đơn giản: Biết chính xác bạn khác biệt ở đâu và nên dùng từ khóa nào để khách hàng nhớ đến thương hiệu.</p>
+          <div class="mt-6 flex flex-col gap-2">
+            <a href="#consult" class="block text-center bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold py-3 rounded-full btn">Đăng ký tư vấn</a>
+            <a href="https://m.me/drakenguyen.me" target="_blank" rel="noopener" class="block text-center border border-yellow-500 text-yellow-400 hover:bg-yellow-500/10 font-semibold py-3 rounded-full btn">Nhắn Messenger</a>
+          </div>
+        </div>
+
+        <!-- Pro -->
+        <div class="rounded-2xl p-6 bg-yellow-500/10 border border-yellow-500/30 shadow-sm flex flex-col">
+          <h3 class="text-xl font-bold text-center">KIẾN TẠO</h3>
+          <p class="text-center text-slate-400 mb-2">Khai phá 3h & đào tạo 3h</p>
+          <div class="text-center text-sm mb-1"><span class="line-through opacity-60">4.999.000 VNĐ</span></div>
+          <p class="text-center text-2xl font-extrabold text-yellow-400 mb-1">3.999.000 VNĐ</p>
+          <p class="text-center text-xs text-emerald-400 mb-4">-20% Pre-Sale</p>
+          <ul class="space-y-2 text-sm">
+            <li>• Bao gồm toàn bộ nội dung của gói Starter.</li>
+            <li>• Brand Story Frame - khung câu chuyện cuốn hút hấp dẫn phù hợp với Thương hiệu & sản phẩm.</li>
+            <li>• Conversion Story Script - kịch bản chuyển đổi để khách hàng nghe và mua.</li>
+          </ul>
+          <p class="mt-3 text-xs text-slate-400">💡 Hiểu đơn giản: Không chỉ biết USP, bạn còn có khung sườn và kịch bản để biến USP thành câu chuyện thuyết phục.</p>
+          <div class="mt-6 flex flex-col gap-2">
+            <a href="#consult" class="block text-center bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold py-3 rounded-full btn">Đăng ký tư vấn</a>
+            <a href="https://m.me/drakenguyen.me" target="_blank" rel="noopener" class="block text-center border border-yellow-500 text-yellow-400 hover:bg-yellow-500/10 font-semibold py-3 rounded-full btn">Nhắn Messenger</a>
+          </div>
+        </div>
+
+        <!-- Premium -->
+        <div class="rounded-2xl p-6 bg-slate-900 border border-white/5 flex flex-col">
+          <h3 class="text-xl font-bold text-center">LAN TỎA</h3>
+          <p class="text-center text-slate-400 mb-2">Khai phá 3h & đào tạo 9h</p>
+          <div class="text-center text-sm mb-1"><span class="line-through opacity-60">14.999.000 VNĐ</span></div>
+          <p class="text-center text-2xl font-extrabold text-yellow-400 mb-1">8.999.000 VNĐ</p>
+          <p class="text-center text-xs text-emerald-400 mb-4">-40% Pre-Sale đăng ký sớm</p>
+          <ul class="space-y-2 text-sm">
+            <li>• Bao gồm toàn bộ nội dung của gói Pro.</li>
+            <li>• Coaching & Workshop cho team - huấn luyện trực tiếp để cả đội áp dụng cùng chiến lược.</li>
+            <li>• Checklist triển khai đa kênh có chiến lược (website, social, ads...).</li>
+            <li>• Follow-up review sau 30 ngày - xem tiến độ & tối ưu.</li>
+          </ul>
+          <p class="mt-3 text-xs text-slate-400">💡 Hiểu đơn giản: Không chỉ có chiến lược và kịch bản, cả team được đào tạo & giám sát thực thi, đi từ ý tưởng → hành động → kết quả.</p>
+          <div class="mt-6 flex flex-col gap-2">
+            <a href="#consult" class="block text-center bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold py-3 rounded-full btn">Đăng ký tư vấn</a>
+            <a href="https://m.me/drakenguyen.me" target="_blank" rel="noopener" class="block text-center border border-yellow-500 text-yellow-400 hover:bg-yellow-500/10 font-semibold py-3 rounded-full btn">Nhắn Messenger</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Khung thời gian dưới bảng giá -->
+      <div class="max-w-3xl mx-auto mt-10">
+        <div class="rounded-2xl bg-slate-900 border border-white/5 p-6 text-center">
+          <p class="text-sm text-slate-400">Thời gian Pre-Sale còn</p>
+          <div id="countdown-pricing" class="text-2xl font-extrabold text-yellow-400 mt-1">...</div>
+          <p class="text-slate-400 text-xs mt-2">Hết thời gian ưu đãi, giá sẽ quay về niêm yết.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSULT FORM (full width + contact icons) -->
+  <section id="consult" class="py-16 bg-slate-900/40 border-y border-white/5">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="rounded-2xl bg-slate-900 border border-white/5 p-6 mx-auto">
+        <!-- VÙNG NỔI BẬT + CĂN GIỮA -->
+        <div class="mb-6 rounded-xl text-center bg-gradient-to-r from-yellow-500/20 via-yellow-400/10 to-yellow-500/20 ring-2 ring-yellow-400/60 animate-glow px-5 py-4">
+          <h2 class="text-3xl md:text-4xl font-extrabold text-yellow-300">Đặt lịch Private Session</h2>
+          <p class="text-slate-300 mt-1 text-sm">Điền thông tin – chúng tôi sẽ liên hệ trong 24h làm việc.</p>
+        </div>
+
+        <form id="consult-form" class="grid grid-cols-1 gap-4">
+          <!-- honeypot -->
+          <input type="text" name="website" class="hidden" tabindex="-1" autocomplete="off" />
+          <input class="w-full bg-slate-800 border border-white/10 rounded-lg px-3 py-3" name="name" placeholder="Họ và tên" required />
+          <input class="w-full bg-slate-800 border border-white/10 rounded-lg px-3 py-3" name="phone" placeholder="Số điện thoại" required />
+          <input class="w-full bg-slate-800 border border-white/10 rounded-lg px-3 py-3" type="email" name="email" placeholder="Email" />
+          <select name="package" class="w-full bg-slate-800 border border-white/10 rounded-lg px-3 py-3">
+            <option>Starter (3h)</option>
+            <option>Pro (6h)</option>
+            <option>Premium Team (12h)</option>
+          </select>
+          <textarea class="w-full bg-slate-800 border border-white/10 rounded-lg px-3 py-3" rows="4" name="note" placeholder="Mô tả ngắn về doanh nghiệp/vấn đề bạn muốn giải quyết"></textarea>
+
+          <div class="flex flex-col sm:flex-row gap-3">
+            <button id="submitBtn" type="submit" class="flex-1 bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold py-3 rounded-full btn">Gửi đăng ký</button>
+            <a href="https://m.me/drakenguyen.me" target="_blank" rel="noopener" class="flex-1 text-center border border-yellow-500 text-yellow-400 hover:bg-yellow-500/10 font-semibold py-3 rounded-full btn">Nhắn Messenger</a>
+          </div>
+          <p id="formStatus" class="mt-3 text-sm text-center"></p>
         </form>
+
+        <!-- Contact icons -->
+        <div class="mt-8">
+          <p class="text-slate-400 text-sm mb-3 text-center">Hoặc liên hệ nhanh qua các kênh:</p>
+          <div class="flex flex-wrap gap-3 justify-center">
+            <a href="https://t.me/drakenguyen.me" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800 border border-white/10 hover:border-[#24A1DE] btn">
+              <!-- Telegram SVG -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#24A1DE" xmlns="http://www.w3.org/2000/svg"><path d="M9.999 15.2 9.9 19c.4 0 .6-.2.9-.4l2.1-2 4.4 3.2c.8.5 1.3.2 1.5-.8l2.7-12.7h.1c.2-.9-.3-1.3-1.1-1L2.7 9.3c-1 .4-.9 1 .2 1.3l4.6 1.4L18.9 6c.5-.3.9-.1.5.2"/></svg>
+              <span class="text-sm">Telegram</span>
+            </a>
+            <a href="https://m.me/drakenguyen.me" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800 border border-white/10 hover:border-[#0084FF] btn">
+              <!-- Messenger SVG -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#0084FF" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.5 2 2 6 2 10.9c0 2.8 1.4 5.3 3.6 7v3.1l3.3-1.8c1 .3 2 .5 3.1.5 5.5 0 10-4.5 10-9.7C22 6 17.5 2 12 2zm1 12-2.6-2.8-5.1 2.8 5.6-6.1 2.6 2.8 5-2.8L13 14z"/></svg>
+              <span class="text-sm">Messenger</span>
+            </a>
+            <a href="https://wa.me/+84968333342" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800 border border-white/10 hover:border-[#25D366] btn">
+              <!-- WhatsApp SVG -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366" xmlns="http://www.w3.org/2000/svg"><path d="M20 12c0 4.4-3.7 8-8.2 8-1.4 0-2.7-.3-3.8-.9L4 20l.9-3.8c-.6-1.2-.9-2.5-.9-3.9C4 7 7.6 4 12 4s8 3.6 8 8zm-8-6.7c-3.7 0-6.7 2.9-6.7 6.6 0 1.3.4 2.6 1.1 3.6l-.7 2.6 2.7-.7c1 .6 2.2 1 3.6 1 3.7 0 6.7-3 6.7-6.6s-3-6.6-6.7-6.6zm3.8 9.6c-.1.3-.7.6-1 .6-.3.1-.6.1-1-.1-.2-.1-.5-.1-1-.3-1.7-.7-2.8-2.2-2.9-2.3-.1-.2-.7-.9-.7-1.7 0-.8.4-1.2.6-1.3.3-.1.6-.1.7 0 .2 0 .5.4.6.6.2.4.4.8.4.9 0 .1 0 .2-.1.3 0 .1-.2.3-.2.5s.1.4.2.5c.1.1.4.6.8.9.6.4 1.1.6 1.2.7.1.1.3.1.4.1.1 0 .3 0 .5-.2.1-.2.6-.4.7-.9.1-.5.1-.9 0-1 0-.1-.1-.1-.2-.2-.1 0-.3-.1-.4-.1-.1 0-.2 0-.3.1-.1 0-.2.3-.3.5z"/></svg>
+              <span class="text-sm">WhatsApp</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="footer-copyright">
-      &copy; 2025 Biệt Đội Tinh Nhuệ. All rights reserved.
-      <br>Built & Managed by <a href="https://drakenguyen.me" target="_blank" style="color:#ffd54f;text-decoration:none;">Drake Nguyễn</a>
-    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center text-sm text-slate-400">
+    © 2025 Dịch vụ tư vấn xác định TỪ KHÓA VÀNG. All rights reserved.
   </footer>
+
+  <!-- Sticky CTA -->
+  <div class="fixed bottom-4 right-4 z-50 flex flex-col gap-2">
+    <a href="https://m.me/drakenguyen.me" target="_blank" rel="noopener" class="rounded-full bg-[#0084FF] text-white px-4 py-3 shadow-lg font-bold btn">Nhắn tư vấn</a>
+    <a href="#consult" class="rounded-full bg-yellow-500 text-slate-900 px-4 py-3 shadow-lg font-bold btn">Đăng ký tư vấn</a>
+  </div>
+
+  <!-- Submit handler -->
   <script>
-document.addEventListener("DOMContentLoaded", function() {
-  const slides = document.querySelectorAll('.hero-slide');
-  const dotsWrap = document.querySelector('.hero-slider-dots');
-  let current = 0, timer;
-  // Tạo dots
-  slides.forEach((_, i) => {
-    let dot = document.createElement('span');
-    dot.className = 'hero-slider-dot' + (i === 0 ? ' active' : '');
-    dot.onclick = () => showSlide(i, true);
-    dotsWrap.appendChild(dot);
-  });
-  const dots = document.querySelectorAll('.hero-slider-dot');
-  // Hiện slide
-  function showSlide(i, manual) {
-    slides[current].classList.remove('active');
-    dots[current].classList.remove('active');
-    current = i;
-    slides[current].classList.add('active');
-    dots[current].classList.add('active');
-    if (manual) { clearInterval(timer); autoSlide(); }
-  }
-  // Auto slide 5s
-  function autoSlide() {
-    timer = setInterval(() => {
-      showSlide((current + 1) % slides.length);
-    }, 5000);
-  }
-  autoSlide();
-});
-</script>
-<!-- Chative.io -->
-<script src="https://messenger.svc.chative.io/static/v1.0/channels/s6f494c3f-4fe7-4c70-b578-e3dc861e8e46/messenger.js?mode=livechat" defer="defer"></script>
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6WJM4VLSG6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    const form = document.getElementById("consult-form");
+    const statusEl = document.getElementById("formStatus");
+    const submitBtn = document.getElementById("submitBtn");
 
-  gtag('config', 'G-6WJM4VLSG6');
-</script>
-	<!-- Chặn click chuột phải -->
-	<script>
-  document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-    // Optionally show a custom message:
-    // alert('Bạn tính làm điều gì mờ ám chăng?');
-  });
-</script>
+    form?.addEventListener("submit", async (e)=>{
+      e.preventDefault();
+      const fd = new FormData(form);
+      if (fd.get("website")) return; // honeypot
 
+      const payload = {
+        name:  (fd.get("name")  || "").toString().trim(),
+        phone: (fd.get("phone") || "").toString().trim(),
+        email: (fd.get("email") || "").toString().trim(),
+        package: (fd.get("package") || "").toString(),
+        note:  (fd.get("note")  || "").toString().trim()
+      };
+
+      statusEl && (statusEl.textContent = "Đang gửi...");
+      submitBtn && (submitBtn.disabled = true, submitBtn.classList.add("opacity-70","cursor-not-allowed"));
+
+      try{
+        await sendToTelegram(payload);
+        statusEl && (statusEl.textContent = "✅ Gửi thành công! Mình sẽ liên hệ sớm.");
+        form.reset();
+      }catch(err){
+        console.error(err);
+        statusEl && (statusEl.textContent = "❌ Lỗi gửi. Vui lòng thử lại hoặc nhắn Messenger.");
+      }finally{
+        submitBtn && (submitBtn.disabled = false, submitBtn.classList.remove("opacity-70","cursor-not-allowed"));
+      }
+    });
+  </script>
 </body>
 </html>
