@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xây Dựng Từ Khóa Chuyên Môn - Thoát Khỏi 'Vùng Chết' 6 Tháng Đầu | Solopreneur Strategy</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Chiến lược 90 ngày giúp Solopreneur biến chuyên môn thành khách hàng. Tool tìm từ khóa ngách và xác định lợi thế cạnh tranh tự động.">
+    <meta name="keywords" content="solopreneur, xây dựng từ khóa, phễu bán hàng, tìm khách hàng, kinh doanh online, niche keyword, personal branding">
+    <meta name="author" content="Solopreneur Growth Expert">
+    <meta name="robots" content="index, follow">
+    <!-- Updated Domain -->
+    <link rel="canonical" href="https://bietdoitinhnhue.com/solopreneur-funnel">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bietdoitinhnhue.com/solopreneur-funnel">
+    <meta property="og:title" content="Xây Dựng Từ Khóa Chuyên Môn - Thoát Khỏi 6 Tháng Không Doanh Thu">
+    <meta property="og:description" content="Template và Tool hỗ trợ người làm chuyên môn tìm ra lợi thế cạnh tranh độc nhất (Edge).">
+    <meta property="og:image" content="https://bietdoitinhnhue.com/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Chiến lược Solopreneur: Từ Chuyên Môn đến Khách Hàng">
+    <meta property="twitter:description" content="Đừng để chuyên môn bị lãng quên. Dùng 8 nguyên lý này để vực dậy doanh số.">
+
+    <!-- Favicon (Inline SVG for demo purposes) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Schema.org FAQ & SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "Niche & Keyword Generator Tool",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "VND"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Tại sao tôi có chuyên môn nhưng 6 tháng đầu không có khách?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Phần lớn do bạn đang cạnh tranh ở 'đại dương đỏ'. Bạn thiếu một 'Edge' (Lợi thế cạnh tranh) rõ ràng và bộ từ khóa ngách để khách hàng tự tìm đến."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Mô hình này hoạt động như thế nào?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Mô hình dựa trên việc xác định giao điểm giữa: Điều bạn giỏi nhất, Nhu cầu thị trường chưa được đáp ứng, và Khả năng khó sao chép."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 */
+            color: #e2e8f0; /* Slate 200 */
+        }
+        h1, h2, h3, .brand-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(168, 85, 247, 0.3);
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        /* Custom Checkbox Toggle */
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #a855f7;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #a855f7;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+    <!-- Header / Nav -->
+    <nav class="fixed w-full z-50 glass-panel border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="rocket" class="text-purple-500 w-6 h-6"></i>
+                    <span class="text-xl font-bold brand-font text-white">SoloMastery</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#problem" class="hover:text-purple-400 px-3 py-2 rounded-md text-sm font-medium transition">Vấn đề</a>
+                        <!-- Updated Text -->
+                        <a href="#method" class="hover:text-purple-400 px-3 py-2 rounded-md text-sm font-medium transition">8 Nguyên Lý</a>
+                        <a href="#tool" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-full text-sm font-medium transition">Dùng Tool Miễn Phí</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute top-0 left-1/2 w-full -translate-x-1/2 h-full z-0 pointer-events-none">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-purple-600/20 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-pink-600/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center px-4 py-2 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-sm mb-8 animate-fade-in-up">
+                <span class="flex h-2 w-2 rounded-full bg-purple-400 mr-2"></span>
+                Dành cho người có chuyên môn nhưng sợ bán hàng
+            </div>
+<h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight">
+  Làm Thế Nào Để <span class="gradient-text">Solopreneur</span><br>
+  <span class="gradient-text">Sinh Tồn</span> Qua 
+  <span class="gradient-text">90 Ngày</span> Đầu Tiên?
+</h1>
+
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-400 mb-10">
+                Đừng cạnh tranh với số đông. Hãy biến kiến thức của bạn thành "Nam Châm" hút khách hàng tự động bằng chiến lược <b>Keyword Phễu Ngược</b>.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#tool" class="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold text-lg transition shadow-lg shadow-purple-500/30 flex items-center justify-center gap-2">
+                    <i data-lucide="zap"></i> Tạo Lộ Trình Ngay
+                </a>
+                <a href="#method" class="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 rounded-lg font-semibold text-lg transition flex items-center justify-center gap-2">
+                    <i data-lucide="book-open"></i> Đọc Nguyên Lý
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Problem & Solution Visual (Inspired by "Vòng lặp" image) -->
+    <section id="problem" class="py-20 bg-slate-800/50 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-3xl font-bold brand-font">Tại sao bạn bế tắc?</h2>
+                    <div class="bg-slate-900 p-6 rounded-xl border border-red-500/20">
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-red-500/10 rounded-lg text-red-400">
+                                <i data-lucide="repeat"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white mb-2">Vòng Lặp Vô Tận</h3>
+                                <p class="text-slate-400">Học kỹ năng -> Đăng bài chung chung -> Không ai quan tâm -> Chán nản -> Đi học khóa học khác.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <i data-lucide="arrow-down" class="text-slate-500 animate-bounce"></i>
+                    </div>
+                    <div class="bg-slate-900 p-6 rounded-xl border border-green-500/20">
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-green-500/10 rounded-lg text-green-400">
+                                <i data-lucide="trending-up"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white mb-2">Bậc Thang Đi Lên (The Edge)</h3>
+                                <p class="text-slate-400">Xác định Ngách hẹp -> Tìm Keyword ít cạnh tranh -> Trao giá trị cụ thể -> Có khách hàng đầu tiên -> Mở rộng.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Visual Chart Simulation -->
+                <div class="relative h-80 md:h-96 bg-slate-900 rounded-2xl border border-white/10 p-6 flex flex-col items-center justify-center overflow-hidden">
+                    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+                    <div class="z-10 text-center">
+                        <div class="inline-block p-4 rounded-full bg-slate-800 border border-slate-700 mb-4">
+                            <i data-lucide="user-x" class="w-8 h-8 text-slate-400"></i>
+                        </div>
+                        <div class="w-1 h-16 bg-gradient-to-b from-slate-700 to-purple-600 mx-auto"></div>
+                        <div class="inline-block p-4 rounded-full bg-purple-600 shadow-lg shadow-purple-500/50 mt-4 animate-pulse">
+                            <i data-lucide="users" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <p class="mt-4 text-purple-300 font-bold">Điểm bùng phát sau 90 ngày</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8 Mental Models (Nguyên Lý) Grid -->
+    <section id="method" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <!-- Updated Text -->
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">8 Nguyên Lý Để Xây Dựng <span class="text-purple-400">Vị Thế Chuyên Gia</span></h2>
+                <p class="text-slate-400">Đúc kết từ tư duy của những người làm chuyên môn thành công nhất.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="glass-panel p-6 rounded-xl card-hover">
+                    <div class="text-purple-400 mb-4 font-mono text-sm">01. Nhận diện</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Biết mình là ai</h3>
+                    <p class="text-sm text-slate-400">Nếu bạn không biết mình là 'cá bé' trong ao lớn, bạn sẽ bị nuốt chửng. Hãy tìm ao nhỏ hơn (Micro-niche).</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="glass-panel p-6 rounded-xl card-hover">
+                    <div class="text-purple-400 mb-4 font-mono text-sm">02. Quan sát</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Copy có chọn lọc</h3>
+                    <p class="text-sm text-slate-400">Đừng sáng tạo bánh xe. Hãy xem đối thủ đang làm gì, tìm điểm yếu của họ và làm tốt hơn ở điểm đó.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="glass-panel p-6 rounded-xl card-hover">
+                    <div class="text-purple-400 mb-4 font-mono text-sm">03. Thực tế</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Đừng nghe lời sáo rỗng</h3>
+                    <p class="text-sm text-slate-400">Bỏ qua những lời khuyên chung chung "hãy đam mê". Hãy nhìn vào số liệu, nhu cầu tìm kiếm thực tế.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="glass-panel p-6 rounded-xl card-hover bg-purple-900/20 border-purple-500/50">
+                    <div class="text-purple-400 mb-4 font-mono text-sm">04. Chiến lược</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Chọn cuộc chơi DỄ</h3>
+                    <p class="text-sm text-slate-400">"Edge" là nơi tài năng của bạn gặp một thị trường ngách ít cạnh tranh. Đừng đâm đầu vào chỗ đông.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="glass-panel p-6 rounded-xl card-hover">
+                    <div class="text-purple-400 mb-4 font-mono text-sm">05. Đam mê</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Tìm LỢI THẾ, không chỉ đam mê</h3>
+                    <p class="text-sm text-slate-400">Đam mê không ra tiền. Lợi thế (kỹ năng giải quyết vấn đề khó) mới ra tiền.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="glass-panel p-6 rounded-xl card-hover">
+                    <div class="text-purple-400 mb-4 font-mono text-sm">06. Quy mô</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Giải quyết vấn đề GỐC</h3>
+                    <p class="text-sm text-slate-400">Xây dựng hệ thống nội dung (blog, video) giải quyết vấn đề cốt lõi một lần và dùng mãi mãi.</p>
+                </div>
+                <!-- Card 7 -->
+                <div class="glass-panel p-6 rounded-xl card-hover">
+                    <div class="text-purple-400 mb-4 font-mono text-sm">07. Tài sản</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Đừng bán thời gian</h3>
+                    <p class="text-sm text-slate-400">Tạo ra "Tài sản số" (Ebook, Template, Course) để nó làm việc cho bạn 24/7.</p>
+                </div>
+                <!-- Card 8 -->
+                <div class="glass-panel p-6 rounded-xl card-hover">
+                    <div class="text-purple-400 mb-4 font-mono text-sm">08. Tập trung</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Đơn giản hóa</h3>
+                    <p class="text-sm text-slate-400">Thành công đến từ việc làm một việc đơn giản một cách xuất sắc và lặp lại nó.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE TOOL SECTION (The Hook) -->
+    <section id="tool" class="py-24 bg-gradient-to-b from-slate-900 to-purple-900/20 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+            <div class="bg-slate-800 rounded-2xl shadow-2xl border border-white/10 overflow-hidden">
+                <div class="p-8 md:p-12">
+                    <div class="text-center mb-10">
+                        <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-purple-600 mb-4">
+                            <i data-lucide="cpu" class="text-white"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-white">Stack Offers & Lộ Trình</h2>
+                        <p class="text-slate-400 mt-2">Đừng ép khách hàng 'cưới' ngay lần đầu gặp. Hãy xây dựng phễu từ thấp đến cao.</p>
+                    </div>
+
+                    <!-- Step 1: Input -->
+                    <div id="tool-step-1" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Chuyên môn chính của bạn là gì?</label>
+                            <input type="text" id="input-skill" placeholder="Ví dụ: Dạy tiếng Anh, Thiết kế Logo, Tư vấn tài chính..." class="w-full bg-slate-900 border border-slate-700 rounded-lg p-4 text-white focus:ring-2 focus:ring-purple-500 outline-none">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Đối tượng khách hàng bạn muốn nhắm tới?</label>
+                            <input type="text" id="input-niche" placeholder="Ví dụ: Người đi làm bận rộn, Chủ Spa, Mẹ bỉm sữa..." class="w-full bg-slate-900 border border-slate-700 rounded-lg p-4 text-white focus:ring-2 focus:ring-purple-500 outline-none">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-slate-300 mb-2">Mức chi trả tối đa của khách hàng (High Ticket)?</label>
+                            <input type="text" id="input-budget" placeholder="Ví dụ: 5 triệu/tháng, 500$ trọn gói..." class="w-full bg-slate-900 border border-slate-700 rounded-lg p-4 text-white focus:ring-2 focus:ring-purple-500 outline-none">
+                        </div>
+
+                        <!-- Edge Filter Checklist -->
+                        <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-700">
+                            <h4 class="font-bold text-white mb-4 flex items-center gap-2">
+                                <i data-lucide="filter" class="w-4 h-4 text-purple-400"></i> Bộ Lọc "Edge" Nhanh
+                            </h4>
+                            <div class="space-y-4">
+                                <label class="flex items-center justify-between cursor-pointer group">
+                                    <span class="text-sm text-slate-300 group-hover:text-white">Điều này DỄ với mình (so với 90% người khác)?</span>
+                                    <div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+                                        <input type="checkbox" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer border-slate-600"/>
+                                        <label class="toggle-label block overflow-hidden h-6 rounded-full bg-slate-700 cursor-pointer"></label>
+                                    </div>
+                                </label>
+                                <label class="flex items-center justify-between cursor-pointer group">
+                                    <span class="text-sm text-slate-300 group-hover:text-white">Khó sao chép nhanh (copycat không bắt kịp)?</span>
+                                    <div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+                                        <input type="checkbox" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer border-slate-600"/>
+                                        <label class="toggle-label block overflow-hidden h-6 rounded-full bg-slate-700 cursor-pointer"></label>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button onclick="generatePlan()" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-4 rounded-lg shadow-lg transition transform hover:scale-[1.02] flex items-center justify-center gap-2">
+                            <i data-lucide="wand-2"></i> Tạo Phễu Offer (Stack Offers)
+                        </button>
+                    </div>
+
+                    <!-- Step 2: Output (Hidden by default) -->
+                    <div id="tool-step-2" class="hidden animate-fade-in space-y-8">
+                        <div class="bg-green-500/10 border border-green-500/30 p-4 rounded-lg text-green-300 flex items-center gap-3">
+                            <i data-lucide="check-circle"></i>
+                            <span>Đã thiết kế xong Phễu Offer cho bạn!</span>
+                        </div>
+
+                        <!-- Stack Offers Framework -->
+                        <div id="stack-offers-content" class="space-y-8">
+                            <!-- Content will be injected here by JS -->
+                        </div>
+
+                        <div class="text-center pt-6 border-t border-slate-700 mt-8">
+                            <p class="text-slate-400 mb-4">Bạn cần hỗ trợ viết nội dung chi tiết cho từng tầng?</p>
+                            <!-- UPDATED: Button points to Whatsapp -->
+                            <a href="https://wa.me/84968333342" target="_blank" class="inline-block bg-white text-purple-900 font-bold py-3 px-8 rounded-full hover:bg-slate-200 transition shadow-lg shadow-white/10">
+                                <i data-lucide="phone" class="w-4 h-4 inline-block mr-1"></i> Tư Vấn Triển Khai 1:1
+                            </a>
+                            <p class="mt-4 text-xs text-slate-500 cursor-pointer hover:text-white underline" onclick="resetTool()">Xây dựng lại từ đầu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section (SEO Optimized) -->
+    <section class="py-20 bg-slate-900">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Câu Hỏi Thường Gặp</h2>
+            <div class="space-y-4">
+                <details class="group bg-slate-800 p-4 rounded-lg cursor-pointer">
+                    <summary class="flex justify-between items-center font-medium list-none">
+                        <span>Tại sao không nên bán gói High-Ticket ngay?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i data-lucide="chevron-down"></i>
+                        </span>
+                    </summary>
+                    <p class="text-slate-400 mt-3 group-open:animate-fadeIn">
+                        Giống như việc hẹn hò, khách hàng cần thời gian để tin tưởng. Bắt đầu bằng giá trị nhỏ (Low-commitment) giúp giảm rào cản tâm lý và lọc ra những người thực sự quan tâm.
+                    </p>
+                </details>
+                <details class="group bg-slate-800 p-4 rounded-lg cursor-pointer">
+                    <summary class="flex justify-between items-center font-medium list-none">
+                        <span>Làm sao để tìm từ khóa "Edge" (Cạnh tranh thấp)?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i data-lucide="chevron-down"></i>
+                        </span>
+                    </summary>
+                    <p class="text-slate-400 mt-3 group-open:animate-fadeIn">
+                        Sử dụng công thức: [Chuyên môn] + [Đối tượng ngách] + [Vấn đề cụ thể]. Ví dụ: Thay vì "Dạy Tiếng Anh" (Cạnh tranh cao), hãy dùng "Tiếng Anh giao tiếp cho IT muốn làm Remote".
+                    </p>
+                </details>
+                <details class="group bg-slate-800 p-4 rounded-lg cursor-pointer">
+                    <summary class="flex justify-between items-center font-medium list-none">
+                        <span>Tôi cần bao nhiêu vốn để bắt đầu phễu này?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i data-lucide="chevron-down"></i>
+                        </span>
+                    </summary>
+                    <p class="text-slate-400 mt-3 group-open:animate-fadeIn">
+                        Gần như bằng 0. Bạn chỉ cần thời gian để nghiên cứu và viết content. Các công cụ như Google Keyword Planner hay ChatGPT bản miễn phí là đủ để bắt đầu.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <span class="text-xl font-bold brand-font text-white">SoloMastery</span>
+                <p class="text-slate-500 text-sm mt-1">Giúp Solopreneur 90 ngày đầu để sống sót.</p>
+            </div>
+            <!-- UPDATED: Social Contact Links -->
+            <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 text-slate-400 mt-4 md:mt-0">
+                <a href="https://m.me/bietdoitinhnhue" target="_blank" class="hover:text-purple-400 transition flex items-center gap-2 group">
+                    <i data-lucide="message-circle" class="group-hover:text-purple-400"></i> Messenger
+                </a>
+                <a href="https://wa.me/84968333342" target="_blank" class="hover:text-green-400 transition flex items-center gap-2 group">
+                    <i data-lucide="phone" class="group-hover:text-green-400"></i> Whatsapp
+                </a>
+                <a href="https://t.me/drakenguyen" target="_blank" class="hover:text-blue-400 transition flex items-center gap-2 group">
+                    <i data-lucide="send" class="group-hover:text-blue-400"></i> Telegram
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Logic for Tool -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        function generatePlan() {
+            const skill = document.getElementById('input-skill').value;
+            const niche = document.getElementById('input-niche').value;
+            const budget = document.getElementById('input-budget').value;
+            
+            if(!skill || !niche || !budget) {
+                alert('Vui lòng nhập đầy đủ thông tin: Chuyên môn, Khách hàng và Ngân sách!');
+                return;
+            }
+
+            // Simulate loading
+            const btn = document.querySelector('button[onclick="generatePlan()"]');
+            btn.innerHTML = '<i data-lucide="loader-2" class="animate-spin"></i> Đang thiết kế phễu...';
+            lucide.createIcons();
+
+            setTimeout(() => {
+                // Generate Stack Offers Content
+                const contentDiv = document.getElementById('stack-offers-content');
+                
+                contentDiv.innerHTML = `
+                    <!-- Level 1: Low Commitment -->
+                    <div class="relative bg-slate-900 border border-slate-700 rounded-xl p-6 overflow-hidden group hover:border-purple-500 transition-colors">
+                        <div class="absolute top-0 right-0 bg-slate-800 px-3 py-1 rounded-bl-lg text-xs font-mono text-slate-400">Entry Point</div>
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-purple-500/10 rounded-lg text-purple-400 shrink-0">
+                                <i data-lucide="gift" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white">1. Low Commitment (Làm Quen)</h3>
+                                <p class="text-slate-400 text-sm italic mb-3">"Đừng bắt họ cưới ngay. Hãy mời họ uống nước."</p>
+                                <div class="bg-black/30 p-4 rounded-lg border border-slate-700/50">
+                                    <p class="text-purple-300 font-bold text-sm mb-1">Gợi ý Hành động:</p>
+                                    <ul class="list-disc list-inside text-slate-300 text-sm space-y-2">
+                                        <li>Tặng <b>Checklist/Template miễn phí</b> giúp <b>${niche}</b> giải quyết nhanh 1 vấn đề nhỏ bằng <b>${skill}</b>.</li>
+                                        <li>Video ngắn 5 phút: "Sửa lỗi sai cơ bản khi làm <b>${skill}</b>".</li>
+                                        <li>Mục tiêu: Lấy Email hoặc sự chú ý (Warm up).</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Level 2: Mid Commitment -->
+                    <div class="relative bg-slate-900 border border-slate-700 rounded-xl p-6 overflow-hidden group hover:border-blue-500 transition-colors">
+                        <div class="absolute top-0 right-0 bg-slate-800 px-3 py-1 rounded-bl-lg text-xs font-mono text-slate-400">Warm Up</div>
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-blue-500/10 rounded-lg text-blue-400 shrink-0">
+                                <i data-lucide="coffee" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white">2. Mid Commitment (Hẹn Hò)</h3>
+                                <p class="text-slate-400 text-sm italic mb-3">"Chuyển họ từ người lạ thành khách hàng trả tiền lần đầu."</p>
+                                <div class="bg-black/30 p-4 rounded-lg border border-slate-700/50">
+                                    <p class="text-blue-300 font-bold text-sm mb-1">Gợi ý Offer:</p>
+                                    <ul class="list-disc list-inside text-slate-300 text-sm space-y-2">
+                                        <li><b>Workshop Online/Audit</b> giá thấp (dưới 500k) hoặc Webinar chuyên sâu.</li>
+                                        <li>Tư vấn 1:1 ngắn (30 phút) để vạch lộ trình cho <b>${niche}</b>.</li>
+                                        <li>Mục tiêu: Xây dựng niềm tin sâu sắc.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Level 3: High Commitment -->
+                    <div class="relative bg-slate-900 border border-slate-700 rounded-xl p-6 overflow-hidden group hover:border-orange-500 transition-colors shadow-lg shadow-orange-500/10">
+                        <div class="absolute top-0 right-0 bg-orange-600 text-white px-3 py-1 rounded-bl-lg text-xs font-bold font-mono">Main Event</div>
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-orange-500/10 rounded-lg text-orange-400 shrink-0">
+                                <i data-lucide="gem" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white">3. High Commitment (Kết Hôn)</h3>
+                                <p class="text-slate-400 text-sm italic mb-3">"Giải pháp trọn gói, cam kết kết quả cao nhất."</p>
+                                <div class="bg-black/30 p-4 rounded-lg border border-slate-700/50">
+                                    <p class="text-orange-300 font-bold text-sm mb-1">Offer Chính:</p>
+                                    <ul class="list-disc list-inside text-slate-300 text-sm space-y-2">
+                                        <li>Dịch vụ <b>${skill}</b> trọn gói (Done-for-you) hoặc Coaching 1:1 dài hạn.</li>
+                                        <li>Giá đề xuất: <b>${budget}</b> (Có thể chia nhỏ 3 lần thanh toán).</li>
+                                        <li>Luôn mở cửa (Rotate Offer) để họ có thể nâng cấp từ Mid lên High bất cứ lúc nào.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                // Re-init icons for dynamic content
+                lucide.createIcons();
+
+                // Switch steps
+                document.getElementById('tool-step-1').classList.add('hidden');
+                document.getElementById('tool-step-2').classList.remove('hidden');
+                
+                // Scroll to result
+                document.getElementById('tool').scrollIntoView({behavior: 'smooth'});
+
+            }, 1500);
+        }
+
+        function resetTool() {
+            document.getElementById('tool-step-1').classList.remove('hidden');
+            document.getElementById('tool-step-2').classList.add('hidden');
+            document.getElementById('input-skill').value = '';
+            document.getElementById('input-niche').value = '';
+            document.getElementById('input-budget').value = '';
+            
+            // Reset button text
+            const btn = document.querySelector('button[onclick="generatePlan()"]');
+            btn.innerHTML = '<i data-lucide="wand-2"></i> Tạo Phễu Offer (Stack Offers)';
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>
