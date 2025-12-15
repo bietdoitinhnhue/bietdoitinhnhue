@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diễm Trinh Yoga | Hành Trình Chữa Lành</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Điều chỉnh theo tone màu ảnh Facebook: Tự nhiên, Ấm áp, Gỗ & Cây
+                        'yoga-primary': '#5D7B6F',   /* Xanh rêu dịu (Sage Green) - thay cho xanh mint lạnh */
+                        'yoga-secondary': '#A4C3B2', /* Xanh nhạt bổ trợ */
+                        'yoga-bg': '#FDFBF7',        /* Màu trắng kem ấm (Warm Off-white) */
+                        'yoga-accent': '#C89F9C',    /* Hồng đất nhẹ (Soft Terra) - lấy từ màu quần áo tập */
+                        'yoga-wood': '#8C705F',      /* Nâu gỗ (Wood) - lấy từ nội thất/sàn */
+                        'yoga-text': '#4A4A4A',      /* Xám đen mềm mại cho chữ */
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Quicksand"', 'sans-serif'],
+                    },
+                    lineHeight: {
+                        'loose-vn': '1.8', /* Tăng line-height đoạn văn cho thoáng hơn */
+                        'relaxed-heading': '1.6', /* Tăng line-height tiêu đề lên 1.6 để không bị dính chữ */
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FDFBF7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #A4C3B2;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5D7B6F;
+        }
+        
+        html {
+            scroll-padding-top: 80px;
+        }
+
+        .hero-bg {
+            /* Vẫn giữ ảnh này vì năng lượng rất tốt, nhưng phủ màu ấm hơn */
+            background-image: linear-gradient(rgba(253, 251, 247, 0.4), rgba(253, 251, 247, 0.8)), url('https://scontent.fsgn2-9.fna.fbcdn.net/v/t39.30808-6/557739231_4089519888029366_8950513864994874671_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeFcpy6THbYZlyfQeSzDFXTxT-9HwnTI22tP70fCdMjba4h4XGGgpyJfLoxiFynoYlAreyK9YJSSq8KzPn2J52Pr&_nc_ohc=llrrl7G3EcsQ7kNvwGVtwQl&_nc_oc=AdnTByBe2AJmTQyhHIHmXjFmETZorU9Y94zuSaYfxV3lBnwOLLJVVBtmLmZ-e6ux6DXAh-6vkxZ8axduEbZI0ixg&_nc_zt=23&_nc_ht=scontent.fsgn2-9.fna&_nc_gid=2QuBIM7t3hc_Cb1kluKe6Q&oh=00_Afkb0PRrOntrqpKgznmBxZubg21XVLd6ZtzucdcBtIoUwg&oe=6945DB63');
+            background-size: cover;
+            background-position: center top;
+            background-attachment: fixed;
+        }
+
+        @media (max-width: 768px) {
+            .hero-bg {
+                background-attachment: scroll;
+                background-position: center;
+            }
+        }
+
+        .blob-shape {
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            animation: blob-bounce 10s infinite ease-in-out;
+        }
+
+        @keyframes blob-bounce {
+            0%, 100% { transform: scale(1); border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+            50% { transform: scale(1.05); border-radius: 60% 40% 30% 70% / 50% 40% 50% 60%; }
+        }
+        
+        .image-card {
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .image-card:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="font-sans text-yoga-text bg-yoga-bg antialiased overflow-x-hidden selection:bg-yoga-primary selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md transition-all duration-300 border-b border-stone-100" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <i data-lucide="sprout" class="text-yoga-primary w-8 h-8"></i>
+                    <span class="font-serif text-2xl font-bold text-yoga-wood tracking-wide">Diễm Trinh Yoga</span>
+                </div>
+                <div class="hidden md:flex space-x-10">
+                    <a href="#home" class="text-yoga-text hover:text-yoga-primary transition-colors font-medium text-sm tracking-widest uppercase py-2 border-b-2 border-transparent hover:border-yoga-primary">Trang chủ</a>
+                    <a href="#story" class="text-yoga-text hover:text-yoga-primary transition-colors font-medium text-sm tracking-widest uppercase py-2 border-b-2 border-transparent hover:border-yoga-primary">Câu Chuyện</a>
+                    <a href="#journey" class="text-yoga-text hover:text-yoga-primary transition-colors font-medium text-sm tracking-widest uppercase py-2 border-b-2 border-transparent hover:border-yoga-primary">Hành Trình</a>
+                    <a href="#philosophy" class="text-yoga-text hover:text-yoga-primary transition-colors font-medium text-sm tracking-widest uppercase py-2 border-b-2 border-transparent hover:border-yoga-primary">Giá Trị</a>
+                    <a href="#contact" class="px-6 py-2 rounded-full bg-yoga-primary text-white hover:bg-yoga-wood transition-colors shadow-md text-sm font-bold uppercase tracking-wider">Liên Hệ</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-yoga-wood hover:text-yoga-primary p-2">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl absolute w-full border-t border-gray-100">
+            <div class="px-4 pt-4 pb-6 space-y-2 text-center">
+                <a href="#home" class="block px-3 py-3 text-yoga-text hover:bg-stone-50 rounded-lg font-medium transition-colors">Trang chủ</a>
+                <a href="#story" class="block px-3 py-3 text-yoga-text hover:bg-stone-50 rounded-lg font-medium transition-colors">Câu Chuyện</a>
+                <a href="#journey" class="block px-3 py-3 text-yoga-text hover:bg-stone-50 rounded-lg font-medium transition-colors">Hành Trình</a>
+                <a href="#philosophy" class="block px-3 py-3 text-yoga-text hover:bg-stone-50 rounded-lg font-medium transition-colors">Giá Trị</a>
+                <a href="#contact" class="block px-3 py-3 text-white bg-yoga-primary font-bold rounded-lg mt-4 shadow-md">Liên Hệ Ngay</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen min-h-[600px] flex items-center justify-center hero-bg">
+        <div class="relative z-10 container mx-auto px-6 text-center mt-10">
+            <div class="inline-block mb-6 px-5 py-2 bg-white/70 backdrop-blur-md rounded-full border border-yoga-primary/20 shadow-sm" data-aos="fade-down">
+                <p class="text-yoga-wood font-bold text-xs md:text-sm tracking-[0.2em] uppercase">Cô gái miền sông nước</p>
+            </div>
+            <!-- Đã sửa line-height (leading-relaxed-heading) và ngắt dòng hợp lý -->
+            <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-yoga-text mb-8 leading-relaxed-heading drop-shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                Yoga <span class="font-light italic text-yoga-primary block md:inline mt-2 md:mt-0">Là Lối Sống</span>
+            </h1>
+            <p class="text-lg md:text-xl text-yoga-text/80 font-medium max-w-2xl mx-auto mb-10 leading-loose-vn" data-aos="fade-up" data-aos-delay="200">
+                Hành trình từ nỗi đau thắt lưng đến sự tự do trong chuyển động của Diễm Trinh (2000). Cùng đánh thức nguồn năng lượng chữa lành bên trong bạn.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-5" data-aos="fade-up" data-aos-delay="300">
+                <a href="#journey" class="px-8 py-4 rounded-full bg-yoga-primary text-white hover:bg-yoga-wood transition-all shadow-xl font-bold tracking-wide transform hover:-translate-y-1">
+                    Xem Hành Trình
+                </a>
+                <a href="#story" class="px-8 py-4 rounded-full bg-white/90 backdrop-blur-md text-yoga-wood border border-yoga-wood/30 hover:bg-yoga-bg transition-all font-bold tracking-wide transform hover:-translate-y-1">
+                    Câu Chuyện Của Tôi
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer opacity-60 hover:opacity-100 transition-opacity">
+            <a href="#story"><i data-lucide="chevron-down" class="text-yoga-wood w-10 h-10"></i></a>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="py-24 md:py-32 bg-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                <div class="w-full lg:w-1/2 relative group" data-aos="fade-right">
+                    <div class="absolute top-0 left-0 w-full h-full bg-yoga-primary opacity-10 blob-shape transform -translate-x-6 -translate-y-6 scale-110"></div>
+                    <!-- Image with softer border radius -->
+                    <div class="relative rounded-[2rem] overflow-hidden shadow-2xl transition-all duration-500">
+                         <img src="https://scontent.fsgn2-5.fna.fbcdn.net/v/t39.30808-6/540300711_4049133252068030_7422298978714949813_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHgHPkeS7WMalzGuHzowsSgIiJts5xGt74iIm2znEa3vmaMEVmfD9IZGo0aMSZDmHZFbyRFkX6ZwREHCHT8oBQV&_nc_ohc=7DobWx6GRX4Q7kNvwHtACvq&_nc_oc=AdmjYAFAoH8VXY2vJVnYi4w-ph5rY1_HovmhFF7W1sKyKWbZW0WDoxkDoXt09EXNKSYNV3dHrOL0FoW0qvC7Om4Y&_nc_zt=23&_nc_ht=scontent.fsgn2-5.fna&_nc_gid=s7Xok3bDKN2Ed9Q8zdMmoA&oh=00_Afm4PowvTv8bS19n8K2bJaGeeFyAVo4riYSaBMZkjFnGgw&oe=6945D157" 
+                              alt="Diễm Trinh tập Yoga trong vườn" 
+                              class="w-full h-[500px] lg:h-[650px] object-cover object-center image-card">
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2" data-aos="fade-left">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="h-px w-10 bg-yoga-wood"></span>
+                        <span class="text-yoga-wood font-bold text-sm tracking-widest uppercase">Về Diễm Trinh</span>
+                    </div>
+                    <!-- Đã sửa line-height và thêm hiệu ứng highlight marker -->
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-yoga-text mb-8 leading-relaxed-heading">
+                        Từ Cô Gái Miền Tây <br> 
+                        Đến <span class="relative inline-block px-1">
+                            <span class="relative z-10 italic text-yoga-primary">Nỗi Đau Thắt Lưng</span>
+                            <!-- Highlight marker effect -->
+                            <span class="absolute bottom-2 left-0 w-full h-3 bg-yoga-secondary/40 -z-0 transform -rotate-1 rounded-full"></span>
+                        </span>
+                    </h2>
+                    <div class="prose prose-lg text-yoga-text/80 mb-10 leading-loose-vn text-justify">
+                        <p class="mb-4">
+                            Chào bạn, mình là <strong>Diễm Trinh</strong>, sinh năm 2000.
+                        </p>
+                        <p class="mb-4">
+                            Mình lớn lên giữa miền Tây sông nước, nơi phù sa bồi đắp không chỉ ruộng vườn mà cả tính cách con người - phóng khoáng, chân thành và hiền hòa như dòng chảy quê hương. Nhưng cuộc sống không phải lúc nào cũng trôi êm như con nước lớn.
+                        </p>
+                        <p class="mb-4">
+                            Áp lực công việc, nhịp sống vội vã và những ngày ngồi nhiều đã khiến mình sớm đối diện với những cơn <strong>đau thắt lưng âm ỉ</strong>. Có lúc, chỉ một động tác cúi xuống nhặt đồ cũng đủ làm mình chùn lại. Giữa những mỏi mệt ấy, mình tìm đến Yoga - ban đầu chỉ với mong muốn giảm đau.
+                        </p>
+                        <p class="mb-4">
+                            Nhưng rồi Yoga mang đến cho mình nhiều hơn thế. Mình học cách lắng nghe cơ thể, học cách thở để tìm lại sự bình an, và học cách sống chậm lại để yêu thương chính mình.
+                        </p>
+                        <p>
+                            Yoga không chỉ giúp mình khỏe hơn, mà còn giúp mình hiểu rằng: <em>chăm sóc bản thân không phải là xa xỉ, mà là điều cần thiết để đi đường dài.</em>
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-6 p-8 bg-yoga-bg rounded-2xl border border-stone-100 shadow-inner">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-white p-3 rounded-full shadow-sm text-yoga-wood border border-stone-100"><i data-lucide="map-pin"></i></div>
+                            <span class="font-medium text-yoga-text tracking-wide">Cần Thơ</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="bg-white p-3 rounded-full shadow-sm text-yoga-wood border border-stone-100"><i data-lucide="calendar"></i></div>
+                            <span class="font-medium text-yoga-text tracking-wide">Est. 2000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats / Values -->
+    <section class="py-20 bg-yoga-bg">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+                <!-- Value 1 -->
+                <div class="p-10 bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-stone-50" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-20 h-20 bg-yoga-primary/10 rounded-full flex items-center justify-center mx-auto mb-8 text-yoga-primary">
+                        <i data-lucide="heart-pulse" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold mb-4 text-yoga-text">Chữa Lành</h3>
+                    <p class="text-yoga-text/70 leading-loose-vn">Phục hồi cột sống, xoa dịu nỗi đau thắt lưng bằng các chuyển động trị liệu chuyên sâu và an toàn.</p>
+                </div>
+                <!-- Value 2 -->
+                <div class="p-10 bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-stone-50" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-yoga-wood/10 rounded-full flex items-center justify-center mx-auto mb-8 text-yoga-wood">
+                        <i data-lucide="flower-2" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold mb-4 text-yoga-text">Cân Bằng</h3>
+                    <p class="text-yoga-text/70 leading-loose-vn">Tìm lại điểm cân bằng tĩnh tại giữa công việc và sức khỏe, mang lại sự bình an sâu sắc cho tâm trí.</p>
+                </div>
+                <!-- Value 3 -->
+                <div class="p-10 bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-stone-50" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-yoga-accent/10 rounded-full flex items-center justify-center mx-auto mb-8 text-yoga-accent">
+                        <i data-lucide="sparkles" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold mb-4 text-yoga-text">Lối Sống</h3>
+                    <p class="text-yoga-text/70 leading-loose-vn">Yoga không dừng lại trên thảm tập. Yoga là hơi thở, là thái độ sống tích cực và yêu thương mỗi ngày.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Journey -->
+    <section id="journey" class="py-24 md:py-32 bg-white relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-24">
+                <span class="text-yoga-primary font-bold text-sm tracking-widest uppercase mb-4 block" data-aos="fade-up">My Journey</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-yoga-text mb-8" data-aos="fade-up" data-aos-delay="100">Hành Trình 5 Năm</h2>
+                <div class="w-16 h-1 bg-yoga-wood mx-auto rounded-full mb-8" data-aos="fade-up" data-aos-delay="150"></div>
+                <p class="text-yoga-text/70 max-w-2xl mx-auto text-lg leading-loose-vn" data-aos="fade-up" data-aos-delay="200">
+                    Từ những trang sách tìm hiểu về nỗi đau, đến những giọt mồ hôi trên thảm tập và niềm hạnh phúc vỡ òa khi được chia sẻ giá trị này.
+                </p>
+            </div>
+
+            <div class="relative max-w-6xl mx-auto">
+                <!-- Vertical Line -->
+                <div class="absolute left-6 md:left-1/2 transform md:-translate-x-1/2 h-full w-px bg-stone-200"></div>
+
+                <!-- Timeline Item 1: 2020 -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between mb-24 w-full group">
+                    <div class="md:w-[45%] order-2 md:order-1 text-left md:text-right pl-16 md:pl-0 md:pr-16 py-4" data-aos="fade-right">
+                        <span class="inline-block px-4 py-1 bg-stone-100 text-yoga-wood text-xs font-bold rounded-full mb-4 tracking-wider">2020</span>
+                        <h3 class="font-serif text-2xl font-bold text-yoga-text mb-3 group-hover:text-yoga-primary transition-colors">Khởi Đầu & Tìm Kiếm</h3>
+                        <p class="text-yoga-text/70 leading-loose-vn">
+                            Đối mặt với cơn đau lưng nghiêm trọng. Mình bắt đầu tìm đọc mọi thứ về cơ thể học và Yoga qua sách vở, tìm kiếm một giải pháp bền vững thay vì thuốc giảm đau.
+                        </p>
+                    </div>
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white border-4 border-yoga-primary rounded-full z-10 shadow-sm"></div>
+                    <div class="md:w-[45%] order-3 md:order-3 pl-16 md:pl-16 text-left w-full mt-6 md:mt-0" data-aos="fade-left">
+                        <div class="overflow-hidden rounded-2xl shadow-lg border-8 border-white image-card">
+                             <img src="https://scontent.fsgn2-4.fna.fbcdn.net/v/t39.30808-6/589937124_4144242382557116_188752004593191141_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFNtXozKGv1oe7KwyeCHpNVgS2ND6F5RSKBLY0PoXlFIqj6JKQRam7rOpDItDAzSkMQwq11pPGpX4ZRij985bP_&_nc_ohc=AoGK2eWHGQ4Q7kNvwGgr6Jp&_nc_oc=AdnK09WA6zKUKQn16ufAwEDz7u3Sql624DspQL2nl36ZcgwLGJJcdZH7wpXLAY2Qel5685L4WNvtQOBh8W1Pn-JU&_nc_zt=23&_nc_ht=scontent.fsgn2-4.fna&_nc_gid=XAI1oCtACPEhWo82Pxt2HQ&oh=00_Afl4_F4bfdMCzmSUmXgvRQrK-2p_2_iljtTOebJq9jENcg&oe=6945C56B" 
+                                  class="w-full h-72 object-cover" alt="Diễm Trinh đọc sách tìm hiểu Yoga">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2: 2021-2022 -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between mb-24 w-full group">
+                    <div class="md:w-[45%] order-3 md:order-1 pl-16 md:pl-0 md:pr-16 text-right w-full mt-6 md:mt-0" data-aos="fade-right">
+                        <div class="overflow-hidden rounded-2xl shadow-lg border-8 border-white image-card">
+                            <img src="https://scontent.fsgn2-3.fna.fbcdn.net/v/t39.30808-6/548739782_4068754463439242_3703874316620515197_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFBhtZi_fEoEp0s3OSlxqwifik1iBYjMAN-KTWIFiMwAw7xfCFVwn-Z-gQGPOiMpTU-t5wSlP3C1kTj2LnF8_tU&_nc_ohc=r19RaDCxjnsQ7kNvwFws4hr&_nc_oc=AdmeU676LzZyyR7CO_J3pE5E0tRkN4El_tvJUnlJjWvdaRXNDXmFdClK7mwzf_DJ-qppSfu7LCcwMKGe7ffgI5d9&_nc_zt=23&_nc_ht=scontent.fsgn2-3.fna&_nc_gid=hnQkw1xN2nQkE3bnp8MG9g&oh=00_AfnTyrne1QacLuet9qpq9vEv2cKtUrz0k5EQnW5OYhDg7w&oe=6945BECD" 
+                                 class="w-full h-72 object-cover" alt="Tập Yoga ngoài trời nắng">
+                        </div>
+                    </div>
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white border-4 border-yoga-primary rounded-full z-10 shadow-sm"></div>
+                    <div class="md:w-[45%] order-2 md:order-3 pl-16 md:pl-16 text-left" data-aos="fade-left">
+                        <span class="inline-block px-4 py-1 bg-stone-100 text-yoga-wood text-xs font-bold rounded-full mb-4 tracking-wider">2021 - 2022</span>
+                        <h3 class="font-serif text-2xl font-bold text-yoga-text mb-3 group-hover:text-yoga-primary transition-colors">Kiên Trì & Chuyển Hóa</h3>
+                        <p class="text-yoga-text/70 leading-loose-vn">
+                            Những buổi tập dưới nắng sớm, những động tác lặp đi lặp lại. Cơn đau thắt lưng giảm dần, thay vào đó là sự dẻo dai và năng lượng tích cực lan tỏa.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3: 2023-2024 -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between mb-24 w-full group">
+                    <div class="md:w-[45%] order-2 md:order-1 text-left md:text-right pl-16 md:pl-0 md:pr-16" data-aos="fade-right">
+                        <span class="inline-block px-4 py-1 bg-stone-100 text-yoga-wood text-xs font-bold rounded-full mb-4 tracking-wider">2023 - 2024</span>
+                        <h3 class="font-serif text-2xl font-bold text-yoga-text mb-3 group-hover:text-yoga-primary transition-colors">Chuyên Sâu & Chứng Nhận</h3>
+                        <p class="text-yoga-text/70 leading-loose-vn">
+                            Hoàn thành khóa đào tạo HLV Yoga 200 giờ Quốc tế. Đào sâu vào giải phẫu học để hiểu rõ hơn về cơ chế chữa lành cho cột sống.
+                        </p>
+                    </div>
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white border-4 border-yoga-primary rounded-full z-10 shadow-sm"></div>
+                    <div class="md:w-[45%] order-3 md:order-3 pl-16 md:pl-16 text-left w-full mt-6 md:mt-0" data-aos="fade-left">
+                         <div class="overflow-hidden rounded-2xl shadow-lg border-8 border-white image-card">
+                            <img src="https://scontent.fsgn2-8.fna.fbcdn.net/v/t39.30808-6/561537659_4095665634081458_6170611307018784968_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGbeIHnOu6COtRwvWsjrG_VuaKZ2jb4OP65opnaNvg4_mLh7hUoBeHc0u1izP4iFvbXBArqv6yc4vdO8Bboavx-&_nc_ohc=_1LYFkP5-2wQ7kNvwG0EbV0&_nc_oc=AdkDaJuG5F9Gf5oBN3L9JF05wKgs-KgP9J3MMbl3xSRiydobfPWoTGM573F_44txcnueCOgrRoPkIbo9uZZ5NhRy&_nc_zt=23&_nc_ht=scontent.fsgn2-8.fna&_nc_gid=Cywm0sgre-aqNTKC-51Z6A&oh=00_AfkWlzBGKj04jullFW25ptYLB07bBXPp19Y30RCfO-OgYg&oe=6945DC44" 
+                                 class="w-full h-72 object-cover" alt="Nhận bằng Yoga 200h">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4: 2025 -->
+                <div class="relative flex flex-col md:flex-row items-center justify-between w-full group">
+                    <div class="md:w-[45%] order-3 md:order-1 pl-16 md:pl-0 md:pr-16 text-right w-full mt-6 md:mt-0" data-aos="fade-right">
+                         <div class="overflow-hidden rounded-2xl shadow-lg border-8 border-yoga-wood/10 relative image-card">
+                            <img src="https://scontent.fsgn2-8.fna.fbcdn.net/v/t39.30808-6/557629419_4089523634695658_7740669483753655025_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEiOYla2TxdhWO7eq7WUVAuhQ7aEtJajYCFDtoS0lqNgMMnDNQ1Yt22wh80JfjQbiqL6Uupg6bUMKjqZ4IjnuIE&_nc_ohc=PzcftttxXucQ7kNvwFX7jEe&_nc_oc=Adn5Y9KsiZooPqV24761F_TiDzStcjdXZsCV3CnJX7EddfC7hJQzqMeNZB_hMLgnUKLSBKSnhTPBsAiBKO3oWQPA&_nc_zt=23&_nc_ht=scontent.fsgn2-8.fna&_nc_gid=9cGs_ds2miTNNuBHhlQPCg&oh=00_Afll01aUI0kepyeIPnD1crS6QE0SL3n6QybZbXdZjTGhZA&oe=6945CE0E" 
+                                 class="w-full h-72 object-cover" alt="HLV Yoga Diễm Trinh">
+                        </div>
+                    </div>
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-14 h-14 bg-yoga-wood rounded-full border-4 border-yoga-bg z-10 flex items-center justify-center shadow-lg shadow-yoga-wood/30">
+                        <i data-lucide="star" class="text-white w-6 h-6"></i>
+                    </div>
+                    <div class="md:w-[45%] order-2 md:order-3 pl-16 md:pl-16 text-left" data-aos="fade-left">
+                        <span class="inline-block px-4 py-1 bg-yoga-wood text-white text-xs font-bold rounded-full mb-4 tracking-wider">2025</span>
+                        <h3 class="font-serif text-2xl font-bold text-yoga-text mb-3">HLV Yoga Cá Nhân</h3>
+                        <p class="text-yoga-text/70 leading-loose-vn font-medium">
+                            Chính thức trở thành người đồng hành cùng bạn. Sứ mệnh của Trinh là giúp những người bị đau lưng tìm lại sự dẻo dai và bình an trong tâm hồn.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="py-24 bg-stone-50">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div data-aos="fade-right">
+                    <!-- Sửa lỗi dính dòng -->
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-yoga-text mb-10 leading-relaxed-heading">
+                        "Yoga Là Câu Chuyện <br> Của Chính Bạn"
+                    </h2>
+                    <p class="text-yoga-text/80 mb-6 leading-loose-vn text-lg">
+                        Trinh tin rằng mỗi người đến với Yoga đều mang theo một câu chuyện riêng. Có người tìm kiếm sức khỏe, có người tìm kiếm sự bình yên, và có người - giống như Trinh ngày xưa - tìm kiếm một lối thoát cho những cơn đau.
+                    </p>
+                    <div class="pl-6 border-l-4 border-yoga-wood my-10">
+                        <p class="text-yoga-text font-serif italic text-xl leading-relaxed">
+                            "Là một HLV cá nhân, Trinh không chỉ dạy bạn các tư thế. Trinh lắng nghe cơ thể bạn, thiết kế lộ trình phù hợp riêng cho vùng thắt lưng và cột sống của bạn."
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div class="flex items-center gap-4 p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                            <i data-lucide="user-check" class="text-yoga-primary"></i> 
+                            <span class="text-yoga-text font-medium">Lộ trình cá nhân 1:1</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                            <i data-lucide="activity" class="text-yoga-primary"></i> 
+                            <span class="text-yoga-text font-medium">Trị liệu đau lưng</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                            <i data-lucide="smile" class="text-yoga-primary"></i> 
+                            <span class="text-yoga-text font-medium">Trị liệu cổ vai gáy</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                            <i data-lucide="moon" class="text-yoga-primary"></i> 
+                            <span class="text-yoga-text font-medium">Thiền định & Chánh niệm</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative" data-aos="fade-left">
+                    <div class="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl">
+                         <img src="https://scontent.fsgn2-5.fna.fbcdn.net/v/t39.30808-6/571251136_4110557972592224_2676085882359814098_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGrcVSpLxwCTC7tJZQEkamwb51kM7NxzDhvnWQzs3HMOHaiT8-4pJNArgns0ZN38BKLW55170w94MFkIisD4bYl&_nc_ohc=k5AkQ40CRYMQ7kNvwHq0-4-&_nc_oc=AdnbyQ7DT4LaMqT6gxMO0zrpNgruiCVra3TYVCWj5XG-4kDLvO2RQ4XppaQeZ8uEFaFCaAR-NnEbhVOZ1yiGQPnI&_nc_zt=23&_nc_ht=scontent.fsgn2-5.fna&_nc_gid=hpj-4hsfyrrH7_ue9FesQQ&oh=00_AflRwge_h_LqWsjbYrc-K3-MN7tgz6KiqcJTu2-gaOuxsQ&oe=6945D1B2" 
+                              class="w-full h-auto object-cover image-card" alt="Nghiên cứu triết lý Yoga">
+                    </div>
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-yoga-accent/20 rounded-full blur-3xl z-0"></div>
+                    <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-yoga-primary/20 rounded-full blur-3xl z-0"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="contact" class="py-24 bg-yoga-wood text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-white opacity-5 rounded-full transform translate-x-1/3 -translate-y-1/3 blur-[100px]"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-20 items-center">
+                <div class="w-full lg:w-1/2 text-center lg:text-left" data-aos="fade-right">
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold mb-8 leading-tight">
+                        Bắt Đầu Hành Trình <br> <span class="text-yoga-secondary">Chữa Lành</span> Của Bạn
+                    </h2>
+                    <p class="text-white/80 text-lg mb-10 leading-loose-vn">
+                        Đừng để cơn đau lưng cản trở niềm vui sống của bạn. Hãy để Diễm Trinh đồng hành cùng bạn trên con đường tìm lại sức khỏe và sự cân bằng.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
+                        <div class="flex items-center gap-4 bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/10">
+                            <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-yoga-wood"><i data-lucide="phone"></i></div>
+                            <div class="text-left">
+                                <p class="text-white/60 text-xs uppercase tracking-wider mb-1">Hotline</p>
+                                <p class="font-bold text-lg">0909 xxx xxx</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/10">
+                            <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-yoga-wood"><i data-lucide="mail"></i></div>
+                            <div class="text-left">
+                                <p class="text-white/60 text-xs uppercase tracking-wider mb-1">Email</p>
+                                <p class="font-bold text-lg">diemtrinh@yoga.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full lg:w-1/2" data-aos="fade-left">
+                    <div class="bg-white p-10 rounded-3xl shadow-2xl">
+                        <form class="space-y-5">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <input type="text" placeholder="Tên của bạn" class="w-full px-5 py-4 rounded-xl bg-stone-50 text-yoga-text focus:outline-none focus:ring-2 focus:ring-yoga-primary placeholder-gray-400 border border-stone-100">
+                                <input type="tel" placeholder="Số điện thoại" class="w-full px-5 py-4 rounded-xl bg-stone-50 text-yoga-text focus:outline-none focus:ring-2 focus:ring-yoga-primary placeholder-gray-400 border border-stone-100">
+                            </div>
+                            <textarea placeholder="Vấn đề bạn đang gặp phải (VD: Đau lưng dưới, mỏi cổ vai gáy...)" rows="4" class="w-full px-5 py-4 rounded-xl bg-stone-50 text-yoga-text focus:outline-none focus:ring-2 focus:ring-yoga-primary placeholder-gray-400 border border-stone-100"></textarea>
+                            <button type="button" class="w-full py-4 rounded-xl bg-yoga-primary hover:bg-yoga-text hover:text-white transition-all font-bold text-white shadow-lg uppercase tracking-wider text-sm flex items-center justify-center gap-2 group">
+                                Đăng Ký Tư Vấn Miễn Phí <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+                            </button>
+                            <p class="text-xs text-center text-gray-400 mt-2">*Diễm Trinh cam kết bảo mật thông tin của bạn.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-50 py-16 border-t border-stone-200">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-yoga-primary text-white rounded-lg flex items-center justify-center">
+                        <i data-lucide="sprout" class="w-6 h-6"></i>
+                    </div>
+                    <span class="font-serif text-2xl font-bold text-yoga-wood">Diễm Trinh Yoga</span>
+                </div>
+                <div class="flex space-x-8">
+                    <a href="#" class="text-gray-400 hover:text-yoga-primary transition-colors transform hover:scale-110"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-yoga-primary transition-colors transform hover:scale-110"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-yoga-primary transition-colors transform hover:scale-110"><i data-lucide="youtube" class="w-6 h-6"></i></a>
+                </div>
+                <p class="text-gray-500 text-sm font-medium">© 2025 Diễm Trinh Yoga. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Init Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Init Icons
+        lucide.createIcons();
+
+        // Init Animations
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 50,
+            easing: 'ease-out-cubic'
+        });
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Sticky Navbar Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-sm', 'py-0');
+            } else {
+                navbar.classList.remove('shadow-sm', 'py-0');
+            }
+        });
+    </script>
+</body>
+</html>
