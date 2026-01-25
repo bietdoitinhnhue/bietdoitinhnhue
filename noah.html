@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noah Spa - Lộ trình 1 Tỷ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #004d4d;
+            --secondary: #C5A059;
+            --text: #1e293b;
+            --bg: #ffffff;
+            --accent: #f8fafc;
+        }
+
+        * { box-sizing: border-box; }
+        
+        body {
+            background-color: #0f172a;
+            margin: 0;
+            padding: 20px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        /* Responsive Slide Container */
+        .slide-container {
+            width: 100%;
+            max-width: 1100px;
+            min-height: 600px;
+            background-color: var(--bg);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+
+        @media (min-width: 1024px) {
+            .slide-container {
+                height: 720px;
+                padding: 80px;
+            }
+        }
+
+        /* Branding Elements */
+        .slide-container::after {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            width: 200px; height: 200px;
+            background: radial-gradient(circle, rgba(197, 160, 89, 0.1) 0%, transparent 70%);
+            z-index: 0;
+        }
+
+        /* Typography */
+        h1 { font-family: 'Playfair Display', serif; font-size: clamp(36px, 8vw, 72px); color: var(--primary); margin: 0; line-height: 1.1; }
+        h2 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 5vw, 48px); color: var(--primary); margin-bottom: 25px; border-bottom: 3px solid var(--secondary); display: inline-block; padding-bottom: 8px; }
+        h3 { font-size: clamp(20px, 3vw, 28px); font-weight: 700; color: var(--secondary); margin: 0 0 10px 0; }
+        p { font-size: clamp(16px, 2vw, 22px); color: #64748b; line-height: 1.5; margin: 0; }
+
+        .content-area { flex-grow: 1; display: flex; align-items: center; position: relative; z-index: 1; width: 100%; }
+
+        .center-layout { text-align: center; justify-content: center; height: 100%; flex-direction: column; }
+        
+        /* Grid System */
+        .grid { display: grid; gap: 30px; width: 100%; }
+        .grid-2 { grid-template-columns: 1fr; }
+        .grid-3 { grid-template-columns: 1fr; }
+
+        @media (min-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr 1fr; gap: 60px; }
+            .grid-3 { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        /* Visual Components */
+        .card {
+            background: var(--accent);
+            padding: clamp(20px, 4vw, 40px);
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            height: 100%;
+        }
+        .card i { font-size: clamp(30px, 5vw, 50px); color: var(--secondary); margin-bottom: 20px; }
+        
+        .stat-circle {
+            width: clamp(200px, 40vw, 280px);
+            height: clamp(200px, 40vw, 280px);
+            border: 10px solid var(--secondary);
+            border-radius: 50%;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            margin: 0 auto 20px;
+        }
+        .stat-number { font-size: clamp(60px, 12vw, 100px); font-weight: 800; color: var(--primary); line-height: 1; }
+        .stat-label { font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: var(--secondary); font-weight: 700; }
+
+        .tag {
+            display: inline-block;
+            padding: 6px 16px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .bar-chart { width: 100%; }
+        .bar { height: 50px; background: #f1f5f9; border-radius: 10px; margin-bottom: 15px; overflow: hidden; display: flex; align-items: center; }
+        .bar-fill { height: 100%; background: var(--primary); display: flex; align-items: center; padding-left: 15px; color: white; font-weight: 600; font-size: 14px; }
+
+        .quote { font-family: 'Playfair Display', serif; font-size: clamp(28px, 6vw, 56px); line-height: 1.2; font-style: italic; color: var(--primary); position: relative; }
+        .quote::before { content: '“'; position: absolute; left: -25px; top: -15px; font-size: 60px; color: #e2e8f0; z-index: -1; }
+
+        /* Responsive Timeline */
+        .timeline { 
+            display: flex; 
+            flex-direction: column;
+            gap: 30px;
+            width: 100%; 
+            position: relative; 
+            padding-top: 20px; 
+        }
+        .t-step { text-align: left; display: flex; align-items: center; gap: 20px; }
+        .t-dot { width: 20px; height: 20px; background: var(--secondary); border-radius: 50%; flex-shrink: 0; }
+        .t-content { flex-grow: 1; }
+
+        @media (min-width: 768px) {
+            .timeline { flex-direction: row; justify-content: space-between; padding-top: 50px; gap: 0; }
+            .timeline::before { content: ''; position: absolute; top: 110px; left: 0; width: 100%; height: 2px; background: #e2e8f0; }
+            .t-step { flex-direction: column; width: 30%; text-align: center; }
+            .t-dot { margin: 30px auto; width: 30px; height: 30px; border: 6px solid white; z-index: 1; }
+        }
+
+        .nav-hint { margin-top: 10px; color: #64748b; font-size: 12px; opacity: 0.7; }
+    </style>
+</head>
+<body>
+
+<!-- Slide 1: Cover -->
+<div class="slide-container">
+    <div class="content-area center-layout">
+        <div class="tag">CONSULTING SESSION</div>
+        <h1>NOAH SPA: ROAD TO 1B</h1>
+        <p style="margin-top: 10px; font-weight: 600; color: var(--secondary);">PHẪU THUẬT HỆ THỐNG OFFER</p>
+        <div style="margin-top: 40px; border-top: 1px solid #e2e8f0; padding-top: 20px; width: 200px;">
+            <p style="font-size: 16px;">Expert: <strong>Lân Offer Funnel</strong></p>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 2: The Core Issue -->
+<div class="slide-container">
+    <h2>Tử huyệt</h2>
+    <div class="content-area grid grid-2">
+        <div class="stat-circle">
+            <div class="stat-number">0</div>
+            <div class="stat-label">Sự chủ động</div>
+        </div>
+        <div style="display: flex; flex-direction: column; justify-content: center; text-align: center; border-left: 0;">
+            <h3 style="color: #ef4444;">"Đợi khách tự cần"</h3>
+            <p>Dòng tiền bấp bênh do bị động.<br>Hãy <strong>KIẾN TẠO NHU CẦU</strong>.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 3: Entry Offer Strategy -->
+<div class="slide-container">
+    <h2>Entry: Phễu "An tâm"</h2>
+    <div class="content-area grid grid-2">
+        <div class="card">
+            <i class="fa-solid fa-user-doctor"></i>
+            <h3>Thăm khám 1:1</h3>
+            <p>Bán <strong>SỰ AN TÂM</strong>, không bán rửa mặt.</p>
+        </div>
+        <div class="card" style="border-left: 5px solid var(--secondary);">
+            <i class="fa-solid fa-file-medical"></i>
+            <h3>Cái cớ "Kê đơn"</h3>
+            <p>Để Bác sĩ xuất hiện và chốt High-ticket.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 4: Offer Ladder -->
+<div class="slide-container">
+    <h2>Hệ thống 3 tầng Offer</h2>
+    <div class="content-area grid grid-3">
+        <div class="card">
+            <h3>ENTRY</h3>
+            <p>Soi da & Phác đồ<br><strong>(Lọc khách)</strong></p>
+        </div>
+        <div class="card" style="background: var(--primary); color: white;">
+            <h3 style="color: var(--secondary);">MIDDLE</h3>
+            <p style="color: white;">Meso phục hồi<br><strong>(Xây niềm tin)</strong></p>
+        </div>
+        <div class="card">
+            <h3>CORE</h3>
+            <p>Hifu / Trị Nám<br><strong>(Dòng tiền 1B)</strong></p>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 5: Marketing Strategy -->
+<div class="slide-container">
+    <h2>Marketing Bác Sĩ</h2>
+    <div class="content-area">
+        <div class="bar-chart">
+            <p style="margin-bottom: 10px; font-weight: 700; font-size: 14px;">HIỆU QUẢ CHỐT ĐƠN</p>
+            <div class="bar"><div class="bar-fill" style="width: 30%; background: #94a3b8;">Copy bài/Ảnh mạng</div></div>
+            <div class="bar"><div class="bar-fill" style="width: 100%;">Series "1 Phút cùng Bác sĩ"</div></div>
+        </div>
+        <div class="grid grid-2" style="margin-top: 30px; text-align: center;">
+            <p><strong>Ads (20tr):</strong> Nữ 20-50t.</p>
+            <p><strong>KOC (10tr):</strong> Social Proof.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 6: Sales Philosophy -->
+<div class="slide-container">
+    <div class="content-area center-layout">
+        <div class="quote">
+            "Bác sĩ không bán hàng. Bác sĩ kê đơn."
+        </div>
+        <p style="margin-top: 30px; color: var(--secondary); font-weight: 700;">CHỐT ĐƠN BẰNG CHUYÊN MÔN</p>
+    </div>
+</div>
+
+<!-- Slide 7: Retention -->
+<div class="slide-container">
+    <h2>Continuity: Dòng tiền</h2>
+    <div class="content-area grid grid-2">
+        <div style="text-align: center;">
+            <div class="stat-number" style="color: var(--secondary);">60%</div>
+            <p style="font-weight: 700; font-size: 14px;">QUAY LẠI MỤC TIÊU</p>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-address-card"></i>
+            <h3>Thẻ Member</h3>
+            <p>Chăm sóc định kỳ. Thoát ly phụ thuộc khách mới.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 8: Roadmap -->
+<div class="slide-container">
+    <h2>Lộ trình 1 Tỷ</h2>
+    <div class="content-area">
+        <div class="timeline">
+            <div class="t-step">
+                <div class="t-dot"></div>
+                <div class="t-content">
+                    <h3>GĐ 1: Xây móng</h3>
+                    <p>Tháng 1-3: 300TR</p>
+                </div>
+            </div>
+            <div class="t-step">
+                <div class="t-dot"></div>
+                <div class="t-content">
+                    <h3>GĐ 2: Tăng tốc</h3>
+                    <p>Tháng 4-8: 600TR</p>
+                </div>
+            </div>
+            <div class="t-step">
+                <div class="t-dot"></div>
+                <div class="t-content">
+                    <h3>GĐ 3: Đột phá</h3>
+                    <p>Tháng 9-12: 1 TỶ</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 9: The Action -->
+<div class="slide-container" style="background: var(--primary);">
+    <div class="content-area center-layout" style="color: white;">
+        <h1 style="color: var(--secondary); margin-bottom: 20px;">ACTION!</h1>
+        <p style="color: white; font-weight: 300;">"Doanh thu 1 tỷ nằm ở việc em có ép nhân viên làm đúng quy trình hay không."</p>
+        <div style="margin-top: 40px; font-size: 18px; letter-spacing: 4px; color: var(--secondary); font-weight: 700;">JUST DO IT.</div>
+    </div>
+</div>
+
+<p class="nav-hint">Cuộn xuống để xem toàn bộ slide</p>
+
+</body>
+</html>
