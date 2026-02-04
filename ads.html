@@ -5,558 +5,340 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- === SEO CƠ BẢN === -->
-    <title>Báo giá Ads Minh Bạch | Biệt đội tinh nhuệ</title>
+    <title>Báo giá Ads Minh Bạch | Biet doi tinh nhuệ (Drake Nguyen)</title>
     <meta name="description" content="Mô hình quản lý Ads (FB, TikTok, Google) minh bạch. Tính phí theo tuần, không giữ ngân sách, tự động giảm phí khi scale. Tính thử chi phí của bạn ngay.">
     <meta name="keywords" content="quản lý quảng cáo, facebook ads, tiktok ads, google ads, báo giá ads, performance marketing, biet doi tinh nhue, drake nguyen">
-    <meta name="author" content="Biệt đội tinh nhuệ">
-    <link rel="canonical" href="https://bietdoitinhnhue.com"> <!-- Thay bằng URL thật của bạn -->
+    <meta name="author" content="Biet doi tinh nhuệ - Drake Nguyen">
+    <link rel="canonical" href="https://your-website-url.com">
 
     <!-- === FAVICON === -->
-    <!-- Sử dụng emoji 🎯 (mục tiêu) làm favicon, không cần file ngoài -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
 
-    <!-- === SOCIAL MEDIA (OPEN GRAPH & TWITTER) === -->
-    <!-- Thumbnail (1200x630) - Thay bằng ảnh thật của bạn -->
-    <meta property="og:image" content="https://www.marketing91.com/wp-content/uploads/2023/10/Advertising-Budget.png">
-    <meta property="og:title" content="Báo giá Ads Minh Bạch | Biệt đội tinh nhuệ">
-    <meta property="og:description" content="Tính phí theo tuần, không giữ ngân sách, tự động giảm phí khi scale. Tính thử chi phí của bạn ngay.">
+    <!-- === SOCIAL MEDIA === -->
+    <meta property="og:image" content="https://placehold.co/1200x630/4F46E5/FFFFFF?text=Quản+lý+Ads+Minh+Bạch\nBiet+doi+tinh+nhuệ">
+    <meta property="og:title" content="Báo giá Ads Minh Bạch | Biet doi tinh nhuệ">
+    <meta property="og:description" content="Tính phí theo tuần, không giữ ngân sách. Gói Test chỉ 7tr/2 tuần.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://your-website-url.com"> <!-- Thay bằng URL thật -->
-    <meta property="og:site_name" content="Biệt đội tinh nhuệ">
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://www.marketing91.com/wp-content/uploads/2023/10/Advertising-Budget.png">
-    <meta name="twitter:title" content="Báo giá Ads Minh Bạch | Biệt đội tinh nhuệ">
-    <meta name="twitter:description" content="Tính phí theo tuần, không giữ ngân sách, tự động giảm phí khi scale. Tính thử chi phí của bạn ngay.">
-
-    <!-- === JSON-LD SCHEMA (SEO NÂNG CAO) === -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Biệt đội tinh nhuệ",
-      "description": "Dịch vụ quản lý quảng cáo (Facebook, TikTok, Google) minh bạch, tính phí theo tuần, không giữ ngân sách và tự động giảm phí khi scale ngân sách lớn.",
-      "url": "https://bietdoitinhnhue.com", // Thay bằng URL thật
-      "image": "https://www.marketing91.com/wp-content/uploads/2023/10/Advertising-Budget.png", // Thay bằng ảnh thật
-      "serviceType": "Advertising Agency",
-      "areaServed": {
-        "@type": "Country",
-        "name": "Vietnam"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "Sales",
-        "url": "https://m.me/bietdoitinhnhue" // Link liên hệ chính
-      }
-    }
-    </script>
     
     <!-- Tải Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Tải Font Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
-        /* Áp dụng font Inter cho toàn bộ trang */
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-        /* Tùy chỉnh thanh cuộn (cho đẹp hơn) */
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #1f2937; } /* gray-800 */
-        ::-webkit-scrollbar-thumb { background: #4f46e5; border-radius: 10px; } /* indigo-600 */
-        ::-webkit-scrollbar-thumb:hover { background: #6366f1; } /* indigo-500 */
-        
-        /* Ẩn các nút tăng/giảm của input[type=number] */
-        input[type=number]::-webkit-inner-spin-button,
-        input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
-        input[type=number] { -moz-appearance: textfield; }
-        
-        /* Style cho tab đang active */
-        .active-tab {
-            background-color: #4f46e5; /* indigo-600 */
-            color: #ffffff; /* white */
-            font-weight: 600; /* semibold */
-        }
+        ::-webkit-scrollbar-track { background: #1f2937; }
+        ::-webkit-scrollbar-thumb { background: #4f46e5; border-radius: 10px; }
+        input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        .active-tab { background-color: #4f46e5; color: #ffffff; font-weight: 600; }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-200 antialiased">
 
-    <!-- Phần nội dung chính -->
-    <div class="container mx-auto max-w-3xl p-4 md:p-8 pt-8 md:pt-12 space-y-12 mb-24"> <!-- Thêm mb-24 để chừa chỗ cho sticky footer -->
+    <div class="container mx-auto max-w-3xl p-4 md:p-8 pt-8 md:pt-12 space-y-12 mb-24">
 
-        <!-- SECTION 1: HERO HEADER -->
+        <!-- HERO HEADER -->
         <section class="text-center space-y-4">
-            <!-- Logo thương hiệu "Biệt đội tinh nhuệ" -->
-            <div class="w-24 h-24 bg-indigo-600 rounded-full mx-auto flex items-center justify-center text-3xl font-bold text-white shadow-lg">
-                BĐ
-            </div>
-            
-            <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
-                QUẢN LÝ QUẢNG CÁO ĐA NỀN TẢNG
-            </h1>
-            <p class="text-lg md:text-xl text-indigo-300 font-medium">
-                Facebook - TikTok - Google
-            </p>
-            
-            <!-- Key Selling Points -->
+            <div class="w-24 h-24 bg-indigo-600 rounded-full mx-auto flex items-center justify-center text-3xl font-bold text-white shadow-lg">BĐ</div>
+            <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">QUẢN LÝ QUẢNG CÁO ĐA NỀN TẢNG</h1>
+            <p class="text-lg md:text-xl text-indigo-300 font-medium">Facebook - TikTok - Google</p>
             <div class="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4 pt-4 text-sm md:text-base">
-                <span class="flex items-center gap-2 bg-gray-800/50 px-3 py-1.5 rounded-full">
-                    <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                    Minh bạch, không giữ ngân sách
-                </span>
-                <span class="flex items-center gap-2 bg-gray-800/50 px-3 py-1.5 rounded-full">
-                    <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                    Thanh toán phí hàng tuần
-                </span>
+                <span class="flex items-center gap-2 bg-gray-800/50 px-3 py-1.5 rounded-full"><svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Minh bạch ngân sách</span>
+                <span class="flex items-center gap-2 bg-gray-800/50 px-3 py-1.5 rounded-full"><svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Gói Test linh hoạt</span>
             </div>
         </section>
 
-        <!-- SECTION 2: CALCULATOR -->
+        <!-- SPECIAL OFFER: GÓI TEST -->
+        <section class="bg-gradient-to-r from-purple-900 to-indigo-900 rounded-xl p-6 border border-purple-500/50 shadow-lg relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-bl-lg uppercase">Hot</div>
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="space-y-2">
+                    <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                        🚀 GÓI TEST HIỆU QUẢ (2 TUẦN)
+                    </h3>
+                    <p class="text-indigo-200 text-sm">Dành cho khách hàng mới muốn kiểm chứng năng lực trước khi cam kết dài hạn.</p>
+                </div>
+                <div class="text-center bg-white/10 p-3 rounded-lg backdrop-blur-sm min-w-[150px]">
+                    <p class="text-xs text-indigo-200 uppercase font-semibold">Phí cố định</p>
+                    <p class="text-2xl font-bold text-yellow-400">7.000.000đ</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALCULATOR -->
         <section id="calculator" class="bg-gray-800 rounded-2xl shadow-2xl p-6 md:p-8 space-y-6 border border-gray-700">
-            <h2 class="text-2xl font-bold text-center text-white">
-                TÍNH THỬ PHÍ QUẢN LÝ CỦA BẠN
-            </h2>
+            <h2 class="text-2xl font-bold text-center text-white">TÍNH THỬ PHÍ QUẢN LÝ</h2>
             
-            <!-- Input Ngân sách -->
             <div>
-                <label for="budgetInput" class="block text-sm font-medium text-gray-300 mb-2">Nhập ngân sách dự kiến/tháng (VNĐ)</label>
-                <input type="text" id="budgetInput" inputmode="numeric" pattern="[0-9]*"
-                       class="w-full p-4 bg-gray-700 border-2 border-gray-600 rounded-lg text-white text-2xl md:text-3xl font-bold text-center focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 outline-none transition"
-                       placeholder="Ví dụ: 300.000.000">
+                <label for="budgetInput" class="block text-sm font-medium text-gray-300 mb-2">Nhập ngân sách chạy Ads dự kiến/tháng (VNĐ)</label>
+                <input type="text" id="budgetInput" inputmode="numeric" pattern="[0-9]*" class="w-full p-4 bg-gray-700 border-2 border-gray-600 rounded-lg text-white text-2xl md:text-3xl font-bold text-center focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500 outline-none transition" placeholder="Ví dụ: 60.000.000">
             </div>
             
-            <!-- Kết quả tính toán -->
-            <div class="bg-gray-900 rounded-lg p-6 space-y-4">
-                <div class="flex justify-between items-center text-lg">
-                    <span class="text-gray-400">Gói dịch vụ của bạn:</span>
+            <!-- Result Box -->
+            <div class="bg-gray-900 rounded-lg p-6 space-y-3">
+                <div class="flex justify-between items-center text-lg border-b border-gray-700 pb-2">
+                    <span class="text-gray-400">Gói áp dụng:</span>
                     <span id="packageName" class="font-bold text-indigo-400 text-xl">---</span>
                 </div>
-                <hr class="border-gray-700">
-                <div class="flex justify-between items-center text-lg">
-                    <span class="text-gray-400">Tỷ lệ phí quản lý:</span>
-                    <span id="feeRate" class="font-bold text-white text-xl">---</span>
+                
+                <div class="flex justify-between items-center text-sm text-gray-400 pt-2">
+                    <span>Phí dịch vụ Agency (<span id="feePercent">0%</span>):</span>
+                    <span id="feeAmount" class="text-white font-medium">0 VNĐ</span>
                 </div>
-                <div class="flex justify-between items-center text-3xl">
-                    <span class="text-gray-300 font-medium">Phí (Ước tính):</span>
-                    <span id="feeAmount" class="font-extrabold text-green-400">0 VNĐ</span>
+
+                <div class="flex justify-between items-center text-sm text-gray-400">
+                    <span class="flex items-center gap-1">Thuế nền tảng (10%) <span class="text-xs text-gray-500 cursor-help" title="Thuế trả cho Google/Facebook/TikTok tại VN">(?)</span>:</span>
+                    <span id="taxAmount" class="text-white font-medium">0 VNĐ</span>
+                </div>
+                
+                <div class="border-t border-gray-700 mt-2 pt-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-300 font-medium">Tổng chi phí ước tính:</span>
+                        <span id="totalEstimate" class="text-2xl md:text-3xl font-extrabold text-green-400">0 VNĐ</span>
+                    </div>
+                    <p class="text-right text-xs text-gray-500 mt-1">(Bao gồm ngân sách Ads + Thuế nền tảng + Phí dịch vụ)</p>
                 </div>
             </div>
             
-            <p class="text-center text-yellow-400 text-sm font-medium bg-yellow-900/30 p-3 rounded-lg">
-                Lưu ý: Chỉ nhận ngân sách tối thiểu <strong>150.000.000 VNĐ / tháng</strong> (tương đương 5tr/ngày).
-            </p>
+            <div id="lowBudgetAlert" class="hidden text-center text-yellow-400 text-sm font-medium bg-yellow-900/30 p-3 rounded-lg">
+                <p>💡 Với ngân sách dưới 50 triệu, bạn nên cân nhắc <strong>Gói Test (7.000.000đ / 2 tuần)</strong> để tối ưu chi phí khởi tạo ban đầu.</p>
+            </div>
 
-            <!-- Nút Call to Action (CTA) chính - Vẫn giữ Messenger để nhận ref -->
-            <a id="ctaButton" href="https://m.me/bietdoitinhnhue?ref=chua_nhap_budget" target="_blank"
-               class="block w-full text-center bg-indigo-600 text-white text-lg font-bold py-4 px-6 rounded-lg shadow-lg hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105">
-                NHẬN TƯ VẤN GÓI NÀY QUA
+            <a id="ctaButton" href="https://m.me/drakenguyen.me" target="_blank" class="block w-full text-center bg-indigo-600 text-white text-lg font-bold py-4 px-6 rounded-lg shadow-lg hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105">
+                NHẬN TƯ VẤN NGAY
             </a>
         </section>
 
-        <!-- SECTION 3: GIẢI THÍCH MÔ HÌNH -->
+        <!-- PRICING TABLE -->
         <section class="space-y-6">
-            <h2 class="text-2xl font-bold text-center text-white">
-                MÔ HÌNH MINH BẠCH - KHÔNG RỦI RO
-            </h2>
-            
-            <!-- Card 1 -->
-            <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 space-y-3">
-                <h3 class="text-xl font-bold text-indigo-400">❓ Vì sao luôn bắt đầu từ 15%?</h3>
-                <p class="text-gray-300 leading-relaxed">
-                    Tuần đầu tiên chưa có dữ liệu (CPM, CTR, CVR...). Chúng ta không thể đoán.
-                </p>
-                <p class="text-gray-300 leading-relaxed">
-                    👉 Do đó, chúng ta khởi động ở <strong>Gói 1 (15%)</strong> với rủi ro thấp nhất để <strong>lấy dữ liệu thị trường</strong>, test tệp, test creative. Khi đã có "công thức thắng", chúng ta mới tự tin scale (mở rộng) ngân sách.
-                </p>
-            </div>
-            
-            <!-- Card 2 -->
-            <div class="bg-gray-800 rounded-lg p-6 border border-green-500/30 border-2 space-y-3">
-                <h3 class="text-xl font-bold text-green-400">💎 Chính sách "Back-Pay" (Hoàn phí chênh lệch)</h3>
-                <p class="text-gray-300 leading-relaxed">
-                    Đây là cam kết minh bạch nhất. Nếu cuối tháng tổng ngân sách của bạn <strong>vượt mốc gói cao hơn</strong>, chúng tôi sẽ <strong>tính lại phí của CẢ THÁNG theo mức % thấp nhất</strong>.
-                </p>
-                <p class="text-gray-300 leading-relaxed">
-                    <strong>Ví dụ:</strong> Bạn chạy 3 tuần phí 15%, tuần 4 vít mạnh, tổng tháng đạt <strong>1.1 Tỷ</strong>.
-                    <br>
-                    <strong class="text-white">Kết quả:</strong> Toàn bộ 1.1 Tỷ đó sẽ được tính lại theo <strong>phí Gói 4 (chỉ 8%)</strong>. Phần phí chênh lệch bạn đã thanh toán ở các tuần trước sẽ được <strong>TRỪ LẠI NGAY LẬP TỨC</strong>.
-                </p>
-                <p class="text-center font-bold text-xl text-white mt-4">
-                    BẠN KHÔNG BAO GIỜ BỊ THIỆT KHI SCALE.
-                </p>
-            </div>
-        </section>
-        
-        <!-- SECTION 4: BẢNG GIÁ CHI TIẾT -->
-        <section class="space-y-6">
-            <h2 class="text-2xl font-bold text-center text-white">
-                BẢNG GIÁ DỊCH VỤ CHI TIẾT
-            </h2>
-            
+            <h2 class="text-2xl font-bold text-center text-white">BẢNG GIÁ DỊCH VỤ CHI TIẾT</h2>
             <div class="space-y-3">
-                <!-- Header -->
                 <div class="hidden md:flex justify-between items-center p-4 text-gray-400 font-bold uppercase text-sm">
                     <span class="w-1/3">Gói Dịch Vụ</span>
                     <span class="w-1/3 text-center">Ngân Sách / Tháng</span>
                     <span class="w-1/3 text-right">Phí Quản Lý</span>
                 </div>
                 
-                <!-- Gói 1 -->
-                <div class="flex flex-col md:flex-row justify-between md:items-center p-5 bg-gray-800 rounded-lg border-2 border-indigo-500 shadow-lg">
-                    <span class="w-full md:w-1/3 text-lg font-bold text-indigo-400">Gói 1 (Khởi động)</span>
-                    <span class="w-full md:w-1/3 md:text-center text-gray-300">&lt; 300 Triệu</span>
+                <!-- Gói Test -->
+                <div class="flex flex-col md:flex-row justify-between md:items-center p-5 bg-gray-800 rounded-lg border border-purple-500/50 relative overflow-hidden">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-purple-500"></div>
+                    <span class="w-full md:w-1/3 text-lg font-bold text-purple-400">⚡ Gói Test (2 tuần)</span>
+                    <span class="w-full md:w-1/3 md:text-center text-gray-300">Dùng thử ngắn hạn</span>
+                    <span class="w-full md:w-1/3 md:text-right text-2xl font-bold text-white">7.000.000 VNĐ</span>
+                </div>
+
+                <!-- Gói Cơ Bản -->
+                <div class="flex flex-col md:flex-row justify-between md:items-center p-5 bg-gray-800 rounded-lg border border-gray-700">
+                    <span class="w-full md:w-1/3 text-lg font-bold text-white">Gói Cơ Bản</span>
+                    <span class="w-full md:w-1/3 md:text-center text-gray-300">&lt; 50 Triệu</span>
+                    <span class="w-full md:w-1/3 md:text-right text-2xl font-bold text-white">25%</span>
+                </div>
+
+                <!-- Gói Khởi Động -->
+                <div class="flex flex-col md:flex-row justify-between md:items-center p-5 bg-gray-800 rounded-lg border-2 border-indigo-500 shadow-lg relative">
+                     <div class="absolute -top-3 left-4 bg-indigo-600 text-xs px-2 py-0.5 rounded text-white">Phổ biến</div>
+                    <span class="w-full md:w-1/3 text-lg font-bold text-indigo-400">Gói Khởi Động</span>
+                    <span class="w-full md:w-1/3 md:text-center text-gray-300">50 - 100 Triệu</span>
+                    <span class="w-full md:w-1/3 md:text-right text-2xl font-bold text-white">20%</span>
+                </div>
+                
+                <!-- Gói Tăng Trưởng (MỚI) -->
+                <div class="flex flex-col md:flex-row justify-between md:items-center p-5 bg-gray-800 rounded-lg border border-gray-700">
+                    <span class="w-full md:w-1/3 text-lg font-bold text-white">Gói Tăng Trưởng</span>
+                    <span class="w-full md:w-1/3 md:text-center text-gray-300">100 - 200 Triệu</span>
                     <span class="w-full md:w-1/3 md:text-right text-2xl font-bold text-white">15%</span>
                 </div>
-                
-                <!-- Gói 2 -->
+
+                <!-- Gói Tăng Tốc -->
                 <div class="flex flex-col md:flex-row justify-between md:items-center p-5 bg-gray-800 rounded-lg border border-gray-700">
-                    <span class="w-full md:w-1/3 text-lg font-bold text-white">Gói 2</span>
-                    <span class="w-full md:w-1/3 md:text-center text-gray-300">300 - 500 Triệu</span>
+                    <span class="w-full md:w-1/3 text-lg font-bold text-white">Gói Tăng Tốc</span>
+                    <span class="w-full md:w-1/3 md:text-center text-gray-300">200 - 500 Triệu</span>
                     <span class="w-full md:w-1/3 md:text-right text-2xl font-bold text-white">12%</span>
                 </div>
-                
-                <!-- Gói 3 -->
+
+                <!-- Gói Chuyên Nghiệp -->
                 <div class="flex flex-col md:flex-row justify-between md:items-center p-5 bg-gray-800 rounded-lg border border-gray-700">
-                    <span class="w-full md:w-1/3 text-lg font-bold text-white">Gói 3</span>
+                    <span class="w-full md:w-1/3 text-lg font-bold text-white">Gói Chuyên Nghiệp</span>
                     <span class="w-full md:w-1/3 md:text-center text-gray-300">500 Triệu - 1 Tỷ</span>
                     <span class="w-full md:w-1/3 md:text-right text-2xl font-bold text-white">10%</span>
                 </div>
-                
-                <!-- Gói 4 -->
+
+                 <!-- Gói Scale -->
                 <div class="flex flex-col md:flex-row justify-between md:items-center p-5 bg-gray-800 rounded-lg border border-gray-700">
-                    <span class="w-full md:w-1/3 text-lg font-bold text-white">Gói 4 (Scale)</span>
+                    <span class="w-full md:w-1/3 text-lg font-bold text-white">Gói Scale</span>
                     <span class="w-full md:w-1/3 md:text-center text-gray-300">&gt; 1 Tỷ</span>
                     <span class="w-full md:w-1/3 md:text-right text-2xl font-bold text-white">8%</span>
                 </div>
             </div>
+            <p class="text-sm text-gray-400 italic text-center">* Lưu ý: Thuế nền tảng (Facebook/Google/TikTok) tại VN hiện tại khoảng 5-10% tùy đối tác và sẽ được cộng thêm vào chi phí nạp tiền.</p>
         </section>
 
-        <!-- SECTION 5: QUY TRÌNH LÀM VIỆC -->
+        <!-- TABS INFO -->
         <section class="space-y-6">
-            <h2 class="text-2xl font-bold text-center text-white">
-                QUY TRÌNH TỔNG QUAN (4 BƯỚC)
-            </h2>
-            
-            <!-- Timeline Container -->
-            <div class="relative pl-6 py-4 space-y-8 border-l-2 border-dashed border-indigo-500/50">
-                <!-- Bước 1 -->
-                <div class="relative">
-                    <div class="absolute -left-9 top-1 w-4 h-4 bg-indigo-500 rounded-full border-4 border-gray-900"></div>
-                    <h3 class="text-lg font-bold text-white">1. Khởi động & Phân tích</h3>
-                    <p class="text-gray-300">Audit tài khoản, phân tích đối thủ, thống nhất KPI. Thiết lập TKQC & Pixel. (Không thu phí trước).</p>
-                </div>
-                <!-- Bước 2 -->
-                <div class="relative">
-                    <div class="absolute -left-9 top-1 w-4 h-4 bg-indigo-500 rounded-full border-4 border-gray-900"></div>
-                    <h3 class="text-lg font-bold text-white">2. Triển khai & Review tuần</h3>
-                    <p class="text-gray-300">Sản xuất content, lên camp. Sau 7 ngày, gửi báo cáo chi tiết & đề xuất tối ưu. Hai bên xác nhận tiếp tục.</p>
-                </div>
-                <!-- Bước 3 -->
-                <div class="relative">
-                    <div class="absolute -left-9 top-1 w-4 h-4 bg-indigo-500 rounded-full border-4 border-gray-900"></div>
-                    <h3 class="text-lg font-bold text-white">3. Thanh toán phí Weekly</h3>
-                    <p class="text-gray-300">Khách hàng thanh toán phí quản lý (dựa trên % ngân sách thực chạy của tuần TRƯỚC) vào đầu tuần mới.</p>
-                </div>
-                <!-- Bước 4 -->
-                <div class="relative">
-                    <div class="absolute -left-9 top-1 w-4 h-4 bg-indigo-500 rounded-full border-4 border-gray-900"></div>
-                    <h3 class="text-lg font-bold text-white">4. Scale & Tự động giảm phí</h3>
-                    <p class="text-gray-300">Tiếp tục tối ưu, scale ngân sách. Hệ thống tự động áp dụng chính sách "Back-pay" khi bạn vượt mốc gói mới.</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- SECTION 6: CHI TIẾT THANH TOÁN & QUY ĐỊNH (Tabs) -->
-        <section class="space-y-6">
-            <h2 class="text-2xl font-bold text-center text-white">
-                CHI TIẾT THANH TOÁN & QUY ĐỊNH
-            </h2>
-            
-            <!-- Tab Buttons -->
-            <nav class="flex flex-col sm:flex-row -mb-px" aria-label="Tabs">
-                <button class="tab-button active-tab flex-1 whitespace-nowrap py-3 px-4 text-center text-sm font-medium text-gray-400 bg-gray-800 rounded-tl-lg border border-gray-700 border-b-0" data-tab="tab1">
-                    1. Khởi động
-                </button>
-                <button class="tab-button flex-1 whitespace-nowrap py-3 px-4 text-center text-sm font-medium text-gray-400 bg-gray-800 border border-gray-700 border-b-0" data-tab="tab2">
-                    2. Đánh giá
-                </button>
-                <button class="tab-button flex-1 whitespace-nowrap py-3 px-4 text-center text-sm font-medium text-gray-400 bg-gray-800 border border-gray-700 border-b-0" data-tab="tab3">
-                    3. Thanh toán
-                </button>
-                <button class="tab-button flex-1 whitespace-nowrap py-3 px-4 text-center text-sm font-medium text-gray-400 bg-gray-800 rounded-tr-lg border border-gray-700 border-b-0" data-tab="tab4">
-                    4. Quy định
-                </button>
+            <h2 class="text-2xl font-bold text-center text-white">CHI TIẾT THANH TOÁN & QUY ĐỊNH</h2>
+            <nav class="flex flex-col sm:flex-row -mb-px">
+                <button class="tab-button active-tab flex-1 py-3 px-4 text-sm font-medium text-gray-400 bg-gray-800 rounded-tl-lg border border-gray-700 border-b-0" data-tab="tab1">1. Khởi động</button>
+                <button class="tab-button flex-1 py-3 px-4 text-sm font-medium text-gray-400 bg-gray-800 border border-gray-700 border-b-0" data-tab="tab2">2. Đánh giá</button>
+                <button class="tab-button flex-1 py-3 px-4 text-sm font-medium text-gray-400 bg-gray-800 border border-gray-700 border-b-0" data-tab="tab3">3. Thanh toán</button>
+                <button class="tab-button flex-1 py-3 px-4 text-sm font-medium text-gray-400 bg-gray-800 rounded-tr-lg border border-gray-700 border-b-0" data-tab="tab4">4. Quy định</button>
             </nav>
-            
-            <!-- Tab Content Panels -->
             <div class="rounded-b-lg bg-gray-800 border border-gray-700 border-t-0">
-                <!-- Panel 1: Khởi động -->
                 <div id="tab1" class="tab-panel p-6 space-y-3">
-                    <h3 class="text-lg font-semibold text-white">1. Khởi động & Gói ngân sách ban đầu (15%)</h3>
+                    <h3 class="text-lg font-semibold text-white">1. Khởi động & Thanh toán</h3>
                     <ul class="space-y-2 list-inside text-gray-300">
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 text-indigo-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <span>Hai bên thống nhất phạm vi công việc, KPI, và tỷ lệ phí quản lý (tính theo % ngân sách).</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 text-indigo-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <span>Khách hàng sử dụng TK quảng cáo + thẻ của họ để chạy ads (freelancer không liên quan ngân sách).</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 text-indigo-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <span>Tuần đầu tiên không thu phí trước, freelancer triển khai ngay sau xác nhận công việc.</span>
-                        </li>
+                        <li>- Hai bên thống nhất phạm vi công việc và gói phí.</li>
+                        <li>- Khách hàng sử dụng TKQC cá nhân hoặc Agency cung cấp.</li>
+                        <li>- Thuế nền tảng (10%) được tính dựa trên ngân sách thực chạy để đảm bảo tuân thủ luật quảng cáo tại VN.</li>
                     </ul>
                 </div>
-                
-                <!-- Panel 2: Đánh giá -->
                 <div id="tab2" class="tab-panel p-6 space-y-3 hidden">
-                    <h3 class="text-lg font-semibold text-white">2. Đánh giá sau 1 tuần</h3>
+                    <h3 class="text-lg font-semibold text-white">2. Gói Test & Đánh giá</h3>
                     <ul class="space-y-2 list-inside text-gray-300">
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 text-indigo-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <span>Sau 07 ngày triển khai, freelancer tổng hợp báo cáo:</span>
-                        </li>
-                        <li class="flex items-start gap-2 ml-6">
-                            <span>- Chi phí ads tuần trước</span>
-                        </li>
-                        <li class="flex items-start gap-2 ml-6">
-                            <span>- Các chỉ số chính (CPM, CPC, CTR, CVR, ROAS…)</span>
-                        </li>
-                         <li class="flex items-start gap-2 ml-6">
-                            <span>- Kết quả & đề xuất tối ưu</span>
-                        </li>
-                         <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 text-indigo-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <span>Hai bên review & xác nhận tiếp tục hợp tác.</span>
-                        </li>
+                        <li>- Gói Test: 7.000.000đ trọn gói cho 2 tuần triển khai đầu tiên.</li>
+                        <li>- Sau 2 tuần: Đánh giá hiệu quả, nếu tiếp tục sẽ chuyển sang tính phí theo % ngân sách tháng.</li>
                     </ul>
                 </div>
-                
-                <!-- Panel 3: Thanh toán -->
                 <div id="tab3" class="tab-panel p-6 space-y-3 hidden">
-                    <h3 class="text-lg font-semibold text-white">3. Thanh toán PHÍ định kỳ hàng tuần</h3>
+                     <h3 class="text-lg font-semibold text-white">3. Thanh toán định kỳ</h3>
                      <ul class="space-y-2 list-inside text-gray-300">
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 text-indigo-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <span>Phí quản lý = Tổng ngân sách quảng cáo tuần trước × % gói dịch vụ.</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 text-indigo-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <span>Khách hàng thanh toán vào đầu tuần mới, ngay sau khi tuần trước kết thúc.</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 text-indigo-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <span>Sau khi thanh toán, freelancer tiếp tục tối ưu trong tuần tiếp theo.</span>
-                        </li>
+                        <li>- Thanh toán phí quản lý vào đầu mỗi tuần.</li>
+                        <li>- Phí dựa trên ngân sách thực chạy của tuần trước đó.</li>
                     </ul>
                 </div>
-                
-                <!-- Panel 4: Quy định -->
                 <div id="tab4" class="tab-panel p-6 space-y-3 hidden">
                     <h3 class="text-lg font-semibold text-white">4. Quy định chung</h3>
                     <ul class="space-y-2 list-inside text-gray-300">
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 text-indigo-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <span>Freelancer không nạp tiền, không giữ ngân sách → tất cả nằm trong TKQC của khách.</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 text-indigo-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <span>Nếu khách không thanh toán phí tuần mới, freelancer tạm ngưng công việc cho đến khi hoàn tất thanh toán.</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 text-indigo-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                            <span>Khách có toàn quyền quản lý chi tiêu Ads của họ, freelancer chỉ tính phí dựa trên ngân sách thực tế đã chạy của tuần trước.</span>
-                        </li>
+                        <li>- Không giữ ngân sách của khách. Minh bạch 100%.</li>
+                        <li>- Khách hàng chịu trách nhiệm thanh toán tiền quảng cáo trực tiếp cho nền tảng (bao gồm thuế).</li>
                     </ul>
                 </div>
             </div>
         </section>
-        
-        <!-- SECTION 7: LIÊN HỆ TRỰC TIẾP (Cho Desktop) -->
+
+        <!-- CONTACT DESKTOP -->
         <section class="space-y-6 hidden md:block">
-            <h2 class="text-2xl font-bold text-center text-white">
-                LIÊN HỆ TRỰC TIẾP
-            </h2>
+            <h2 class="text-2xl font-bold text-center text-white">LIÊN HỆ TRỰC TIẾP</h2>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <!-- Messenger -->
-                <a href="https://m.me/bietdoitinhnhue" target="_blank" class="flex-1 flex items-center justify-center gap-2 text-center bg-blue-600 text-white text-base font-bold py-3 px-5 rounded-lg shadow-lg hover:bg-blue-700 transition-colors">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 4.974 0 11.111c0 3.498 1.744 6.614 4.464 8.55l-1.396 4.983c-.283 1.01.705 1.86 1.69.9l5.074-4.8c1.04.22 2.13.336 3.26.336 6.627 0 12-4.974 12-11.11C24 4.974 18.627 0 12 0zm1.14 14.166L9.33 11.08c-.78-.54-1.89.61-.9.99l3.86 1.45c.19.07.35.24.42.42l1.45 3.86c.38.99 1.53-.12.99-.9l-3.08-3.74z"/></svg>
-                    <span>Messenger</span>
-                </a>
-                <!-- WhatsApp -->
-                <a href="https://wa.me/0968333342" target="_blank" class="flex-1 flex items-center justify-center gap-2 text-center bg-green-500 text-white text-base font-bold py-3 px-5 rounded-lg shadow-lg hover:bg-green-600 transition-colors">
-                    <!-- Thay YOUR_PHONE_NUMBER bằng SĐT của bạn, ví dụ: +84912345678 -->
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 12c0 1.78.46 3.45 1.28 4.91L2 22l5.24-1.38c1.41.79 2.99 1.21 4.67 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.91-9.91-9.91zM17.47 16c-.2-.1-.58-.29-.67-.32-.09-.04-1.12 1.34-1.37 1.62-.25.28-.5.31-.92.18-.42-.13-1.66-.61-3.16-1.92-1.17-1.02-1.96-2.28-2.2-2.67-.24-.4-.01-.61.12-.74c.12-.12.26-.31.39-.43s.18-.21.27-.36c.09-.15.05-.28-.02-.39-.07-.12-.67-1.61-.92-2.2-.25-.59-.5-.51-.69-.51-.18 0-.38-.03-.57-.03-.19 0-.5.08-.76.36-.26.28-.98.96-.98 2.34s1 2.71 1.13 2.9c.13.18 1.99 3.03 4.83 4.25 2.84 1.22 2.84.81 3.36.75.52-.06 1.65-.68 1.88-1.33.24-.65.24-1.21.17-1.33-.07-.12-.26-.2-.46-.3z"/></svg>
-                    <span>WhatsApp</span>
-                </a>
-                <!-- Telegram -->
-                <a href="https://t.me/Drakenguyen" target="_blank" class="flex-1 flex items-center justify-center gap-2 text-center bg-blue-400 text-white text-base font-bold py-3 px-5 rounded-lg shadow-lg hover:bg-blue-500 transition-colors">
-                    <!-- Thay YOUR_USERNAME bằng username Telegram của bạn -->
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0C5.346 0 0 5.346 0 11.944c0 6.598 5.346 11.944 11.944 11.944C18.542 23.888 23.888 18.542 23.888 11.944 23.888 5.346 18.542 0 11.944 0zM17.97 8.3c-.14.652-1.03 5.753-1.465 7.828-.15.733-.51 1.01-1.01 1.033-.8.04-1.406-.51-2.14-1.002-1.11-.74-1.74-1.19-2.82-1.93-.33-.22-.57-.39-.57-.8 0-.39.22-.57.94-1.22 3.25-2.91 4.54-4.14 4.79-4.39.02-.02.04-.04.04-.05.1-.11.1-.21.04-.21-.07 0-.21.07-.33.15-.36.25-2.48 1.95-6.72 4.7-.6.38-.85.5-.85 1.01 0 .2.09.32.22.41.3.21.72.43.72.43.68.21 1.08.32 1.52.5 1.01.42 1.34.62 1.91 1.2.62.63.5.95 1.01.95.1 0 .2-.02.3-.04.42-.1.9-.32 1.36-.53.5-.22 2.22-1.4 2.87-1.83.65-.45.96-.68 1.1-.68.1 0 .19.02.19.2zm-5.07 4.14c.9 0 1.63.73 1.63 1.63 0 .9-.73 1.63-1.63 1.63-.9 0-1.63-.73-1.63-1.63 0-.9.73-1.63 1.63-1.63z"/></svg>
-                    <span>Telegram</span>
-                </a>
+                <a href="https://m.me/drakenguyen.me" target="_blank" class="flex-1 flex items-center justify-center gap-2 text-center bg-blue-600 text-white text-base font-bold py-3 px-5 rounded-lg shadow-lg hover:bg-blue-700 transition-colors">Messenger</a>
+                <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank" class="flex-1 flex items-center justify-center gap-2 text-center bg-green-500 text-white text-base font-bold py-3 px-5 rounded-lg shadow-lg hover:bg-green-600 transition-colors">WhatsApp</a>
+                <a href="https://t.me/YOUR_USERNAME" target="_blank" class="flex-1 flex items-center justify-center gap-2 text-center bg-blue-400 text-white text-base font-bold py-3 px-5 rounded-lg shadow-lg hover:bg-blue-500 transition-colors">Telegram</a>
             </div>
         </section>
 
-        <!-- Footer -->
         <footer class="text-center text-gray-500 pt-8">
-            <p>© 2024 Biệt đội tinh nhuệ. All rights reserved.</p>
-            <p class="text-sm">Giải pháp minh bạch cho Performance Marketing.</p>
+            <p>© 2024 Biet doi tinh nhuệ (Drake Nguyen). All rights reserved.</p>
         </footer>
-        
-    </div> <!-- Hết .container -->
+    </div>
 
-    <!-- STICKY FOOTER (Đã cập nhật cho Mobile) -->
+    <!-- STICKY FOOTER MOBILE -->
     <div class="fixed bottom-0 left-0 right-0 p-3 bg-gray-900/80 backdrop-blur-sm border-t border-gray-700 md:hidden z-50">
         <div class="flex justify-around items-center">
-            <!-- Messenger -->
-            <a href="https://m.me/bietdoitinhnhue" target="_blank" class="flex flex-col items-center text-gray-300 hover:text-indigo-400 transition-colors">
-                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 4.974 0 11.111c0 3.498 1.744 6.614 4.464 8.55l-1.396 4.983c-.283 1.01.705 1.86 1.69.9l5.074-4.8c1.04.22 2.13.336 3.26.336 6.627 0 12-4.974 12-11.11C24 4.974 18.627 0 12 0zm1.14 14.166L9.33 11.08c-.78-.54-1.89.61-.9.99l3.86 1.45c.19.07.35.24.42.42l1.45 3.86c.38.99 1.53-.12.99-.9l-3.08-3.74z"/></svg>
-                <span class="text-xs mt-1">Messenger</span>
-            </a>
-            <!-- WhatsApp -->
-            <a href="https://wa.me/0968333342" target="_blank" class="flex flex-col items-center text-gray-300 hover:text-green-400 transition-colors">
-                <!-- Thay YOUR_PHONE_NUMBER bằng SĐT của bạn, ví dụ: +84912345678 -->
-                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 12c0 1.78.46 3.45 1.28 4.91L2 22l5.24-1.38c1.41.79 2.99 1.21 4.67 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.91-9.91-9.91zM17.47 16c-.2-.1-.58-.29-.67-.32-.09-.04-1.12 1.34-1.37 1.62-.25.28-.5.31-.92.18-.42-.13-1.66-.61-3.16-1.92-1.17-1.02-1.96-2.28-2.2-2.67-.24-.4-.01-.61.12-.74c.12-.12.26-.31.39-.43s.18-.21.27-.36c.09-.15.05-.28-.02-.39-.07-.12-.67-1.61-.92-2.2-.25-.59-.5-.51-.69-.51-.18 0-.38-.03-.57-.03-.19 0-.5.08-.76.36-.26.28-.98.96-.98 2.34s1 2.71 1.13 2.9c.13.18 1.99 3.03 4.83 4.25 2.84 1.22 2.84.81 3.36.75.52-.06 1.65-.68 1.88-1.33.24-.65.24-1.21.17-1.33-.07-.12-.26-.2-.46-.3z"/></svg>
-                <span class="text-xs mt-1">WhatsApp</span>
-            </a>
-            <!-- Telegram -->
-            <a href="https://t.me/Drakenguyen" target="_blank" class="flex flex-col items-center text-gray-300 hover:text-blue-400 transition-colors">
-                <!-- Thay YOUR_USERNAME bằng username Telegram của bạn -->
-                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0C5.346 0 0 5.346 0 11.944c0 6.598 5.346 11.944 11.944 11.944C18.542 23.888 23.888 18.542 23.888 11.944 23.888 5.346 18.542 0 11.944 0zM17.97 8.3c-.14.652-1.03 5.753-1.465 7.828-.15.733-.51 1.01-1.01 1.033-.8.04-1.406-.51-2.14-1.002-1.11-.74-1.74-1.19-2.82-1.93-.33-.22-.57-.39-.57-.8 0-.39.22-.57.94-1.22 3.25-2.91 4.54-4.14 4.79-4.39.02-.02.04-.04.04-.05.1-.11.1-.21.04-.21-.07 0-.21.07-.33.15-.36.25-2.48 1.95-6.72 4.7-.6.38-.85.5-.85 1.01 0 .2.09.32.22.41.3.21.72.43.72.43.68.21 1.08.32 1.52.5 1.01.42 1.34.62 1.91 1.2.62.63.5.95 1.01.95.1 0 .2-.02.3-.04.42-.1.9-.32 1.36-.53.5-.22 2.22-1.4 2.87-1.83.65-.45.96-.68 1.1-.68.1 0 .19.02.19.2zm-5.07 4.14c.9 0 1.63.73 1.63 1.63 0 .9-.73 1.63-1.63 1.63-.9 0-1.63-.73-1.63-1.63 0-.9.73-1.63 1.63-1.63z"/></svg>
-                <span class="text-xs mt-1">Telegram</span>
-            </a>
+            <a href="https://m.me/drakenguyen.me" class="flex flex-col items-center text-gray-300 hover:text-indigo-400"><span class="text-xs font-bold">Messenger</span></a>
+            <a href="https://wa.me/YOUR_PHONE_NUMBER" class="flex flex-col items-center text-gray-300 hover:text-green-400"><span class="text-xs font-bold">WhatsApp</span></a>
+            <a href="https://t.me/YOUR_USERNAME" class="flex flex-col items-center text-gray-300 hover:text-blue-400"><span class="text-xs font-bold">Telegram</span></a>
         </div>
     </div>
 
-    <!-- SCRIPT TÍNH TOÁN VÀ TABS -->
+    <!-- SCRIPT -->
     <script>
-        // Lấy các phần tử DOM
         const budgetInput = document.getElementById('budgetInput');
         const packageNameEl = document.getElementById('packageName');
-        const feeRateEl = document.getElementById('feeRate');
+        const feePercentEl = document.getElementById('feePercent');
         const feeAmountEl = document.getElementById('feeAmount');
+        const taxAmountEl = document.getElementById('taxAmount');
+        const totalEstimateEl = document.getElementById('totalEstimate');
         const ctaButton = document.getElementById('ctaButton');
+        const lowBudgetAlert = document.getElementById('lowBudgetAlert');
 
-        // Hàm format số kiểu Việt Nam (1000000 -> 1.000.000)
         const formatter = new Intl.NumberFormat('vi-VN');
 
-        // Hàm cập nhật UI máy tính
         function updateCalculator(budget) {
-            let rate = 0.15; // Mặc định là Gói 1
-            let fee = 0;
-            let pack = 'Gói 1';
-            let feeText = '0 VNĐ';
+            let rate = 0;
+            let pack = '---';
+            let showLowBudgetAlert = false;
 
             if (budget === 0) {
-                pack = '---';
-                rate = 0;
-                fee = 0;
-                feeText = '0 VNĐ';
-                feeRateEl.textContent = '---';
-                
-            } else if (budget < 150000000) {
-                // Xử lý mức tối thiểu
-                pack = 'Chưa đạt yêu cầu';
-                rate = 0.15; // Vẫn hiển thị rate của Gói 1
-                fee = 150000000 * rate; // Hiển thị phí tối thiểu
-                feeText = `<span class="text-yellow-400">${formatter.format(fee)} VNĐ (Tối thiểu)</span>`;
-                feeRateEl.textContent = `${rate * 100}%`;
-                
-            } else if (budget >= 150000000 && budget < 300000000) {
-                pack = 'Gói 1';
+                // Reset
+            } else if (budget < 50000000) {
+                pack = 'Gói Cơ Bản (< 50tr)';
+                rate = 0.25;
+                showLowBudgetAlert = true;
+            } else if (budget >= 50000000 && budget < 100000000) { // 50-100tr
+                pack = 'Gói Khởi Động';
+                rate = 0.20;
+            } else if (budget >= 100000000 && budget < 200000000) { // 100-200tr
+                pack = 'Gói Tăng Trưởng';
                 rate = 0.15;
-            } else if (budget >= 300000000 && budget < 500000000) {
-                pack = 'Gói 2';
+            } else if (budget >= 200000000 && budget < 500000000) { // 200-500tr
+                pack = 'Gói Tăng Tốc';
                 rate = 0.12;
             } else if (budget >= 500000000 && budget < 1000000000) {
-                pack = 'Gói 3';
+                pack = 'Gói Chuyên Nghiệp';
                 rate = 0.10;
             } else if (budget >= 1000000000) {
-                pack = 'Gói 4';
+                pack = 'Gói Scale';
                 rate = 0.08;
             }
 
-            // Tính toán phí nếu không phải trường hợp đặc biệt
-            if (budget > 0 && budget >= 150000000) {
-                fee = budget * rate;
-                feeText = `${formatter.format(fee)} VNĐ`;
-                feeRateEl.textContent = `${rate * 100}%`;
+            // Tính toán
+            const fee = budget * rate;
+            const tax = budget * 0.10; // Thuế nền tảng 10%
+            const total = budget + fee + tax;
+
+            // Render
+            if (budget > 0) {
+                packageNameEl.textContent = pack;
+                feePercentEl.textContent = (rate * 100) + '%';
+                feeAmountEl.textContent = formatter.format(fee) + ' VNĐ';
+                taxAmountEl.textContent = formatter.format(tax) + ' VNĐ';
+                totalEstimateEl.textContent = formatter.format(total) + ' VNĐ';
+                
+                const mess = `Tu van ${pack} - Ngan sach ${formatter.format(budget)} - Phi ${rate*100}%`;
+                ctaButton.href = `https://m.me/drakenguyen.me?ref=${encodeURIComponent(mess)}`;
+            } else {
+                packageNameEl.textContent = '---';
+                feePercentEl.textContent = '0%';
+                feeAmountEl.textContent = '0 VNĐ';
+                taxAmountEl.textContent = '0 VNĐ';
+                totalEstimateEl.textContent = '0 VNĐ';
             }
-            
-            // Cập nhật UI
-            packageNameEl.textContent = pack;
-            feeAmountEl.innerHTML = feeText; // Dùng innerHTML để render thẻ span (nếu có)
-            
-            // Cập nhật link CTA chính
-            const budgetString = formatter.format(budget) + ' VND';
-            const message = `Tu van goi ${pack} - Ngan sach ${budgetString}`;
-            ctaButton.href = `https://m.me/bietdoitinhnhue?ref=${encodeURIComponent(message)}`;
+
+            // Hiển thị cảnh báo gói test
+            if (showLowBudgetAlert) {
+                lowBudgetAlert.classList.remove('hidden');
+            } else {
+                lowBudgetAlert.classList.add('hidden');
+            }
         }
 
-        // Xử lý sự kiện khi người dùng gõ phím
         budgetInput.addEventListener('input', (e) => {
-            // 1. Lấy giá trị, loại bỏ mọi ký tự không phải số
-            let rawValue = e.target.value.replace(/[^0-9]/g, '');
-            let budget = parseInt(rawValue) || 0;
-            
-            // 2. Cập nhật UI tính toán
-            updateCalculator(budget);
+            let raw = e.target.value.replace(/[^0-9]/g, '');
+            updateCalculator(parseInt(raw) || 0);
         });
 
-        // Xử lý sự kiện khi người dùng click ra ngoài (để format số)
         budgetInput.addEventListener('blur', (e) => {
-            let rawValue = e.target.value.replace(/[^0-9]/g, '');
-            let budget = parseInt(rawValue) || 0;
-            
-            // Format lại ô input cho đẹp
-            if (budget > 0) {
-                e.target.value = formatter.format(budget);
-            } else {
-                e.target.value = ''; // Xóa trắng nếu là 0
-            }
+            let raw = e.target.value.replace(/[^0-9]/g, '');
+            if(raw) e.target.value = formatter.format(parseInt(raw));
         });
-        
-        // Chạy lần đầu khi tải trang
-        updateCalculator(0);
 
-        // --- SCRIPT CHO TABS ---
+        // Tabs Logic
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabPanels = document.querySelectorAll('.tab-panel');
-
-        tabButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const targetTab = button.getAttribute('data-tab');
-
-                // Tắt active tất cả buttons
-                tabButtons.forEach(btn => {
-                    btn.classList.remove('active-tab');
-                    btn.classList.add('bg-gray-800', 'text-gray-400'); // Trả về style mặc định
+        tabButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const target = btn.getAttribute('data-tab');
+                tabButtons.forEach(b => {
+                    b.classList.remove('active-tab');
+                    b.classList.add('bg-gray-800', 'text-gray-400');
                 });
-                
-                // Bật active cho button được click
-                button.classList.add('active-tab');
-                button.classList.remove('bg-gray-800', 'text-gray-400');
-
-                // Ẩn tất cả panels
-                tabPanels.forEach(panel => {
-                    panel.classList.add('hidden');
-                });
-
-                // Hiển thị panel tương ứng
-                const activePanel = document.getElementById(targetTab);
-                if (activePanel) {
-                    activePanel.classList.remove('hidden');
-                }
+                btn.classList.add('active-tab');
+                btn.classList.remove('bg-gray-800', 'text-gray-400');
+                tabPanels.forEach(p => p.classList.add('hidden'));
+                document.getElementById(target).classList.remove('hidden');
             });
         });
 
+        updateCalculator(0);
     </script>
-
 </body>
 </html>
