@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DealHub — Kho sản phẩm được chọn lọc</title>
+  <meta name="description" content="Kho deal Shopee được chọn lọc theo nhu cầu, có đánh giá nhanh và link mua hàng rõ ràng.">
+  <meta name="theme-color" content="#f4511e">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="store-page">
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="DealHub - Trang chủ">
+      <span class="brand-mark" aria-hidden="true">D</span>
+      <span><strong>DealHub</strong><small>by Biệt Đội Tinh Nhuệ</small></span>
+    </a>
+    <nav class="header-actions" aria-label="Điều hướng chính">
+      <a href="#products">Kho deal</a>
+      <a href="#how">Cách chọn</a>
+      <a class="ghost-button" href="dashboard.html">Dashboard <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="store-hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><i></i> DEAL ĐÃ ĐƯỢC LỌC</p>
+        <h1>Ít sản phẩm hơn.<br><em>Chọn đúng nhanh hơn.</em></h1>
+        <p class="hero-lead">Tổng hợp những sản phẩm đáng cân nhắc, chia theo nhu cầu và có ghi chú ngắn để bạn không phải mở hàng chục tab Shopee.</p>
+        <div class="hero-search" role="search">
+          <span aria-hidden="true">⌕</span>
+          <input id="heroSearch" type="search" placeholder="Tìm tên sản phẩm hoặc nhu cầu..." autocomplete="off">
+          <button id="searchButton" type="button">Tìm deal</button>
+        </div>
+        <div class="trust-row"><span>✓ Link Shopee rõ ràng</span><span>✓ Có tiêu chí chọn</span><span>✓ Cập nhật theo chiến dịch</span></div>
+      </div>
+      <div class="hero-visual" aria-label="Minh họa hệ thống chọn deal">
+        <div class="signal-card signal-main">
+          <span class="signal-label">DEAL SCORE</span>
+          <strong>9.2</strong><small>/10</small>
+          <div class="score-line"><i style="width:92%"></i></div>
+          <p>Giá tốt · Review ổn · Hoa hồng XTRA</p>
+        </div>
+        <div class="signal-card signal-one"><b>01</b><span>Đúng nhu cầu</span></div>
+        <div class="signal-card signal-two"><b>02</b><span>So giá nhanh</span></div>
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+      </div>
+    </section>
+
+    <section class="quick-strip" aria-label="Tóm tắt kho deal">
+      <div><strong id="productCount">0</strong><span>Sản phẩm chọn lọc</span></div>
+      <div><strong id="categoryCount">0</strong><span>Nhóm nhu cầu</span></div>
+      <div><strong>01</strong><span>Link mua chính thức</span></div>
+      <p>Trang này có sử dụng liên kết tiếp thị. Bạn không trả thêm chi phí; người giới thiệu có thể nhận hoa hồng từ đơn hợp lệ.</p>
+    </section>
+
+    <section class="catalog" id="products">
+      <div class="section-title">
+        <div><p class="eyebrow"><i></i> KHO SẢN PHẨM</p><h2>Chọn theo thứ bạn thật sự cần.</h2></div>
+        <p>Ưu tiên giá trị sử dụng, độ phù hợp và tín hiệu từ người mua — không xếp hạng chỉ vì mức hoa hồng.</p>
+      </div>
+      <div class="catalog-tools">
+        <div id="categoryFilters" class="filter-pills" role="group" aria-label="Lọc danh mục"></div>
+        <label class="sort-control">Sắp xếp
+          <select id="sortSelect">
+            <option value="featured">Nổi bật</option>
+            <option value="price-asc">Giá thấp → cao</option>
+            <option value="price-desc">Giá cao → thấp</option>
+            <option value="rating">Đánh giá cao</option>
+          </select>
+        </label>
+      </div>
+      <div id="activeContext" class="context-note" hidden></div>
+      <div id="productGrid" class="product-grid" aria-live="polite"></div>
+      <div id="emptyState" class="empty-state" hidden><b>Chưa thấy deal phù hợp</b><span>Thử từ khóa ngắn hơn hoặc chọn “Tất cả”.</span></div>
+    </section>
+
+    <section class="method" id="how">
+      <div class="method-copy"><p class="eyebrow light"><i></i> CÁCH CHÚNG TÔI LỌC</p><h2>Một deal tốt không chỉ là giá rẻ.</h2><p>Mỗi sản phẩm được nhìn qua bốn lớp tín hiệu để cân bằng giữa giá, trải nghiệm và mức độ phù hợp.</p></div>
+      <div class="method-grid">
+        <article><span>01</span><h3>Nhu cầu rõ</h3><p>Sản phẩm giải quyết một tình huống cụ thể, không gom danh mục cho đầy.</p></article>
+        <article><span>02</span><h3>Giá hợp lý</h3><p>So trong cùng phân khúc và ghi rõ mức giá tham khảo tại lần cập nhật.</p></article>
+        <article><span>03</span><h3>Tín hiệu mua</h3><p>Ưu tiên đánh giá, số lượt bán và chất lượng phản hồi có thể kiểm chứng.</p></article>
+        <article><span>04</span><h3>Minh bạch</h3><p>Đánh dấu link affiliate và không để mức hoa hồng thay thế tiêu chí phù hợp.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="brand inverse"><span class="brand-mark">D</span><span><strong>DealHub</strong><small>Chọn ít, dùng đúng.</small></span></div><p>Giá và ưu đãi có thể thay đổi trên Shopee. Hãy kiểm tra lại trước khi đặt hàng.</p><a href="dashboard.html">Mở dashboard →</a></footer>
+
+  <template id="productTemplate">
+    <article class="product-card">
+      <div class="product-media"><img alt="" loading="lazy"><span class="product-badge"></span><button class="save-button" type="button" aria-label="Lưu sản phẩm">♡</button></div>
+      <div class="product-body"><div class="product-meta"><span class="product-category"></span><span class="product-rating"></span></div><h3></h3><p class="product-note"></p><div class="product-proof"></div><div class="product-bottom"><div><span class="old-price"></span><strong class="product-price"></strong></div><a class="buy-button" target="_blank" rel="nofollow sponsored noopener">Xem trên Shopee <span>↗</span></a></div></div>
+    </article>
+  </template>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
