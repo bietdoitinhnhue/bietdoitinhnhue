@@ -51,6 +51,7 @@ Sau khi thêm biến môi trường, redeploy Production trên Vercel. Kiểm tr
 - `/api/products` trả JSON.
 - Storefront vẫn chạy nếu DB chưa có sản phẩm vì có fallback tĩnh.
 - Dashboard → **Kết nối DB** → nhập `DASHBOARD_ADMIN_TOKEN`.
+- Vào **Quản lý link** → chọn **Khởi tạo 7 sản phẩm** để đưa catalog hiện tại vào Supabase.
 
 ## 4. Tracking social
 
