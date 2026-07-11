@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DealHub Analytics — Shopee Affiliate Dashboard</title>
+  <meta name="description" content="Dashboard phân tích content, sản phẩm và hoa hồng Shopee Affiliate.">
+  <meta name="theme-color" content="#111318">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js" defer></script>
+  <script src="assets/dashboard.js" defer></script>
+</head>
+<body class="dashboard-page">
+  <aside class="sidebar">
+    <a class="brand inverse" href="index.html"><span class="brand-mark">D</span><span><strong>DealHub</strong><small>Affiliate Analytics</small></span></a>
+    <nav class="side-nav" aria-label="Dashboard"><button class="active" data-view="overview"><span>⌁</span>Tổng quan</button><button data-view="content"><span>▤</span>Hiệu quả content</button><button data-view="products"><span>◇</span>Sản phẩm</button><button data-view="linkplan"><span>↗</span>Kế hoạch Sub ID</button></nav>
+    <div class="side-status"><i></i><div><b>Dữ liệu cục bộ</b><span>Không tải đơn hàng lên GitHub</span></div></div>
+    <a class="side-store" href="index.html">← Xem trang sản phẩm</a>
+  </aside>
+
+  <main class="dashboard-main">
+    <header class="dashboard-header"><div><p>SHOPEE AFFILIATE / PERFORMANCE</p><h1>Điều gì đang thật sự tạo ra hoa hồng?</h1></div><div class="header-controls"><label>Khoảng thời gian<select id="periodFilter"><option value="7">7 ngày</option><option value="30" selected>30 ngày</option><option value="90">90 ngày</option><option value="all">Tất cả</option></select></label><label>Kênh<select id="channelFilter"><option value="all">Tất cả kênh</option></select></label><button id="importButton" class="primary-button">＋ Nhập báo cáo</button><input id="fileInput" type="file" accept=".csv,.xlsx,.xls,.json" hidden></div></header>
+
+    <section class="data-banner" id="dataBanner"><div><i></i><b>Đang xem dữ liệu demo</b><span>Nhập file Conversion/Click Report từ Shopee Affiliate để thay thế.</span></div><div><button id="downloadSample">Tải file mẫu</button><button id="clearData" class="quiet-button">Khôi phục demo</button></div></section>
+
+    <section class="view active" data-panel="overview">
+      <div class="metric-grid"><article><span>Lượt click</span><strong id="metricClicks">0</strong><small id="deltaClicks">—</small></article><article><span>Đơn ghi nhận</span><strong id="metricOrders">0</strong><small id="deltaOrders">—</small></article><article class="metric-featured"><span>Hoa hồng ước tính</span><strong id="metricCommission">0 ₫</strong><small id="deltaCommission">—</small></article><article><span>Tỷ lệ chuyển đổi</span><strong id="metricCvr">0%</strong><small id="metricAov">AOV —</small></article></div>
+      <div class="dashboard-grid"><article class="panel trend-panel"><div class="panel-head"><div><span>HOA HỒNG THEO NGÀY</span><h2>Nhịp tăng trưởng</h2></div><div class="legend"><i></i> Hoa hồng ước tính</div></div><div id="trendChart" class="trend-chart" role="img" aria-label="Biểu đồ hoa hồng theo ngày"></div></article><article class="panel channel-panel"><div class="panel-head"><div><span>PHÂN BỔ KÊNH</span><h2>Kênh tạo hoa hồng</h2></div></div><div id="channelChart" class="channel-chart"></div></article></div>
+      <div class="dashboard-grid lower"><article class="panel table-panel"><div class="panel-head"><div><span>CONTENT LEADERBOARD</span><h2>Content bán tốt nhất</h2></div><button class="text-button" data-jump="content">Xem tất cả →</button></div><div class="table-wrap"><table><thead><tr><th>Content</th><th>Kênh</th><th>Click</th><th>Đơn</th><th>CVR</th><th>Hoa hồng</th></tr></thead><tbody id="topContentBody"></tbody></table></div></article><article class="panel insight-panel"><div class="panel-head"><div><span>AI-READY INSIGHT</span><h2>Điểm đáng chú ý</h2></div></div><div id="insightList" class="insight-list"></div></article></div>
+    </section>
+
+    <section class="view" data-panel="content"><div class="section-panel-head"><div><p>CONTENT ATTRIBUTION</p><h2>Xếp hạng theo doanh số và hoa hồng</h2></div><input id="contentSearch" type="search" placeholder="Tìm content ID hoặc kênh..."></div><article class="panel table-panel full"><div class="table-wrap"><table><thead><tr><th>#</th><th>Content ID</th><th>Kênh</th><th>Format</th><th>Chiến dịch</th><th>Click</th><th>Đơn</th><th>CVR</th><th>Doanh thu</th><th>Hoa hồng</th></tr></thead><tbody id="contentTableBody"></tbody></table></div></article></section>
+
+    <section class="view" data-panel="products"><div class="section-panel-head"><div><p>PRODUCT PERFORMANCE</p><h2>Sản phẩm nào xứng đáng được đẩy mạnh?</h2></div><input id="productSearch" type="search" placeholder="Tìm tên hoặc mã sản phẩm..."></div><div id="productPerformanceGrid" class="performance-grid"></div></section>
+
+    <section class="view" data-panel="linkplan"><div class="section-panel-head"><div><p>SUB ID NAMING SYSTEM</p><h2>Tạo mã tracking nhất quán cho từng content</h2></div><button id="exportLinkPlan" class="primary-button">Tải CSV kế hoạch</button></div><div class="link-plan-grid"><article class="panel form-panel"><h3>Thông tin content</h3><p>Nhập một content để tạo cấu trúc 5 Sub ID. Đây là mã dùng khi tạo Custom Link trên Shopee Affiliate.</p><div class="form-grid"><label>Kênh<input id="subChannel" value="facebook" placeholder="facebook"></label><label>Content ID<input id="subContent" value="gao-ep01-a" placeholder="gao-ep01-a"></label><label>Format<input id="subFormat" value="reel" placeholder="reel"></label><label>Chiến dịch<input id="subCampaign" value="evergreen" placeholder="7-7"></label><label>Phiên bản<input id="subVariant" value="v1" placeholder="v1"></label><label>Link sản phẩm gốc<input id="subProductUrl" placeholder="https://shopee.vn/product/..."></label></div><button id="addLinkPlan" class="primary-button wide">＋ Thêm vào kế hoạch</button></article><article class="panel naming-panel"><span>QUY ƯỚC ĐỀ XUẤT</span><h3>5 tầng attribution</h3><ol><li><b>Sub ID 1</b><strong>Kênh</strong><code>facebook</code></li><li><b>Sub ID 2</b><strong>Content ID</strong><code>gao-ep01-a</code></li><li><b>Sub ID 3</b><strong>Format</strong><code>reel</code></li><li><b>Sub ID 4</b><strong>Chiến dịch</strong><code>evergreen</code></li><li><b>Sub ID 5</b><strong>Phiên bản</strong><code>v1</code></li></ol></article></div><article class="panel table-panel full"><div class="panel-head"><div><span>BATCH CUSTOM LINK PLAN</span><h2>Danh sách cần tạo link</h2></div><button id="clearLinkPlan" class="text-button">Xóa danh sách</button></div><div class="table-wrap"><table><thead><tr><th>Link sản phẩm</th><th>Sub ID 1</th><th>Sub ID 2</th><th>Sub ID 3</th><th>Sub ID 4</th><th>Sub ID 5</th><th></th></tr></thead><tbody id="linkPlanBody"></tbody></table></div></article></section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
