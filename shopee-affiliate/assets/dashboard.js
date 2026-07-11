@@ -5,7 +5,7 @@
   const pct = (n) => `${Number(n || 0).toFixed(1).replace(".0", "")}%`;
   const normalize = (v) => String(v ?? "").trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "");
   const cleanId = (v, fallback) => normalize(v || fallback).slice(0, 60) || fallback;
-  const state = { report: [], filtered: [], linkPlan: JSON.parse(localStorage.getItem("dealhub_link_plan") || "[]"), isDemo: true };
+  const state = { report: [], filtered: [], linkPlan: JSON.parse(localStorage.getItem("dealhub_link_plan") || "[]"), isDemo: true, adminToken:sessionStorage.getItem("dealhub_admin_token") || "", remote:false, managedProducts:[], managedLinks:[] };
 
   function dateISO(daysAgo = 0) { const d = new Date(); d.setHours(12,0,0,0); d.setDate(d.getDate() - daysAgo); return d.toISOString().slice(0,10); }
   function demoData() {
@@ -36,6 +36,33 @@
     try {
       return JSON.parse(localStorage.getItem("dealhub_clicks") || "[]").map(e => ({ date:String(e.timestamp || "").slice(0,10) || dateISO(), channel:e.channel||"website", contentId:e.contentId||"dealhub-store", format:e.format||"storefront", campaign:e.campaign||"evergreen", productId:e.productId||"unknown", productName:e.productName||"Chưa xác định", icon:"↗", clicks:1, orders:0, revenue:0, commission:0, status:"Click" }));
     } catch (_) { return []; }
+  }
+
+  async function api(path, options={}) {
+    const response=await fetch(path,{...options,headers:{"Content-Type":"application/json",...(state.adminToken?{Authorization:`Bearer ${state.adminToken}`}:{ } ),...(options.headers||{})}});
+    const data=await response.json().catch(()=>({}));
+    if(!response.ok)throw new Error(data.message||data.error||`API ${response.status}`);
+    return data;
+  }
+
+  async function loadRemote() {
+    if(!state.adminToken)return false;
+    const period=$("periodFilter").value;const days=period==="all"?365:Number(period);
+    const data=await api(`/api/analytics?days=${days}`);
+    state.report=Array.isArray(data.rows)?data.rows:[];state.remote=true;state.isDemo=false;
+    renderFilters();setDataBanner();applyFilters();return true;
+  }
+
+  async function loadManager() {
+    if(!state.adminToken)return toast("Kết nối DB trước khi quản lý link");
+    const [p,l]=await Promise.all([api("/api/products?admin=1"),api("/api/links")]);
+    state.managedProducts=p.products||[];state.managedLinks=l.links||[];renderManager();
+  }
+
+  function renderManager() {
+    const pb=$("productManagerBody"),lb=$("linkManagerBody");pb.replaceChildren();lb.replaceChildren();
+    state.managedProducts.forEach(p=>{const tr=document.createElement("tr");tr.append(td(p.id),td(p.name),td(money(p.price)),td(p.trackingReady?"Có affiliate link":"Chưa có link",p.trackingReady?"commission-cell":""));pb.append(tr)});
+    state.managedLinks.forEach(l=>{const tr=document.createElement("tr");const link=document.createElement("td");const a=document.createElement("a");a.href=l.affiliate_url;a.target="_blank";a.rel="noopener";a.textContent="Mở ↗";link.append(a);tr.append(td(l.product_id),td(l.channel,"channel-tag"),td(l.content_id||"Mặc định"),link);lb.append(tr)});
   }
 
   function loadStored() {
@@ -197,20 +224,24 @@
 
   function renderFilters(){const current=$("channelFilter").value;const channels=[...new Set(state.report.map(r=>r.channel).filter(Boolean))].sort();$("channelFilter").replaceChildren(new Option("Tất cả kênh","all"),...channels.map(c=>new Option(c,c)));$("channelFilter").value=channels.includes(current)?current:"all"}
   function toast(message){const t=$("toast");t.textContent=message;t.classList.add("show");clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.classList.remove("show"),2800)}
-  function setDataBanner(){const b=$("dataBanner");b.querySelector("b").textContent=state.isDemo?"Đang xem dữ liệu demo":"Đang xem dữ liệu đã nhập";b.querySelector("span").textContent=state.isDemo?"Nhập file Conversion/Click Report từ Shopee Affiliate để thay thế.":`${state.report.length} dòng dữ liệu · lưu cục bộ trên thiết bị này.`;b.querySelector("i").style.background=state.isDemo?"#ffc84a":"#38c995"}
+  function setDataBanner(){const b=$("dataBanner");const title=state.remote?"Đã kết nối Supabase":state.isDemo?"Đang xem dữ liệu demo":"Đang xem dữ liệu đã nhập";b.querySelector("b").textContent=title;b.querySelector("span").textContent=state.remote?`${state.report.length} sự kiện từ Vercel API · secret không xuất hiện trên trình duyệt.`:state.isDemo?"Kết nối DB hoặc nhập Conversion/Click Report để thay thế.":`${state.report.length} dòng dữ liệu · lưu cục bộ trên thiết bị này.`;b.querySelector("i").style.background=state.remote||!state.isDemo?"#38c995":"#ffc84a";$("adminLogin").classList.toggle("connected",Boolean(state.adminToken));$("adminLogin").textContent=state.adminToken?"● DB đã kết nối":"🔒 Kết nối DB"}
 
   function bind() {
     document.querySelectorAll(".side-nav button").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".side-nav button").forEach(b=>b.classList.toggle("active",b===btn));document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active",v.dataset.panel===btn.dataset.view))}));
     document.querySelectorAll("[data-jump]").forEach(btn=>btn.addEventListener("click",()=>document.querySelector(`.side-nav [data-view='${btn.dataset.jump}']`).click()));
-    $("periodFilter").addEventListener("change",applyFilters);$("channelFilter").addEventListener("change",applyFilters);$("contentSearch").addEventListener("input",renderContentTable);$("productSearch").addEventListener("input",renderProducts);
+    $("periodFilter").addEventListener("change",()=>state.adminToken?loadRemote().catch(e=>toast(e.message)):applyFilters());$("channelFilter").addEventListener("change",applyFilters);$("contentSearch").addEventListener("input",renderContentTable);$("productSearch").addEventListener("input",renderProducts);
+    $("adminLogin").onclick=async()=>{if(state.adminToken){sessionStorage.removeItem("dealhub_admin_token");state.adminToken="";state.remote=false;loadStored();renderFilters();setDataBanner();applyFilters();return toast("Đã ngắt kết nối DB")};const token=prompt("Nhập Dashboard Admin Token đã lưu trong Vercel:");if(!token)return;state.adminToken=token.trim();try{await loadRemote();sessionStorage.setItem("dealhub_admin_token",state.adminToken);toast("Đã kết nối dữ liệu thật")}catch(err){state.adminToken="";toast(`Kết nối thất bại: ${err.message}`)}setDataBanner()};
     $("importButton").onclick=()=>$("fileInput").click();
-    $("fileInput").addEventListener("change",async e=>{const file=e.target.files[0];if(!file)return;try{const raw=await readFile(file);const rows=mapRows(raw);if(!rows.length)throw new Error("Không tìm thấy cột click, đơn hàng, doanh thu hoặc hoa hồng");localStorage.setItem("dealhub_report",JSON.stringify(rows));state.report=[...rows,...localClicks()];state.isDemo=false;renderFilters();setDataBanner();applyFilters();toast(`Đã nhập ${rows.length} dòng từ ${file.name}`)}catch(err){console.error(err);toast(`Không thể nhập file: ${err.message}`)}e.target.value=""});
+    $("fileInput").addEventListener("change",async e=>{const file=e.target.files[0];if(!file)return;try{const raw=await readFile(file);const rows=mapRows(raw);if(!rows.length)throw new Error("Không tìm thấy cột click, đơn hàng, doanh thu hoặc hoa hồng");if(state.adminToken){const result=await api("/api/conversions",{method:"POST",body:JSON.stringify({rows})});await loadRemote();toast(`Đã đồng bộ ${result.upserted} chuyển đổi vào Supabase`)}else{localStorage.setItem("dealhub_report",JSON.stringify(rows));state.report=[...rows,...localClicks()];state.isDemo=false;renderFilters();setDataBanner();applyFilters();toast(`Đã nhập ${rows.length} dòng cục bộ từ ${file.name}`)}}catch(err){console.error(err);toast(`Không thể nhập file: ${err.message}`)}e.target.value=""});
     $("clearData").onclick=()=>{localStorage.removeItem("dealhub_report");state.report=[...demoData(),...localClicks()];state.isDemo=true;renderFilters();setDataBanner();applyFilters();toast("Đã khôi phục dữ liệu demo")};
     $("downloadSample").onclick=()=>exportCsv(demoData().slice(0,18),"dealhub_shopee_report_mau.csv");
     $("addLinkPlan").onclick=()=>{state.linkPlan.push({productUrl:$("subProductUrl").value.trim(),subId1:cleanId($("subChannel").value,"unknown"),subId2:cleanId($("subContent").value,"content"),subId3:cleanId($("subFormat").value,"unknown"),subId4:cleanId($("subCampaign").value,"evergreen"),subId5:cleanId($("subVariant").value,"v1")});saveLinkPlan();toast("Đã thêm vào kế hoạch Sub ID")};
     $("clearLinkPlan").onclick=()=>{state.linkPlan=[];saveLinkPlan();toast("Đã xóa kế hoạch")};
     $("exportLinkPlan").onclick=()=>exportCsv(state.linkPlan,"dealhub_batch_custom_link_plan.csv");
+    $("refreshManager").onclick=()=>loadManager().catch(e=>toast(e.message));
+    $("saveProduct").onclick=async()=>{try{const payload={id:$("manageProductId").value.trim(),name:$("manageProductName").value.trim(),category:$("manageCategory").value.trim(),price:Number($("managePrice").value||0),image_url:$("manageImage").value.trim(),product_url:$("manageProductUrl").value.trim(),is_active:true};if(!payload.id||!payload.name||!payload.product_url)throw new Error("Cần mã, tên và link sản phẩm");await api("/api/products",{method:"POST",body:JSON.stringify(payload)});await loadManager();toast("Đã lưu sản phẩm") }catch(e){toast(e.message)}};
+    $("saveAffiliateLink").onclick=async()=>{try{const channel=cleanId($("manageChannel").value,"all"),content=cleanId($("manageContentId").value,"");const payload={product_id:$("manageLinkProductId").value.trim(),affiliate_url:$("manageAffiliateUrl").value.trim(),channel,content_id:content||null,content_format:cleanId($("manageFormat").value,"unknown"),campaign:cleanId($("manageCampaign").value,"evergreen"),variant:"v1",sub_id1:channel,sub_id2:content||null,sub_id3:cleanId($("manageFormat").value,"unknown"),sub_id4:cleanId($("manageCampaign").value,"evergreen"),sub_id5:"v1",is_default:!content,is_active:true};if(!payload.product_id||!payload.affiliate_url)throw new Error("Cần mã sản phẩm và affiliate URL");await api("/api/links",{method:"POST",body:JSON.stringify(payload)});await loadManager();toast("Đã lưu affiliate link") }catch(e){toast(e.message)}};
   }
 
-  loadStored(); renderFilters(); setDataBanner(); bind(); applyFilters();
+  loadStored(); renderFilters(); setDataBanner(); bind(); applyFilters(); if(state.adminToken)loadRemote().catch(()=>{state.adminToken="";sessionStorage.removeItem("dealhub_admin_token");setDataBanner()});
 })();

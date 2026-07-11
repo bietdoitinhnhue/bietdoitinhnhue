@@ -1,12 +1,14 @@
 # DealHub — Shopee Affiliate Storefront & Analytics
 
-Website tĩnh dành cho GitHub Pages, gồm:
+Website frontend triển khai trên Vercel, gồm:
 
 - `index.html`: trang tổng hợp sản phẩm affiliate Shopee.
 - `dashboard.html`: dashboard click, đơn hàng, doanh thu, hoa hồng, content và sản phẩm.
 - `data/products.json`: danh sách sản phẩm mặc định.
 - `data/site-config.json`: cấu hình nguồn dữ liệu và tracking endpoint.
 - `data/demo-conversions.csv`: file mẫu để kiểm thử import.
+
+Backend production sử dụng Vercel Serverless Functions + Supabase. Xem `../SUPABASE_SETUP.md`.
 
 ## Cách chạy
 
