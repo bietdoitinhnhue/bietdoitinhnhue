@@ -5,6 +5,12 @@
   const normalize = (value) => String(value || "").trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   const safeText = (value) => String(value ?? "");
 
+  function clientId() {
+    let id = localStorage.getItem("dealhub_client_id");
+    if (!id) { id = (crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random()}`); localStorage.setItem("dealhub_client_id", id); }
+    return id;
+  }
+
   function getAttribution() {
     const p = new URLSearchParams(location.search);
     return {
@@ -35,7 +41,15 @@
   async function loadData() {
     const configRes = await fetch("data/site-config.json", { cache: "no-store" });
     state.config = configRes.ok ? await configRes.json() : {};
-    let source = state.config.productFeedUrl || "data/products.json";
+    const a = getAttribution();
+    try {
+      const api = await fetch(`/api/products?channel=${encodeURIComponent(a.channel)}&contentId=${encodeURIComponent(a.contentId)}`, { cache:"no-store" });
+      if (api.ok) {
+        const payload = await api.json();
+        if (Array.isArray(payload.products) && payload.products.length) { state.products = payload.products; return; }
+      }
+    } catch (_) {}
+    const source = state.config.productFeedUrl || "data/products.json";
     try {
       const response = await fetch(source, { cache: "no-store" });
       if (!response.ok) throw new Error("Không tải được dữ liệu sản phẩm");
@@ -55,13 +69,12 @@
 
   async function trackClick(product) {
     const a = getAttribution();
-    const event = { type: "affiliate_click", timestamp: new Date().toISOString(), productId: product.id, productName: product.name, value: Number(product.price || 0), ...a };
+    const event = { type: "affiliate_click", timestamp: new Date().toISOString(), productId: product.id, linkId:product.linkId || null, productName: product.name, value: Number(product.price || 0), clientId:clientId(), referrer:document.referrer, ...a };
     const events = JSON.parse(localStorage.getItem("dealhub_clicks") || "[]");
     events.push(event);
     localStorage.setItem("dealhub_clicks", JSON.stringify(events.slice(-5000)));
-    if (state.config.trackingEndpoint) {
-      try { navigator.sendBeacon(state.config.trackingEndpoint, new Blob([JSON.stringify(event)], { type: "application/json" })); } catch (_) {}
-    }
+    const endpoint = state.config.trackingEndpoint || "/api/track";
+    try { fetch(endpoint, { method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(event), keepalive:true }).catch(()=>{}); } catch (_) {}
     if (typeof window.gtag === "function") window.gtag("event", "affiliate_click", { item_id: product.id, item_name: product.name, content_id: a.contentId, campaign: a.campaign, channel: a.channel });
   }
 
