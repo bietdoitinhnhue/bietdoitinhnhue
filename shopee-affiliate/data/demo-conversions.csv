@@ -1,0 +1,5 @@
+date,channel,contentId,format,campaign,productId,productName,clicks,orders,revenue,commission,status
+2026-07-10,facebook,gao-ep01-a,reel,gao-series,gao-figure-red-01,Mô hình Gao Đỏ sưu tầm,128,8,1512000,136080,Hoàn thành
+2026-07-10,tiktok,gaoking-review-01,short,review,gao-robot-03,94,6,2574000,308880,Hoàn thành
+2026-07-09,youtube,top-5-oruku,video,evergreen,display-case-05,Hộp mica trưng bày mô hình,72,3,297000,22275,Hoàn thành
+2026-07-09,threads,goc-suu-tam-setup,post,setup-corner,led-shelf-06,51,2,158000,12640,Hoàn thành
