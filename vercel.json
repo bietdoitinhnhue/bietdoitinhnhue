@@ -1,3 +1,15 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/affiliate-shopee",
+      "destination": "/shopee-affiliate",
+      "permanent": false
+    },
+    {
+      "source": "/affiliate-shopee/dashboard",
+      "destination": "/shopee-affiliate/dashboard",
+      "permanent": false
+    }
+  ]
 }
