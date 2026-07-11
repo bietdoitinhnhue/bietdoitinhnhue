@@ -89,10 +89,10 @@
     for (const product of items) {
       const node = el("productTemplate").content.cloneNode(true);
       const card = node.querySelector(".product-card");
-      const image = node.querySelector("img"); image.src = product.image; image.alt = safeText(product.name);
+      const image = node.querySelector("img"); image.src = product.image; image.alt = safeText(product.name); image.referrerPolicy = "no-referrer";
       node.querySelector(".product-badge").textContent = safeText(product.badge || "ĐỀ XUẤT");
       node.querySelector(".product-category").textContent = safeText(product.category);
-      node.querySelector(".product-rating").textContent = `★ ${Number(product.rating || 0).toFixed(1)}`;
+      node.querySelector(".product-rating").textContent = Number(product.rating) > 0 ? `★ ${Number(product.rating).toFixed(1)}` : "Đang hiển thị";
       node.querySelector("h3").textContent = safeText(product.name);
       node.querySelector(".product-note").textContent = safeText(product.note);
       node.querySelector(".product-proof").textContent = safeText(product.proof || `${product.sold || 0} lượt bán`);
