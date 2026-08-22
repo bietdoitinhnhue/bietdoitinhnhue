@@ -1,5 +1,6 @@
 {
   "cleanUrls": true,
+  "trailingSlash": false,
   "redirects": [
     {
       "source": "/affiliate-shopee",
@@ -10,6 +11,11 @@
       "source": "/affiliate-shopee/dashboard",
       "destination": "/shopee-affiliate/dashboard",
       "permanent": false
+    },
+    {
+      "source": "/dịch-vu/dich-vu-marketing-tai-phan-rang",
+      "destination": "/dich-vu/dich-vu-marketing-tai-phan-rang",
+      "permanent": true
     }
   ]
 }
