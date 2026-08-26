@@ -2,14 +2,101 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    {"source":"/Chat-plugin","destination":"/chat-plugin","permanent":true},
-    {"source":"/dịch-vu/dich-vu-marketing-tai-phan-rang","destination":"/dich-vu/dich-vu-marketing-tai-phan-rang","permanent":true},
-    {"source":"/dịch-vu/dich-vu-marketing-tai-can-tho","destination":"/dich-vu/dich-vu-marketing-tai-can-tho","permanent":true},
-    {"source":"/dịch-vu/dich-vu-marketing-tai-binh-duong","destination":"/dich-vu/dich-vu-marketing-tai-binh-duong","permanent":true},
-    {"source":"/dịch-vu/dich-vu-marketing-tai-nha-trang","destination":"/dich-vu/dich-vu-marketing-tai-nha-trang","permanent":true},
-    {"source":"/dịch-vu/dich-vu-marketing-tai-vung-tau","destination":"/dich-vu/dich-vu-marketing-tai-vung-tau","permanent":true},
-    {"source":"/dịch-vu/dich-vu-marketing-tai-phu-quoc","destination":"/dich-vu/dich-vu-marketing-tai-phu-quoc","permanent":true},
-    {"source":"/dịch-vu/dich-vu-marketing-tai-rach-gia","destination":"/dich-vu/dich-vu-marketing-tai-rach-gia","permanent":true},
-    {"source":"/dịch-vu/dich-vu-marketing-tai-long-xuyen","destination":"/dich-vu/dich-vu-marketing-tai-long-xuyen","permanent":true}
+    {
+      "source": "/Chat-plugin",
+      "destination": "/chat-plugin",
+      "permanent": true
+    },
+    {
+      "source": "/dịch-vu/dich-vu-marketing-tai-phan-rang",
+      "destination": "/dich-vu/marketing/phan-rang",
+      "permanent": true
+    },
+    {
+      "source": "/dịch-vu/dich-vu-marketing-tai-can-tho",
+      "destination": "/dich-vu/marketing/can-tho",
+      "permanent": true
+    },
+    {
+      "source": "/dịch-vu/dich-vu-marketing-tai-binh-duong",
+      "destination": "/dich-vu/marketing/binh-duong",
+      "permanent": true
+    },
+    {
+      "source": "/dịch-vu/dich-vu-marketing-tai-nha-trang",
+      "destination": "/dich-vu/marketing/nha-trang",
+      "permanent": true
+    },
+    {
+      "source": "/dịch-vu/dich-vu-marketing-tai-vung-tau",
+      "destination": "/dich-vu/marketing/vung-tau",
+      "permanent": true
+    },
+    {
+      "source": "/dịch-vu/dich-vu-marketing-tai-phu-quoc",
+      "destination": "/dich-vu/marketing/phu-quoc",
+      "permanent": true
+    },
+    {
+      "source": "/dịch-vu/dich-vu-marketing-tai-rach-gia",
+      "destination": "/dich-vu/marketing/rach-gia",
+      "permanent": true
+    },
+    {
+      "source": "/dịch-vu/dich-vu-marketing-tai-long-xuyen",
+      "destination": "/dich-vu/marketing/long-xuyen",
+      "permanent": true
+    },
+    {
+      "source": "/offer-funnel.html",
+      "destination": "/offer-funnel",
+      "permanent": true
+    },
+    {
+      "source": "/dich-vu/dich-vu-marketing-tai-phan-rang",
+      "destination": "/dich-vu/marketing/phan-rang",
+      "permanent": true
+    },
+    {
+      "source": "/dich-vu/dich-vu-marketing-tai-can-tho",
+      "destination": "/dich-vu/marketing/can-tho",
+      "permanent": true
+    },
+    {
+      "source": "/dich-vu/dich-vu-marketing-tai-binh-duong",
+      "destination": "/dich-vu/marketing/binh-duong",
+      "permanent": true
+    },
+    {
+      "source": "/dich-vu/dich-vu-marketing-tai-nha-trang",
+      "destination": "/dich-vu/marketing/nha-trang",
+      "permanent": true
+    },
+    {
+      "source": "/dich-vu/dich-vu-marketing-tai-vung-tau",
+      "destination": "/dich-vu/marketing/vung-tau",
+      "permanent": true
+    },
+    {
+      "source": "/dich-vu/dich-vu-marketing-tai-phu-quoc",
+      "destination": "/dich-vu/marketing/phu-quoc",
+      "permanent": true
+    },
+    {
+      "source": "/dich-vu/dich-vu-marketing-tai-rach-gia",
+      "destination": "/dich-vu/marketing/rach-gia",
+      "permanent": true
+    },
+    {
+      "source": "/dich-vu/dich-vu-marketing-tai-long-xuyen",
+      "destination": "/dich-vu/marketing/long-xuyen",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/offer-funnel",
+      "destination": "/dich-vu/marketing/offer-funnel"
+    }
   ]
 }
