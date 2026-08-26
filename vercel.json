@@ -2,45 +2,14 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    {
-      "source": "/dịch-vu/dich-vu-marketing-tai-phan-rang",
-      "destination": "/dich-vu/dich-vu-marketing-tai-phan-rang",
-      "permanent": true
-    },
-    {
-      "source": "/dịch-vu/dich-vu-marketing-tai-can-tho",
-      "destination": "/dich-vu/dich-vu-marketing-tai-can-tho",
-      "permanent": true
-    },
-    {
-      "source": "/dịch-vu/dich-vu-marketing-tai-binh-duong",
-      "destination": "/dich-vu/dich-vu-marketing-tai-binh-duong",
-      "permanent": true
-    },
-    {
-      "source": "/dịch-vu/dich-vu-marketing-tai-nha-trang",
-      "destination": "/dich-vu/dich-vu-marketing-tai-nha-trang",
-      "permanent": true
-    },
-    {
-      "source": "/dịch-vu/dich-vu-marketing-tai-vung-tau",
-      "destination": "/dich-vu/dich-vu-marketing-tai-vung-tau",
-      "permanent": true
-    },
-    {
-      "source": "/dịch-vu/dich-vu-marketing-tai-phu-quoc",
-      "destination": "/dich-vu/dich-vu-marketing-tai-phu-quoc",
-      "permanent": true
-    },
-    {
-      "source": "/dịch-vu/dich-vu-marketing-tai-rach-gia",
-      "destination": "/dich-vu/dich-vu-marketing-tai-rach-gia",
-      "permanent": true
-    },
-    {
-      "source": "/dịch-vu/dich-vu-marketing-tai-long-xuyen",
-      "destination": "/dich-vu/dich-vu-marketing-tai-long-xuyen",
-      "permanent": true
-    }
+    {"source":"/Chat-plugin","destination":"/chat-plugin","permanent":true},
+    {"source":"/dịch-vu/dich-vu-marketing-tai-phan-rang","destination":"/dich-vu/dich-vu-marketing-tai-phan-rang","permanent":true},
+    {"source":"/dịch-vu/dich-vu-marketing-tai-can-tho","destination":"/dich-vu/dich-vu-marketing-tai-can-tho","permanent":true},
+    {"source":"/dịch-vu/dich-vu-marketing-tai-binh-duong","destination":"/dich-vu/dich-vu-marketing-tai-binh-duong","permanent":true},
+    {"source":"/dịch-vu/dich-vu-marketing-tai-nha-trang","destination":"/dich-vu/dich-vu-marketing-tai-nha-trang","permanent":true},
+    {"source":"/dịch-vu/dich-vu-marketing-tai-vung-tau","destination":"/dich-vu/dich-vu-marketing-tai-vung-tau","permanent":true},
+    {"source":"/dịch-vu/dich-vu-marketing-tai-phu-quoc","destination":"/dich-vu/dich-vu-marketing-tai-phu-quoc","permanent":true},
+    {"source":"/dịch-vu/dich-vu-marketing-tai-rach-gia","destination":"/dich-vu/dich-vu-marketing-tai-rach-gia","permanent":true},
+    {"source":"/dịch-vu/dich-vu-marketing-tai-long-xuyen","destination":"/dich-vu/dich-vu-marketing-tai-long-xuyen","permanent":true}
   ]
 }
