@@ -3,16 +3,6 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/affiliate-shopee",
-      "destination": "/shopee-affiliate",
-      "permanent": false
-    },
-    {
-      "source": "/affiliate-shopee/dashboard",
-      "destination": "/shopee-affiliate/dashboard",
-      "permanent": false
-    },
-    {
       "source": "/dịch-vu/dich-vu-marketing-tai-phan-rang",
       "destination": "/dich-vu/dich-vu-marketing-tai-phan-rang",
       "permanent": true
